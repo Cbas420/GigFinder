@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.loginButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
             this.loginLabel = new System.Windows.Forms.Label();
-            this.loginButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,11 +47,26 @@
             this.groupBox1.Controls.Add(this.emailTextBox);
             this.groupBox1.Controls.Add(this.emailLabel);
             this.groupBox1.Controls.Add(this.loginLabel);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(29, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(537, 373);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // loginButton
+            // 
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.loginButton.Location = new System.Drawing.Point(199, 280);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(147, 49);
+            this.loginButton.TabIndex = 5;
+            this.loginButton.Text = "ACCEDER";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.Paint += new System.Windows.Forms.PaintEventHandler(this.loginButton_Paint);
             // 
             // passwordTextBox
             // 
@@ -95,22 +110,11 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(177, 16);
+            this.loginLabel.Location = new System.Drawing.Point(209, 16);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(203, 29);
+            this.loginLabel.Size = new System.Drawing.Size(123, 29);
             this.loginLabel.TabIndex = 0;
-            this.loginLabel.Text = "INICIAR SESION";
-            // 
-            // loginButton
-            // 
-            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(199, 280);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(147, 49);
-            this.loginButton.TabIndex = 5;
-            this.loginButton.Text = "ACCEDER";
-            this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginLabel.Text = "GigFinder";
             // 
             // Form1
             // 
