@@ -17,29 +17,18 @@ namespace GigFinder
             InitializeComponent();
 
             loginButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#21D0D5");
+
         }
-
-        private void loginButton_Paint(object sender, PaintEventArgs e)
-        {
-            // El color del borde, en este caso #21D0D5
-            Color borderColor = System.Drawing.ColorTranslator.FromHtml("#21D0D5");
-
-            // Definir el grosor del borde
-            int borderThickness = 2;
-
-            // Dibujar el borde alrededor del botón
-            using (Pen borderPen = new Pen(borderColor, borderThickness))
-            {
-                e.Graphics.DrawRectangle(borderPen, 0, 0, loginButton.Width - 1, loginButton.Height - 1);
-            }
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
             SelectAccessForm accessForm = new SelectAccessForm();
 
+            this.Hide();
 
-            accessForm.ShowDialog();
+            accessForm.Closed += (s, args) => this.Close();
+
+            accessForm.Show();
+
         }
 
         private void passwordTextBox_TextChanged(object sender, EventArgs e)

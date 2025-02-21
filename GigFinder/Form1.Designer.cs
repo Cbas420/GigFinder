@@ -66,7 +66,6 @@
             this.loginButton.Text = "ACCEDER";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            this.loginButton.Paint += new System.Windows.Forms.PaintEventHandler(this.loginButton_Paint);
             // 
             // passwordTextBox
             // 
@@ -123,6 +122,7 @@
             this.ClientSize = new System.Drawing.Size(595, 424);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
