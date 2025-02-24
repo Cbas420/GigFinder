@@ -15,6 +15,32 @@ namespace GigFinder
         public SelectAccessForm()
         {
             InitializeComponent();
+
+            manageDatabaseButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#21D0D5");
+
+            manageUsersButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#21D0D5");
+
+
+        }
+
+        private void buttonManageDatabase_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void buttonManageUsers_Click(object sender, EventArgs e)
+        {
+            ManageUsersForm manageUsersForm = new ManageUsersForm();
+
+            this.Hide();
+
+           // manageUsersForm.Closed += (s, args) => this.Close();
+
+            manageUsersForm.ShowDialog();
+
+            this.Show();
         }
     }
 }
