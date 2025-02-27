@@ -35,20 +35,34 @@
             this.changesHistoryButton = new System.Windows.Forms.ToolStripButton();
             this.databaseManagementPanel = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
-            this.usersDataGridView = new System.Windows.Forms.DataGridView();
-            this.userColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastLoginColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filterUserPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataBaseDataGridView = new System.Windows.Forms.DataGridView();
+            this.filterQueryPanel = new System.Windows.Forms.Panel();
+            this.filterButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.queryTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.databaseLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.userIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyCapacityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musicianGenreIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musicianSizeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musicianSongLanguageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musicianPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musicianLanguageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userEmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userDescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userRoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userCreationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userPasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.averageRatingColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.actionsToolStrip.SuspendLayout();
             this.databaseManagementPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
-            this.filterUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataGridView)).BeginInit();
+            this.filterQueryPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // actionsToolStrip
@@ -97,8 +111,9 @@
             // databaseManagementPanel
             // 
             this.databaseManagementPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.databaseManagementPanel.Controls.Add(this.button1);
             this.databaseManagementPanel.Controls.Add(this.saveButton);
-            this.databaseManagementPanel.Controls.Add(this.usersDataGridView);
+            this.databaseManagementPanel.Controls.Add(this.dataBaseDataGridView);
             this.databaseManagementPanel.Location = new System.Drawing.Point(14, 188);
             this.databaseManagementPanel.Name = "databaseManagementPanel";
             this.databaseManagementPanel.Size = new System.Drawing.Size(616, 224);
@@ -107,79 +122,61 @@
             // saveButton
             // 
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(37, 178);
+            this.saveButton.Location = new System.Drawing.Point(473, 176);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(107, 30);
             this.saveButton.TabIndex = 19;
             this.saveButton.Text = "Guardar";
             this.saveButton.UseVisualStyleBackColor = true;
             // 
-            // usersDataGridView
+            // dataBaseDataGridView
             // 
-            this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userColumn,
-            this.roleColumn,
-            this.lastLoginColumn,
-            this.creationDateColumn});
-            this.usersDataGridView.Location = new System.Drawing.Point(37, 20);
-            this.usersDataGridView.Name = "usersDataGridView";
-            this.usersDataGridView.Size = new System.Drawing.Size(543, 150);
-            this.usersDataGridView.TabIndex = 16;
+            this.dataBaseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataBaseDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userIdColumn,
+            this.companyCapacityColumn,
+            this.musicianGenreIdColumn,
+            this.musicianSizeColumn,
+            this.musicianSongLanguageColumn,
+            this.musicianPriceColumn,
+            this.musicianLanguageColumn,
+            this.userNameColumn,
+            this.userEmailColumn,
+            this.userDescriptionColumn,
+            this.userRoleColumn,
+            this.userCreationDateColumn,
+            this.userPasswordColumn,
+            this.userTypeColumn,
+            this.averageRatingColumn});
+            this.dataBaseDataGridView.Location = new System.Drawing.Point(37, 20);
+            this.dataBaseDataGridView.Name = "dataBaseDataGridView";
+            this.dataBaseDataGridView.RowHeadersVisible = false;
+            this.dataBaseDataGridView.Size = new System.Drawing.Size(543, 150);
+            this.dataBaseDataGridView.TabIndex = 16;
             // 
-            // userColumn
+            // filterQueryPanel
             // 
-            this.userColumn.HeaderText = "Usuario";
-            this.userColumn.Name = "userColumn";
-            this.userColumn.Width = 125;
+            this.filterQueryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filterQueryPanel.Controls.Add(this.label3);
+            this.filterQueryPanel.Controls.Add(this.label1);
+            this.filterQueryPanel.Controls.Add(this.filterButton);
+            this.filterQueryPanel.Controls.Add(this.label2);
+            this.filterQueryPanel.Controls.Add(this.queryTypeComboBox);
+            this.filterQueryPanel.Controls.Add(this.databaseLabel);
+            this.filterQueryPanel.Location = new System.Drawing.Point(14, 37);
+            this.filterQueryPanel.Name = "filterQueryPanel";
+            this.filterQueryPanel.Size = new System.Drawing.Size(613, 140);
+            this.filterQueryPanel.TabIndex = 17;
             // 
-            // roleColumn
+            // filterButton
             // 
-            this.roleColumn.HeaderText = "Rol";
-            this.roleColumn.Name = "roleColumn";
-            this.roleColumn.Width = 125;
-            // 
-            // lastLoginColumn
-            // 
-            this.lastLoginColumn.HeaderText = "Última sesión";
-            this.lastLoginColumn.Name = "lastLoginColumn";
-            this.lastLoginColumn.Width = 125;
-            // 
-            // creationDateColumn
-            // 
-            this.creationDateColumn.HeaderText = "fecha de creacion";
-            this.creationDateColumn.Name = "creationDateColumn";
-            this.creationDateColumn.Width = 125;
-            // 
-            // filterUserPanel
-            // 
-            this.filterUserPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.filterUserPanel.Controls.Add(this.button1);
-            this.filterUserPanel.Controls.Add(this.label2);
-            this.filterUserPanel.Controls.Add(this.comboBox1);
-            this.filterUserPanel.Controls.Add(this.label1);
-            this.filterUserPanel.Location = new System.Drawing.Point(14, 37);
-            this.filterUserPanel.Name = "filterUserPanel";
-            this.filterUserPanel.Size = new System.Drawing.Size(613, 140);
-            this.filterUserPanel.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Database Management";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(87, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(201, 21);
-            this.comboBox1.TabIndex = 18;
+            this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filterButton.Location = new System.Drawing.Point(87, 85);
+            this.filterButton.Name = "filterButton";
+            this.filterButton.Size = new System.Drawing.Size(107, 30);
+            this.filterButton.TabIndex = 20;
+            this.filterButton.Text = "Filtrar";
+            this.filterButton.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -191,14 +188,131 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Tipo";
             // 
+            // queryTypeComboBox
+            // 
+            this.queryTypeComboBox.FormattingEnabled = true;
+            this.queryTypeComboBox.Location = new System.Drawing.Point(87, 51);
+            this.queryTypeComboBox.Name = "queryTypeComboBox";
+            this.queryTypeComboBox.Size = new System.Drawing.Size(201, 21);
+            this.queryTypeComboBox.TabIndex = 18;
+            // 
+            // databaseLabel
+            // 
+            this.databaseLabel.AutoSize = true;
+            this.databaseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.databaseLabel.Location = new System.Drawing.Point(212, 9);
+            this.databaseLabel.Name = "databaseLabel";
+            this.databaseLabel.Size = new System.Drawing.Size(196, 20);
+            this.databaseLabel.TabIndex = 17;
+            this.databaseLabel.Text = "Database Management";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(349, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "*SUPER GRAFICO*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(338, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(408, 25);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "*SUPER RATING BIEN MAMALONES*";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // userIdColumn
+            // 
+            this.userIdColumn.HeaderText = "user id";
+            this.userIdColumn.Name = "userIdColumn";
+            this.userIdColumn.Width = 125;
+            // 
+            // companyCapacityColumn
+            // 
+            this.companyCapacityColumn.HeaderText = "company capacity";
+            this.companyCapacityColumn.Name = "companyCapacityColumn";
+            // 
+            // musicianGenreIdColumn
+            // 
+            this.musicianGenreIdColumn.HeaderText = "musician genre id";
+            this.musicianGenreIdColumn.Name = "musicianGenreIdColumn";
+            // 
+            // musicianSizeColumn
+            // 
+            this.musicianSizeColumn.HeaderText = "musician size";
+            this.musicianSizeColumn.Name = "musicianSizeColumn";
+            // 
+            // musicianSongLanguageColumn
+            // 
+            this.musicianSongLanguageColumn.HeaderText = "musician song language";
+            this.musicianSongLanguageColumn.Name = "musicianSongLanguageColumn";
+            // 
+            // musicianPriceColumn
+            // 
+            this.musicianPriceColumn.HeaderText = "musician price";
+            this.musicianPriceColumn.Name = "musicianPriceColumn";
+            // 
+            // musicianLanguageColumn
+            // 
+            this.musicianLanguageColumn.HeaderText = "musician language";
+            this.musicianLanguageColumn.Name = "musicianLanguageColumn";
+            // 
+            // userNameColumn
+            // 
+            this.userNameColumn.HeaderText = "user name";
+            this.userNameColumn.Name = "userNameColumn";
+            // 
+            // userEmailColumn
+            // 
+            this.userEmailColumn.HeaderText = "user email";
+            this.userEmailColumn.Name = "userEmailColumn";
+            // 
+            // userDescriptionColumn
+            // 
+            this.userDescriptionColumn.HeaderText = "user description";
+            this.userDescriptionColumn.Name = "userDescriptionColumn";
+            // 
+            // userRoleColumn
+            // 
+            this.userRoleColumn.HeaderText = "user role";
+            this.userRoleColumn.Name = "userRoleColumn";
+            this.userRoleColumn.Width = 125;
+            // 
+            // userCreationDateColumn
+            // 
+            this.userCreationDateColumn.HeaderText = "user creation date";
+            this.userCreationDateColumn.Name = "userCreationDateColumn";
+            this.userCreationDateColumn.Width = 125;
+            // 
+            // userPasswordColumn
+            // 
+            this.userPasswordColumn.HeaderText = "user password";
+            this.userPasswordColumn.Name = "userPasswordColumn";
+            // 
+            // userTypeColumn
+            // 
+            this.userTypeColumn.HeaderText = "user type";
+            this.userTypeColumn.Name = "userTypeColumn";
+            // 
+            // averageRatingColumn
+            // 
+            this.averageRatingColumn.HeaderText = "user avg rating";
+            this.averageRatingColumn.Name = "averageRatingColumn";
+            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(181, 99);
+            this.button1.Location = new System.Drawing.Point(37, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 30);
             this.button1.TabIndex = 20;
-            this.button1.Text = "Filtrar";
+            this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // ManageDatabaseForm
@@ -207,16 +321,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 424);
             this.Controls.Add(this.databaseManagementPanel);
-            this.Controls.Add(this.filterUserPanel);
+            this.Controls.Add(this.filterQueryPanel);
             this.Controls.Add(this.actionsToolStrip);
             this.Name = "ManageDatabaseForm";
             this.Text = "ManageDatabaseForm";
             this.actionsToolStrip.ResumeLayout(false);
             this.actionsToolStrip.PerformLayout();
             this.databaseManagementPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
-            this.filterUserPanel.ResumeLayout(false);
-            this.filterUserPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataGridView)).EndInit();
+            this.filterQueryPanel.ResumeLayout(false);
+            this.filterQueryPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,15 +344,29 @@
         private System.Windows.Forms.ToolStripButton changesHistoryButton;
         private System.Windows.Forms.Panel databaseManagementPanel;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.DataGridView usersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastLoginColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creationDateColumn;
-        private System.Windows.Forms.Panel filterUserPanel;
+        private System.Windows.Forms.DataGridView dataBaseDataGridView;
+        private System.Windows.Forms.Panel filterQueryPanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox queryTypeComboBox;
+        private System.Windows.Forms.Label databaseLabel;
+        private System.Windows.Forms.Button filterButton;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyCapacityColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn musicianGenreIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn musicianSizeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn musicianSongLanguageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn musicianPriceColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn musicianLanguageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userEmailColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userDescriptionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userRoleColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userCreationDateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userPasswordColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userTypeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn averageRatingColumn;
         private System.Windows.Forms.Button button1;
     }
 }
