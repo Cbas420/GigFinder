@@ -28,117 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.loginButton = new System.Windows.Forms.Button();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.loginLabel = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.roundedTextBox1 = new GigFinder.Controls.RoundedTextBox();
+            this.roundedTextBox2 = new GigFinder.Controls.RoundedTextBox();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // roundedTextBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox1.Controls.Add(this.loginButton);
-            this.groupBox1.Controls.Add(this.passwordTextBox);
-            this.groupBox1.Controls.Add(this.passwordLabel);
-            this.groupBox1.Controls.Add(this.emailTextBox);
-            this.groupBox1.Controls.Add(this.emailLabel);
-            this.groupBox1.Controls.Add(this.loginLabel);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(29, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(537, 373);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.roundedTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.roundedTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBox1.BorderFocusColor = System.Drawing.Color.Black;
+            this.roundedTextBox1.BorderRadius = 8;
+            this.roundedTextBox1.BorderSize = 2;
+            this.roundedTextBox1.Location = new System.Drawing.Point(177, 99);
+            this.roundedTextBox1.Multiline = false;
+            this.roundedTextBox1.Name = "roundedTextBox1";
+            this.roundedTextBox1.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
+            this.roundedTextBox1.PasswordChar = false;
+            this.roundedTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBox1.PlaceholderText = "";
+            this.roundedTextBox1.Size = new System.Drawing.Size(250, 34);
+            this.roundedTextBox1.TabIndex = 0;
+            this.roundedTextBox1.Texts = "";
+            this.roundedTextBox1.UnderlinedStyle = false;
             // 
-            // loginButton
+            // roundedTextBox2
             // 
-            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.loginButton.Location = new System.Drawing.Point(199, 280);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(147, 49);
-            this.loginButton.TabIndex = 5;
-            this.loginButton.Text = "ACCEDER";
-            this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(130, 185);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(302, 35);
-            this.passwordTextBox.TabIndex = 4;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(209, 153);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(143, 29);
-            this.passwordLabel.TabIndex = 3;
-            this.passwordLabel.Text = "Contraseña";
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(129, 110);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(302, 35);
-            this.emailTextBox.TabIndex = 2;
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(230, 78);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(89, 29);
-            this.emailLabel.TabIndex = 1;
-            this.emailLabel.Text = "Correo";
-            // 
-            // loginLabel
-            // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(209, 16);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(123, 29);
-            this.loginLabel.TabIndex = 0;
-            this.loginLabel.Text = "GigFinder";
+            this.roundedTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.roundedTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBox2.BorderFocusColor = System.Drawing.Color.Black;
+            this.roundedTextBox2.BorderRadius = 8;
+            this.roundedTextBox2.BorderSize = 2;
+            this.roundedTextBox2.Location = new System.Drawing.Point(177, 154);
+            this.roundedTextBox2.Multiline = false;
+            this.roundedTextBox2.Name = "roundedTextBox2";
+            this.roundedTextBox2.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
+            this.roundedTextBox2.PasswordChar = false;
+            this.roundedTextBox2.PlaceholderColor = System.Drawing.Color.Black;
+            this.roundedTextBox2.PlaceholderText = "";
+            this.roundedTextBox2.Size = new System.Drawing.Size(250, 34);
+            this.roundedTextBox2.TabIndex = 1;
+            this.roundedTextBox2.Texts = "";
+            this.roundedTextBox2.UnderlinedStyle = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 424);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.roundedTextBox2);
+            this.Controls.Add(this.roundedTextBox1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label loginLabel;
-        private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.Button loginButton;
+        private Controls.RoundedTextBox roundedTextBox1;
+        private Controls.RoundedTextBox roundedTextBox2;
     }
 }
 

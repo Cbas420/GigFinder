@@ -15,25 +15,6 @@ namespace GigFinder
         public Form1()
         {
             InitializeComponent();
-
-            loginButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#21D0D5");
-
-        }
-        private void loginButton_Click(object sender, EventArgs e)
-        {
-            SelectAccessForm accessForm = new SelectAccessForm();
-
-            this.Hide();
-
-            accessForm.Closed += (s, args) => this.Close();
-
-            accessForm.Show();
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
