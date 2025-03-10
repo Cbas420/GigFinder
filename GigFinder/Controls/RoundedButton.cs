@@ -13,7 +13,7 @@ namespace GigFinder.Controls
     {
         private int borderSize = 0;
         private int borderRadius = 15;
-        private Color borderColor = Color.FromArgb(252, 158, 79);
+        private Color borderColor = Color.FromArgb(33, 208, 213);
 
         public int BorderSize { get => borderSize; set => borderSize = value; }
         public int BorderRadius { get => borderRadius; set => borderRadius = value; }
