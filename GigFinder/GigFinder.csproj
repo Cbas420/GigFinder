@@ -129,10 +129,19 @@
     <None Include="Resources\Fondo escritorio.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo1.png" />
+    <None Include="Resources\ImageUsers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageMonitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageActivity.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
