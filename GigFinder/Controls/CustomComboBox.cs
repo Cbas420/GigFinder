@@ -366,5 +366,17 @@ namespace GigFinder.Controls
             base.OnResize(e);
             AdjustComboBoxDimensions();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // CustomComboBox
+            // 
+            this.Name = "CustomComboBox";
+            this.Size = new System.Drawing.Size(89, 23);
+            this.ResumeLayout(false);
+
+        }
     }
 }

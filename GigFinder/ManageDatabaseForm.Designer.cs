@@ -28,309 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageDatabaseForm));
-            this.actionsToolStrip = new System.Windows.Forms.ToolStrip();
-            this.goBackButton = new System.Windows.Forms.ToolStripButton();
-            this.signOutButton = new System.Windows.Forms.ToolStripButton();
-            this.changesHistoryButton = new System.Windows.Forms.ToolStripButton();
-            this.databaseManagementPanel = new System.Windows.Forms.Panel();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.dataBaseDataGridView = new System.Windows.Forms.DataGridView();
-            this.filterQueryPanel = new System.Windows.Forms.Panel();
-            this.filterButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.queryTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.databaseLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.userIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyCapacityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.musicianGenreIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.musicianSizeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.musicianSongLanguageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.musicianPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.musicianLanguageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userEmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userDescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userRoleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userCreationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userPasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.averageRatingColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.actionsToolStrip.SuspendLayout();
-            this.databaseManagementPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataGridView)).BeginInit();
-            this.filterQueryPanel.SuspendLayout();
+            this.customComboBoxFilter = new GigFinder.Controls.CustomComboBox();
+            this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
+            this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
+            this.roundedButtonEdit = new GigFinder.Controls.RoundedButton();
+            this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // actionsToolStrip
+            // customComboBoxFilter
             // 
-            this.actionsToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.goBackButton,
-            this.signOutButton,
-            this.changesHistoryButton});
-            this.actionsToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.actionsToolStrip.Name = "actionsToolStrip";
-            this.actionsToolStrip.Size = new System.Drawing.Size(644, 25);
-            this.actionsToolStrip.TabIndex = 9;
-            this.actionsToolStrip.Text = "toolStrip1";
+            this.customComboBoxFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxFilter.BorderSize = 1;
+            this.customComboBoxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.customComboBoxFilter.Font = new System.Drawing.Font("Passion One", 14F);
+            this.customComboBoxFilter.ForeColor = System.Drawing.Color.White;
+            this.customComboBoxFilter.IconColor = System.Drawing.Color.White;
+            this.customComboBoxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxFilter.ListTextColor = System.Drawing.Color.White;
+            this.customComboBoxFilter.Location = new System.Drawing.Point(25, 123);
+            this.customComboBoxFilter.MinimumSize = new System.Drawing.Size(100, 30);
+            this.customComboBoxFilter.Name = "customComboBoxFilter";
+            this.customComboBoxFilter.Padding = new System.Windows.Forms.Padding(1);
+            this.customComboBoxFilter.Size = new System.Drawing.Size(150, 41);
+            this.customComboBoxFilter.TabIndex = 14;
+            this.customComboBoxFilter.Texts = "Mostrar";
             // 
-            // goBackButton
+            // customComboBoxOrder
             // 
-            this.goBackButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.goBackButton.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.goBackButton.Image = ((System.Drawing.Image)(resources.GetObject("goBackButton.Image")));
-            this.goBackButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(23, 22);
-            this.goBackButton.Text = "toolStripButton1";
-            this.goBackButton.ToolTipText = "Volver";
+            this.customComboBoxOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxOrder.BorderSize = 1;
+            this.customComboBoxOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.customComboBoxOrder.Font = new System.Drawing.Font("Passion One", 14F);
+            this.customComboBoxOrder.ForeColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.IconColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxOrder.ListTextColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.Location = new System.Drawing.Point(181, 123);
+            this.customComboBoxOrder.MinimumSize = new System.Drawing.Size(100, 30);
+            this.customComboBoxOrder.Name = "customComboBoxOrder";
+            this.customComboBoxOrder.Padding = new System.Windows.Forms.Padding(1);
+            this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
+            this.customComboBoxOrder.TabIndex = 13;
+            this.customComboBoxOrder.Texts = "Ordenar por";
             // 
-            // signOutButton
+            // roundedButtonDelete
             // 
-            this.signOutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
-            this.signOutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.signOutButton.Name = "signOutButton";
-            this.signOutButton.Size = new System.Drawing.Size(23, 22);
-            this.signOutButton.Text = "toolStripButton3";
-            this.signOutButton.ToolTipText = "Cerrar Sesión";
+            this.roundedButtonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.roundedButtonDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonDelete.BorderRadius = 8;
+            this.roundedButtonDelete.BorderSize = 0;
+            this.roundedButtonDelete.FlatAppearance.BorderSize = 0;
+            this.roundedButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonDelete.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonDelete.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonDelete.Location = new System.Drawing.Point(1026, 123);
+            this.roundedButtonDelete.Name = "roundedButtonDelete";
+            this.roundedButtonDelete.Size = new System.Drawing.Size(150, 40);
+            this.roundedButtonDelete.TabIndex = 12;
+            this.roundedButtonDelete.Text = "Eliminar";
+            this.roundedButtonDelete.UseVisualStyleBackColor = false;
             // 
-            // changesHistoryButton
+            // roundedButtonEdit
             // 
-            this.changesHistoryButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.changesHistoryButton.Image = ((System.Drawing.Image)(resources.GetObject("changesHistoryButton.Image")));
-            this.changesHistoryButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.changesHistoryButton.Name = "changesHistoryButton";
-            this.changesHistoryButton.Size = new System.Drawing.Size(23, 22);
-            this.changesHistoryButton.Text = "toolStripButton2";
-            this.changesHistoryButton.ToolTipText = "Historial";
+            this.roundedButtonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonEdit.BorderRadius = 8;
+            this.roundedButtonEdit.BorderSize = 0;
+            this.roundedButtonEdit.FlatAppearance.BorderSize = 0;
+            this.roundedButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonEdit.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonEdit.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonEdit.Location = new System.Drawing.Point(870, 123);
+            this.roundedButtonEdit.Name = "roundedButtonEdit";
+            this.roundedButtonEdit.Size = new System.Drawing.Size(150, 40);
+            this.roundedButtonEdit.TabIndex = 11;
+            this.roundedButtonEdit.Text = "Editar";
+            this.roundedButtonEdit.UseVisualStyleBackColor = false;
             // 
-            // databaseManagementPanel
+            // roundedButtonCreate
             // 
-            this.databaseManagementPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.databaseManagementPanel.Controls.Add(this.button1);
-            this.databaseManagementPanel.Controls.Add(this.saveButton);
-            this.databaseManagementPanel.Controls.Add(this.dataBaseDataGridView);
-            this.databaseManagementPanel.Location = new System.Drawing.Point(14, 188);
-            this.databaseManagementPanel.Name = "databaseManagementPanel";
-            this.databaseManagementPanel.Size = new System.Drawing.Size(616, 224);
-            this.databaseManagementPanel.TabIndex = 18;
+            this.roundedButtonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonCreate.BorderRadius = 8;
+            this.roundedButtonCreate.BorderSize = 0;
+            this.roundedButtonCreate.FlatAppearance.BorderSize = 0;
+            this.roundedButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonCreate.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonCreate.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonCreate.Location = new System.Drawing.Point(714, 123);
+            this.roundedButtonCreate.Name = "roundedButtonCreate";
+            this.roundedButtonCreate.Size = new System.Drawing.Size(150, 40);
+            this.roundedButtonCreate.TabIndex = 10;
+            this.roundedButtonCreate.Text = "Crear";
+            this.roundedButtonCreate.UseVisualStyleBackColor = false;
             // 
-            // saveButton
+            // labelTitle
             // 
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(473, 176);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(107, 30);
-            this.saveButton.TabIndex = 19;
-            this.saveButton.Text = "Guardar";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Passion One", 50F);
+            this.labelTitle.Location = new System.Drawing.Point(12, 12);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(445, 74);
+            this.labelTitle.TabIndex = 9;
+            this.labelTitle.Text = "Gestión de datos";
             // 
-            // dataBaseDataGridView
+            // pictureBoxLogo
             // 
-            this.dataBaseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataBaseDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIdColumn,
-            this.companyCapacityColumn,
-            this.musicianGenreIdColumn,
-            this.musicianSizeColumn,
-            this.musicianSongLanguageColumn,
-            this.musicianPriceColumn,
-            this.musicianLanguageColumn,
-            this.userNameColumn,
-            this.userEmailColumn,
-            this.userDescriptionColumn,
-            this.userRoleColumn,
-            this.userCreationDateColumn,
-            this.userPasswordColumn,
-            this.userTypeColumn,
-            this.averageRatingColumn});
-            this.dataBaseDataGridView.Location = new System.Drawing.Point(37, 20);
-            this.dataBaseDataGridView.Name = "dataBaseDataGridView";
-            this.dataBaseDataGridView.RowHeadersVisible = false;
-            this.dataBaseDataGridView.Size = new System.Drawing.Size(543, 150);
-            this.dataBaseDataGridView.TabIndex = 16;
-            // 
-            // filterQueryPanel
-            // 
-            this.filterQueryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.filterQueryPanel.Controls.Add(this.label3);
-            this.filterQueryPanel.Controls.Add(this.label1);
-            this.filterQueryPanel.Controls.Add(this.filterButton);
-            this.filterQueryPanel.Controls.Add(this.label2);
-            this.filterQueryPanel.Controls.Add(this.queryTypeComboBox);
-            this.filterQueryPanel.Controls.Add(this.databaseLabel);
-            this.filterQueryPanel.Location = new System.Drawing.Point(14, 37);
-            this.filterQueryPanel.Name = "filterQueryPanel";
-            this.filterQueryPanel.Size = new System.Drawing.Size(613, 140);
-            this.filterQueryPanel.TabIndex = 17;
-            // 
-            // filterButton
-            // 
-            this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filterButton.Location = new System.Drawing.Point(87, 85);
-            this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(107, 30);
-            this.filterButton.TabIndex = 20;
-            this.filterButton.Text = "Filtrar";
-            this.filterButton.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 20);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Tipo";
-            // 
-            // queryTypeComboBox
-            // 
-            this.queryTypeComboBox.FormattingEnabled = true;
-            this.queryTypeComboBox.Location = new System.Drawing.Point(87, 51);
-            this.queryTypeComboBox.Name = "queryTypeComboBox";
-            this.queryTypeComboBox.Size = new System.Drawing.Size(201, 21);
-            this.queryTypeComboBox.TabIndex = 18;
-            // 
-            // databaseLabel
-            // 
-            this.databaseLabel.AutoSize = true;
-            this.databaseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.databaseLabel.Location = new System.Drawing.Point(212, 9);
-            this.databaseLabel.Name = "databaseLabel";
-            this.databaseLabel.Size = new System.Drawing.Size(196, 20);
-            this.databaseLabel.TabIndex = 17;
-            this.databaseLabel.Text = "Database Management";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(349, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "*SUPER GRAFICO*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(408, 25);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "*SUPER RATING BIEN MAMALONES*";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // userIdColumn
-            // 
-            this.userIdColumn.HeaderText = "user id";
-            this.userIdColumn.Name = "userIdColumn";
-            this.userIdColumn.Width = 125;
-            // 
-            // companyCapacityColumn
-            // 
-            this.companyCapacityColumn.HeaderText = "company capacity";
-            this.companyCapacityColumn.Name = "companyCapacityColumn";
-            // 
-            // musicianGenreIdColumn
-            // 
-            this.musicianGenreIdColumn.HeaderText = "musician genre id";
-            this.musicianGenreIdColumn.Name = "musicianGenreIdColumn";
-            // 
-            // musicianSizeColumn
-            // 
-            this.musicianSizeColumn.HeaderText = "musician size";
-            this.musicianSizeColumn.Name = "musicianSizeColumn";
-            // 
-            // musicianSongLanguageColumn
-            // 
-            this.musicianSongLanguageColumn.HeaderText = "musician song language";
-            this.musicianSongLanguageColumn.Name = "musicianSongLanguageColumn";
-            // 
-            // musicianPriceColumn
-            // 
-            this.musicianPriceColumn.HeaderText = "musician price";
-            this.musicianPriceColumn.Name = "musicianPriceColumn";
-            // 
-            // musicianLanguageColumn
-            // 
-            this.musicianLanguageColumn.HeaderText = "musician language";
-            this.musicianLanguageColumn.Name = "musicianLanguageColumn";
-            // 
-            // userNameColumn
-            // 
-            this.userNameColumn.HeaderText = "user name";
-            this.userNameColumn.Name = "userNameColumn";
-            // 
-            // userEmailColumn
-            // 
-            this.userEmailColumn.HeaderText = "user email";
-            this.userEmailColumn.Name = "userEmailColumn";
-            // 
-            // userDescriptionColumn
-            // 
-            this.userDescriptionColumn.HeaderText = "user description";
-            this.userDescriptionColumn.Name = "userDescriptionColumn";
-            // 
-            // userRoleColumn
-            // 
-            this.userRoleColumn.HeaderText = "user role";
-            this.userRoleColumn.Name = "userRoleColumn";
-            this.userRoleColumn.Width = 125;
-            // 
-            // userCreationDateColumn
-            // 
-            this.userCreationDateColumn.HeaderText = "user creation date";
-            this.userCreationDateColumn.Name = "userCreationDateColumn";
-            this.userCreationDateColumn.Width = 125;
-            // 
-            // userPasswordColumn
-            // 
-            this.userPasswordColumn.HeaderText = "user password";
-            this.userPasswordColumn.Name = "userPasswordColumn";
-            // 
-            // userTypeColumn
-            // 
-            this.userTypeColumn.HeaderText = "user type";
-            this.userTypeColumn.Name = "userTypeColumn";
-            // 
-            // averageRatingColumn
-            // 
-            this.averageRatingColumn.HeaderText = "user avg rating";
-            this.averageRatingColumn.Name = "averageRatingColumn";
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(37, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 30);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.BackgroundImage = global::GigFinder.Properties.Resources.logo1;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1101, 11);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(75, 90);
+            this.pictureBoxLogo.TabIndex = 8;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // ManageDatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 424);
-            this.Controls.Add(this.databaseManagementPanel);
-            this.Controls.Add(this.filterQueryPanel);
-            this.Controls.Add(this.actionsToolStrip);
+            this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.customComboBoxFilter);
+            this.Controls.Add(this.customComboBoxOrder);
+            this.Controls.Add(this.roundedButtonDelete);
+            this.Controls.Add(this.roundedButtonEdit);
+            this.Controls.Add(this.roundedButtonCreate);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Name = "ManageDatabaseForm";
             this.Text = "ManageDatabaseForm";
-            this.actionsToolStrip.ResumeLayout(false);
-            this.actionsToolStrip.PerformLayout();
-            this.databaseManagementPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataGridView)).EndInit();
-            this.filterQueryPanel.ResumeLayout(false);
-            this.filterQueryPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,35 +170,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip actionsToolStrip;
-        private System.Windows.Forms.ToolStripButton goBackButton;
-        private System.Windows.Forms.ToolStripButton signOutButton;
-        private System.Windows.Forms.ToolStripButton changesHistoryButton;
-        private System.Windows.Forms.Panel databaseManagementPanel;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.DataGridView dataBaseDataGridView;
-        private System.Windows.Forms.Panel filterQueryPanel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox queryTypeComboBox;
-        private System.Windows.Forms.Label databaseLabel;
-        private System.Windows.Forms.Button filterButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIdColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyCapacityColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn musicianGenreIdColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn musicianSizeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn musicianSongLanguageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn musicianPriceColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn musicianLanguageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userEmailColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userDescriptionColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userRoleColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userCreationDateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userPasswordColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userTypeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn averageRatingColumn;
-        private System.Windows.Forms.Button button1;
+        private Controls.CustomComboBox customComboBoxFilter;
+        private Controls.CustomComboBox customComboBoxOrder;
+        private Controls.RoundedButton roundedButtonDelete;
+        private Controls.RoundedButton roundedButtonEdit;
+        private Controls.RoundedButton roundedButtonCreate;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }
