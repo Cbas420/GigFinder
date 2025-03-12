@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.customPanelLogin = new GigFinder.Controls.CustomPanel();
+            this.labelPass = new System.Windows.Forms.Label();
+            this.labelMail = new System.Windows.Forms.Label();
             this.roundedButtonLogin = new GigFinder.Controls.RoundedButton();
             this.roundedTextBoxPass = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxMail = new GigFinder.Controls.RoundedTextBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelMail = new System.Windows.Forms.Label();
-            this.labelPass = new System.Windows.Forms.Label();
             this.customPanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,28 @@
             this.customPanelLogin.Size = new System.Drawing.Size(600, 550);
             this.customPanelLogin.TabIndex = 0;
             // 
+            // labelPass
+            // 
+            this.labelPass.AutoSize = true;
+            this.labelPass.BackColor = System.Drawing.Color.Transparent;
+            this.labelPass.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPass.Location = new System.Drawing.Point(154, 344);
+            this.labelPass.Name = "labelPass";
+            this.labelPass.Size = new System.Drawing.Size(120, 27);
+            this.labelPass.TabIndex = 5;
+            this.labelPass.Text = "Contraseña:";
+            // 
+            // labelMail
+            // 
+            this.labelMail.AutoSize = true;
+            this.labelMail.BackColor = System.Drawing.Color.Transparent;
+            this.labelMail.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMail.Location = new System.Drawing.Point(154, 255);
+            this.labelMail.Name = "labelMail";
+            this.labelMail.Size = new System.Drawing.Size(78, 27);
+            this.labelMail.TabIndex = 4;
+            this.labelMail.Text = "Correo:";
+            // 
             // roundedButtonLogin
             // 
             this.roundedButtonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
@@ -70,6 +92,7 @@
             this.roundedButtonLogin.TabIndex = 3;
             this.roundedButtonLogin.Text = "Entrar";
             this.roundedButtonLogin.UseVisualStyleBackColor = false;
+            this.roundedButtonLogin.Click += new System.EventHandler(this.roundedButtonLogin_Click);
             // 
             // roundedTextBoxPass
             // 
@@ -80,6 +103,7 @@
             this.roundedTextBoxPass.BorderSize = 2;
             this.roundedTextBoxPass.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedTextBoxPass.Location = new System.Drawing.Point(150, 374);
+            this.roundedTextBoxPass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.roundedTextBoxPass.Multiline = false;
             this.roundedTextBoxPass.Name = "roundedTextBoxPass";
             this.roundedTextBoxPass.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
@@ -100,6 +124,7 @@
             this.roundedTextBoxMail.BorderSize = 2;
             this.roundedTextBoxMail.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedTextBoxMail.Location = new System.Drawing.Point(150, 285);
+            this.roundedTextBoxMail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.roundedTextBoxMail.Multiline = false;
             this.roundedTextBoxMail.Name = "roundedTextBoxMail";
             this.roundedTextBoxMail.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
@@ -121,28 +146,6 @@
             this.pictureBoxLogo.Size = new System.Drawing.Size(170, 200);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
-            // 
-            // labelMail
-            // 
-            this.labelMail.AutoSize = true;
-            this.labelMail.BackColor = System.Drawing.Color.Transparent;
-            this.labelMail.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMail.Location = new System.Drawing.Point(154, 255);
-            this.labelMail.Name = "labelMail";
-            this.labelMail.Size = new System.Drawing.Size(78, 27);
-            this.labelMail.TabIndex = 4;
-            this.labelMail.Text = "Correo:";
-            // 
-            // labelPass
-            // 
-            this.labelPass.AutoSize = true;
-            this.labelPass.BackColor = System.Drawing.Color.Transparent;
-            this.labelPass.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPass.Location = new System.Drawing.Point(154, 344);
-            this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(120, 27);
-            this.labelPass.TabIndex = 5;
-            this.labelPass.Text = "Contraseña:";
             // 
             // Form1
             // 

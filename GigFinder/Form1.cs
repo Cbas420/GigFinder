@@ -16,5 +16,12 @@ namespace GigFinder
         {
             InitializeComponent();
         }
+
+        private void roundedButtonLogin_Click(object sender, EventArgs e)
+        {
+            SelectAccessForm form = new SelectAccessForm();
+            form.ShowDialog();
+            this.Hide();
+        }
     }
 }

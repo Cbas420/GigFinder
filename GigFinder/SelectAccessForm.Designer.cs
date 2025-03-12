@@ -210,6 +210,8 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.customPanelLogin);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "SelectAccessForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectAccessForm";
