@@ -67,6 +67,24 @@
     <Compile Include="Controls\RoundedTextBox.Designer.cs">
       <DependentUpon>RoundedTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateLocalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateLocalForm.Designer.cs">
+      <DependentUpon>CreateLocalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateMusicianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateMusicianForm.Designer.cs">
+      <DependentUpon>CreateMusicianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUserForm.Designer.cs">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\RoundedTextBox.resx">
       <DependentUpon>RoundedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateLocalForm.resx">
+      <DependentUpon>CreateLocalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
