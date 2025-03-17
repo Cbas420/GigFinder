@@ -32,9 +32,9 @@
             this.roundedTextBoxName = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxMail = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxPass = new GigFinder.Controls.RoundedTextBox();
-            this.roundedTextBox4 = new GigFinder.Controls.RoundedTextBox();
-            this.roundedTextBox5 = new GigFinder.Controls.RoundedTextBox();
-            this.roundedTextBox6 = new GigFinder.Controls.RoundedTextBox();
+            this.roundedTextBoxCapacity = new GigFinder.Controls.RoundedTextBox();
+            this.roundedTextBoxCoordX = new GigFinder.Controls.RoundedTextBox();
+            this.roundedTextBoxCoordY = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxConfirmPass = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxDescription = new GigFinder.Controls.RoundedTextBox();
             this.listBoxGenres = new System.Windows.Forms.ListBox();
@@ -116,62 +116,62 @@
             this.roundedTextBoxPass.Texts = "";
             this.roundedTextBoxPass.UnderlinedStyle = false;
             // 
-            // roundedTextBox4
+            // roundedTextBoxCapacity
             // 
-            this.roundedTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.roundedTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.roundedTextBox4.BorderFocusColor = System.Drawing.Color.Black;
-            this.roundedTextBox4.BorderRadius = 8;
-            this.roundedTextBox4.BorderSize = 2;
-            this.roundedTextBox4.Location = new System.Drawing.Point(425, 108);
-            this.roundedTextBox4.Multiline = false;
-            this.roundedTextBox4.Name = "roundedTextBox4";
-            this.roundedTextBox4.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
-            this.roundedTextBox4.PasswordChar = false;
-            this.roundedTextBox4.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.roundedTextBox4.PlaceholderText = "";
-            this.roundedTextBox4.Size = new System.Drawing.Size(320, 34);
-            this.roundedTextBox4.TabIndex = 4;
-            this.roundedTextBox4.Texts = "";
-            this.roundedTextBox4.UnderlinedStyle = false;
+            this.roundedTextBoxCapacity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.roundedTextBoxCapacity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBoxCapacity.BorderFocusColor = System.Drawing.Color.Black;
+            this.roundedTextBoxCapacity.BorderRadius = 8;
+            this.roundedTextBoxCapacity.BorderSize = 2;
+            this.roundedTextBoxCapacity.Location = new System.Drawing.Point(425, 108);
+            this.roundedTextBoxCapacity.Multiline = false;
+            this.roundedTextBoxCapacity.Name = "roundedTextBoxCapacity";
+            this.roundedTextBoxCapacity.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
+            this.roundedTextBoxCapacity.PasswordChar = false;
+            this.roundedTextBoxCapacity.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBoxCapacity.PlaceholderText = "";
+            this.roundedTextBoxCapacity.Size = new System.Drawing.Size(320, 34);
+            this.roundedTextBoxCapacity.TabIndex = 4;
+            this.roundedTextBoxCapacity.Texts = "";
+            this.roundedTextBoxCapacity.UnderlinedStyle = false;
             // 
-            // roundedTextBox5
+            // roundedTextBoxCoordX
             // 
-            this.roundedTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.roundedTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.roundedTextBox5.BorderFocusColor = System.Drawing.Color.Black;
-            this.roundedTextBox5.BorderRadius = 8;
-            this.roundedTextBox5.BorderSize = 2;
-            this.roundedTextBox5.Location = new System.Drawing.Point(425, 175);
-            this.roundedTextBox5.Multiline = false;
-            this.roundedTextBox5.Name = "roundedTextBox5";
-            this.roundedTextBox5.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
-            this.roundedTextBox5.PasswordChar = false;
-            this.roundedTextBox5.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.roundedTextBox5.PlaceholderText = "";
-            this.roundedTextBox5.Size = new System.Drawing.Size(320, 34);
-            this.roundedTextBox5.TabIndex = 5;
-            this.roundedTextBox5.Texts = "";
-            this.roundedTextBox5.UnderlinedStyle = false;
+            this.roundedTextBoxCoordX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.roundedTextBoxCoordX.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBoxCoordX.BorderFocusColor = System.Drawing.Color.Black;
+            this.roundedTextBoxCoordX.BorderRadius = 8;
+            this.roundedTextBoxCoordX.BorderSize = 2;
+            this.roundedTextBoxCoordX.Location = new System.Drawing.Point(425, 175);
+            this.roundedTextBoxCoordX.Multiline = false;
+            this.roundedTextBoxCoordX.Name = "roundedTextBoxCoordX";
+            this.roundedTextBoxCoordX.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
+            this.roundedTextBoxCoordX.PasswordChar = false;
+            this.roundedTextBoxCoordX.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBoxCoordX.PlaceholderText = "";
+            this.roundedTextBoxCoordX.Size = new System.Drawing.Size(320, 34);
+            this.roundedTextBoxCoordX.TabIndex = 5;
+            this.roundedTextBoxCoordX.Texts = "";
+            this.roundedTextBoxCoordX.UnderlinedStyle = false;
             // 
-            // roundedTextBox6
+            // roundedTextBoxCoordY
             // 
-            this.roundedTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.roundedTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.roundedTextBox6.BorderFocusColor = System.Drawing.Color.Black;
-            this.roundedTextBox6.BorderRadius = 8;
-            this.roundedTextBox6.BorderSize = 2;
-            this.roundedTextBox6.Location = new System.Drawing.Point(425, 242);
-            this.roundedTextBox6.Multiline = false;
-            this.roundedTextBox6.Name = "roundedTextBox6";
-            this.roundedTextBox6.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
-            this.roundedTextBox6.PasswordChar = false;
-            this.roundedTextBox6.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.roundedTextBox6.PlaceholderText = "";
-            this.roundedTextBox6.Size = new System.Drawing.Size(320, 34);
-            this.roundedTextBox6.TabIndex = 6;
-            this.roundedTextBox6.Texts = "";
-            this.roundedTextBox6.UnderlinedStyle = false;
+            this.roundedTextBoxCoordY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.roundedTextBoxCoordY.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBoxCoordY.BorderFocusColor = System.Drawing.Color.Black;
+            this.roundedTextBoxCoordY.BorderRadius = 8;
+            this.roundedTextBoxCoordY.BorderSize = 2;
+            this.roundedTextBoxCoordY.Location = new System.Drawing.Point(425, 242);
+            this.roundedTextBoxCoordY.Multiline = false;
+            this.roundedTextBoxCoordY.Name = "roundedTextBoxCoordY";
+            this.roundedTextBoxCoordY.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
+            this.roundedTextBoxCoordY.PasswordChar = false;
+            this.roundedTextBoxCoordY.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.roundedTextBoxCoordY.PlaceholderText = "";
+            this.roundedTextBoxCoordY.Size = new System.Drawing.Size(320, 34);
+            this.roundedTextBoxCoordY.TabIndex = 6;
+            this.roundedTextBoxCoordY.Texts = "";
+            this.roundedTextBoxCoordY.UnderlinedStyle = false;
             // 
             // roundedTextBoxConfirmPass
             // 
@@ -332,9 +332,9 @@
             this.Controls.Add(this.listBoxGenres);
             this.Controls.Add(this.roundedTextBoxDescription);
             this.Controls.Add(this.roundedTextBoxConfirmPass);
-            this.Controls.Add(this.roundedTextBox6);
-            this.Controls.Add(this.roundedTextBox5);
-            this.Controls.Add(this.roundedTextBox4);
+            this.Controls.Add(this.roundedTextBoxCoordY);
+            this.Controls.Add(this.roundedTextBoxCoordX);
+            this.Controls.Add(this.roundedTextBoxCapacity);
             this.Controls.Add(this.roundedTextBoxPass);
             this.Controls.Add(this.roundedTextBoxMail);
             this.Controls.Add(this.roundedTextBoxName);
@@ -352,9 +352,9 @@
         private Controls.RoundedTextBox roundedTextBoxName;
         private Controls.RoundedTextBox roundedTextBoxMail;
         private Controls.RoundedTextBox roundedTextBoxPass;
-        private Controls.RoundedTextBox roundedTextBox4;
-        private Controls.RoundedTextBox roundedTextBox5;
-        private Controls.RoundedTextBox roundedTextBox6;
+        private Controls.RoundedTextBox roundedTextBoxCapacity;
+        private Controls.RoundedTextBox roundedTextBoxCoordX;
+        private Controls.RoundedTextBox roundedTextBoxCoordY;
         private Controls.RoundedTextBox roundedTextBoxConfirmPass;
         private Controls.RoundedTextBox roundedTextBoxDescription;
         private System.Windows.Forms.ListBox listBoxGenres;
