@@ -37,7 +37,6 @@
             this.roundedButtonEdit = new GigFinder.Controls.RoundedButton();
             this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +44,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // customComboBoxFilter
@@ -61,7 +61,7 @@
             this.customComboBoxFilter.IconColor = System.Drawing.Color.White;
             this.customComboBoxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
             this.customComboBoxFilter.ListTextColor = System.Drawing.Color.White;
-            this.customComboBoxFilter.Location = new System.Drawing.Point(25, 123);
+            this.customComboBoxFilter.Location = new System.Drawing.Point(20, 123);
             this.customComboBoxFilter.MinimumSize = new System.Drawing.Size(100, 30);
             this.customComboBoxFilter.Name = "customComboBoxFilter";
             this.customComboBoxFilter.Padding = new System.Windows.Forms.Padding(1);
@@ -80,7 +80,7 @@
             this.customComboBoxOrder.IconColor = System.Drawing.Color.White;
             this.customComboBoxOrder.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
             this.customComboBoxOrder.ListTextColor = System.Drawing.Color.White;
-            this.customComboBoxOrder.Location = new System.Drawing.Point(181, 123);
+            this.customComboBoxOrder.Location = new System.Drawing.Point(176, 123);
             this.customComboBoxOrder.MinimumSize = new System.Drawing.Size(100, 30);
             this.customComboBoxOrder.Name = "customComboBoxOrder";
             this.customComboBoxOrder.Padding = new System.Windows.Forms.Padding(1);
@@ -98,7 +98,7 @@
             this.roundedButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButtonDelete.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButtonDelete.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonDelete.Location = new System.Drawing.Point(1023, 123);
+            this.roundedButtonDelete.Location = new System.Drawing.Point(1018, 123);
             this.roundedButtonDelete.Name = "roundedButtonDelete";
             this.roundedButtonDelete.Size = new System.Drawing.Size(150, 40);
             this.roundedButtonDelete.TabIndex = 12;
@@ -115,7 +115,7 @@
             this.roundedButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButtonEdit.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButtonEdit.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonEdit.Location = new System.Drawing.Point(867, 123);
+            this.roundedButtonEdit.Location = new System.Drawing.Point(862, 123);
             this.roundedButtonEdit.Name = "roundedButtonEdit";
             this.roundedButtonEdit.Size = new System.Drawing.Size(150, 40);
             this.roundedButtonEdit.TabIndex = 11;
@@ -132,7 +132,7 @@
             this.roundedButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButtonCreate.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButtonCreate.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonCreate.Location = new System.Drawing.Point(711, 123);
+            this.roundedButtonCreate.Location = new System.Drawing.Point(706, 123);
             this.roundedButtonCreate.Name = "roundedButtonCreate";
             this.roundedButtonCreate.Size = new System.Drawing.Size(150, 40);
             this.roundedButtonCreate.TabIndex = 10;
@@ -143,29 +143,18 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Passion One", 50F);
-            this.labelTitle.Location = new System.Drawing.Point(12, 12);
+            this.labelTitle.Location = new System.Drawing.Point(7, 12);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(445, 74);
             this.labelTitle.TabIndex = 9;
             this.labelTitle.Text = "Gestión de datos";
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogo.BackgroundImage = global::GigFinder.Properties.Resources.logo1;
-            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1098, 11);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(75, 90);
-            this.pictureBoxLogo.TabIndex = 8;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // customPanel1
             // 
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.customPanel1.BorderRadius = 8;
             this.customPanel1.Controls.Add(this.dataGridViewData);
-            this.customPanel1.Location = new System.Drawing.Point(25, 182);
+            this.customPanel1.Location = new System.Drawing.Point(20, 182);
             this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Padding = new System.Windows.Forms.Padding(6, 0, 6, 8);
@@ -262,6 +251,17 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.BackgroundImage = global::GigFinder.Properties.Resources.logo1;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1093, 11);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(75, 90);
+            this.pictureBoxLogo.TabIndex = 8;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // ManageDatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,9 +281,9 @@
             this.Name = "ManageDatabaseForm";
             this.Text = "ManageDatabaseForm";
             this.Load += new System.EventHandler(this.ManageDatabaseForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
