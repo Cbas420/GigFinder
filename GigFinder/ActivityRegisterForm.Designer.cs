@@ -217,6 +217,8 @@
             this.Controls.Add(this.roundedButtonDelete);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLogo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ActivityRegisterForm";
             this.Text = "ActivityRegisterForm";
             this.customPanel1.ResumeLayout(false);

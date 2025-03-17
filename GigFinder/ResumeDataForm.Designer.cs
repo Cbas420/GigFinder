@@ -110,6 +110,8 @@
             this.Controls.Add(this.labelGraphic1);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLogo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ResumeDataForm";
             this.Text = "ResumeDataForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();

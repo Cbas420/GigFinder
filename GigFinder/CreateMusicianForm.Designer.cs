@@ -365,6 +365,8 @@
             this.Controls.Add(this.roundedTextBoxMail);
             this.Controls.Add(this.roundedTextBoxName);
             this.Controls.Add(this.labelTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CreateMusicianForm";
             this.Text = "CreateMusicianForm";
             this.ResumeLayout(false);
