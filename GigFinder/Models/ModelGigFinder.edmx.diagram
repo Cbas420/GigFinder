@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3c097a35488846dd8828ce97fbb9c079" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="dam03Model.Aplications" Width="1.5" PointX="9.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Attachments" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.ChatRooms" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Events" Width="1.5" PointX="7.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Files" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Genres" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Incidences" Width="1.5" PointX="10.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Languages" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Locals" Width="1.5" PointX="5.125" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Messages" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Musicians" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Ratings" Width="1.5" PointX="12.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Users" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.UsersDesktop" Width="1.5" PointX="8" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="dam03Model.FK_EVENT_APLICATIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_USER_APLICATIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_ATTACHMENTS_FILE" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_USER_ATTACHMENTS" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_CHAT_USER_1" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_CHAT_USER_2" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_MSG_CHAT" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_EVENT_GENRE" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_EVENT_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_EVENT_musician" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_EVENT_RATINGS" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_MESSAGES_FILE" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_ADMIN_INCIDENCES" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_USER_INCIDENCES" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_musician_LANG" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_ID_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_MSG_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_musician_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.FK_USER_VALORATIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="dam03Model.UserGenres" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
