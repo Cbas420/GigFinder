@@ -16,7 +16,7 @@ namespace GigFinder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageDatabaseForm());
+            Application.Run(new Form1());
         }
     }
 }

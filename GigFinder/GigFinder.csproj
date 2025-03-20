@@ -161,6 +161,7 @@
     <Compile Include="Models\Musicians.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Orm.cs" />
     <Compile Include="Models\Ratings.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
@@ -170,6 +171,7 @@
     <Compile Include="Models\UsersDesktop.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UsersDesktopOrm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResumeDataForm.cs">

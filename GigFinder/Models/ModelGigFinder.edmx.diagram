@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="dam03Model.Genres" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="dam03Model.Incidences" Width="1.5" PointX="10.25" PointY="16" IsExpanded="true" />
         <EntityTypeShape EntityType="dam03Model.Languages" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="dam03Model.Locals" Width="1.5" PointX="5.125" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dam03Model.Locals" Width="1.5" PointX="5.125" PointY="21.25" IsExpanded="true" />
         <EntityTypeShape EntityType="dam03Model.Messages" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="dam03Model.Musicians" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="dam03Model.Ratings" Width="1.5" PointX="12.75" PointY="16.875" IsExpanded="true" />
