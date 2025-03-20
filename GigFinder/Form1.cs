@@ -21,7 +21,7 @@ namespace GigFinder
 
         private void roundedButtonLogin_Click(object sender, EventArgs e)
         {
-            UsersDesktop userLogin = UsersDesktopOrm.Selectlogin(roundedTextBoxMail.Texts, roundedTextBoxPass.Texts);
+            UsersDesktop userLogin = UsersDesktopOrm.Selectlogin(roundedTextBoxMail.Texts.Trim(), roundedTextBoxPass.Texts.Trim());
             if (userLogin != null)
             {
                 this.Hide();

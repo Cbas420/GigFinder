@@ -75,6 +75,7 @@
             this.customPanelStats.Name = "customPanelStats";
             this.customPanelStats.Size = new System.Drawing.Size(200, 200);
             this.customPanelStats.TabIndex = 3;
+            this.customPanelStats.Click += new System.EventHandler(this.customPanelStats_Click);
             // 
             // pictureBoxStats
             // 
@@ -86,6 +87,7 @@
             this.pictureBoxStats.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxStats.TabIndex = 3;
             this.pictureBoxStats.TabStop = false;
+            this.pictureBoxStats.Click += new System.EventHandler(this.pictureBoxStats_Click);
             // 
             // labelStats
             // 
@@ -98,6 +100,7 @@
             this.labelStats.TabIndex = 0;
             this.labelStats.Text = "Resumen de\r\ndatos";
             this.labelStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelStats.Click += new System.EventHandler(this.labelStats_Click);
             // 
             // customPanelRegister
             // 
@@ -109,6 +112,7 @@
             this.customPanelRegister.Name = "customPanelRegister";
             this.customPanelRegister.Size = new System.Drawing.Size(200, 200);
             this.customPanelRegister.TabIndex = 3;
+            this.customPanelRegister.Click += new System.EventHandler(this.customPanelRegister_Click);
             // 
             // pictureBoxRegister
             // 
@@ -120,6 +124,7 @@
             this.pictureBoxRegister.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxRegister.TabIndex = 4;
             this.pictureBoxRegister.TabStop = false;
+            this.pictureBoxRegister.Click += new System.EventHandler(this.pictureBoxRegister_Click);
             // 
             // labelRegister
             // 
@@ -132,6 +137,7 @@
             this.labelRegister.TabIndex = 0;
             this.labelRegister.Text = "Registo de\r\nactividad";
             this.labelRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRegister.Click += new System.EventHandler(this.labelRegister_Click);
             // 
             // customPanelData
             // 
@@ -143,6 +149,7 @@
             this.customPanelData.Name = "customPanelData";
             this.customPanelData.Size = new System.Drawing.Size(200, 200);
             this.customPanelData.TabIndex = 3;
+            this.customPanelData.Click += new System.EventHandler(this.customPanelData_Click);
             // 
             // pictureBoxData
             // 
@@ -154,6 +161,7 @@
             this.pictureBoxData.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxData.TabIndex = 2;
             this.pictureBoxData.TabStop = false;
+            this.pictureBoxData.Click += new System.EventHandler(this.pictureBoxData_Click);
             // 
             // labelData
             // 
@@ -166,6 +174,7 @@
             this.labelData.TabIndex = 0;
             this.labelData.Text = "Gestión de\r\ndatos";
             this.labelData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelData.Click += new System.EventHandler(this.labelData_Click);
             // 
             // customPanelUsers
             // 
@@ -177,6 +186,7 @@
             this.customPanelUsers.Name = "customPanelUsers";
             this.customPanelUsers.Size = new System.Drawing.Size(200, 200);
             this.customPanelUsers.TabIndex = 2;
+            this.customPanelUsers.Click += new System.EventHandler(this.customPanelUsers_Click);
             // 
             // pictureBoxUsers
             // 
@@ -188,6 +198,7 @@
             this.pictureBoxUsers.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxUsers.TabIndex = 1;
             this.pictureBoxUsers.TabStop = false;
+            this.pictureBoxUsers.Click += new System.EventHandler(this.pictureBoxUsers_Click);
             // 
             // labelUsers
             // 
@@ -200,6 +211,7 @@
             this.labelUsers.TabIndex = 0;
             this.labelUsers.Text = "Gestión de\r\nusuarios";
             this.labelUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelUsers.Click += new System.EventHandler(this.labelUsers_Click);
             // 
             // SelectAccessForm
             // 

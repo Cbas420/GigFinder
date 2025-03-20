@@ -15,6 +15,7 @@ namespace GigFinder
         public ResumeDataForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

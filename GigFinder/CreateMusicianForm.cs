@@ -15,6 +15,7 @@ namespace GigFinder
         public CreateMusicianForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }
