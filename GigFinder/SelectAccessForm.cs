@@ -17,47 +17,71 @@ namespace GigFinder
         public SelectAccessForm(UsersDesktop user)
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
             userLogin = user;
         }
 
         private void pictureBoxUsers_Click(object sender, EventArgs e)
         {
-            if (userLogin.type == "super")
-            {
-                ManageUsersForm formUsers = new ManageUsersForm();
-                formUsers.FormClosed += (s, args) =>
-                {
-                    this.Show();
-                };
-
-                formUsers.Show();
-            } else
-            {
-                MessageBox.Show("No tienes permisos para acceder a este apartado de la aplicación");
-            }
+            menuUsers();
         }
 
         private void labelUsers_Click(object sender, EventArgs e)
         {
-            if (userLogin.type == "super")
-            {
-                ManageUsersForm formUsers = new ManageUsersForm();
-                formUsers.FormClosed += (s, args) =>
-                {
-                    this.Show();
-                };
-
-                formUsers.Show();
-            }
-            else
-            {
-                MessageBox.Show("No tienes permisos para acceder a este apartado de la aplicación");
-            }
+            menuUsers();
         }
 
         private void customPanelUsers_Click(object sender, EventArgs e)
         {
+            menuUsers();
+        }
+
+        private void pictureBoxData_Click(object sender, EventArgs e)
+        {
+            menuData();
+        }
+
+        private void labelData_Click(object sender, EventArgs e)
+        {
+            menuData();
+        }
+
+        private void customPanelData_Click(object sender, EventArgs e)
+        {
+            menuData();
+        }
+
+        private void pictureBoxStats_Click(object sender, EventArgs e)
+        {
+            menuStats();
+        }
+
+        private void labelStats_Click(object sender, EventArgs e)
+        {
+            menuStats();
+        }
+
+        private void customPanelStats_Click(object sender, EventArgs e)
+        {
+            menuStats();
+        }
+
+        private void pictureBoxRegister_Click(object sender, EventArgs e)
+        {
+            menuRegister();
+        }
+
+        private void labelRegister_Click(object sender, EventArgs e)
+        {
+            menuRegister();
+        }
+
+        private void customPanelRegister_Click(object sender, EventArgs e)
+        {
+            menuRegister();
+        }
+
+        public void menuUsers()
+        {
             if (userLogin.type == "super")
             {
                 ManageUsersForm formUsers = new ManageUsersForm();
@@ -74,7 +98,7 @@ namespace GigFinder
             }
         }
 
-        private void pictureBoxData_Click(object sender, EventArgs e)
+        public void menuData()
         {
             ManageDatabaseForm formData = new ManageDatabaseForm();
             formData.FormClosed += (s, args) =>
@@ -85,29 +109,7 @@ namespace GigFinder
             formData.Show();
         }
 
-        private void labelData_Click(object sender, EventArgs e)
-        {
-            ManageDatabaseForm formData = new ManageDatabaseForm();
-            formData.FormClosed += (s, args) =>
-            {
-                this.Show();
-            };
-
-            formData.Show();
-        }
-
-        private void customPanelData_Click(object sender, EventArgs e)
-        {
-            ManageDatabaseForm formData = new ManageDatabaseForm();
-            formData.FormClosed += (s, args) =>
-            {
-                this.Show();
-            };
-
-            formData.Show();
-        }
-
-        private void pictureBoxStats_Click(object sender, EventArgs e)
+        public void menuStats()
         {
             ResumeDataForm formResume = new ResumeDataForm();
             formResume.FormClosed += (s, args) =>
@@ -118,59 +120,22 @@ namespace GigFinder
             formResume.Show();
         }
 
-        private void labelStats_Click(object sender, EventArgs e)
+        public void menuRegister()
         {
-            ResumeDataForm formResume = new ResumeDataForm();
-            formResume.FormClosed += (s, args) =>
+            if (userLogin.type == "super")
             {
-                this.Show();
-            };
+                ActivityRegisterForm formActivity = new ActivityRegisterForm();
+                formActivity.FormClosed += (s, args) =>
+                {
+                    this.Show();
+                };
 
-            formResume.Show();
-        }
-
-        private void customPanelStats_Click(object sender, EventArgs e)
-        {
-            ResumeDataForm formResume = new ResumeDataForm();
-            formResume.FormClosed += (s, args) =>
+                formActivity.Show();
+            }
+            else
             {
-                this.Show();
-            };
-
-            formResume.Show();
-        }
-
-        private void pictureBoxRegister_Click(object sender, EventArgs e)
-        {
-            ActivityRegisterForm formActivity = new ActivityRegisterForm();
-            formActivity.FormClosed += (s, args) =>
-            {
-                this.Show();
-            };
-
-            formActivity.Show();
-        }
-
-        private void labelRegister_Click(object sender, EventArgs e)
-        {
-            ActivityRegisterForm formActivity = new ActivityRegisterForm();
-            formActivity.FormClosed += (s, args) =>
-            {
-                this.Show();
-            };
-
-            formActivity.Show();
-        }
-
-        private void customPanelRegister_Click(object sender, EventArgs e)
-        {
-            ActivityRegisterForm formActivity = new ActivityRegisterForm();
-            formActivity.FormClosed += (s, args) =>
-            {
-                this.Show();
-            };
-
-            formActivity.Show();
+                MessageBox.Show("No tienes permisos para acceder a este apartado de la aplicación");
+            }
         }
     }
 }
