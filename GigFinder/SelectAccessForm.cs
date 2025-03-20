@@ -17,22 +17,8 @@ namespace GigFinder
         public SelectAccessForm(UsersDesktop user)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             userLogin = user;
-        }
-
-        private void SelectAccessForm_Load(object sender, EventArgs e)
-        {
-            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
-            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;
-
-            int formWidth = this.Width;
-            int formHeight = this.Height;
-
-            int positionX = (screenWidth - formWidth) / 2;
-            int positionY = (screenHeight - formHeight) / 2;
-
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(positionX, positionY);
         }
     }
 }

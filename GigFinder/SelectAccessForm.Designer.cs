@@ -215,7 +215,6 @@
             this.Name = "SelectAccessForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectAccessForm";
-            this.Load += new System.EventHandler(this.SelectAccessForm_Load);
             this.customPanelLogin.ResumeLayout(false);
             this.customPanelStats.ResumeLayout(false);
             this.customPanelStats.PerformLayout();
