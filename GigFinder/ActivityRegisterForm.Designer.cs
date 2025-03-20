@@ -221,6 +221,7 @@
             this.MaximizeBox = false;
             this.Name = "ActivityRegisterForm";
             this.Text = "ActivityRegisterForm";
+            this.Load += new System.EventHandler(this.ActivityRegisterForm_Load);
             this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegister)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();

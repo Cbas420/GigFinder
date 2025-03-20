@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Models;
+using GigFinder.Resources;
 
 namespace GigFinder
 {
@@ -136,6 +139,26 @@ namespace GigFinder
             {
                 MessageBox.Show("No tienes permisos para acceder a este apartado de la aplicación");
             }
+        }
+        private void CambiarIdioma()
+        {
+            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
+            Thread.CurrentThread.CurrentUICulture = cultura;
+            Thread.CurrentThread.CurrentCulture = cultura;
+            ActualizarTextos();
+        }
+
+        private void ActualizarTextos()
+        {
+            labelUsers.Text = Resources.Strings.menuUsers;
+            labelStats.Text = Resources.Strings.menuStats;
+            labelRegister.Text = Resources.Strings.menuActivity;
+            labelData.Text = Resources.Strings.menuData;
+        }
+
+        private void SelectAccessForm_Load(object sender, EventArgs e)
+        {
+            CambiarIdioma();
         }
     }
 }

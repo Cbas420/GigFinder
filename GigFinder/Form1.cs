@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Models;
+using GigFinder.Resources;
 
 namespace GigFinder
 {
@@ -42,6 +45,37 @@ namespace GigFinder
             
         }
 
-        
+        private void pictureBoxES_Click(object sender, EventArgs e)
+        {
+            LanguageManager.Idioma = "es-ES";
+            CambiarIdioma();
+        }
+
+        private void pictureBoxEN_Click(object sender, EventArgs e)
+        {
+            LanguageManager.Idioma = "en-En";
+            CambiarIdioma();
+        }
+
+        private void pictureBoxCA_Click(object sender, EventArgs e)
+        {
+            LanguageManager.Idioma = "ca-CA";
+            CambiarIdioma();
+        }
+
+        private void CambiarIdioma()
+        {
+            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
+            Thread.CurrentThread.CurrentUICulture = cultura;
+            Thread.CurrentThread.CurrentCulture = cultura;
+            ActualizarTextos();
+        }
+
+        private void ActualizarTextos()
+        {
+            labelMail.Text = Resources.Strings.labelMail;
+            labelPass.Text = Resources.Strings.labelPass;
+            roundedButtonLogin.Text = Resources.Strings.buttonLogin;
+        }
     }
 }

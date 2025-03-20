@@ -114,6 +114,7 @@
             this.MaximizeBox = false;
             this.Name = "ResumeDataForm";
             this.Text = "ResumeDataForm";
+            this.Load += new System.EventHandler(this.ResumeDataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

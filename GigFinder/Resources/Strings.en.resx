@@ -117,32 +117,119 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ImageActivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImageActivity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonCancelar" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="reino-unido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reino-unido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonCreate" xml:space="preserve">
+    <value>Create</value>
   </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonDelete" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="espana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\espana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonEdit" xml:space="preserve">
+    <value>Edit</value>
   </data>
-  <data name="ImageMonitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImageMonitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonLogin" xml:space="preserve">
+    <value>Log in</value>
   </data>
-  <data name="Fondo escritorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fondo escritorio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="comboBoxFilter" xml:space="preserve">
+    <value>Filter by</value>
   </data>
-  <data name="ImageData" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImageData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="comboBoxLang" xml:space="preserve">
+    <value>Songs languaje</value>
   </data>
-  <data name="ImageUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImageUsers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="comboBoxMostrar" xml:space="preserve">
+    <value>Show</value>
   </data>
-  <data name="bandera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bandera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="comboBoxOrder" xml:space="preserve">
+    <value>Order by</value>
+  </data>
+  <data name="comboBoxUserType" xml:space="preserve">
+    <value>User type</value>
+  </data>
+  <data name="labelCalendar" xml:space="preserve">
+    <value>Programed events</value>
+  </data>
+  <data name="labelCommonGenres" xml:space="preserve">
+    <value>Most common genres</value>
+  </data>
+  <data name="labelConfirPass" xml:space="preserve">
+    <value>Confirm password:</value>
+  </data>
+  <data name="labelCoordX" xml:space="preserve">
+    <value>Coordinate X:</value>
+  </data>
+  <data name="labelCoordY" xml:space="preserve">
+    <value>Coordinate Y:</value>
+  </data>
+  <data name="labelCreateLocal" xml:space="preserve">
+    <value>Create local</value>
+  </data>
+  <data name="labelCreateMusic" xml:space="preserve">
+    <value>Create musician</value>
+  </data>
+  <data name="labelCreateUser" xml:space="preserve">
+    <value>Create user</value>
+  </data>
+  <data name="labelDescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="labelGendres" xml:space="preserve">
+    <value>Musical genres:</value>
+  </data>
+  <data name="labelGroupSize" xml:space="preserve">
+    <value>Group members:</value>
+  </data>
+  <data name="labelLocalCapacity" xml:space="preserve">
+    <value>Local capacity:</value>
+  </data>
+  <data name="labelMail" xml:space="preserve">
+    <value>Mail:</value>
+  </data>
+  <data name="labelMap" xml:space="preserve">
+    <value>Locals location</value>
+  </data>
+  <data name="labelName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="labelPass" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="labelPrice" xml:space="preserve">
+    <value>Contratation price:</value>
+  </data>
+  <data name="labelSurname" xml:space="preserve">
+    <value>Surnames:</value>
+  </data>
+  <data name="labelUserType" xml:space="preserve">
+    <value>Users type</value>
+  </data>
+  <data name="menuActivity" xml:space="preserve">
+    <value>Activity
+log</value>
+  </data>
+  <data name="menuData" xml:space="preserve">
+    <value>Data
+managment</value>
+  </data>
+  <data name="menuStats" xml:space="preserve">
+    <value>Data
+suamary</value>
+  </data>
+  <data name="menuUsers" xml:space="preserve">
+    <value>User
+management</value>
+  </data>
+  <data name="titleActivity" xml:space="preserve">
+    <value>Activity log</value>
+  </data>
+  <data name="titleData" xml:space="preserve">
+    <value>Data management</value>
+  </data>
+  <data name="titleStats" xml:space="preserve">
+    <value>Data summary</value>
+  </data>
+  <data name="titleUsers" xml:space="preserve">
+    <value>User management</value>
   </data>
 </root>

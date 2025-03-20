@@ -35,8 +35,14 @@
             this.roundedTextBoxPass = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxMail = new GigFinder.Controls.RoundedTextBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBoxES = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEN = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCA = new System.Windows.Forms.PictureBox();
             this.customPanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxES)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCA)).BeginInit();
             this.SuspendLayout();
             // 
             // customPanelLogin
@@ -147,6 +153,42 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // pictureBoxES
+            // 
+            this.pictureBoxES.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxES.BackgroundImage = global::GigFinder.Properties.Resources.espana;
+            this.pictureBoxES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxES.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxES.Name = "pictureBoxES";
+            this.pictureBoxES.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxES.TabIndex = 1;
+            this.pictureBoxES.TabStop = false;
+            this.pictureBoxES.Click += new System.EventHandler(this.pictureBoxES_Click);
+            // 
+            // pictureBoxEN
+            // 
+            this.pictureBoxEN.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxEN.BackgroundImage = global::GigFinder.Properties.Resources.reino_unido;
+            this.pictureBoxEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEN.Location = new System.Drawing.Point(58, 12);
+            this.pictureBoxEN.Name = "pictureBoxEN";
+            this.pictureBoxEN.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxEN.TabIndex = 2;
+            this.pictureBoxEN.TabStop = false;
+            this.pictureBoxEN.Click += new System.EventHandler(this.pictureBoxEN_Click);
+            // 
+            // pictureBoxCA
+            // 
+            this.pictureBoxCA.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCA.BackgroundImage = global::GigFinder.Properties.Resources.bandera;
+            this.pictureBoxCA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxCA.Location = new System.Drawing.Point(104, 12);
+            this.pictureBoxCA.Name = "pictureBoxCA";
+            this.pictureBoxCA.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxCA.TabIndex = 3;
+            this.pictureBoxCA.TabStop = false;
+            this.pictureBoxCA.Click += new System.EventHandler(this.pictureBoxCA_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +196,9 @@
             this.BackgroundImage = global::GigFinder.Properties.Resources.Fondo_escritorio;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.pictureBoxCA);
+            this.Controls.Add(this.pictureBoxEN);
+            this.Controls.Add(this.pictureBoxES);
             this.Controls.Add(this.customPanelLogin);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -164,6 +209,9 @@
             this.customPanelLogin.ResumeLayout(false);
             this.customPanelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxES)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCA)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,6 +225,9 @@
         private Controls.RoundedButton roundedButtonLogin;
         private System.Windows.Forms.Label labelPass;
         private System.Windows.Forms.Label labelMail;
+        private System.Windows.Forms.PictureBox pictureBoxES;
+        private System.Windows.Forms.PictureBox pictureBoxEN;
+        private System.Windows.Forms.PictureBox pictureBoxCA;
     }
 }
 

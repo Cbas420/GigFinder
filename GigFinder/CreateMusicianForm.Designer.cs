@@ -369,6 +369,7 @@
             this.MaximizeBox = false;
             this.Name = "CreateMusicianForm";
             this.Text = "CreateMusicianForm";
+            this.Load += new System.EventHandler(this.CreateMusicianForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
