@@ -26,5 +26,27 @@ namespace GigFinder.Models
 
             return _usersDesktops;
         }
+
+        public static UsersDesktop SelectWithMail(string email)
+        {
+            UsersDesktop _userDesktop =
+                (UsersDesktop)(from user in Orm.bd.UsersDesktop
+                               where user.email == email
+                               select user).FirstOrDefault();
+
+            return _userDesktop;
+        }
+
+        public static void Insert(UsersDesktop _userDesktop)
+        {
+            Orm.bd.UsersDesktop.Add(_userDesktop);
+            Orm.bd.SaveChanges();
+        }
+
+        public static void Delete(UsersDesktop _userDesktop)
+        {
+            Orm.bd.UsersDesktop.Remove(_userDesktop);
+            Orm.bd.SaveChanges();
+        }
     }
 }

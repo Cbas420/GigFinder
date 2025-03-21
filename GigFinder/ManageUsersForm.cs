@@ -46,7 +46,7 @@ namespace GigFinder
 
         private void customComboBoxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedValue = customComboBoxFilter.SelectedItem?.ToString();
+            var selectedValue = customComboBoxFilter.SelectedItem?.ToString().ToLower();
 
             var filteredUsers = FilterUsersByType(selectedValue);
 
@@ -63,8 +63,61 @@ namespace GigFinder
             }
             else
             {
-                return _desktopUsers.Where(user => user.type == selectedType.ToLower()).ToList();
+                return _desktopUsers.Where(user => user.type == selectedType).ToList();
             }
+        }
+
+        private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedOrder = customComboBoxOrder.SelectedItem?.ToString();
+
+            var orderedUsers = OrderUsersBy(selectedOrder);
+
+            bindingSourceUsers.DataSource = orderedUsers;
+        }
+
+        private List<UsersDesktop> OrderUsersBy(string selectedOrder)
+        {
+            var _desktopUsers = UsersDesktopOrm.SelectGlobal();
+
+            switch (selectedOrder)
+            {
+                case "Id":
+                    return _desktopUsers.OrderBy(user => user.id).ToList();
+
+                case "Name":
+                    return _desktopUsers.OrderBy(user => user.name).ToList();
+
+                case "Surname":
+                    return _desktopUsers.OrderBy(user => user.surname).ToList();
+
+                case "Email":
+                    return _desktopUsers.OrderBy(user => user.email).ToList();
+
+                case "Type":
+                    return _desktopUsers.OrderBy(user => user.type).ToList();
+
+                default:
+                    return _desktopUsers;
+            }
+        }
+
+        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedButtonCreate_Click(object sender, EventArgs e)
+        {
+            CreateUserForm createUserForm = new CreateUserForm();
+            createUserForm.FormClosed += (s, args) =>
+            {
+                bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
+                customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
+            };
+
+            createUserForm.ShowDialog();
         }
     }
 }
