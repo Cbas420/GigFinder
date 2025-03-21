@@ -43,5 +43,28 @@ namespace GigFinder
         {
             CambiarIdioma();
         }
+
+        private void customComboBoxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedValue = customComboBoxFilter.SelectedItem?.ToString();
+
+            var filteredUsers = FilterUsersByType(selectedValue);
+
+            bindingSourceUsers.DataSource = filteredUsers;
+        }
+
+        private List<UsersDesktop> FilterUsersByType(string selectedType)
+        {
+            var _desktopUsers = UsersDesktopOrm.SelectGlobal();
+
+            if (string.IsNullOrEmpty(selectedType) || selectedType == "All")
+            {
+                return _desktopUsers;
+            }
+            else
+            {
+                return _desktopUsers.Where(user => user.type == selectedType.ToLower()).ToList();
+            }
+        }
     }
 }
