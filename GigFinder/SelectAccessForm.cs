@@ -88,6 +88,7 @@ namespace GigFinder
             if (userLogin.type == "super")
             {
                 ManageUsersForm formUsers = new ManageUsersForm();
+                this.Hide();
                 formUsers.FormClosed += (s, args) =>
                 {
                     this.Show();
@@ -104,6 +105,7 @@ namespace GigFinder
         public void menuData()
         {
             ManageDatabaseForm formData = new ManageDatabaseForm();
+            this.Hide();
             formData.FormClosed += (s, args) =>
             {
                 this.Show();
@@ -115,6 +117,7 @@ namespace GigFinder
         public void menuStats()
         {
             ResumeDataForm formResume = new ResumeDataForm();
+            this.Hide();
             formResume.FormClosed += (s, args) =>
             {
                 this.Show();
@@ -128,6 +131,7 @@ namespace GigFinder
             if (userLogin.type == "super")
             {
                 ActivityRegisterForm formActivity = new ActivityRegisterForm();
+                this.Hide();
                 formActivity.FormClosed += (s, args) =>
                 {
                     this.Show();

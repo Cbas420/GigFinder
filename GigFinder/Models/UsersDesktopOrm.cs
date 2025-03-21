@@ -17,5 +17,14 @@ namespace GigFinder.Models
 
             return _userDesktop;
         }
+
+        public static List<UsersDesktop> SelectGlobal()
+        {
+            List<UsersDesktop> _usersDesktops = (
+                from users in Orm.bd.UsersDesktop
+                select users).ToList();
+
+            return _usersDesktops;
+        }
     }
 }

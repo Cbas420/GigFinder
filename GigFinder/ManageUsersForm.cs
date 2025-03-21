@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Models;
 using GigFinder.Resources;
 
 namespace GigFinder
@@ -18,6 +19,7 @@ namespace GigFinder
         public ManageUsersForm()
         {
             InitializeComponent();
+            bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
         }
         private void CambiarIdioma()
         {

@@ -250,6 +250,22 @@
       <DependentUpon>ModelGigFinder.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\GigFinder.Models.Aplications.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Attachments.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.ChatRooms.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Events.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Files.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Genres.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Incidences.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Languages.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Locals.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Messages.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Musicians.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Orm.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Ratings.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Users.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.UsersDesktop.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.UsersDesktopOrm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
