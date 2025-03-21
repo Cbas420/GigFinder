@@ -381,6 +381,7 @@
             this.MaximizeBox = false;
             this.Name = "CreateLocalForm";
             this.Text = "CreateLocalForm";
+            this.Load += new System.EventHandler(this.CreateLocalForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
