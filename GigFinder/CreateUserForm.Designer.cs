@@ -40,7 +40,7 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.roundedTextBoxSurname = new GigFinder.Controls.RoundedTextBox();
             this.customComboBoxType = new GigFinder.Controls.CustomComboBox();
-            this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
+            this.roundedButtonSave = new GigFinder.Controls.RoundedButton();
             this.roundedButtonCancel = new GigFinder.Controls.RoundedButton();
             this.SuspendLayout();
             // 
@@ -103,6 +103,7 @@
             this.roundedTextBoxConfirmPass.BorderSize = 2;
             this.roundedTextBoxConfirmPass.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedTextBoxConfirmPass.Location = new System.Drawing.Point(32, 395);
+            this.roundedTextBoxConfirmPass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.roundedTextBoxConfirmPass.Multiline = false;
             this.roundedTextBoxConfirmPass.Name = "roundedTextBoxConfirmPass";
             this.roundedTextBoxConfirmPass.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
@@ -123,6 +124,7 @@
             this.roundedTextBoxPass.BorderSize = 2;
             this.roundedTextBoxPass.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedTextBoxPass.Location = new System.Drawing.Point(32, 325);
+            this.roundedTextBoxPass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.roundedTextBoxPass.Multiline = false;
             this.roundedTextBoxPass.Name = "roundedTextBoxPass";
             this.roundedTextBoxPass.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
@@ -143,6 +145,7 @@
             this.roundedTextBoxMail.BorderSize = 2;
             this.roundedTextBoxMail.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedTextBoxMail.Location = new System.Drawing.Point(32, 255);
+            this.roundedTextBoxMail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.roundedTextBoxMail.Multiline = false;
             this.roundedTextBoxMail.Name = "roundedTextBoxMail";
             this.roundedTextBoxMail.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
@@ -163,6 +166,7 @@
             this.roundedTextBoxName.BorderSize = 2;
             this.roundedTextBoxName.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedTextBoxName.Location = new System.Drawing.Point(32, 114);
+            this.roundedTextBoxName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.roundedTextBoxName.Multiline = false;
             this.roundedTextBoxName.Name = "roundedTextBoxName";
             this.roundedTextBoxName.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
@@ -193,6 +197,7 @@
             this.roundedTextBoxSurname.BorderSize = 2;
             this.roundedTextBoxSurname.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedTextBoxSurname.Location = new System.Drawing.Point(32, 184);
+            this.roundedTextBoxSurname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.roundedTextBoxSurname.Multiline = false;
             this.roundedTextBoxSurname.Name = "roundedTextBoxSurname";
             this.roundedTextBoxSurname.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
@@ -227,23 +232,23 @@
             this.customComboBoxType.TabIndex = 43;
             this.customComboBoxType.Texts = "Tipo de usuario";
             // 
-            // roundedButtonCreate
+            // roundedButtonSave
             // 
-            this.roundedButtonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonCreate.BorderRadius = 8;
-            this.roundedButtonCreate.BorderSize = 0;
-            this.roundedButtonCreate.FlatAppearance.BorderSize = 0;
-            this.roundedButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonCreate.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonCreate.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonCreate.Location = new System.Drawing.Point(32, 509);
-            this.roundedButtonCreate.Name = "roundedButtonCreate";
-            this.roundedButtonCreate.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCreate.TabIndex = 44;
-            this.roundedButtonCreate.Text = "Crear";
-            this.roundedButtonCreate.UseVisualStyleBackColor = false;
-            this.roundedButtonCreate.Click += new System.EventHandler(this.roundedButtonCreate_Click);
+            this.roundedButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonSave.BorderRadius = 8;
+            this.roundedButtonSave.BorderSize = 0;
+            this.roundedButtonSave.FlatAppearance.BorderSize = 0;
+            this.roundedButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonSave.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonSave.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonSave.Location = new System.Drawing.Point(32, 509);
+            this.roundedButtonSave.Name = "roundedButtonSave";
+            this.roundedButtonSave.Size = new System.Drawing.Size(150, 40);
+            this.roundedButtonSave.TabIndex = 44;
+            this.roundedButtonSave.Text = "Crear";
+            this.roundedButtonSave.UseVisualStyleBackColor = false;
+            this.roundedButtonSave.Click += new System.EventHandler(this.roundedButtonCreate_Click);
             // 
             // roundedButtonCancel
             // 
@@ -269,7 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 561);
             this.Controls.Add(this.roundedButtonCancel);
-            this.Controls.Add(this.roundedButtonCreate);
+            this.Controls.Add(this.roundedButtonSave);
             this.Controls.Add(this.customComboBoxType);
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.roundedTextBoxSurname);
@@ -285,6 +290,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "CreateUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateUserForm";
             this.Load += new System.EventHandler(this.CreateUserForm_Load);
             this.ResumeLayout(false);
@@ -306,7 +312,7 @@
         private System.Windows.Forms.Label labelSurname;
         private Controls.RoundedTextBox roundedTextBoxSurname;
         private Controls.CustomComboBox customComboBoxType;
-        private Controls.RoundedButton roundedButtonCreate;
+        private Controls.RoundedButton roundedButtonSave;
         private Controls.RoundedButton roundedButtonCancel;
     }
 }

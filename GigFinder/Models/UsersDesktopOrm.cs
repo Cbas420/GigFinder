@@ -48,5 +48,21 @@ namespace GigFinder.Models
             Orm.bd.UsersDesktop.Remove(_userDesktop);
             Orm.bd.SaveChanges();
         }
+
+        public static void Update(UsersDesktop _userDesktop)
+        {
+            var existingUser = Orm.bd.UsersDesktop.FirstOrDefault(user => user.id == _userDesktop.id);
+
+            if (existingUser != null)
+            {
+                existingUser.name = _userDesktop.name;
+                existingUser.surname = _userDesktop.surname;
+                existingUser.email = _userDesktop.email;
+                existingUser.password = _userDesktop.password;
+                existingUser.type = _userDesktop.type;
+
+                Orm.bd.SaveChanges();
+            }
+        }
     }
 }

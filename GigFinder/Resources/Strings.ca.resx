@@ -132,6 +132,9 @@
   <data name="buttonLogin" xml:space="preserve">
     <value>Entrar</value>
   </data>
+  <data name="buttonSave" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
   <data name="comboBoxFilter" xml:space="preserve">
     <value>Filtrar per</value>
   </data>
@@ -220,16 +223,56 @@ dades</value>
     <value>Gestió
 d'usuaris</value>
   </data>
+  <data name="messageComplete" xml:space="preserve">
+    <value>Si us plau, completeu tots els camps abans de continuar.</value>
+  </data>
+  <data name="messageCompleteShort" xml:space="preserve">
+    <value>Camps incomplets</value>
+  </data>
+  <data name="messagePassCheckShort" xml:space="preserve">
+    <value>Wrong passwords</value>
+  </data>
+  <data name="messagePassCheck" xml:space="preserve">
+    <value>Les contrasenyes no coincideixen.</value>
+  </data>
   <data name="titleActivity" xml:space="preserve">
     <value>Registre d'activitat</value>
   </data>
   <data name="titleData" xml:space="preserve">
     <value>Gestió de dades</value>
   </data>
+  <data name="titleEditUser" xml:space="preserve">
+    <value>Editar usuari</value>
+  </data>
   <data name="titleStats" xml:space="preserve">
     <value>Resum de dades</value>
   </data>
   <data name="titleUsers" xml:space="preserve">
     <value>Gestió d'usuaris</value>
+  </data>
+  <data name="messageUserExists" xml:space="preserve">
+    <value>Ja existeix un usuari amb aquest correu electrònic.</value>
+  </data>
+  <data name="messageUserExistsShort" xml:space="preserve">
+    <value>Usuari existent</value>
+  </data>
+  <data name="messageLogin" xml:space="preserve">
+    <value>L'usuari i/o la contrasenya són incorrectes
+</value>
+  </data>
+  <data name="askDelete" xml:space="preserve">
+    <value>Estàs segur que vols eliminar aquest usuari?</value>
+  </data>
+  <data name="askDeleteShort" xml:space="preserve">
+    <value>Confirmació d'eliminació</value>
+  </data>
+  <data name="selectionDelete" xml:space="preserve">
+    <value>Si us plau, seleccioneu un usuari per eliminar.</value>
+  </data>
+  <data name="selectionEdit" xml:space="preserve">
+    <value>Seleccioneu un usuari per editar.</value>
+  </data>
+  <data name="selectionShort" xml:space="preserve">
+    <value>Selecció requerida</value>
   </data>
 </root>

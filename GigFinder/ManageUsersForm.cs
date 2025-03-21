@@ -16,6 +16,12 @@ namespace GigFinder
 {
     public partial class ManageUsersForm : Form
     {
+        UsersDesktop userEdit = null;
+        string askDelete;
+        string askDeleteShort;
+        string selectionShort;
+        string selectionDelete;
+        string selectionEdit;
         public ManageUsersForm()
         {
             InitializeComponent();
@@ -31,6 +37,8 @@ namespace GigFinder
 
         private void ActualizarTextos()
         {
+            askDelete = Resources.Strings.askDelete;
+            askDeleteShort = Resources.Strings.askDeleteShort;
             labelTitle.Text = Resources.Strings.titleUsers;
             customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
             customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
@@ -106,10 +114,7 @@ namespace GigFinder
         {
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
-                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este usuario?",
-                                                      "Confirmación de eliminación",
-                                                      MessageBoxButtons.YesNo,
-                                                      MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show(askDelete, askDeleteShort, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
@@ -122,13 +127,13 @@ namespace GigFinder
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione un usuario para eliminar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(selectionDelete, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
-            CreateUserForm createUserForm = new CreateUserForm();
+            CreateUserForm createUserForm = new CreateUserForm(0, userEdit);
             createUserForm.FormClosed += (s, args) =>
             {
                 bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
@@ -137,6 +142,27 @@ namespace GigFinder
             };
 
             createUserForm.ShowDialog();
+        }
+
+        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsers.SelectedRows.Count > 0)
+            {
+                userEdit = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
+                CreateUserForm createUserForm = new CreateUserForm(1, userEdit);
+                createUserForm.FormClosed += (s, args) =>
+                {
+                    bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                    customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
+                    customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
+                };
+                createUserForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(selectionEdit, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
     }
 }

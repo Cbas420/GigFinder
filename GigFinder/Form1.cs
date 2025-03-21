@@ -16,6 +16,7 @@ namespace GigFinder
 {
     public partial class Form1 : Form
     {
+        string login;
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace GigFinder
             } else
             {
                 roundedTextBoxPass.Texts = "";
-                MessageBox.Show("El usuario y/o la contraseña son incorrectos");
+                MessageBox.Show(login);
             }
             
         }
@@ -76,6 +77,7 @@ namespace GigFinder
             labelMail.Text = Resources.Strings.labelMail;
             labelPass.Text = Resources.Strings.labelPass;
             roundedButtonLogin.Text = Resources.Strings.buttonLogin;
+            login = Resources.Strings.messageLogin;
         }
     }
 }

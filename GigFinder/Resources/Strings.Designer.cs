@@ -61,6 +61,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a ¿Estás seguro de que deseas eliminar este usuario?.
+        /// </summary>
+        internal static string askDelete {
+            get {
+                return ResourceManager.GetString("askDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Confirmación de eliminación.
+        /// </summary>
+        internal static string askDeleteShort {
+            get {
+                return ResourceManager.GetString("askDeleteShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Cancelar.
         /// </summary>
         internal static string buttonCancelar {
@@ -102,6 +120,15 @@ namespace GigFinder.Resources {
         internal static string buttonLogin {
             get {
                 return ResourceManager.GetString("buttonLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Guardar.
+        /// </summary>
+        internal static string buttonSave {
+            get {
+                return ResourceManager.GetString("buttonSave", resourceCulture);
             }
         }
         
@@ -362,6 +389,96 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, complete todos los campos antes de continuar..
+        /// </summary>
+        internal static string messageComplete {
+            get {
+                return ResourceManager.GetString("messageComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Campos incompletos.
+        /// </summary>
+        internal static string messageCompleteShort {
+            get {
+                return ResourceManager.GetString("messageCompleteShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El usuario y/o la contraseña son incorrectos.
+        /// </summary>
+        internal static string messageLogin {
+            get {
+                return ResourceManager.GetString("messageLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Las contraseñas no coinciden..
+        /// </summary>
+        internal static string messagePassCheck {
+            get {
+                return ResourceManager.GetString("messagePassCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contraseñas erróneas.
+        /// </summary>
+        internal static string messagePassCheckShort {
+            get {
+                return ResourceManager.GetString("messagePassCheckShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ya existe un usuario con ese email..
+        /// </summary>
+        internal static string messageUserExists {
+            get {
+                return ResourceManager.GetString("messageUserExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Usuario existente.
+        /// </summary>
+        internal static string messageUserExistsShort {
+            get {
+                return ResourceManager.GetString("messageUserExistsShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, seleccione un usuario para eliminar..
+        /// </summary>
+        internal static string selectionDelete {
+            get {
+                return ResourceManager.GetString("selectionDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, seleccione un usuario para editar..
+        /// </summary>
+        internal static string selectionEdit {
+            get {
+                return ResourceManager.GetString("selectionEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selección requerida.
+        /// </summary>
+        internal static string selectionShort {
+            get {
+                return ResourceManager.GetString("selectionShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Registro de actividad.
         /// </summary>
         internal static string titleActivity {
@@ -376,6 +493,15 @@ namespace GigFinder.Resources {
         internal static string titleData {
             get {
                 return ResourceManager.GetString("titleData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Editar usuario.
+        /// </summary>
+        internal static string titleEditUser {
+            get {
+                return ResourceManager.GetString("titleEditUser", resourceCulture);
             }
         }
         
