@@ -104,7 +104,26 @@ namespace GigFinder
 
         private void roundedButtonDelete_Click(object sender, EventArgs e)
         {
+            if (dataGridViewUsers.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este usuario?",
+                                                      "Confirmación de eliminación",
+                                                      MessageBoxButtons.YesNo,
+                                                      MessageBoxIcon.Warning);
 
+                if (result == DialogResult.Yes)
+                {
+                    UsersDesktopOrm.Delete((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem);
+
+                    bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                    customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
+                    customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un usuario para eliminar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void roundedButtonCreate_Click(object sender, EventArgs e)
