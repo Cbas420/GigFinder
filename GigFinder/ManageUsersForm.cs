@@ -37,14 +37,14 @@ namespace GigFinder
 
         private void ActualizarTextos()
         {
-            askDelete = Resources.Strings.askDelete;
-            askDeleteShort = Resources.Strings.askDeleteShort;
-            labelTitle.Text = Resources.Strings.titleUsers;
-            customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
-            customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
-            roundedButtonCreate.Text = Resources.Strings.buttonCreate;
-            roundedButtonEdit.Text = Resources.Strings.buttonEdit;
-            roundedButtonDelete.Text = Resources.Strings.buttonDelete;
+            askDelete = Strings.askDelete;
+            askDeleteShort = Strings.askDeleteShort;
+            labelTitle.Text = Strings.titleUsers;
+            customComboBoxFilter.Texts = Strings.comboBoxFilter;
+            customComboBoxOrder.Texts = Strings.comboBoxOrder;
+            roundedButtonCreate.Text = Strings.buttonCreate;
+            roundedButtonEdit.Text = Strings.buttonEdit;
+            roundedButtonDelete.Text = Strings.buttonDelete;
         }
 
         private void ManageUsersForm_Load(object sender, EventArgs e)
@@ -65,11 +65,10 @@ namespace GigFinder
         {
             var _desktopUsers = UsersDesktopOrm.SelectGlobal();
 
-            if (string.IsNullOrEmpty(selectedType) || selectedType == "All")
+            if (string.IsNullOrEmpty(selectedType) || selectedType == "all")
             {
                 return _desktopUsers;
-            }
-            else
+            } else
             {
                 return _desktopUsers.Where(user => user.type == selectedType).ToList();
             }
@@ -121,8 +120,8 @@ namespace GigFinder
                     UsersDesktopOrm.Delete((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem);
 
                     bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-                    customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
-                    customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
+                    customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
                 }
             }
             else
@@ -137,8 +136,8 @@ namespace GigFinder
             createUserForm.FormClosed += (s, args) =>
             {
                 bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-                customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
-                customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
+                customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                customComboBoxOrder.Texts = Strings.comboBoxOrder;
             };
 
             createUserForm.ShowDialog();
@@ -153,8 +152,8 @@ namespace GigFinder
                 createUserForm.FormClosed += (s, args) =>
                 {
                     bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-                    customComboBoxFilter.Texts = Resources.Strings.comboBoxFilter;
-                    customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
+                    customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
                 };
                 createUserForm.ShowDialog();
             }
