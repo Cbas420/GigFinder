@@ -40,6 +40,7 @@ namespace GigFinder
 
         private void ActualizarTextos()
         {
+            sameUserDelete = Strings.sameUserDelete;
             askDelete = Strings.askDelete;
             askDeleteShort = Strings.askDeleteShort;
             labelTitle.Text = Strings.titleUsers;
@@ -118,7 +119,7 @@ namespace GigFinder
             {
                 if (userLogin.Equals((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem))
                 {
-                    MessageBox.Show("No puedes eliminar tu propio usuario");
+                    MessageBox.Show(sameUserDelete);
                 } else
                 {
                     DialogResult result = MessageBox.Show(askDelete, askDeleteShort, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
