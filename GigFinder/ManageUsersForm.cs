@@ -142,14 +142,12 @@ namespace GigFinder
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
             CreateUserForm createUserForm = new CreateUserForm(0, userEdit);
-            createUserForm.FormClosed += (s, args) =>
+            if (createUserForm.ShowDialog() == DialogResult.OK)
             {
                 bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
                 customComboBoxFilter.Texts = Strings.comboBoxFilter;
                 customComboBoxOrder.Texts = Strings.comboBoxOrder;
-            };
-
-            createUserForm.ShowDialog();
+            }
         }
 
         private void roundedButtonEdit_Click(object sender, EventArgs e)
@@ -158,13 +156,12 @@ namespace GigFinder
             {
                 userEdit = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
                 CreateUserForm createUserForm = new CreateUserForm(1, userEdit);
-                createUserForm.FormClosed += (s, args) =>
+                if (createUserForm.ShowDialog() == DialogResult.OK)
                 {
                     bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
                     customComboBoxFilter.Texts = Strings.comboBoxFilter;
                     customComboBoxOrder.Texts = Strings.comboBoxOrder;
-                };
-                createUserForm.ShowDialog();
+                }
             }
             else
             {

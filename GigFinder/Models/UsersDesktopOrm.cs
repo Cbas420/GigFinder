@@ -37,10 +37,14 @@ namespace GigFinder.Models
             return _userDesktop;
         }
 
-        public static void Insert(UsersDesktop _userDesktop)
+        public static bool Insert(UsersDesktop _userDesktop)
         {
+            bool insert;
             Orm.bd.UsersDesktop.Add(_userDesktop);
             Orm.bd.SaveChanges();
+
+            insert = true;
+            return insert;
         }
 
         public static void Delete(UsersDesktop _userDesktop)

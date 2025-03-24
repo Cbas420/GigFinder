@@ -17,6 +17,7 @@ namespace GigFinder
 {
     public partial class CreateUserForm : Form
     {
+        public bool insertOk {  get; set; }
         int actionMade;
         UsersDesktop _useredit;
         string passCheck;
@@ -116,6 +117,7 @@ namespace GigFinder
 
                             clearInfo();
                             UsersDesktopOrm.Insert(_userDesktop);
+                            this.DialogResult = DialogResult.OK;
                             this.Close();
                         }
                         else
@@ -147,6 +149,7 @@ namespace GigFinder
 
                             clearInfo();
                             UsersDesktopOrm.Update(_useredit);
+                            this.DialogResult = DialogResult.OK;
                             this.Close();
                         }
                         else
