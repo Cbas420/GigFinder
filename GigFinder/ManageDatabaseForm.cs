@@ -31,11 +31,7 @@ namespace GigFinder
         private void ActualizarTextos()
         {
             labelTitle.Text = Resources.Strings.titleData;
-            customComboBoxFilter.Texts = Resources.Strings.comboBoxMostrar;
-            customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
-            roundedButtonCreate.Text = Resources.Strings.buttonCreate;
-            roundedButtonEdit.Text = Resources.Strings.buttonEdit;
-            roundedButtonDelete.Text = Resources.Strings.buttonDelete;
+            
         }
 
         private void ManageDatabaseForm_Load(object sender, EventArgs e)

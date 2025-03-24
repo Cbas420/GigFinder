@@ -107,6 +107,30 @@
     <Compile Include="ManageDatabaseForm.Designer.cs">
       <DependentUpon>ManageDatabaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageIncidences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageIncidences.Designer.cs">
+      <DependentUpon>ManageIncidences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageLocalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageLocalForm.Designer.cs">
+      <DependentUpon>ManageLocalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMusiciansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMusiciansForm.Designer.cs">
+      <DependentUpon>ManageMusiciansForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRatingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRatingsForm.Designer.cs">
+      <DependentUpon>ManageRatingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +239,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageDatabaseForm.resx">
       <DependentUpon>ManageDatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageIncidences.resx">
+      <DependentUpon>ManageIncidences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageLocalForm.resx">
+      <DependentUpon>ManageLocalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMusiciansForm.resx">
+      <DependentUpon>ManageMusiciansForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageRatingsForm.resx">
+      <DependentUpon>ManageRatingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageUsersForm.resx">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
