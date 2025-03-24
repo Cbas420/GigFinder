@@ -29,9 +29,7 @@ namespace GigFinder
         }
 
         private void ActualizarTextos()
-        {
-            labelTitle.Text = Resources.Strings.titleData;
-            
+        {            
         }
 
         private void ManageDatabaseForm_Load(object sender, EventArgs e)

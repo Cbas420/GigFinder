@@ -17,15 +17,18 @@ namespace GigFinder
     public partial class ManageUsersForm : Form
     {
         UsersDesktop userEdit = null;
+        UsersDesktop userLogin;
         string askDelete;
         string askDeleteShort;
         string selectionShort;
         string selectionDelete;
         string selectionEdit;
-        public ManageUsersForm()
+        string sameUserDelete;
+        public ManageUsersForm(UsersDesktop user)
         {
             InitializeComponent();
             bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+            userLogin = user;
         }
         private void CambiarIdioma()
         {
@@ -113,15 +116,21 @@ namespace GigFinder
         {
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
-                DialogResult result = MessageBox.Show(askDelete, askDeleteShort, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
+                if (userLogin.Equals((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem))
                 {
-                    UsersDesktopOrm.Delete((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem);
+                    MessageBox.Show("No puedes eliminar tu propio usuario");
+                } else
+                {
+                    DialogResult result = MessageBox.Show(askDelete, askDeleteShort, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                    bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-                    customComboBoxFilter.Texts = Strings.comboBoxFilter;
-                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                    if (result == DialogResult.Yes)
+                    {
+                        UsersDesktopOrm.Delete((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem);
+
+                        bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                        customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                        customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                    }
                 }
             }
             else

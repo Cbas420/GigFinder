@@ -275,4 +275,7 @@ management</value>
   <data name="selectionShort" xml:space="preserve">
     <value>Required selection</value>
   </data>
+  <data name="sameUserDelete" xml:space="preserve">
+    <value>You cannot delete your own user.</value>
+  </data>
 </root>

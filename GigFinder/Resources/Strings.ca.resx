@@ -275,4 +275,7 @@ d'usuaris</value>
   <data name="selectionShort" xml:space="preserve">
     <value>Selecció requerida</value>
   </data>
+  <data name="sameUserDelete" xml:space="preserve">
+    <value>No pots eliminar el teu propi usuari.</value>
+  </data>
 </root>

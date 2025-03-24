@@ -87,7 +87,7 @@ namespace GigFinder
         {
             if (userLogin.type == "super")
             {
-                ManageUsersForm formUsers = new ManageUsersForm();
+                ManageUsersForm formUsers = new ManageUsersForm(userLogin);
                 this.Hide();
                 formUsers.FormClosed += (s, args) =>
                 {

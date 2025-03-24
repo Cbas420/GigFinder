@@ -452,6 +452,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No puedes eliminar tu propio usuario..
+        /// </summary>
+        internal static string sameUserDelete {
+            get {
+                return ResourceManager.GetString("sameUserDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Por favor, seleccione un usuario para eliminar..
         /// </summary>
         internal static string selectionDelete {
