@@ -345,6 +345,10 @@
       <DependentUpon>ModelGigFinder.edmx</DependentUpon>
       <LastGenOutput>ModelGigFinder.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\buena-resena.png" />
+    <None Include="Resources\llamada-de-emergencia.png" />
+    <None Include="Resources\compra-local.png" />
+    <None Include="Resources\banda.png" />
     <None Include="Resources\bandera.png" />
     <None Include="Resources\reino-unido.png" />
     <None Include="Resources\espana.png" />

@@ -63,9 +63,39 @@ namespace GigFinder.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banda {
+            get {
+                object obj = ResourceManager.GetObject("banda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bandera {
             get {
                 object obj = ResourceManager.GetObject("bandera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buena_resena {
+            get {
+                object obj = ResourceManager.GetObject("buena-resena", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap compra_local {
+            get {
+                object obj = ResourceManager.GetObject("compra-local", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,16 @@ namespace GigFinder.Properties {
         internal static System.Drawing.Bitmap ImageUsers {
             get {
                 object obj = ResourceManager.GetObject("ImageUsers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap llamada_de_emergencia {
+            get {
+                object obj = ResourceManager.GetObject("llamada-de-emergencia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

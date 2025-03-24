@@ -118,17 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ImageActivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImageActivity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="reino-unido" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reino-unido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="llamada-de-emergencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\llamada-de-emergencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="espana" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\espana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImageActivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImageActivity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImageMonitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImageMonitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,10 +142,19 @@
   <data name="ImageData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImageData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bandera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bandera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="compra-local" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compra-local.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImageUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImageUsers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bandera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bandera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buena-resena" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buena-resena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

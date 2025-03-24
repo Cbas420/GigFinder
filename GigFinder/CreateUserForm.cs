@@ -44,25 +44,25 @@ namespace GigFinder
         {
             if (actionMade == 0)
             {
-                labelTitle.Text = Resources.Strings.labelCreateUser;
+                labelTitle.Text = Strings.labelCreateUser;
             } else
             {
-                labelTitle.Text = Resources.Strings.titleEditUser;
+                labelTitle.Text = Strings.titleEditUser;
             }
-            roundedButtonCancel.Text = Resources.Strings.buttonCancelar;
-            roundedButtonSave.Text = Resources.Strings.buttonSave;
-            labelMail.Text = Resources.Strings.labelMail;
-            labelName.Text = Resources.Strings.labelName;
-            labelConfirmPass.Text = Resources.Strings.labelConfirPass;
-            labelPass.Text = Resources.Strings.labelPass;
-            labelSurname.Text = Resources.Strings.labelSurname;
-            customComboBoxType.Texts = Resources.Strings.comboBoxUserType;
-            complete = Resources.Strings.messageComplete;
-            completeShort = Resources.Strings.messageCompleteShort;
-            passCheck = Resources.Strings.messagePassCheck;
-            passCheckShort = Resources.Strings.messagePassCheckShort;
-            userExists = Resources.Strings.messageUserExists;
-            userExistsShort = Resources.Strings.messageUserExistsShort;
+            roundedButtonCancel.Text = Strings.buttonCancelar;
+            roundedButtonSave.Text = Strings.buttonSave;
+            labelMail.Text = Strings.labelMail;
+            labelName.Text = Strings.labelName;
+            labelConfirmPass.Text = Strings.labelConfirPass;
+            labelPass.Text = Strings.labelPass;
+            labelSurname.Text = Strings.labelSurname;
+            customComboBoxType.Texts = Strings.comboBoxUserType;
+            complete = Strings.messageComplete;
+            completeShort = Strings.messageCompleteShort;
+            passCheck = Strings.messagePassCheck;
+            passCheckShort = Strings.messagePassCheckShort;
+            userExists = Strings.messageUserExists;
+            userExistsShort = Strings.messageUserExistsShort;
         }
 
         private void CreateUserForm_Load(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace GigFinder
 
         private void clearInfo()
         {
-            customComboBoxType.Texts = Resources.Strings.comboBoxUserType;
+            customComboBoxType.Texts = Strings.comboBoxUserType;
             roundedTextBoxConfirmPass.Texts = "";
             roundedTextBoxPass.Texts = "";
             roundedTextBoxName.Texts = "";
