@@ -4,7 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dam03Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dam03Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Activity_log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="action_made" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="date_log" Type="datetime" Nullable="false" />
+          <Property Name="admin_id" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Aplications">
           <Key>
             <PropertyRef Name="user_id" />
@@ -154,6 +163,18 @@
           <Property Name="password" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="type" Type="varchar" MaxLength="5" Nullable="false" />
         </EntityType>
+        <Association Name="FK_ADMIN_ACTIVITY">
+          <End Role="UsersDesktop" Type="Self.UsersDesktop" Multiplicity="1" />
+          <End Role="Activity_log" Type="Self.Activity_log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsersDesktop">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_log">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ADMIN_INCIDENCES">
           <End Role="UsersDesktop" Type="Self.UsersDesktop" Multiplicity="0..1" />
           <End Role="Incidences" Type="Self.Incidences" Multiplicity="*" />
@@ -407,6 +428,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="dam03ModelStoreContainer">
+          <EntitySet Name="Activity_log" EntityType="Self.Activity_log" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Aplications" EntityType="Self.Aplications" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Attachments" EntityType="Self.Attachments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ChatRooms" EntityType="Self.ChatRooms" Schema="dbo" store:Type="Tables" />
@@ -422,6 +444,10 @@
           <EntitySet Name="UserGenres" EntityType="Self.UserGenres" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UsersDesktop" EntityType="Self.UsersDesktop" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ADMIN_ACTIVITY" Association="Self.FK_ADMIN_ACTIVITY">
+            <End Role="UsersDesktop" EntitySet="UsersDesktop" />
+            <End Role="Activity_log" EntitySet="Activity_log" />
+          </AssociationSet>
           <AssociationSet Name="FK_ADMIN_INCIDENCES" Association="Self.FK_ADMIN_INCIDENCES">
             <End Role="UsersDesktop" EntitySet="UsersDesktop" />
             <End Role="Incidences" EntitySet="Incidences" />
@@ -507,8 +533,7 @@
             <End Role="Ratings" EntitySet="Ratings" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dam03Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -692,6 +717,7 @@
           <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Incidences" Relationship="Self.FK_ADMIN_INCIDENCES" FromRole="UsersDesktop" ToRole="Incidences" />
+          <NavigationProperty Name="Activity_log" Relationship="dam03Model.FK_ADMIN_ACTIVITY" FromRole="UsersDesktop" ToRole="Activity_log" />
         </EntityType>
         <Association Name="FK_EVENT_APLICATIONS">
           <End Role="Events" Type="Self.Events" Multiplicity="1" />
@@ -1020,7 +1046,34 @@
             <End Role="Genres" EntitySet="Genres" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="Activity_log" EntityType="dam03Model.Activity_log" />
+          <AssociationSet Name="FK_ADMIN_ACTIVITY" Association="dam03Model.FK_ADMIN_ACTIVITY">
+            <End Role="UsersDesktop" EntitySet="UsersDesktop" />
+            <End Role="Activity_log" EntitySet="Activity_log" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Activity_log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="action_made" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="date_log" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="admin_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UsersDesktop" Relationship="dam03Model.FK_ADMIN_ACTIVITY" FromRole="Activity_log" ToRole="UsersDesktop" />
+        </EntityType>
+        <Association Name="FK_ADMIN_ACTIVITY">
+          <End Type="dam03Model.UsersDesktop" Role="UsersDesktop" Multiplicity="1" />
+          <End Type="dam03Model.Activity_log" Role="Activity_log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsersDesktop">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_log">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1188,6 +1241,16 @@
               <ScalarProperty Name="id" ColumnName="user_id" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="Activity_log">
+            <EntityTypeMapping TypeName="dam03Model.Activity_log">
+              <MappingFragment StoreEntitySet="Activity_log">
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="date_log" ColumnName="date_log" />
+                <ScalarProperty Name="action_made" ColumnName="action_made" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

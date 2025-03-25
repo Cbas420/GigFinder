@@ -35,8 +35,6 @@
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
             this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
-            this.roundedButtonEdit = new GigFinder.Controls.RoundedButton();
-            this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.customPanel1.SuspendLayout();
@@ -140,49 +138,15 @@
             this.roundedButtonDelete.Text = "Eliminar";
             this.roundedButtonDelete.UseVisualStyleBackColor = false;
             // 
-            // roundedButtonEdit
-            // 
-            this.roundedButtonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonEdit.BorderRadius = 8;
-            this.roundedButtonEdit.BorderSize = 0;
-            this.roundedButtonEdit.FlatAppearance.BorderSize = 0;
-            this.roundedButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonEdit.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonEdit.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonEdit.Location = new System.Drawing.Point(862, 123);
-            this.roundedButtonEdit.Name = "roundedButtonEdit";
-            this.roundedButtonEdit.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonEdit.TabIndex = 19;
-            this.roundedButtonEdit.Text = "Editar";
-            this.roundedButtonEdit.UseVisualStyleBackColor = false;
-            // 
-            // roundedButtonCreate
-            // 
-            this.roundedButtonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonCreate.BorderRadius = 8;
-            this.roundedButtonCreate.BorderSize = 0;
-            this.roundedButtonCreate.FlatAppearance.BorderSize = 0;
-            this.roundedButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonCreate.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonCreate.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonCreate.Location = new System.Drawing.Point(706, 123);
-            this.roundedButtonCreate.Name = "roundedButtonCreate";
-            this.roundedButtonCreate.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCreate.TabIndex = 18;
-            this.roundedButtonCreate.Text = "Crear";
-            this.roundedButtonCreate.UseVisualStyleBackColor = false;
-            // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Passion One", 50F);
             this.labelTitle.Location = new System.Drawing.Point(7, 12);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(445, 74);
+            this.labelTitle.Size = new System.Drawing.Size(623, 74);
             this.labelTitle.TabIndex = 17;
-            this.labelTitle.Text = "Gestión de datos";
+            this.labelTitle.Text = "Gestión de Valoraciones";
             // 
             // pictureBoxLogo
             // 
@@ -204,8 +168,6 @@
             this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.customComboBoxOrder);
             this.Controls.Add(this.roundedButtonDelete);
-            this.Controls.Add(this.roundedButtonEdit);
-            this.Controls.Add(this.roundedButtonCreate);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -227,8 +189,6 @@
         private System.Windows.Forms.DataGridView dataGridViewData;
         private Controls.CustomComboBox customComboBoxOrder;
         private Controls.RoundedButton roundedButtonDelete;
-        private Controls.RoundedButton roundedButtonEdit;
-        private Controls.RoundedButton roundedButtonCreate;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
     }

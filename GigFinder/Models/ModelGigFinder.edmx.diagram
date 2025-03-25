@@ -39,6 +39,8 @@
         <AssociationConnector Association="dam03Model.FK_musician_ID" ManuallyRouted="false" />
         <AssociationConnector Association="dam03Model.FK_USER_VALORATIONS" ManuallyRouted="false" />
         <AssociationConnector Association="dam03Model.UserGenres" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dam03Model.Activity_log" Width="1.5" PointX="10.25" PointY="9.375" />
+        <AssociationConnector Association="dam03Model.FK_ADMIN_ACTIVITY" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

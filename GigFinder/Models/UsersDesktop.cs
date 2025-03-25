@@ -18,6 +18,7 @@ namespace GigFinder.Models
         public UsersDesktop()
         {
             this.Incidences = new HashSet<Incidences>();
+            this.Activity_log = new HashSet<Activity_log>();
         }
     
         public int id { get; set; }
@@ -29,5 +30,7 @@ namespace GigFinder.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Incidences> Incidences { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Activity_log> Activity_log { get; set; }
     }
 }

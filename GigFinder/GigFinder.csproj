@@ -137,6 +137,9 @@
     <Compile Include="ManageUsersForm.Designer.cs">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Activity_log.cs">
+      <DependentUpon>ModelGigFinder.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Aplications.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
