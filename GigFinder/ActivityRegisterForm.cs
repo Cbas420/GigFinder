@@ -32,7 +32,7 @@ namespace GigFinder
 
         private void ActualizarTextos()
         {
-            labelTitle.Text = Resources.Strings.titleActivity;
+            labelTitle.Text = Strings.titleActivity;
         }
 
         private void ActivityRegisterForm_Load(object sender, EventArgs e)

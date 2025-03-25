@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.customPanel1 = new GigFinder.Controls.CustomPanel();
-            this.dataGridViewData = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLocal = new System.Windows.Forms.DataGridView();
             this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
             this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
             this.roundedButtonEdit = new GigFinder.Controls.RoundedButton();
@@ -40,7 +40,7 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.customPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLocal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.customPanel1.BorderRadius = 8;
-            this.customPanel1.Controls.Add(this.dataGridViewData);
+            this.customPanel1.Controls.Add(this.dataGridViewLocal);
             this.customPanel1.Location = new System.Drawing.Point(20, 182);
             this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.customPanel1.Name = "customPanel1";
@@ -56,53 +56,54 @@
             this.customPanel1.Size = new System.Drawing.Size(1148, 454);
             this.customPanel1.TabIndex = 22;
             // 
-            // dataGridViewData
+            // dataGridViewLocal
             // 
-            this.dataGridViewData.AllowUserToAddRows = false;
-            this.dataGridViewData.AllowUserToDeleteRows = false;
-            this.dataGridViewData.AllowUserToResizeRows = false;
-            this.dataGridViewData.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Passion One", 16F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewData.ColumnHeadersHeight = 35;
-            this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewData.EnableHeadersVisualStyles = false;
-            this.dataGridViewData.GridColor = System.Drawing.Color.White;
-            this.dataGridViewData.Location = new System.Drawing.Point(6, 0);
-            this.dataGridViewData.MultiSelect = false;
-            this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewData.RowHeadersVisible = false;
-            this.dataGridViewData.RowTemplate.Height = 25;
-            this.dataGridViewData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewData.Size = new System.Drawing.Size(1136, 446);
-            this.dataGridViewData.TabIndex = 0;
+            this.dataGridViewLocal.AllowUserToAddRows = false;
+            this.dataGridViewLocal.AllowUserToDeleteRows = false;
+            this.dataGridViewLocal.AllowUserToResizeRows = false;
+            this.dataGridViewLocal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewLocal.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewLocal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewLocal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Passion One", 16F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLocal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewLocal.ColumnHeadersHeight = 35;
+            this.dataGridViewLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLocal.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewLocal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewLocal.EnableHeadersVisualStyles = false;
+            this.dataGridViewLocal.GridColor = System.Drawing.Color.White;
+            this.dataGridViewLocal.Location = new System.Drawing.Point(6, 0);
+            this.dataGridViewLocal.MultiSelect = false;
+            this.dataGridViewLocal.Name = "dataGridViewLocal";
+            this.dataGridViewLocal.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLocal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewLocal.RowHeadersVisible = false;
+            this.dataGridViewLocal.RowTemplate.Height = 25;
+            this.dataGridViewLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewLocal.Size = new System.Drawing.Size(1136, 446);
+            this.dataGridViewLocal.TabIndex = 0;
             // 
             // customComboBoxOrder
             // 
@@ -215,7 +216,7 @@
             this.Text = "ManageLocalForm";
             this.Load += new System.EventHandler(this.ManageLocalForm_Load);
             this.customPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLocal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,7 +226,7 @@
         #endregion
 
         private Controls.CustomPanel customPanel1;
-        private System.Windows.Forms.DataGridView dataGridViewData;
+        private System.Windows.Forms.DataGridView dataGridViewLocal;
         private Controls.CustomComboBox customComboBoxOrder;
         private Controls.RoundedButton roundedButtonDelete;
         private Controls.RoundedButton roundedButtonEdit;
