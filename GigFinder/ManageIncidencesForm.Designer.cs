@@ -28,151 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.customPanel1 = new GigFinder.Controls.CustomPanel();
-            this.dataGridViewData = new System.Windows.Forms.DataGridView();
-            this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
-            this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
-            this.roundedButtonEdit = new GigFinder.Controls.RoundedButton();
-            this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.customPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
+            this.roundedButtonResolve = new GigFinder.Controls.RoundedButton();
+            this.customPanel1 = new GigFinder.Controls.CustomPanel();
+            this.dataGridViewIncidencies = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminnoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceIncidencies = new System.Windows.Forms.BindingSource(this.components);
+            this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
+            this.customComboBoxFilter = new GigFinder.Controls.CustomComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.customPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncidencies)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceIncidencies)).BeginInit();
             this.SuspendLayout();
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            this.customPanel1.BorderRadius = 8;
-            this.customPanel1.Controls.Add(this.dataGridViewData);
-            this.customPanel1.Location = new System.Drawing.Point(20, 182);
-            this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Padding = new System.Windows.Forms.Padding(6, 0, 6, 8);
-            this.customPanel1.Size = new System.Drawing.Size(1148, 454);
-            this.customPanel1.TabIndex = 22;
-            // 
-            // dataGridViewData
-            // 
-            this.dataGridViewData.AllowUserToAddRows = false;
-            this.dataGridViewData.AllowUserToDeleteRows = false;
-            this.dataGridViewData.AllowUserToResizeRows = false;
-            this.dataGridViewData.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Passion One", 16F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewData.ColumnHeadersHeight = 35;
-            this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewData.EnableHeadersVisualStyles = false;
-            this.dataGridViewData.GridColor = System.Drawing.Color.White;
-            this.dataGridViewData.Location = new System.Drawing.Point(6, 0);
-            this.dataGridViewData.MultiSelect = false;
-            this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewData.RowHeadersVisible = false;
-            this.dataGridViewData.RowTemplate.Height = 25;
-            this.dataGridViewData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewData.Size = new System.Drawing.Size(1136, 446);
-            this.dataGridViewData.TabIndex = 0;
-            // 
-            // customComboBoxOrder
-            // 
-            this.customComboBoxOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.customComboBoxOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.customComboBoxOrder.BorderSize = 1;
-            this.customComboBoxOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.customComboBoxOrder.Font = new System.Drawing.Font("Passion One", 14F);
-            this.customComboBoxOrder.ForeColor = System.Drawing.Color.White;
-            this.customComboBoxOrder.IconColor = System.Drawing.Color.White;
-            this.customComboBoxOrder.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.customComboBoxOrder.ListTextColor = System.Drawing.Color.White;
-            this.customComboBoxOrder.Location = new System.Drawing.Point(20, 123);
-            this.customComboBoxOrder.MinimumSize = new System.Drawing.Size(100, 30);
-            this.customComboBoxOrder.Name = "customComboBoxOrder";
-            this.customComboBoxOrder.Padding = new System.Windows.Forms.Padding(1);
-            this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
-            this.customComboBoxOrder.TabIndex = 21;
-            this.customComboBoxOrder.Texts = "Ordenar por";
-            // 
-            // roundedButtonDelete
-            // 
-            this.roundedButtonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.roundedButtonDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonDelete.BorderRadius = 8;
-            this.roundedButtonDelete.BorderSize = 0;
-            this.roundedButtonDelete.FlatAppearance.BorderSize = 0;
-            this.roundedButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonDelete.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonDelete.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonDelete.Location = new System.Drawing.Point(1018, 123);
-            this.roundedButtonDelete.Name = "roundedButtonDelete";
-            this.roundedButtonDelete.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonDelete.TabIndex = 20;
-            this.roundedButtonDelete.Text = "Eliminar";
-            this.roundedButtonDelete.UseVisualStyleBackColor = false;
-            // 
-            // roundedButtonEdit
-            // 
-            this.roundedButtonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonEdit.BorderRadius = 8;
-            this.roundedButtonEdit.BorderSize = 0;
-            this.roundedButtonEdit.FlatAppearance.BorderSize = 0;
-            this.roundedButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonEdit.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonEdit.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonEdit.Location = new System.Drawing.Point(862, 123);
-            this.roundedButtonEdit.Name = "roundedButtonEdit";
-            this.roundedButtonEdit.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonEdit.TabIndex = 19;
-            this.roundedButtonEdit.Text = "Editar";
-            this.roundedButtonEdit.UseVisualStyleBackColor = false;
-            // 
-            // roundedButtonCreate
-            // 
-            this.roundedButtonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.roundedButtonCreate.BorderRadius = 8;
-            this.roundedButtonCreate.BorderSize = 0;
-            this.roundedButtonCreate.FlatAppearance.BorderSize = 0;
-            this.roundedButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonCreate.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonCreate.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonCreate.Location = new System.Drawing.Point(706, 123);
-            this.roundedButtonCreate.Name = "roundedButtonCreate";
-            this.roundedButtonCreate.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCreate.TabIndex = 18;
-            this.roundedButtonCreate.Text = "Crear";
-            this.roundedButtonCreate.UseVisualStyleBackColor = false;
             // 
             // labelTitle
             // 
@@ -180,9 +58,9 @@
             this.labelTitle.Font = new System.Drawing.Font("Passion One", 50F);
             this.labelTitle.Location = new System.Drawing.Point(7, 12);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(445, 74);
+            this.labelTitle.Size = new System.Drawing.Size(579, 74);
             this.labelTitle.TabIndex = 17;
-            this.labelTitle.Text = "Gestión de datos";
+            this.labelTitle.Text = "Gestión de incidencias";
             // 
             // pictureBoxLogo
             // 
@@ -195,17 +73,199 @@
             this.pictureBoxLogo.TabIndex = 16;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // roundedButtonResolve
+            // 
+            this.roundedButtonResolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonResolve.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.roundedButtonResolve.BorderRadius = 8;
+            this.roundedButtonResolve.BorderSize = 0;
+            this.roundedButtonResolve.FlatAppearance.BorderSize = 0;
+            this.roundedButtonResolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonResolve.Font = new System.Drawing.Font("Passion One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonResolve.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonResolve.Location = new System.Drawing.Point(1018, 124);
+            this.roundedButtonResolve.Name = "roundedButtonResolve";
+            this.roundedButtonResolve.Size = new System.Drawing.Size(150, 40);
+            this.roundedButtonResolve.TabIndex = 23;
+            this.roundedButtonResolve.Text = "Resolver";
+            this.roundedButtonResolve.UseVisualStyleBackColor = false;
+            this.roundedButtonResolve.Click += new System.EventHandler(this.roundedButtonResolve_Click);
+            // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            this.customPanel1.BorderRadius = 8;
+            this.customPanel1.Controls.Add(this.dataGridViewIncidencies);
+            this.customPanel1.Location = new System.Drawing.Point(20, 182);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Padding = new System.Windows.Forms.Padding(6, 0, 6, 8);
+            this.customPanel1.Size = new System.Drawing.Size(1148, 454);
+            this.customPanel1.TabIndex = 22;
+            // 
+            // dataGridViewIncidencies
+            // 
+            this.dataGridViewIncidencies.AllowUserToAddRows = false;
+            this.dataGridViewIncidencies.AllowUserToDeleteRows = false;
+            this.dataGridViewIncidencies.AllowUserToResizeRows = false;
+            this.dataGridViewIncidencies.AutoGenerateColumns = false;
+            this.dataGridViewIncidencies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewIncidencies.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewIncidencies.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewIncidencies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewIncidencies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Passion One", 16F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewIncidencies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewIncidencies.ColumnHeadersHeight = 35;
+            this.dataGridViewIncidencies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewIncidencies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.adminnoteDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.useridDataGridViewTextBoxColumn,
+            this.adminidDataGridViewTextBoxColumn});
+            this.dataGridViewIncidencies.DataSource = this.bindingSourceIncidencies;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewIncidencies.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewIncidencies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewIncidencies.EnableHeadersVisualStyles = false;
+            this.dataGridViewIncidencies.GridColor = System.Drawing.Color.White;
+            this.dataGridViewIncidencies.Location = new System.Drawing.Point(6, 0);
+            this.dataGridViewIncidencies.MultiSelect = false;
+            this.dataGridViewIncidencies.Name = "dataGridViewIncidencies";
+            this.dataGridViewIncidencies.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewIncidencies.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewIncidencies.RowHeadersVisible = false;
+            this.dataGridViewIncidencies.RowTemplate.Height = 25;
+            this.dataGridViewIncidencies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewIncidencies.Size = new System.Drawing.Size(1136, 446);
+            this.dataGridViewIncidencies.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adminnoteDataGridViewTextBoxColumn
+            // 
+            this.adminnoteDataGridViewTextBoxColumn.DataPropertyName = "admin_note";
+            this.adminnoteDataGridViewTextBoxColumn.HeaderText = "admin_note";
+            this.adminnoteDataGridViewTextBoxColumn.Name = "adminnoteDataGridViewTextBoxColumn";
+            this.adminnoteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // useridDataGridViewTextBoxColumn
+            // 
+            this.useridDataGridViewTextBoxColumn.DataPropertyName = "user_id";
+            this.useridDataGridViewTextBoxColumn.HeaderText = "user_id";
+            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
+            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adminidDataGridViewTextBoxColumn
+            // 
+            this.adminidDataGridViewTextBoxColumn.DataPropertyName = "admin_id";
+            this.adminidDataGridViewTextBoxColumn.HeaderText = "admin_id";
+            this.adminidDataGridViewTextBoxColumn.Name = "adminidDataGridViewTextBoxColumn";
+            this.adminidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceIncidencies
+            // 
+            this.bindingSourceIncidencies.DataSource = typeof(GigFinder.Models.Incidences);
+            // 
+            // customComboBoxOrder
+            // 
+            this.customComboBoxOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxOrder.BorderSize = 1;
+            this.customComboBoxOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.customComboBoxOrder.Font = new System.Drawing.Font("Passion One", 14F);
+            this.customComboBoxOrder.ForeColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.IconColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.Items.AddRange(new object[] {
+            "Status",
+            "User_id",
+            "Admin_id"});
+            this.customComboBoxOrder.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxOrder.ListTextColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.Location = new System.Drawing.Point(195, 124);
+            this.customComboBoxOrder.MinimumSize = new System.Drawing.Size(100, 30);
+            this.customComboBoxOrder.Name = "customComboBoxOrder";
+            this.customComboBoxOrder.Padding = new System.Windows.Forms.Padding(1);
+            this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
+            this.customComboBoxOrder.TabIndex = 21;
+            this.customComboBoxOrder.Texts = "Ordenar por";
+            this.customComboBoxOrder.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxOrder_OnSelectedIndexChanged);
+            // 
+            // customComboBoxFilter
+            // 
+            this.customComboBoxFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxFilter.BorderSize = 1;
+            this.customComboBoxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.customComboBoxFilter.Font = new System.Drawing.Font("Passion One", 14F);
+            this.customComboBoxFilter.ForeColor = System.Drawing.Color.White;
+            this.customComboBoxFilter.IconColor = System.Drawing.Color.White;
+            this.customComboBoxFilter.Items.AddRange(new object[] {
+            "All",
+            "Pendent",
+            "Ignores",
+            "Fixed"});
+            this.customComboBoxFilter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.customComboBoxFilter.ListTextColor = System.Drawing.Color.White;
+            this.customComboBoxFilter.Location = new System.Drawing.Point(26, 123);
+            this.customComboBoxFilter.MinimumSize = new System.Drawing.Size(100, 30);
+            this.customComboBoxFilter.Name = "customComboBoxFilter";
+            this.customComboBoxFilter.Padding = new System.Windows.Forms.Padding(1);
+            this.customComboBoxFilter.Size = new System.Drawing.Size(150, 41);
+            this.customComboBoxFilter.TabIndex = 24;
+            this.customComboBoxFilter.Texts = "Filtrar por";
+            this.customComboBoxFilter.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxFilter_OnSelectedIndexChanged);
+            // 
             // ManageIncidencesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.customComboBoxFilter);
+            this.Controls.Add(this.roundedButtonResolve);
             this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.customComboBoxOrder);
-            this.Controls.Add(this.roundedButtonDelete);
-            this.Controls.Add(this.roundedButtonEdit);
-            this.Controls.Add(this.roundedButtonCreate);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -213,9 +273,11 @@
             this.Name = "ManageIncidencesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageIncidences";
-            this.customPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
+            this.Load += new System.EventHandler(this.ManageIncidencesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.customPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncidencies)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceIncidencies)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,12 +286,18 @@
         #endregion
 
         private Controls.CustomPanel customPanel1;
-        private System.Windows.Forms.DataGridView dataGridViewData;
+        private System.Windows.Forms.DataGridView dataGridViewIncidencies;
         private Controls.CustomComboBox customComboBoxOrder;
-        private Controls.RoundedButton roundedButtonDelete;
-        private Controls.RoundedButton roundedButtonEdit;
-        private Controls.RoundedButton roundedButtonCreate;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.BindingSource bindingSourceIncidencies;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adminnoteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adminidDataGridViewTextBoxColumn;
+        private Controls.RoundedButton roundedButtonResolve;
+        private Controls.CustomComboBox customComboBoxFilter;
     }
 }

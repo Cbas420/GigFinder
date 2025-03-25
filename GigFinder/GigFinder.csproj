@@ -161,6 +161,7 @@
     <Compile Include="Models\Incidences.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\IncidenciesOrm.cs" />
     <Compile Include="Models\Languages.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
