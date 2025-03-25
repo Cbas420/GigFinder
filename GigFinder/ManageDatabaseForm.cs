@@ -124,7 +124,7 @@ namespace GigFinder
 
         public void menuRatings()
         {
-            ManageRatingsForm formRatings = new ManageRatingsForm();
+            ManageRatingsForm formRatings = new ManageRatingsForm(userLogin);
             this.Hide();
             formRatings.FormClosed += (s, args) =>
             {
@@ -136,7 +136,7 @@ namespace GigFinder
 
         public void menuIncidencies()
         {
-            ManageIncidencesForm formIncidencies = new ManageIncidencesForm();
+            ManageIncidencesForm formIncidencies = new ManageIncidencesForm(userLogin);
             this.Hide();
             formIncidencies.FormClosed += (s, args) =>
             {

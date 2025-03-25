@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Entities;
 using GigFinder.Models;
 using GigFinder.Resources;
 
@@ -16,9 +17,11 @@ namespace GigFinder
 {
     public partial class ManageRatingsForm : Form
     {
-        public ManageRatingsForm()
+        UsersDesktop userLogin;
+        public ManageRatingsForm(UsersDesktop user)
         {
             InitializeComponent();
+            userLogin = user;
             bindingSourceRatings.DataSource = RatingsOrm.SelectGlobal();
         }
 
@@ -49,7 +52,7 @@ namespace GigFinder
                 if (result == DialogResult.Yes)
                 {
                     RatingsOrm.Delete((Ratings)dataGridViewRatings.SelectedRows[0].DataBoundItem);
-
+                    Log.createLog("Delete Rating", userLogin.id);
                     bindingSourceRatings.DataSource = RatingsOrm.SelectGlobal();
                     customComboBoxOrder.Texts = Strings.comboBoxOrder;
                 }

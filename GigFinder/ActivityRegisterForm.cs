@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Models;
 using GigFinder.Resources;
 
 namespace GigFinder
@@ -18,7 +19,7 @@ namespace GigFinder
         public ActivityRegisterForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            activitylogBindingSource.DataSource = Activity_logOrm.SelectGlobal();
         }
 
         private void CambiarIdioma()
@@ -32,7 +33,6 @@ namespace GigFinder
         private void ActualizarTextos()
         {
             labelTitle.Text = Resources.Strings.titleActivity;
-            customComboBoxOrder.Texts = Resources.Strings.comboBoxOrder;
         }
 
         private void ActivityRegisterForm_Load(object sender, EventArgs e)

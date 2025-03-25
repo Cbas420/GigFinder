@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Entities;
 using GigFinder.Models;
 using GigFinder.Resources;
 
@@ -16,9 +17,11 @@ namespace GigFinder
 {
     public partial class ManageIncidencesForm : Form
     {
-        public ManageIncidencesForm()
+        UsersDesktop userLogin;
+        public ManageIncidencesForm(UsersDesktop user)
         {
             InitializeComponent();
+            userLogin = user;
             bindingSourceIncidencies.DataSource = IncidenciesOrm.SelectGlobal();
         }
 
@@ -37,12 +40,35 @@ namespace GigFinder
 
         private void ActualizarTextos()
         {
-
+            
         }
 
         private void roundedButtonResolve_Click(object sender, EventArgs e)
         {
-
+            if (dataGridViewIncidencies.SelectedRows.Count > 0)
+            {
+                Incidences incidence = (Incidences)dataGridViewIncidencies.SelectedRows[0].DataBoundItem;
+                if (incidence.status == "pendent")
+                {
+                    ResolveIncidencesForm createUserForm = new ResolveIncidencesForm(userLogin, incidence);
+                    if (createUserForm.ShowDialog() == DialogResult.OK)
+                    {
+                        bindingSourceIncidencies.DataSource = IncidenciesOrm.SelectGlobal();
+                        Log.createLog("Resolve Incidencie", userLogin.id);
+                        customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                        customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                    }
+                } else
+                {
+                    MessageBox.Show("Esta incidencia ya está resuelta.");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una incidencia para poder resolverla.", "Selección requrida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)

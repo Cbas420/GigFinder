@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Entities;
 using GigFinder.Models;
 using GigFinder.Resources;
 
@@ -127,6 +128,7 @@ namespace GigFinder
                     if (result == DialogResult.Yes)
                     {
                         UsersDesktopOrm.Delete((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem);
+                        Log.createLog("Delete UserDesktop", userLogin.id);
 
                         bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
                         customComboBoxFilter.Texts = Strings.comboBoxFilter;
@@ -146,6 +148,7 @@ namespace GigFinder
             if (createUserForm.ShowDialog() == DialogResult.OK)
             {
                 bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                Log.createLog("Create UserDesktop", userLogin.id);
                 customComboBoxFilter.Texts = Strings.comboBoxFilter;
                 customComboBoxOrder.Texts = Strings.comboBoxOrder;
             }
@@ -160,6 +163,7 @@ namespace GigFinder
                 if (createUserForm.ShowDialog() == DialogResult.OK)
                 {
                     bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                    Log.createLog("Edit UserDesktop", userLogin.id);
                     customComboBoxFilter.Texts = Strings.comboBoxFilter;
                     customComboBoxOrder.Texts = Strings.comboBoxOrder;
                 }
