@@ -28,25 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.customPanel1 = new GigFinder.Controls.CustomPanel();
-            this.dataGridViewData = new System.Windows.Forms.DataGridView();
-            this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
-            this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.customPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
+            this.customPanel1 = new GigFinder.Controls.CustomPanel();
+            this.dataGridViewRatings = new System.Windows.Forms.DataGridView();
+            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avgratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceRatings = new System.Windows.Forms.BindingSource(this.components);
+            this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
+            this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.customPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRatings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRatings)).BeginInit();
             this.SuspendLayout();
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Passion One", 50F);
+            this.labelTitle.Location = new System.Drawing.Point(7, 12);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(619, 74);
+            this.labelTitle.TabIndex = 17;
+            this.labelTitle.Text = "Gestión de valoraciones";
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.BackgroundImage = global::GigFinder.Properties.Resources.logo1;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1093, 11);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(75, 90);
+            this.pictureBoxLogo.TabIndex = 16;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // customPanel1
             // 
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.customPanel1.BorderRadius = 8;
-            this.customPanel1.Controls.Add(this.dataGridViewData);
+            this.customPanel1.Controls.Add(this.dataGridViewRatings);
             this.customPanel1.Location = new System.Drawing.Point(20, 182);
             this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.customPanel1.Name = "customPanel1";
@@ -54,15 +82,17 @@
             this.customPanel1.Size = new System.Drawing.Size(1148, 454);
             this.customPanel1.TabIndex = 22;
             // 
-            // dataGridViewData
+            // dataGridViewRatings
             // 
-            this.dataGridViewData.AllowUserToAddRows = false;
-            this.dataGridViewData.AllowUserToDeleteRows = false;
-            this.dataGridViewData.AllowUserToResizeRows = false;
-            this.dataGridViewData.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewRatings.AllowUserToAddRows = false;
+            this.dataGridViewRatings.AllowUserToDeleteRows = false;
+            this.dataGridViewRatings.AllowUserToResizeRows = false;
+            this.dataGridViewRatings.AutoGenerateColumns = false;
+            this.dataGridViewRatings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRatings.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewRatings.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewRatings.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewRatings.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Passion One", 16F);
@@ -70,9 +100,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewData.ColumnHeadersHeight = 35;
-            this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewRatings.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewRatings.ColumnHeadersHeight = 35;
+            this.dataGridViewRatings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewRatings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.useridDataGridViewTextBoxColumn,
+            this.eventidDataGridViewTextBoxColumn,
+            this.contentDataGridViewTextBoxColumn,
+            this.avgratingDataGridViewTextBoxColumn});
+            this.dataGridViewRatings.DataSource = this.bindingSourceRatings;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,14 +116,14 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewData.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewData.EnableHeadersVisualStyles = false;
-            this.dataGridViewData.GridColor = System.Drawing.Color.White;
-            this.dataGridViewData.Location = new System.Drawing.Point(6, 0);
-            this.dataGridViewData.MultiSelect = false;
-            this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.ReadOnly = true;
+            this.dataGridViewRatings.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewRatings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewRatings.EnableHeadersVisualStyles = false;
+            this.dataGridViewRatings.GridColor = System.Drawing.Color.White;
+            this.dataGridViewRatings.Location = new System.Drawing.Point(6, 0);
+            this.dataGridViewRatings.MultiSelect = false;
+            this.dataGridViewRatings.Name = "dataGridViewRatings";
+            this.dataGridViewRatings.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,12 +131,44 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewData.RowHeadersVisible = false;
-            this.dataGridViewData.RowTemplate.Height = 25;
-            this.dataGridViewData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewData.Size = new System.Drawing.Size(1136, 446);
-            this.dataGridViewData.TabIndex = 0;
+            this.dataGridViewRatings.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewRatings.RowHeadersVisible = false;
+            this.dataGridViewRatings.RowTemplate.Height = 25;
+            this.dataGridViewRatings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewRatings.Size = new System.Drawing.Size(1136, 446);
+            this.dataGridViewRatings.TabIndex = 0;
+            // 
+            // useridDataGridViewTextBoxColumn
+            // 
+            this.useridDataGridViewTextBoxColumn.DataPropertyName = "user_id";
+            this.useridDataGridViewTextBoxColumn.HeaderText = "User_id";
+            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
+            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eventidDataGridViewTextBoxColumn
+            // 
+            this.eventidDataGridViewTextBoxColumn.DataPropertyName = "event_id";
+            this.eventidDataGridViewTextBoxColumn.HeaderText = "Event_id";
+            this.eventidDataGridViewTextBoxColumn.Name = "eventidDataGridViewTextBoxColumn";
+            this.eventidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contentDataGridViewTextBoxColumn
+            // 
+            this.contentDataGridViewTextBoxColumn.DataPropertyName = "content";
+            this.contentDataGridViewTextBoxColumn.HeaderText = "Content";
+            this.contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
+            this.contentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // avgratingDataGridViewTextBoxColumn
+            // 
+            this.avgratingDataGridViewTextBoxColumn.DataPropertyName = "avg_rating";
+            this.avgratingDataGridViewTextBoxColumn.HeaderText = "Rating";
+            this.avgratingDataGridViewTextBoxColumn.Name = "avgratingDataGridViewTextBoxColumn";
+            this.avgratingDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceRatings
+            // 
+            this.bindingSourceRatings.DataSource = typeof(GigFinder.Models.Ratings);
             // 
             // customComboBoxOrder
             // 
@@ -111,6 +179,10 @@
             this.customComboBoxOrder.Font = new System.Drawing.Font("Passion One", 14F);
             this.customComboBoxOrder.ForeColor = System.Drawing.Color.White;
             this.customComboBoxOrder.IconColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.Items.AddRange(new object[] {
+            "User_id",
+            "Event_id",
+            "Rating"});
             this.customComboBoxOrder.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
             this.customComboBoxOrder.ListTextColor = System.Drawing.Color.White;
             this.customComboBoxOrder.Location = new System.Drawing.Point(20, 123);
@@ -120,6 +192,7 @@
             this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
             this.customComboBoxOrder.TabIndex = 21;
             this.customComboBoxOrder.Texts = "Ordenar por";
+            this.customComboBoxOrder.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxOrder_OnSelectedIndexChanged);
             // 
             // roundedButtonDelete
             // 
@@ -137,27 +210,7 @@
             this.roundedButtonDelete.TabIndex = 20;
             this.roundedButtonDelete.Text = "Eliminar";
             this.roundedButtonDelete.UseVisualStyleBackColor = false;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Passion One", 50F);
-            this.labelTitle.Location = new System.Drawing.Point(7, 12);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(623, 74);
-            this.labelTitle.TabIndex = 17;
-            this.labelTitle.Text = "Gestión de Valoraciones";
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogo.BackgroundImage = global::GigFinder.Properties.Resources.logo1;
-            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1093, 11);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(75, 90);
-            this.pictureBoxLogo.TabIndex = 16;
-            this.pictureBoxLogo.TabStop = false;
+            this.roundedButtonDelete.Click += new System.EventHandler(this.roundedButtonDelete_Click);
             // 
             // ManageRatingsForm
             // 
@@ -175,9 +228,11 @@
             this.Name = "ManageRatingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageRatingsForm";
-            this.customPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
+            this.Load += new System.EventHandler(this.ManageRatingsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.customPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRatings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRatings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,10 +241,15 @@
         #endregion
 
         private Controls.CustomPanel customPanel1;
-        private System.Windows.Forms.DataGridView dataGridViewData;
+        private System.Windows.Forms.DataGridView dataGridViewRatings;
         private Controls.CustomComboBox customComboBoxOrder;
         private Controls.RoundedButton roundedButtonDelete;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.BindingSource bindingSourceRatings;
+        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eventidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn avgratingDataGridViewTextBoxColumn;
     }
 }

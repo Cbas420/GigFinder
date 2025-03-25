@@ -192,6 +192,7 @@
     <Compile Include="Models\Ratings.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RatingsOrm.cs" />
     <Compile Include="Models\Users.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
