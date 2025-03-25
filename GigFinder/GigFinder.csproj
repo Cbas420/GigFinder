@@ -107,11 +107,11 @@
     <Compile Include="ManageDatabaseForm.Designer.cs">
       <DependentUpon>ManageDatabaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageIncidences.cs">
+    <Compile Include="ManageIncidencesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageIncidences.Designer.cs">
-      <DependentUpon>ManageIncidences.cs</DependentUpon>
+    <Compile Include="ManageIncidencesForm.Designer.cs">
+      <DependentUpon>ManageIncidencesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageLocalForm.cs">
       <SubType>Form</SubType>
@@ -240,8 +240,8 @@
     <EmbeddedResource Include="ManageDatabaseForm.resx">
       <DependentUpon>ManageDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageIncidences.resx">
-      <DependentUpon>ManageIncidences.cs</DependentUpon>
+    <EmbeddedResource Include="ManageIncidencesForm.resx">
+      <DependentUpon>ManageIncidencesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageLocalForm.resx">
       <DependentUpon>ManageLocalForm.cs</DependentUpon>

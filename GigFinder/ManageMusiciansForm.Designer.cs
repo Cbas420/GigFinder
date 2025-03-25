@@ -180,9 +180,9 @@
             this.labelTitle.Font = new System.Drawing.Font("Passion One", 50F);
             this.labelTitle.Location = new System.Drawing.Point(7, 12);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(445, 74);
+            this.labelTitle.Size = new System.Drawing.Size(503, 74);
             this.labelTitle.TabIndex = 17;
-            this.labelTitle.Text = "Gestión de datos";
+            this.labelTitle.Text = "Gestión de músicos";
             // 
             // pictureBoxLogo
             // 
@@ -211,7 +211,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ManageMusiciansForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageMusiciansForm";
+            this.Load += new System.EventHandler(this.ManageMusiciansForm_Load);
             this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();

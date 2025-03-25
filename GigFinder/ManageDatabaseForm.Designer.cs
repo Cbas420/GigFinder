@@ -60,7 +60,7 @@
             this.customPanelLogin.Controls.Add(this.customPanelRatings);
             this.customPanelLogin.Controls.Add(this.customPanelLocals);
             this.customPanelLogin.Controls.Add(this.customPanelMusicians);
-            this.customPanelLogin.Location = new System.Drawing.Point(292, 55);
+            this.customPanelLogin.Location = new System.Drawing.Point(300, 50);
             this.customPanelLogin.Name = "customPanelLogin";
             this.customPanelLogin.Size = new System.Drawing.Size(600, 550);
             this.customPanelLogin.TabIndex = 2;
@@ -75,6 +75,7 @@
             this.customPanelIncidencies.Name = "customPanelIncidencies";
             this.customPanelIncidencies.Size = new System.Drawing.Size(200, 200);
             this.customPanelIncidencies.TabIndex = 3;
+            this.customPanelIncidencies.Click += new System.EventHandler(this.customPanelIncidencies_Click);
             // 
             // pictureBoxIncidencies
             // 
@@ -86,6 +87,7 @@
             this.pictureBoxIncidencies.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxIncidencies.TabIndex = 3;
             this.pictureBoxIncidencies.TabStop = false;
+            this.pictureBoxIncidencies.Click += new System.EventHandler(this.pictureBoxIncidencies_Click);
             // 
             // labelIncidencies
             // 
@@ -98,6 +100,7 @@
             this.labelIncidencies.TabIndex = 0;
             this.labelIncidencies.Text = "Gestión de\r\nincidencias";
             this.labelIncidencies.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelIncidencies.Click += new System.EventHandler(this.labelIncidencies_Click);
             // 
             // customPanelRatings
             // 
@@ -109,6 +112,7 @@
             this.customPanelRatings.Name = "customPanelRatings";
             this.customPanelRatings.Size = new System.Drawing.Size(200, 200);
             this.customPanelRatings.TabIndex = 3;
+            this.customPanelRatings.Click += new System.EventHandler(this.customPanelRatings_Click);
             // 
             // pictureBoxRatings
             // 
@@ -120,6 +124,7 @@
             this.pictureBoxRatings.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxRatings.TabIndex = 4;
             this.pictureBoxRatings.TabStop = false;
+            this.pictureBoxRatings.Click += new System.EventHandler(this.pictureBoxRatings_Click);
             // 
             // labelRatings
             // 
@@ -132,6 +137,7 @@
             this.labelRatings.TabIndex = 0;
             this.labelRatings.Text = "Gestión de\r\nvaloraciones";
             this.labelRatings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRatings.Click += new System.EventHandler(this.labelRatings_Click);
             // 
             // customPanelLocals
             // 
@@ -143,6 +149,7 @@
             this.customPanelLocals.Name = "customPanelLocals";
             this.customPanelLocals.Size = new System.Drawing.Size(200, 200);
             this.customPanelLocals.TabIndex = 3;
+            this.customPanelLocals.Click += new System.EventHandler(this.customPanelLocals_Click);
             // 
             // pictureBoxLocals
             // 
@@ -154,6 +161,7 @@
             this.pictureBoxLocals.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxLocals.TabIndex = 2;
             this.pictureBoxLocals.TabStop = false;
+            this.pictureBoxLocals.Click += new System.EventHandler(this.pictureBoxLocals_Click);
             // 
             // labelLocals
             // 
@@ -166,6 +174,7 @@
             this.labelLocals.TabIndex = 0;
             this.labelLocals.Text = "Gestión de\r\nlocales";
             this.labelLocals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelLocals.Click += new System.EventHandler(this.labelLocals_Click);
             // 
             // customPanelMusicians
             // 
@@ -177,6 +186,7 @@
             this.customPanelMusicians.Name = "customPanelMusicians";
             this.customPanelMusicians.Size = new System.Drawing.Size(200, 200);
             this.customPanelMusicians.TabIndex = 2;
+            this.customPanelMusicians.Click += new System.EventHandler(this.customPanelMusicians_Click);
             // 
             // pictureBoxMusicians
             // 
@@ -188,6 +198,7 @@
             this.pictureBoxMusicians.Size = new System.Drawing.Size(110, 110);
             this.pictureBoxMusicians.TabIndex = 1;
             this.pictureBoxMusicians.TabStop = false;
+            this.pictureBoxMusicians.Click += new System.EventHandler(this.pictureBoxMusicians_Click);
             // 
             // labelMusicians
             // 
@@ -200,6 +211,7 @@
             this.labelMusicians.TabIndex = 0;
             this.labelMusicians.Text = "Gestión de\r\nmúsicos";
             this.labelMusicians.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMusicians.Click += new System.EventHandler(this.labelMusicians_Click);
             // 
             // ManageDatabaseForm
             // 
@@ -214,6 +226,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ManageDatabaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageDatabaseForm";
             this.Load += new System.EventHandler(this.ManageDatabaseForm_Load);
             this.customPanelLogin.ResumeLayout(false);

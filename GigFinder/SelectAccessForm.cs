@@ -104,7 +104,7 @@ namespace GigFinder
 
         public void menuData()
         {
-            ManageDatabaseForm formData = new ManageDatabaseForm();
+            ManageDatabaseForm formData = new ManageDatabaseForm(userLogin);
             this.Hide();
             formData.FormClosed += (s, args) =>
             {

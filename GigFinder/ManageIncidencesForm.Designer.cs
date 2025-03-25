@@ -1,6 +1,6 @@
 ﻿namespace GigFinder
 {
-    partial class ManageIncidences
+    partial class ManageIncidencesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -195,7 +195,7 @@
             this.pictureBoxLogo.TabIndex = 16;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // ManageIncidences
+            // ManageIncidencesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -210,7 +210,8 @@
             this.Controls.Add(this.pictureBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "ManageIncidences";
+            this.Name = "ManageIncidencesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageIncidences";
             this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GigFinder
 {
-    public partial class ManageIncidences : Form
+    public partial class ManageIncidencesForm : Form
     {
-        public ManageIncidences()
+        public ManageIncidencesForm()
         {
             InitializeComponent();
         }
