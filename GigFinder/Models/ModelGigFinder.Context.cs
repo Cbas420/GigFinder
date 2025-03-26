@@ -40,5 +40,6 @@ namespace GigFinder.Models
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<UsersDesktop> UsersDesktop { get; set; }
         public virtual DbSet<Activity_log> Activity_log { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

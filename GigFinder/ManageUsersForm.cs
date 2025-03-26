@@ -127,7 +127,10 @@ namespace GigFinder
 
                     if (result == DialogResult.Yes)
                     {
-                        UsersDesktopOrm.Delete((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem);
+                        UsersDesktop userDelete = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
+                        deleteRelatedData(userDelete);
+
+                        UsersDesktopOrm.Delete(userDelete);
                         Log.createLog("Delete UserDesktop", userLogin.id);
 
                         bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
@@ -173,6 +176,20 @@ namespace GigFinder
                 MessageBox.Show(selectionEdit, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
+        }
+
+        private void deleteRelatedData(UsersDesktop userDelete)
+        {
+            List<Activity_log> activity_logs = Activity_logOrm.SelectByUser(userDelete.id);
+            foreach (Activity_log activity in activity_logs)
+            {
+                Activity_logOrm.Delete(activity);
+            }
+            List<Incidences> incidences = IncidenciesOrm.SelectIncidenceByAdmin(userDelete.id);
+            foreach (Incidences incidence in incidences)
+            {
+                IncidenciesOrm.UpdateIncidenceAdmin(userDelete.id);
+            }
         }
     }
 }
