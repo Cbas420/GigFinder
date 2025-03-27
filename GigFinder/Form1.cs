@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Entities;
 using GigFinder.Models;
 using GigFinder.Resources;
 
@@ -25,7 +26,9 @@ namespace GigFinder
 
         private void roundedButtonLogin_Click(object sender, EventArgs e)
         {
-            UsersDesktop userLogin = UsersDesktopOrm.Selectlogin(roundedTextBoxMail.Texts.Trim(), roundedTextBoxPass.Texts.Trim());
+            string mail = roundedTextBoxMail.Texts.Trim();
+            string pass = Encrypt.EncryptSHA256(roundedTextBoxPass.Texts.Trim());
+            UsersDesktop userLogin = UsersDesktopOrm.Selectlogin(mail, pass);
             if (userLogin != null)
             {
                 this.Hide();
@@ -74,10 +77,10 @@ namespace GigFinder
 
         private void ActualizarTextos()
         {
-            labelMail.Text = Resources.Strings.labelMail;
-            labelPass.Text = Resources.Strings.labelPass;
-            roundedButtonLogin.Text = Resources.Strings.buttonLogin;
-            login = Resources.Strings.messageLogin;
+            labelMail.Text = Strings.labelMail;
+            labelPass.Text = Strings.labelPass;
+            roundedButtonLogin.Text = Strings.buttonLogin;
+            login = Strings.messageLogin;
         }
     }
 }

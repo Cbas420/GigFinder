@@ -64,5 +64,19 @@ namespace GigFinder.Models
                 Orm.bd.SaveChanges();
             }
         }
+        public static void UpdateWithoutPass(UsersDesktop _userDesktop)
+        {
+            var existingUser = Orm.bd.UsersDesktop.FirstOrDefault(user => user.id == _userDesktop.id);
+
+            if (existingUser != null)
+            {
+                existingUser.name = _userDesktop.name;
+                existingUser.surname = _userDesktop.surname;
+                existingUser.email = _userDesktop.email;
+                existingUser.type = _userDesktop.type;
+
+                Orm.bd.SaveChanges();
+            }
+        }
     }
 }

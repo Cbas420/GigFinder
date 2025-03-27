@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Entities;
 using GigFinder.Models;
 using GigFinder.Resources;
 
@@ -73,9 +74,7 @@ namespace GigFinder
             {
                 roundedTextBoxName.Texts = _useredit.name;
                 roundedTextBoxSurname.Texts = _useredit.surname;
-                roundedTextBoxPass.Texts = _useredit.password;
                 roundedTextBoxMail.Texts = _useredit.email;
-                roundedTextBoxConfirmPass.Texts = _useredit.password;
                 customComboBoxType.SelectedItem = _useredit.type;
                 customComboBoxType.Texts = _useredit.type.ToString();
             }
@@ -86,22 +85,23 @@ namespace GigFinder
             string name = roundedTextBoxName.Texts.Trim();
             string surname = roundedTextBoxSurname.Texts.Trim();
             string email = roundedTextBoxMail.Texts.Trim();
-            string password = roundedTextBoxPass.Texts.Trim();
-            string confirmPassword = roundedTextBoxConfirmPass.Texts.Trim();
+            string password = Encrypt.EncryptSHA256(roundedTextBoxPass.Texts.Trim());
+            string confirmPassword = Encrypt.EncryptSHA256(roundedTextBoxConfirmPass.Texts.Trim());
             string type = customComboBoxType.SelectedItem?.ToString();
 
-            if (string.IsNullOrEmpty(name) ||
+            
+            if (actionMade == 0)
+            {
+                if (string.IsNullOrEmpty(name) ||
                 string.IsNullOrEmpty(surname) ||
                 string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(password) ||
                 string.IsNullOrEmpty(confirmPassword) ||
                 string.IsNullOrEmpty(type))
-            {
-                MessageBox.Show(complete, completeShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (actionMade == 0)
+                {
+                    MessageBox.Show(complete, completeShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
                 {
                     UsersDesktop userMail = UsersDesktopOrm.SelectWithMail(email);
                     if (userMail == null)
@@ -130,6 +130,16 @@ namespace GigFinder
                         MessageBox.Show(userExists, userExistsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(name) ||
+                string.IsNullOrEmpty(surname) ||
+                string.IsNullOrEmpty(email) ||
+                string.IsNullOrEmpty(type))
+                {
+                    MessageBox.Show(complete, completeShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                } 
                 else
                 {
                     UsersDesktop userToEdit = UsersDesktopOrm.SelectWithMail(email);
@@ -139,27 +149,41 @@ namespace GigFinder
                     }
                     else
                     {
-                        if (password.Equals(confirmPassword))
+                        if (string.IsNullOrEmpty(password) && string.IsNullOrEmpty(confirmPassword))
                         {
                             _useredit.name = name;
                             _useredit.surname = surname;
                             _useredit.email = email;
-                            _useredit.password = password;
                             _useredit.type = type;
 
                             clearInfo();
-                            UsersDesktopOrm.Update(_useredit);
+                            UsersDesktopOrm.UpdateWithoutPass(_useredit);
                             this.DialogResult = DialogResult.OK;
                             this.Close();
-                        }
+                        } 
                         else
                         {
-                            MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            if (password.Equals(confirmPassword))
+                            {
+                                _useredit.name = name;
+                                _useredit.surname = surname;
+                                _useredit.email = email;
+                                _useredit.password = password;
+                                _useredit.type = type;
+
+                                clearInfo();
+                                UsersDesktopOrm.Update(_useredit);
+                                this.DialogResult = DialogResult.OK;
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                     }
                 }
             }
-                  
         }
 
         private void roundedButtonCancel_Click(object sender, EventArgs e)

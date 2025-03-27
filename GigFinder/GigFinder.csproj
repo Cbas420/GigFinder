@@ -95,6 +95,7 @@
     <Compile Include="CreateUserForm.Designer.cs">
       <DependentUpon>CreateUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Encrypt.cs" />
     <Compile Include="Entities\Log.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
