@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Models;
 using GigFinder.Resources;
 
 namespace GigFinder
@@ -18,7 +19,7 @@ namespace GigFinder
         public CreateLocalForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            bindingSourceGenres.DataSource = GenresOrm.SelectGlobal();
         }
         private void ChangeLanguage()
         {
@@ -47,6 +48,11 @@ namespace GigFinder
         private void CreateLocalForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
+        }
+
+        private void roundedButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

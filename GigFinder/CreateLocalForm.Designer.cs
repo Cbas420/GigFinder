@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelTitle = new System.Windows.Forms.Label();
             this.roundedTextBoxName = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxMail = new GigFinder.Controls.RoundedTextBox();
@@ -49,6 +50,8 @@
             this.labelCoordY = new System.Windows.Forms.Label();
             this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
             this.roundedButtonCancel = new GigFinder.Controls.RoundedButton();
+            this.bindingSourceGenres = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGenres)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -217,6 +220,8 @@
             // 
             this.listBoxGenres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.listBoxGenres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxGenres.DataSource = this.bindingSourceGenres;
+            this.listBoxGenres.DisplayMember = "name";
             this.listBoxGenres.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxGenres.FormattingEnabled = true;
             this.listBoxGenres.ItemHeight = 23;
@@ -225,6 +230,7 @@
             this.listBoxGenres.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxGenres.Size = new System.Drawing.Size(320, 276);
             this.listBoxGenres.TabIndex = 9;
+            this.listBoxGenres.ValueMember = "id";
             // 
             // labelName
             // 
@@ -349,6 +355,11 @@
             this.roundedButtonCancel.TabIndex = 46;
             this.roundedButtonCancel.Text = "Cancelar";
             this.roundedButtonCancel.UseVisualStyleBackColor = false;
+            this.roundedButtonCancel.Click += new System.EventHandler(this.roundedButtonCancel_Click);
+            // 
+            // bindingSourceGenres
+            // 
+            this.bindingSourceGenres.DataSource = typeof(GigFinder.Models.Genres);
             // 
             // CreateLocalForm
             // 
@@ -380,8 +391,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "CreateLocalForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateLocalForm";
             this.Load += new System.EventHandler(this.CreateLocalForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGenres)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,5 +423,6 @@
         private System.Windows.Forms.Label labelCoordY;
         private Controls.RoundedButton roundedButtonCreate;
         private Controls.RoundedButton roundedButtonCancel;
+        private System.Windows.Forms.BindingSource bindingSourceGenres;
     }
 }
