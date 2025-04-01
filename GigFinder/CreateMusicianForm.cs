@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GigFinder.Models;
 using GigFinder.Resources;
 
 namespace GigFinder
@@ -18,7 +19,8 @@ namespace GigFinder
         public CreateMusicianForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            bindingSourceGenres.DataSource = GenresOrm.SelectGlobal();
+            bindingSourceLang.DataSource = LanguagesOrm.SelectGlobal();
         }
         private void ChangeLanguage()
         {
@@ -30,23 +32,28 @@ namespace GigFinder
 
         private void UpdateTexts()
         {
-            labelTitle.Text = Resources.Strings.labelCreateMusic;
-            roundedButtonCreate.Text = Resources.Strings.buttonCreate;
-            roundedButtonCancel.Text = Resources.Strings.buttonCancelar;
-            customComboBoxLang.Texts = Resources.Strings.comboBoxLang;
-            labelConfirmPass.Text = Resources.Strings.labelConfirPass;
-            labelDescription.Text = Resources.Strings.labelDescription;
-            labelGenres.Text = Resources.Strings.labelGendres;
-            labelGroupSize.Text = Resources.Strings.labelGroupSize;
-            labelMail.Text = Resources.Strings.labelMail;
-            labelName.Text = Resources.Strings.labelName;
-            labelPass.Text = Resources.Strings.labelPass;
-            labelPrize.Text = Resources.Strings.labelPrice;
+            labelTitle.Text = Strings.labelCreateMusic;
+            roundedButtonCreate.Text = Strings.buttonCreate;
+            roundedButtonCancel.Text = Strings.buttonCancelar;
+            customComboBoxLang.Texts = Strings.comboBoxLang;
+            labelConfirmPass.Text = Strings.labelConfirPass;
+            labelDescription.Text = Strings.labelDescription;
+            labelGenres.Text = Strings.labelGendres;
+            labelGroupSize.Text = Strings.labelGroupSize;
+            labelMail.Text = Strings.labelMail;
+            labelName.Text = Strings.labelName;
+            labelPass.Text = Strings.labelPass;
+            labelPrize.Text = Strings.labelPrice;
         }
 
         private void CreateMusicianForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
+        }
+
+        private void roundedButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

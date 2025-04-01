@@ -161,6 +161,7 @@
     <Compile Include="Models\Genres.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GenresOrm.cs" />
     <Compile Include="Models\Incidences.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
@@ -168,6 +169,7 @@
     <Compile Include="Models\Languages.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LanguagesOrm.cs" />
     <Compile Include="Models\Locals.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>

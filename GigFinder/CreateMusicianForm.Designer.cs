@@ -38,6 +38,7 @@
             this.labelMail = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.listBoxGenres = new System.Windows.Forms.ListBox();
+            this.bindingSourceGenres = new System.Windows.Forms.BindingSource(this.components);
             this.roundedTextBoxDescription = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxConfirmPass = new GigFinder.Controls.RoundedTextBox();
             this.roundedTextBoxSizeGroup = new GigFinder.Controls.RoundedTextBox();
@@ -47,12 +48,11 @@
             this.roundedTextBoxName = new GigFinder.Controls.RoundedTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.customComboBoxLang = new GigFinder.Controls.CustomComboBox();
+            this.bindingSourceLang = new System.Windows.Forms.BindingSource(this.components);
             this.roundedButtonCancel = new GigFinder.Controls.RoundedButton();
             this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
-            this.bindingSourceLang = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceGenres = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGenres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLang)).BeginInit();
             this.SuspendLayout();
             // 
             // labelGroupSize
@@ -150,6 +150,10 @@
             this.listBoxGenres.Size = new System.Drawing.Size(320, 276);
             this.listBoxGenres.TabIndex = 28;
             this.listBoxGenres.ValueMember = "id";
+            // 
+            // bindingSourceGenres
+            // 
+            this.bindingSourceGenres.DataSource = typeof(GigFinder.Models.Genres);
             // 
             // roundedTextBoxDescription
             // 
@@ -316,6 +320,10 @@
             this.customComboBoxLang.Texts = "Idioma de canciones";
             this.customComboBoxLang.ValueMember = "id";
             // 
+            // bindingSourceLang
+            // 
+            this.bindingSourceLang.DataSource = typeof(GigFinder.Models.Languages);
+            // 
             // roundedButtonCancel
             // 
             this.roundedButtonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -332,6 +340,7 @@
             this.roundedButtonCancel.TabIndex = 48;
             this.roundedButtonCancel.Text = "Cancelar";
             this.roundedButtonCancel.UseVisualStyleBackColor = false;
+            this.roundedButtonCancel.Click += new System.EventHandler(this.roundedButtonCancel_Click);
             // 
             // roundedButtonCreate
             // 
@@ -349,14 +358,6 @@
             this.roundedButtonCreate.TabIndex = 47;
             this.roundedButtonCreate.Text = "Crear";
             this.roundedButtonCreate.UseVisualStyleBackColor = false;
-            // 
-            // bindingSourceLang
-            // 
-            this.bindingSourceLang.DataSource = typeof(GigFinder.Models.Languages);
-            // 
-            // bindingSourceGenres
-            // 
-            this.bindingSourceGenres.DataSource = typeof(GigFinder.Models.Genres);
             // 
             // CreateMusicianForm
             // 
@@ -387,10 +388,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "CreateMusicianForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateMusicianForm";
             this.Load += new System.EventHandler(this.CreateMusicianForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGenres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
