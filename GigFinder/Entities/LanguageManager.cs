@@ -10,6 +10,6 @@ namespace GigFinder.Resources
 {
     public static class LanguageManager
     {
-        public static string Idioma { get; set; } = "es-ES";
+        public static string language { get; set; } = "es-ES";
     }
 }

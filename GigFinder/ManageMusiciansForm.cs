@@ -20,6 +20,7 @@ namespace GigFinder
         public ManageMusiciansForm(UsersDesktop user)
         {
             InitializeComponent();
+            bindingSourceMusician.DataSource = UsersOrm.SelectMusicians();
             userLogin = user;
         }
 
