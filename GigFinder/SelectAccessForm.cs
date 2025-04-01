@@ -144,25 +144,25 @@ namespace GigFinder
                 MessageBox.Show("No tienes permisos para acceder a este apartado de la aplicación");
             }
         }
-        private void CambiarIdioma()
+        private void ChangeLanguage()
         {
-            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
-            Thread.CurrentThread.CurrentUICulture = cultura;
-            Thread.CurrentThread.CurrentCulture = cultura;
-            ActualizarTextos();
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
         }
 
-        private void ActualizarTextos()
+        private void UpdateTexts()
         {
-            labelUsers.Text = Resources.Strings.menuUsers;
-            labelStats.Text = Resources.Strings.menuStats;
-            labelRegister.Text = Resources.Strings.menuActivity;
-            labelData.Text = Resources.Strings.menuData;
+            labelUsers.Text = Strings.menuUsers;
+            labelStats.Text = Strings.menuStats;
+            labelRegister.Text = Strings.menuActivity;
+            labelData.Text = Strings.menuData;
         }
 
         private void SelectAccessForm_Load(object sender, EventArgs e)
         {
-            CambiarIdioma();
+            ChangeLanguage();
         }
     }
 }

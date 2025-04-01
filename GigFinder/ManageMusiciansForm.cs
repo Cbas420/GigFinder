@@ -26,20 +26,33 @@ namespace GigFinder
 
         private void ManageMusiciansForm_Load(object sender, EventArgs e)
         {
-            CambiarIdioma();
+            ChangeLanguage();
         }
 
-        private void CambiarIdioma()
+        private void ChangeLanguage()
         {
-            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
-            Thread.CurrentThread.CurrentUICulture = cultura;
-            Thread.CurrentThread.CurrentCulture = cultura;
-            ActualizarTextos();
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
         }
 
-        private void ActualizarTextos()
+        private void UpdateTexts()
         {
             
+        }
+
+        private void roundedButtonCreate_Click(object sender, EventArgs e)
+        {
+            if (userLogin.type != "user")
+            {
+                CreateMusicianForm createMusician = new CreateMusicianForm();
+                createMusician.ShowDialog();
+            } 
+            else
+            {
+                MessageBox.Show("No tienes permisos para utilizar esta función de la aplicación.");
+            }
         }
     }
 }

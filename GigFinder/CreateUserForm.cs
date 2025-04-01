@@ -34,15 +34,15 @@ namespace GigFinder
             actionMade = action;
             _useredit = user;
         }
-        private void CambiarIdioma()
+        private void ChangeLanguage()
         {
-            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
-            Thread.CurrentThread.CurrentUICulture = cultura;
-            Thread.CurrentThread.CurrentCulture = cultura;
-            ActualizarTextos();
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
         }
 
-        private void ActualizarTextos()
+        private void UpdateTexts()
         {
             if (actionMade == 0)
             {
@@ -69,7 +69,7 @@ namespace GigFinder
 
         private void CreateUserForm_Load(object sender, EventArgs e)
         {
-            CambiarIdioma();
+            ChangeLanguage();
             if (actionMade == 1)
             {
                 roundedTextBoxName.Texts = _useredit.name;

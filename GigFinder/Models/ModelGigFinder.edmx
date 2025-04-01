@@ -161,6 +161,7 @@
           <Property Name="type" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="avg_rating" Type="tinyint" Nullable="false" />
           <Property Name="profile_image_identifier" Type="varchar" MaxLength="100" />
+          <Property Name="active" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="UsersDesktop">
           <Key>
@@ -716,6 +717,7 @@
           <NavigationProperty Name="Musicians" Relationship="Self.FK_musician_ID" FromRole="Users" ToRole="Musicians" />
           <NavigationProperty Name="Ratings" Relationship="Self.FK_USER_VALORATIONS" FromRole="Users" ToRole="Ratings" />
           <NavigationProperty Name="Genres" Relationship="Self.UserGenres" FromRole="Users" ToRole="Genres" />
+          <Property Name="active" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="UsersDesktop">
           <Key>
@@ -1232,6 +1234,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="dam03Model.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="active" ColumnName="active" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="description" ColumnName="description" />

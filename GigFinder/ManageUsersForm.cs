@@ -31,15 +31,15 @@ namespace GigFinder
             bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
             userLogin = user;
         }
-        private void CambiarIdioma()
+        private void ChangeLanguage()
         {
-            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
-            Thread.CurrentThread.CurrentUICulture = cultura;
-            Thread.CurrentThread.CurrentCulture = cultura;
-            ActualizarTextos();
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
         }
 
-        private void ActualizarTextos()
+        private void UpdateTexts()
         {
             sameUserDelete = Strings.sameUserDelete;
             askDelete = Strings.askDelete;
@@ -54,7 +54,7 @@ namespace GigFinder
 
         private void ManageUsersForm_Load(object sender, EventArgs e)
         {
-            CambiarIdioma();
+            ChangeLanguage();
         }
 
         private void customComboBoxFilter_OnSelectedIndexChanged(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelGroupSize = new System.Windows.Forms.Label();
             this.labelPrize = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
@@ -48,6 +49,10 @@
             this.customComboBoxLang = new GigFinder.Controls.CustomComboBox();
             this.roundedButtonCancel = new GigFinder.Controls.RoundedButton();
             this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
+            this.bindingSourceLang = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceGenres = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGenres)).BeginInit();
             this.SuspendLayout();
             // 
             // labelGroupSize
@@ -134,6 +139,8 @@
             // 
             this.listBoxGenres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.listBoxGenres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxGenres.DataSource = this.bindingSourceGenres;
+            this.listBoxGenres.DisplayMember = "name";
             this.listBoxGenres.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxGenres.FormattingEnabled = true;
             this.listBoxGenres.ItemHeight = 23;
@@ -142,6 +149,7 @@
             this.listBoxGenres.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxGenres.Size = new System.Drawing.Size(320, 276);
             this.listBoxGenres.TabIndex = 28;
+            this.listBoxGenres.ValueMember = "id";
             // 
             // roundedTextBoxDescription
             // 
@@ -291,6 +299,8 @@
             this.customComboBoxLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.customComboBoxLang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.customComboBoxLang.BorderSize = 2;
+            this.customComboBoxLang.DataSource = this.bindingSourceLang;
+            this.customComboBoxLang.DisplayMember = "lang";
             this.customComboBoxLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.customComboBoxLang.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customComboBoxLang.ForeColor = System.Drawing.Color.Black;
@@ -304,6 +314,7 @@
             this.customComboBoxLang.Size = new System.Drawing.Size(320, 38);
             this.customComboBoxLang.TabIndex = 38;
             this.customComboBoxLang.Texts = "Idioma de canciones";
+            this.customComboBoxLang.ValueMember = "id";
             // 
             // roundedButtonCancel
             // 
@@ -339,6 +350,14 @@
             this.roundedButtonCreate.Text = "Crear";
             this.roundedButtonCreate.UseVisualStyleBackColor = false;
             // 
+            // bindingSourceLang
+            // 
+            this.bindingSourceLang.DataSource = typeof(GigFinder.Models.Languages);
+            // 
+            // bindingSourceGenres
+            // 
+            this.bindingSourceGenres.DataSource = typeof(GigFinder.Models.Genres);
+            // 
             // CreateMusicianForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +389,8 @@
             this.Name = "CreateMusicianForm";
             this.Text = "CreateMusicianForm";
             this.Load += new System.EventHandler(this.CreateMusicianForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGenres)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,5 +418,7 @@
         private Controls.CustomComboBox customComboBoxLang;
         private Controls.RoundedButton roundedButtonCancel;
         private Controls.RoundedButton roundedButtonCreate;
+        private System.Windows.Forms.BindingSource bindingSourceGenres;
+        private System.Windows.Forms.BindingSource bindingSourceLang;
     }
 }

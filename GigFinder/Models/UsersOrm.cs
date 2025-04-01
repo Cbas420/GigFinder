@@ -43,7 +43,7 @@ namespace GigFinder.Models
             List<UserMusician> _userMusician = (from u in Orm.bd.Users
                           join m in Orm.bd.Musicians on u.id equals m.id
                           join l in Orm.bd.Languages on m.songs_lang equals l.id
-                          where u.type == "music"
+                          where u.type == "music" && u.active == true
                           select new UserMusician
                           {
                               id = u.id,
@@ -62,19 +62,19 @@ namespace GigFinder.Models
         public static List<UserLocal> SelectLocals()
         {
             List<UserLocal> _userLocal = (from u in Orm.bd.Users
-                                                join l in Orm.bd.Locals on u.id equals l.id
-                                                where u.type == "local"
-                                                select new UserLocal
-                                                {
-                                                    id = u.id,
-                                                    name = u.name,
-                                                    description = u.description,
-                                                    email = u.email,
-                                                    password = u.password,
-                                                    capacity = l.capacity,
-                                                    x_coordination = l.x_coordination,
-                                                    y_coordination = l.y_coordination,
-                                                }).ToList();
+                           join l in Orm.bd.Locals on u.id equals l.id
+                           where u.type == "local" && u.active == true
+                           select new UserLocal
+                           {
+                                id = u.id,
+                                name = u.name,
+                                description = u.description,
+                                email = u.email,
+                                password = u.password,
+                                capacity = l.capacity,
+                                x_coordination = l.x_coordination,
+                                y_coordination = l.y_coordination,
+                           }).ToList();
 
             return _userLocal;
         }

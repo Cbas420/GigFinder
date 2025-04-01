@@ -20,33 +20,33 @@ namespace GigFinder
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-        private void CambiarIdioma()
+        private void ChangeLanguage()
         {
-            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
-            Thread.CurrentThread.CurrentUICulture = cultura;
-            Thread.CurrentThread.CurrentCulture = cultura;
-            ActualizarTextos();
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
         }
 
-        private void ActualizarTextos()
+        private void UpdateTexts()
         {
-            labelTitle.Text = Resources.Strings.labelCreateLocal;
-            roundedButtonCreate.Text = Resources.Strings.buttonCreate;
-            roundedButtonCancel.Text = Resources.Strings.buttonCancelar;
-            labelConfirmPass.Text = Resources.Strings.labelConfirPass;
-            labelDescription.Text = Resources.Strings.labelDescription;
-            labelGenres.Text = Resources.Strings.labelGendres;
-            labelMail.Text = Resources.Strings.labelMail;
-            labelName.Text = Resources.Strings.labelName;
-            labelPass.Text = Resources.Strings.labelPass;
-            labelCapacity.Text = Resources.Strings.labelLocalCapacity;
-            labelCoordX.Text = Resources.Strings.labelCoordX;
-            labelCoordY.Text = Resources.Strings.labelCoordY;
+            labelTitle.Text = Strings.labelCreateLocal;
+            roundedButtonCreate.Text = Strings.buttonCreate;
+            roundedButtonCancel.Text = Strings.buttonCancelar;
+            labelConfirmPass.Text = Strings.labelConfirPass;
+            labelDescription.Text = Strings.labelDescription;
+            labelGenres.Text = Strings.labelGendres;
+            labelMail.Text = Strings.labelMail;
+            labelName.Text = Strings.labelName;
+            labelPass.Text = Strings.labelPass;
+            labelCapacity.Text = Strings.labelLocalCapacity;
+            labelCoordX.Text = Strings.labelCoordX;
+            labelCoordY.Text = Strings.labelCoordY;
         }
 
         private void CreateLocalForm_Load(object sender, EventArgs e)
         {
-            CambiarIdioma();
+            ChangeLanguage();
         }
     }
 }

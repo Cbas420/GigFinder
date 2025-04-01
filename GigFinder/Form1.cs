@@ -51,36 +51,41 @@ namespace GigFinder
 
         private void pictureBoxES_Click(object sender, EventArgs e)
         {
-            LanguageManager.Idioma = "es-ES";
-            CambiarIdioma();
+            LanguageManager.language = "es-ES";
+            ChangeLanguage();
         }
 
         private void pictureBoxEN_Click(object sender, EventArgs e)
         {
-            LanguageManager.Idioma = "en-En";
-            CambiarIdioma();
+            LanguageManager.language = "en-En";
+            ChangeLanguage();
         }
 
         private void pictureBoxCA_Click(object sender, EventArgs e)
         {
-            LanguageManager.Idioma = "ca-CA";
-            CambiarIdioma();
+            LanguageManager.language = "ca-CA";
+            ChangeLanguage();
         }
 
-        private void CambiarIdioma()
+        private void ChangeLanguage()
         {
-            CultureInfo cultura = new CultureInfo(LanguageManager.Idioma);
-            Thread.CurrentThread.CurrentUICulture = cultura;
-            Thread.CurrentThread.CurrentCulture = cultura;
-            ActualizarTextos();
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
         }
 
-        private void ActualizarTextos()
+        private void UpdateTexts()
         {
             labelMail.Text = Strings.labelMail;
             labelPass.Text = Strings.labelPass;
             roundedButtonLogin.Text = Strings.buttonLogin;
             login = Strings.messageLogin;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ChangeLanguage();
         }
     }
 }

@@ -35,6 +35,7 @@ namespace GigFinder.Models
         public string type { get; set; }
         public byte avg_rating { get; set; }
         public string profile_image_identifier { get; set; }
+        public bool active { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Aplications> Aplications { get; set; }
