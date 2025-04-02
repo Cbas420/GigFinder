@@ -95,13 +95,13 @@ namespace GigFinder.Models
             return _user;
         }
 
-        public static void InserMusician(Musicians _music)
+        public static void InsertMusician(Musicians _music)
         {
             Orm.bd.Musicians.Add(_music);
             Orm.bd.SaveChanges();
         }
 
-        public static void InserLocal(Locals _local)
+        public static void InsertLocal(Locals _local)
         {
             Orm.bd.Locals.Add(_local);
             Orm.bd.SaveChanges();

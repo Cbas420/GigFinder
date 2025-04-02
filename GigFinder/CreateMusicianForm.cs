@@ -104,7 +104,7 @@ namespace GigFinder
                         _music.price = price;
                         _music.songs_lang = lang;
                         _music.size = (byte)size;
-                        UsersOrm.InserMusician(_music);
+                        UsersOrm.InsertMusician(_music);
 
                         this.DialogResult = DialogResult.OK;
                         this.Close();

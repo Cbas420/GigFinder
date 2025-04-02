@@ -189,7 +189,7 @@
             this.roundedTextBoxConfirmPass.Multiline = false;
             this.roundedTextBoxConfirmPass.Name = "roundedTextBoxConfirmPass";
             this.roundedTextBoxConfirmPass.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
-            this.roundedTextBoxConfirmPass.PasswordChar = false;
+            this.roundedTextBoxConfirmPass.PasswordChar = true;
             this.roundedTextBoxConfirmPass.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxConfirmPass.PlaceholderText = "";
             this.roundedTextBoxConfirmPass.Size = new System.Drawing.Size(320, 44);
@@ -252,7 +252,7 @@
             this.roundedTextBoxPass.Multiline = false;
             this.roundedTextBoxPass.Name = "roundedTextBoxPass";
             this.roundedTextBoxPass.Padding = new System.Windows.Forms.Padding(7, 10, 7, 10);
-            this.roundedTextBoxPass.PasswordChar = false;
+            this.roundedTextBoxPass.PasswordChar = true;
             this.roundedTextBoxPass.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxPass.PlaceholderText = "";
             this.roundedTextBoxPass.Size = new System.Drawing.Size(320, 44);
