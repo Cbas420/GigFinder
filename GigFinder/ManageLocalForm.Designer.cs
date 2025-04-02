@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.dataGridViewLocal = new System.Windows.Forms.DataGridView();
+            this.bindingSourceLocal = new System.Windows.Forms.BindingSource(this.components);
             this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
             this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
             this.roundedButtonEdit = new GigFinder.Controls.RoundedButton();
             this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.bindingSourceLocal = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +51,8 @@
             this.ycoordinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLocal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLocal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // customPanel1
@@ -127,6 +127,10 @@
             this.dataGridViewLocal.Size = new System.Drawing.Size(1136, 446);
             this.dataGridViewLocal.TabIndex = 0;
             // 
+            // bindingSourceLocal
+            // 
+            this.bindingSourceLocal.DataSource = typeof(GigFinder.Models.UserLocal);
+            // 
             // customComboBoxOrder
             // 
             this.customComboBoxOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
@@ -136,6 +140,11 @@
             this.customComboBoxOrder.Font = new System.Drawing.Font("Passion One", 14F);
             this.customComboBoxOrder.ForeColor = System.Drawing.Color.White;
             this.customComboBoxOrder.IconColor = System.Drawing.Color.White;
+            this.customComboBoxOrder.Items.AddRange(new object[] {
+            "Id",
+            "Name",
+            "Email",
+            "Capacity"});
             this.customComboBoxOrder.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
             this.customComboBoxOrder.ListTextColor = System.Drawing.Color.White;
             this.customComboBoxOrder.Location = new System.Drawing.Point(20, 123);
@@ -145,6 +154,7 @@
             this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
             this.customComboBoxOrder.TabIndex = 21;
             this.customComboBoxOrder.Texts = "Ordenar por";
+            this.customComboBoxOrder.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxOrder_OnSelectedIndexChanged);
             // 
             // roundedButtonDelete
             // 
@@ -162,6 +172,7 @@
             this.roundedButtonDelete.TabIndex = 20;
             this.roundedButtonDelete.Text = "Eliminar";
             this.roundedButtonDelete.UseVisualStyleBackColor = false;
+            this.roundedButtonDelete.Click += new System.EventHandler(this.roundedButtonDelete_Click);
             // 
             // roundedButtonEdit
             // 
@@ -196,6 +207,7 @@
             this.roundedButtonCreate.TabIndex = 18;
             this.roundedButtonCreate.Text = "Crear";
             this.roundedButtonCreate.UseVisualStyleBackColor = false;
+            this.roundedButtonCreate.Click += new System.EventHandler(this.roundedButtonCreate_Click);
             // 
             // labelTitle
             // 
@@ -218,63 +230,59 @@
             this.pictureBoxLogo.TabIndex = 16;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // bindingSourceLocal
-            // 
-            this.bindingSourceLocal.DataSource = typeof(GigFinder.Models.UserLocal);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
             this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // capacityDataGridViewTextBoxColumn
             // 
             this.capacityDataGridViewTextBoxColumn.DataPropertyName = "capacity";
-            this.capacityDataGridViewTextBoxColumn.HeaderText = "capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "Capacity";
             this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
             this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // xcoordinationDataGridViewTextBoxColumn
             // 
             this.xcoordinationDataGridViewTextBoxColumn.DataPropertyName = "x_coordination";
-            this.xcoordinationDataGridViewTextBoxColumn.HeaderText = "x_coordination";
+            this.xcoordinationDataGridViewTextBoxColumn.HeaderText = "Longitude";
             this.xcoordinationDataGridViewTextBoxColumn.Name = "xcoordinationDataGridViewTextBoxColumn";
             this.xcoordinationDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ycoordinationDataGridViewTextBoxColumn
             // 
             this.ycoordinationDataGridViewTextBoxColumn.DataPropertyName = "y_coordination";
-            this.ycoordinationDataGridViewTextBoxColumn.HeaderText = "y_coordination";
+            this.ycoordinationDataGridViewTextBoxColumn.HeaderText = "Latitude";
             this.ycoordinationDataGridViewTextBoxColumn.Name = "ycoordinationDataGridViewTextBoxColumn";
             this.ycoordinationDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -299,8 +307,8 @@
             this.Load += new System.EventHandler(this.ManageLocalForm_Load);
             this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLocal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLocal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

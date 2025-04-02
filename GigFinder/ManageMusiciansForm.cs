@@ -67,7 +67,7 @@ namespace GigFinder
             {
                 if (dataGridViewData.SelectedRows.Count > 0)
                 {
-                    DialogResult result = MessageBox.Show("Estas seguro de que quieres eliminar ese músico.", "Confirmación de eliminación.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("¿Estas seguro de que quieres eliminar ese músico?", "Confirmación de eliminación.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
@@ -89,7 +89,44 @@ namespace GigFinder
             {
                 MessageBox.Show("No tienes permisos para utilizar esta función de la aplicación.");
             }
-            
+        }
+
+        private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedOrder = customComboBoxOrder.SelectedItem?.ToString();
+
+            var orderedMusicians = OrderMusiciansBy(selectedOrder);
+
+            bindingSourceMusician.DataSource = orderedMusicians;
+        }
+
+        private List<UserMusician> OrderMusiciansBy(string selectedOrder)
+        {
+            var _musicians = UsersOrm.SelectMusicians();
+
+            switch (selectedOrder)
+            {
+                case "Id":
+                    return _musicians.OrderBy(user => user.id).ToList();
+
+                case "Name":
+                    return _musicians.OrderBy(user => user.name).ToList();
+
+                case "Email":
+                    return _musicians.OrderBy(user => user.email).ToList();
+
+                case "Size":
+                    return _musicians.OrderBy(user => user.size).ToList();
+
+                case "Price":
+                    return _musicians.OrderBy(user => user.price).ToList();
+
+                case "Lang":
+                    return _musicians.OrderBy(user => user.lang).ToList();
+
+                default:
+                    return _musicians;
+            }
         }
     }
 }
