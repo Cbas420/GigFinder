@@ -78,5 +78,56 @@ namespace GigFinder.Models
 
             return _userLocal;
         }
+
+        public static void InsertUser(Users _user)
+        {
+            Orm.bd.Users.Add(_user);
+            Orm.bd.SaveChanges();
+        }
+
+        public static Users SelectUserWithMail(string email)
+        {
+            Users _user =
+                (Users)(from user in Orm.bd.Users
+                        where user.email == email
+                        select user).FirstOrDefault();
+
+            return _user;
+        }
+
+        public static void InserMusician(Musicians _music)
+        {
+            Orm.bd.Musicians.Add(_music);
+            Orm.bd.SaveChanges();
+        }
+
+        public static void InserLocal(Locals _local)
+        {
+            Orm.bd.Locals.Add(_local);
+            Orm.bd.SaveChanges();
+        }
+
+        public static void DeleteUserMusician(UserMusician _music)
+        {
+            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == _music.id);
+
+            if (existingUser != null)
+            {
+                existingUser.active = false;
+
+                Orm.bd.SaveChanges();
+            }
+        }
+        public static void DeleteUserLocal(UserLocal _local)
+        {
+            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == _local.id);
+
+            if (existingUser != null)
+            {
+                existingUser.active = false;
+
+                Orm.bd.SaveChanges();
+            }
+        }
     }
 }

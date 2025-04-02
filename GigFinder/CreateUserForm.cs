@@ -115,7 +115,6 @@ namespace GigFinder
                             _userDesktop.password = password;
                             _userDesktop.type = type;
 
-                            clearInfo();
                             UsersDesktopOrm.Insert(_userDesktop);
                             this.DialogResult = DialogResult.OK;
                             this.Close();
@@ -156,7 +155,6 @@ namespace GigFinder
                             _useredit.email = email;
                             _useredit.type = type;
 
-                            clearInfo();
                             UsersDesktopOrm.UpdateWithoutPass(_useredit);
                             this.DialogResult = DialogResult.OK;
                             this.Close();
@@ -171,7 +169,6 @@ namespace GigFinder
                                 _useredit.password = password;
                                 _useredit.type = type;
 
-                                clearInfo();
                                 UsersDesktopOrm.Update(_useredit);
                                 this.DialogResult = DialogResult.OK;
                                 this.Close();
@@ -188,18 +185,7 @@ namespace GigFinder
 
         private void roundedButtonCancel_Click(object sender, EventArgs e)
         {
-            clearInfo();
             this.Close();
-        }
-
-        private void clearInfo()
-        {
-            customComboBoxType.Texts = Strings.comboBoxUserType;
-            roundedTextBoxConfirmPass.Texts = "";
-            roundedTextBoxPass.Texts = "";
-            roundedTextBoxName.Texts = "";
-            roundedTextBoxSurname.Texts = "";
-            roundedTextBoxMail.Texts = "";
         }
     }
 }

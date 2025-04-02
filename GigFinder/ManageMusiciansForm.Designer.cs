@@ -222,6 +222,7 @@
             this.roundedButtonDelete.TabIndex = 20;
             this.roundedButtonDelete.Text = "Eliminar";
             this.roundedButtonDelete.UseVisualStyleBackColor = false;
+            this.roundedButtonDelete.Click += new System.EventHandler(this.roundedButtonDelete_Click);
             // 
             // roundedButtonEdit
             // 
