@@ -286,4 +286,7 @@ usuarios</value>
   <data name="accesMenuShort" xml:space="preserve">
     <value>Acceso denegado</value>
   </data>
+  <data name="sameUserDeleteShort" xml:space="preserve">
+    <value>Acción indebida</value>
+  </data>
 </root>

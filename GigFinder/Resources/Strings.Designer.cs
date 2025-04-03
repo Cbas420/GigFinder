@@ -488,6 +488,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Acción indebida.
+        /// </summary>
+        internal static string sameUserDeleteShort {
+            get {
+                return ResourceManager.GetString("sameUserDeleteShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Por favor, seleccione un usuario para eliminar..
         /// </summary>
         internal static string selectionDelete {

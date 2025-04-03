@@ -18,43 +18,89 @@ namespace GigFinder
     public partial class ManageUsersForm : Form
     {
         UsersDesktop _userEdit = null;
-        UsersDesktop userLogin;
+        UsersDesktop _userLogin;
         string askDelete;
         string askDeleteShort;
         string selectionShort;
         string selectionDelete;
         string selectionEdit;
         string sameUserDelete;
+        string sameUserDeleteShort;
         public ManageUsersForm(UsersDesktop user)
         {
             InitializeComponent();
             bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-            userLogin = user;
-        }
-        private void ChangeLanguage()
-        {
-            CultureInfo culture = new CultureInfo(LanguageManager.language);
-            Thread.CurrentThread.CurrentUICulture = culture;
-            Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
-        }
-
-        private void UpdateTexts()
-        {
-            sameUserDelete = Strings.sameUserDelete;
-            askDelete = Strings.askDelete;
-            askDeleteShort = Strings.askDeleteShort;
-            labelTitle.Text = Strings.titleUsers;
-            customComboBoxFilter.Texts = Strings.comboBoxFilter;
-            customComboBoxOrder.Texts = Strings.comboBoxOrder;
-            roundedButtonCreate.Text = Strings.buttonCreate;
-            roundedButtonEdit.Text = Strings.buttonEdit;
-            roundedButtonDelete.Text = Strings.buttonDelete;
+            _userLogin = user;
         }
 
         private void ManageUsersForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
+        }
+
+        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsers.SelectedRows.Count > 0)
+            {
+                if (_userLogin.Equals((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem))
+                {
+                    MessageBox.Show(sameUserDelete, sameUserDeleteShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show(askDelete, askDeleteShort, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        UsersDesktop userDelete = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
+                        deleteRelatedData(userDelete);
+
+                        UsersDesktopOrm.Delete(userDelete);
+                        Log.createLog("Delete UserDesktop", _userLogin.id);
+
+                        bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                        customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                        customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(selectionDelete, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void roundedButtonCreate_Click(object sender, EventArgs e)
+        {
+            CreateUserForm createUserForm = new CreateUserForm(0, _userEdit);
+            if (createUserForm.ShowDialog() == DialogResult.OK)
+            {
+                bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                Log.createLog("Create UserDesktop", _userLogin.id);
+                customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                customComboBoxOrder.Texts = Strings.comboBoxOrder;
+            }
+        }
+
+        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsers.SelectedRows.Count > 0)
+            {
+                _userEdit = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
+                CreateUserForm createUserForm = new CreateUserForm(1, _userEdit);
+                if (createUserForm.ShowDialog() == DialogResult.OK)
+                {
+                    bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
+                    Log.createLog("Edit UserDesktop", _userLogin.id);
+                    customComboBoxFilter.Texts = Strings.comboBoxFilter;
+                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                }
+            }
+            else
+            {
+                MessageBox.Show(selectionEdit, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void customComboBoxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -64,20 +110,7 @@ namespace GigFinder
             var filteredUsers = FilterUsersByType(selectedValue);
 
             bindingSourceUsers.DataSource = filteredUsers;
-        }
-
-        private List<UsersDesktop> FilterUsersByType(string selectedType)
-        {
-            var _desktopUsers = UsersDesktopOrm.SelectGlobal();
-
-            if (string.IsNullOrEmpty(selectedType) || selectedType == "all")
-            {
-                return _desktopUsers;
-            } else
-            {
-                return _desktopUsers.Where(user => user.type == selectedType).ToList();
-            }
-        }
+        }    
 
         private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -114,68 +147,18 @@ namespace GigFinder
             }
         }
 
-        private void roundedButtonDelete_Click(object sender, EventArgs e)
+        private List<UsersDesktop> FilterUsersByType(string selectedType)
         {
-            if (dataGridViewUsers.SelectedRows.Count > 0)
+            var _desktopUsers = UsersDesktopOrm.SelectGlobal();
+
+            if (string.IsNullOrEmpty(selectedType) || selectedType == "all")
             {
-                if (userLogin.Equals((UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem))
-                {
-                    MessageBox.Show(sameUserDelete);
-                } else
-                {
-                    DialogResult result = MessageBox.Show(askDelete, askDeleteShort, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                    if (result == DialogResult.Yes)
-                    {
-                        UsersDesktop userDelete = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
-                        deleteRelatedData(userDelete);
-
-                        UsersDesktopOrm.Delete(userDelete);
-                        Log.createLog("Delete UserDesktop", userLogin.id);
-
-                        bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-                        customComboBoxFilter.Texts = Strings.comboBoxFilter;
-                        customComboBoxOrder.Texts = Strings.comboBoxOrder;
-                    }
-                }
+                return _desktopUsers;
             }
             else
             {
-                MessageBox.Show(selectionDelete, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return _desktopUsers.Where(user => user.type == selectedType).ToList();
             }
-        }
-
-        private void roundedButtonCreate_Click(object sender, EventArgs e)
-        {
-            CreateUserForm createUserForm = new CreateUserForm(0, _userEdit);
-            if (createUserForm.ShowDialog() == DialogResult.OK)
-            {
-                bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-                Log.createLog("Create UserDesktop", userLogin.id);
-                customComboBoxFilter.Texts = Strings.comboBoxFilter;
-                customComboBoxOrder.Texts = Strings.comboBoxOrder;
-            }
-        }
-
-        private void roundedButtonEdit_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewUsers.SelectedRows.Count > 0)
-            {
-                _userEdit = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
-                CreateUserForm createUserForm = new CreateUserForm(1, _userEdit);
-                if (createUserForm.ShowDialog() == DialogResult.OK)
-                {
-                    bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
-                    Log.createLog("Edit UserDesktop", userLogin.id);
-                    customComboBoxFilter.Texts = Strings.comboBoxFilter;
-                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
-                }
-            }
-            else
-            {
-                MessageBox.Show(selectionEdit, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
         }
 
         private void deleteRelatedData(UsersDesktop userDelete)
@@ -190,6 +173,27 @@ namespace GigFinder
             {
                 IncidenciesOrm.UpdateIncidenceAdmin(userDelete.id);
             }
+        }
+
+        private void ChangeLanguage()
+        {
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
+        }
+
+        private void UpdateTexts()
+        {
+            sameUserDelete = Strings.sameUserDelete;
+            askDelete = Strings.askDelete;
+            askDeleteShort = Strings.askDeleteShort;
+            labelTitle.Text = Strings.titleUsers;
+            customComboBoxFilter.Texts = Strings.comboBoxFilter;
+            customComboBoxOrder.Texts = Strings.comboBoxOrder;
+            roundedButtonCreate.Text = Strings.buttonCreate;
+            roundedButtonEdit.Text = Strings.buttonEdit;
+            roundedButtonDelete.Text = Strings.buttonDelete;
         }
     }
 }

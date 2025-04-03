@@ -287,4 +287,7 @@ management</value>
   <data name="accesMenuShort" xml:space="preserve">
     <value>Acces denied</value>
   </data>
+  <data name="sameUserDeleteShort" xml:space="preserve">
+    <value>Improper action</value>
+  </data>
 </root>

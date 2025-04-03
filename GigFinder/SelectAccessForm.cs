@@ -24,6 +24,10 @@ namespace GigFinder
             InitializeComponent();
             _userLogin = user;
         }
+        private void SelectAccessForm_Load(object sender, EventArgs e)
+        {
+            ChangeLanguage();
+        }
 
         private void pictureBoxUsers_Click(object sender, EventArgs e)
         {
@@ -162,11 +166,6 @@ namespace GigFinder
             labelData.Text = Strings.menuData;
             accesMenu = Strings.accesMenu;
             accesMenuShort = Strings.accesMenuShort;
-        }
-
-        private void SelectAccessForm_Load(object sender, EventArgs e)
-        {
-            ChangeLanguage();
         }
     }
 }
