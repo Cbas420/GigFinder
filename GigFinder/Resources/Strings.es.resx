@@ -289,4 +289,16 @@ usuarios</value>
   <data name="sameUserDeleteShort" xml:space="preserve">
     <value>Acción indebida</value>
   </data>
+  <data name="completeIncidencie" xml:space="preserve">
+    <value>Completa todos los campos para resolver la incidencia.</value>
+  </data>
+  <data name="titleIncidencie" xml:space="preserve">
+    <value>Resolver incidencia</value>
+  </data>
+  <data name="resolutionNote" xml:space="preserve">
+    <value>Nota de resolución:</value>
+  </data>
+  <data name="resolutionState" xml:space="preserve">
+    <value>Estado de resolución:</value>
+  </data>
 </root>

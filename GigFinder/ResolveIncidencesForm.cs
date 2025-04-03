@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Models;
 using GigFinder.Resources;
@@ -16,6 +9,9 @@ namespace GigFinder
 {
     public partial class ResolveIncidencesForm : Form
     {
+        string completeIncidencie;
+        string completeIncidencieShort;
+        
         Incidences incidence;
         UsersDesktop userLogin;
         public ResolveIncidencesForm(UsersDesktop user, Incidences incidence)
@@ -24,24 +20,11 @@ namespace GigFinder
             userLogin = user;
             this.incidence = incidence;
         }
-        private void ChangeLanguage()
-        {
-            CultureInfo culture = new CultureInfo(LanguageManager.language);
-            Thread.CurrentThread.CurrentUICulture = culture;
-            Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
-        }
-
-        private void UpdateTexts()
-        {
-
-        }
-
         private void ResolveIncidencesForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
         }
-
+              
         private void roundedButtonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -54,7 +37,7 @@ namespace GigFinder
 
             if (string.IsNullOrEmpty(note) || string.IsNullOrEmpty(status))
             {
-                MessageBox.Show("Completa todos los campos para resolver la incidencia.");
+                MessageBox.Show(completeIncidencie, completeIncidencieShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             } else
             {
                 roundedTextBoxNote.Texts = "";
@@ -63,6 +46,22 @@ namespace GigFinder
                 IncidenciesOrm.UpdateIncidence(incidence.id, status, note, userLogin.id);
                 this.DialogResult = DialogResult.OK;
             }
+        }
+        private void ChangeLanguage()
+        {
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
+        }
+
+        private void UpdateTexts()
+        {
+            labelTitle.Text = Strings.titleIncidencie;
+            labelNote.Text = Strings.resolutionNote;
+            customComboBoxStatus.Texts = Strings.resolutionState;
+            completeIncidencie = Strings.completeIncidencie;
+            completeIncidencieShort = Strings.messageCompleteShort;
         }
     }
 }

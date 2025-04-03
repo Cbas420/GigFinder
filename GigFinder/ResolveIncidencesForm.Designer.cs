@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.customComboBoxStatus = new GigFinder.Controls.CustomComboBox();
-            this.labelName = new System.Windows.Forms.Label();
+            this.labelNote = new System.Windows.Forms.Label();
             this.roundedTextBoxNote = new GigFinder.Controls.RoundedTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.roundedButtonCancel = new GigFinder.Controls.RoundedButton();
@@ -58,15 +58,15 @@
             this.customComboBoxStatus.TabIndex = 47;
             this.customComboBoxStatus.Texts = "Estado de resolución:";
             // 
-            // labelName
+            // labelNote
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(89, 80);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(158, 23);
-            this.labelName.TabIndex = 46;
-            this.labelName.Text = "Nota de resolución:";
+            this.labelNote.AutoSize = true;
+            this.labelNote.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNote.Location = new System.Drawing.Point(89, 80);
+            this.labelNote.Name = "labelNote";
+            this.labelNote.Size = new System.Drawing.Size(158, 23);
+            this.labelNote.TabIndex = 46;
+            this.labelNote.Text = "Nota de resolución:";
             // 
             // roundedTextBoxNote
             // 
@@ -144,7 +144,7 @@
             this.Controls.Add(this.roundedButtonCancel);
             this.Controls.Add(this.roundedButtonSave);
             this.Controls.Add(this.customComboBoxStatus);
-            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelNote);
             this.Controls.Add(this.roundedTextBoxNote);
             this.Controls.Add(this.labelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -161,7 +161,7 @@
         #endregion
 
         private Controls.CustomComboBox customComboBoxStatus;
-        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelNote;
         private Controls.RoundedTextBox roundedTextBoxNote;
         private System.Windows.Forms.Label labelTitle;
         private Controls.RoundedButton roundedButtonCancel;

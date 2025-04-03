@@ -196,6 +196,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Completa todos los campos para resolver la incidencia..
+        /// </summary>
+        internal static string completeIncidencie {
+            get {
+                return ResourceManager.GetString("completeIncidencie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Eventos programados.
         /// </summary>
         internal static string labelCalendar {
@@ -479,6 +488,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Nota de resolución:.
+        /// </summary>
+        internal static string resolutionNote {
+            get {
+                return ResourceManager.GetString("resolutionNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estado de resolución:.
+        /// </summary>
+        internal static string resolutionState {
+            get {
+                return ResourceManager.GetString("resolutionState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No puedes eliminar tu propio usuario..
         /// </summary>
         internal static string sameUserDelete {
@@ -547,6 +574,15 @@ namespace GigFinder.Resources {
         internal static string titleEditUser {
             get {
                 return ResourceManager.GetString("titleEditUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Resolver incidencia.
+        /// </summary>
+        internal static string titleIncidencie {
+            get {
+                return ResourceManager.GetString("titleIncidencie", resourceCulture);
             }
         }
         

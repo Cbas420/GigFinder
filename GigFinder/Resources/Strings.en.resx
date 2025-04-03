@@ -290,4 +290,16 @@ management</value>
   <data name="sameUserDeleteShort" xml:space="preserve">
     <value>Improper action</value>
   </data>
+  <data name="completeIncidencie" xml:space="preserve">
+    <value>Complete all fields to resolve the incident.</value>
+  </data>
+  <data name="titleIncidencie" xml:space="preserve">
+    <value>Resolve incident</value>
+  </data>
+  <data name="resolutionNote" xml:space="preserve">
+    <value>Resolution note:</value>
+  </data>
+  <data name="resolutionState" xml:space="preserve">
+    <value>Resolution state:</value>
+  </data>
 </root>
