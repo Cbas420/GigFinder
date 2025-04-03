@@ -301,4 +301,13 @@ usuarios</value>
   <data name="resolutionState" xml:space="preserve">
     <value>Estado de resolución:</value>
   </data>
+  <data name="askDeleteRating" xml:space="preserve">
+    <value>¿Estas seguro de que quieres eliminar esa valoración?</value>
+  </data>
+  <data name="selectRating" xml:space="preserve">
+    <value>Selecciona una valoración para eliminarla.</value>
+  </data>
+  <data name="titleRatings" xml:space="preserve">
+    <value>Gestión de valoraciones</value>
+  </data>
 </root>

@@ -302,4 +302,13 @@ management</value>
   <data name="resolutionState" xml:space="preserve">
     <value>Resolution state:</value>
   </data>
+  <data name="askDeleteRating" xml:space="preserve">
+    <value>Are you sure you want to delete that review?</value>
+  </data>
+  <data name="selectRating" xml:space="preserve">
+    <value>Select a rating to delete.</value>
+  </data>
+  <data name="titleRatings" xml:space="preserve">
+    <value>Ratings management</value>
+  </data>
 </root>

@@ -88,6 +88,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a ¿Estas seguro de que quieres eliminar esa valoración?.
+        /// </summary>
+        internal static string askDeleteRating {
+            get {
+                return ResourceManager.GetString("askDeleteRating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Confirmación de eliminación.
         /// </summary>
         internal static string askDeleteShort {
@@ -551,6 +560,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona una valoración para eliminarla..
+        /// </summary>
+        internal static string selectRating {
+            get {
+                return ResourceManager.GetString("selectRating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Registro de actividad.
         /// </summary>
         internal static string titleActivity {
@@ -583,6 +601,15 @@ namespace GigFinder.Resources {
         internal static string titleIncidencie {
             get {
                 return ResourceManager.GetString("titleIncidencie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de valoraciones.
+        /// </summary>
+        internal static string titleRatings {
+            get {
+                return ResourceManager.GetString("titleRatings", resourceCulture);
             }
         }
         
