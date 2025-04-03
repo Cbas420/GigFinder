@@ -18,6 +18,12 @@ namespace GigFinder
     {
         int actionMade;
         UserMusician _userEdit;
+        String completeFields;
+        String completeFieldsShort;
+        String passCheck;
+        String passCheckShort;
+        String existingMusician;
+        String existingMusicianShort;
         public CreateMusicianForm(int action, UserMusician user)
         {
             InitializeComponent();
@@ -25,64 +31,14 @@ namespace GigFinder
             actionMade = action;
             bindingSourceGenres.DataSource = GenresOrm.SelectGlobal();
             bindingSourceLang.DataSource = LanguagesOrm.SelectGlobal();
-        }
-        private void ChangeLanguage()
-        {
-            CultureInfo culture = new CultureInfo(LanguageManager.language);
-            Thread.CurrentThread.CurrentUICulture = culture;
-            Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
-        }
-
-        private void UpdateTexts()
-        {
-            labelTitle.Text = Strings.labelCreateMusic;
-            roundedButtonCreate.Text = Strings.buttonSave;
-            roundedButtonCancel.Text = Strings.buttonCancelar;
-            customComboBoxLang.Texts = Strings.comboBoxLang;
-            labelConfirmPass.Text = Strings.labelConfirPass;
-            labelDescription.Text = Strings.labelDescription;
-            labelGenres.Text = Strings.labelGendres;
-            labelGroupSize.Text = Strings.labelGroupSize;
-            labelMail.Text = Strings.labelMail;
-            labelName.Text = Strings.labelName;
-            labelPass.Text = Strings.labelPass;
-            labelPrize.Text = Strings.labelPrice;
-        }
+        }   
 
         private void CreateMusicianForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
             LoadData();
             
-        }
-
-        private void LoadData()
-        {
-            if (actionMade == 1)
-            {
-                Users userToEdit = UsersOrm.SelectUserWithMail(_userEdit.email);
-                Musicians musicianToEdit = UsersOrm.SelectMusicianWithId(_userEdit.id);
-                roundedTextBoxName.Texts = userToEdit.name;
-                roundedTextBoxMail.Texts = userToEdit.email;
-                roundedTextBoxDescription.Texts = userToEdit.description;
-                roundedTextBoxPrice.Texts = musicianToEdit.price.ToString();
-                roundedTextBoxSizeGroup.Texts = musicianToEdit.size.ToString();
-                customComboBoxLang.SelectedItem = _userEdit.lang;
-                customComboBoxLang.Texts = _userEdit.lang;
-                listBoxGenres.SetSelected(0, false);
-                foreach (Genres _genre in userToEdit.Genres)
-                {
-                    for (int i = 0; i < listBoxGenres.Items.Count; i++)
-                    {
-                        if (((Genres)listBoxGenres.Items[i]).id == _genre.id)
-                        {
-                            listBoxGenres.SetSelected(i, true);
-                        }
-                    }
-                }
-            }
-        }
+        }      
 
         private void roundedButtonCancel_Click(object sender, EventArgs e)
         {
@@ -115,7 +71,7 @@ namespace GigFinder
                 !isPriceValid || price <= 0 ||
                 !isSizeValid || size <= 0)
                 {
-                    MessageBox.Show("Por favor, completa todos los campos correctamente.");
+                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -146,12 +102,12 @@ namespace GigFinder
                         }
                         else
                         {
-                            MessageBox.Show("Las contraseñas no coinciden.");
+                            MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Ya existe un usuario con ese correo.");
+                        MessageBox.Show(existingMusician, existingMusicianShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -165,14 +121,14 @@ namespace GigFinder
                 !isPriceValid || price <= 0 ||
                 !isSizeValid || size <= 0)
                 {
-                    MessageBox.Show("Por favor, completa todos los campos correctamente.");
+                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     Users userToEdit = UsersOrm.SelectUserWithMail(email);
                     if (userToEdit != null && userToEdit.id != _userEdit.id)
                     {
-                        MessageBox.Show("Ya existe otro músico con ese mail", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(existingMusician, existingMusicianShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -193,12 +149,74 @@ namespace GigFinder
                             }
                             else
                             {
-                                MessageBox.Show("Las contraseñas no coinciden.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     }
                 }
             }
+        }
+        private void LoadData()
+        {
+            if (actionMade == 1)
+            {
+                Users userToEdit = UsersOrm.SelectUserWithMail(_userEdit.email);
+                Musicians musicianToEdit = UsersOrm.SelectMusicianWithId(_userEdit.id);
+                roundedTextBoxName.Texts = userToEdit.name;
+                roundedTextBoxMail.Texts = userToEdit.email;
+                roundedTextBoxDescription.Texts = userToEdit.description;
+                roundedTextBoxPrice.Texts = musicianToEdit.price.ToString();
+                roundedTextBoxSizeGroup.Texts = musicianToEdit.size.ToString();
+                customComboBoxLang.SelectedItem = _userEdit.lang;
+                customComboBoxLang.Texts = _userEdit.lang;
+                listBoxGenres.SetSelected(0, false);
+                foreach (Genres _genre in userToEdit.Genres)
+                {
+                    for (int i = 0; i < listBoxGenres.Items.Count; i++)
+                    {
+                        if (((Genres)listBoxGenres.Items[i]).id == _genre.id)
+                        {
+                            listBoxGenres.SetSelected(i, true);
+                        }
+                    }
+                }
+            }
+        }
+        private void ChangeLanguage()
+        {
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
+        }
+
+        private void UpdateTexts()
+        {
+            if (actionMade == 0)
+            {
+                labelTitle.Text = Strings.labelCreateMusic;
+            }
+            else
+            {
+                labelTitle.Text = Strings.labelEditMusic;
+            }
+            roundedButtonCreate.Text = Strings.buttonSave;
+            roundedButtonCancel.Text = Strings.buttonCancelar;
+            customComboBoxLang.Texts = Strings.comboBoxLang;
+            labelConfirmPass.Text = Strings.labelConfirPass;
+            labelDescription.Text = Strings.labelDescription;
+            labelGenres.Text = Strings.labelGendres;
+            labelGroupSize.Text = Strings.labelGroupSize;
+            labelMail.Text = Strings.labelMail;
+            labelName.Text = Strings.labelName;
+            labelPass.Text = Strings.labelPass;
+            labelPrize.Text = Strings.labelPrice;
+            passCheck = Strings.messagePassCheck;
+            passCheckShort = Strings.messagePassCheckShort;
+            completeFields = Strings.messageComplete;
+            completeFieldsShort = Strings.messageCompleteShort;
+            existingMusician = Strings.existingMusician;
+            existingMusicianShort = Strings.existingMusicianShort;
         }
     }
 }

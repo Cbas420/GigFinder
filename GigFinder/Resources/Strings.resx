@@ -319,4 +319,29 @@ usuarios</value>
   <data name="existingLocalShort" xml:space="preserve">
     <value>Local existente</value>
   </data>
+  <data name="labelEditMusic" xml:space="preserve">
+    <value>Editar músico</value>
+  </data>
+  <data name="existingMusician" xml:space="preserve">
+    <value>Ya existe un músico con ese correo.</value>
+  </data>
+  <data name="existingMusicianShort" xml:space="preserve">
+    <value>Músico existente</value>
+  </data>
+  <data name="musiciansManage" xml:space="preserve">
+    <value>Gestión de
+musicos</value>
+  </data>
+  <data name="LocalsManage" xml:space="preserve">
+    <value>Gestión de
+locales</value>
+  </data>
+  <data name="ratingsManage" xml:space="preserve">
+    <value>Gestión de
+valoraciones</value>
+  </data>
+  <data name="incidenciesManage" xml:space="preserve">
+    <value>Gestión de
+incidencias</value>
+  </data>
 </root>

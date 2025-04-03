@@ -232,6 +232,34 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ya existe un músico con ese correo..
+        /// </summary>
+        internal static string existingMusician {
+            get {
+                return ResourceManager.GetString("existingMusician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Músico existente.
+        /// </summary>
+        internal static string existingMusicianShort {
+            get {
+                return ResourceManager.GetString("existingMusicianShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de
+        ///incidencias.
+        /// </summary>
+        internal static string incidenciesManage {
+            get {
+                return ResourceManager.GetString("incidenciesManage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Eventos programados.
         /// </summary>
         internal static string labelCalendar {
@@ -322,6 +350,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Editar músico.
+        /// </summary>
+        internal static string labelEditMusic {
+            get {
+                return ResourceManager.GetString("labelEditMusic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Géneros musicales:.
         /// </summary>
         internal static string labelGendres {
@@ -408,6 +445,16 @@ namespace GigFinder.Resources {
         internal static string labelUserType {
             get {
                 return ResourceManager.GetString("labelUserType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de
+        ///locales.
+        /// </summary>
+        internal static string LocalsManage {
+            get {
+                return ResourceManager.GetString("LocalsManage", resourceCulture);
             }
         }
         
@@ -520,6 +567,26 @@ namespace GigFinder.Resources {
         internal static string messageUserExistsShort {
             get {
                 return ResourceManager.GetString("messageUserExistsShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de
+        ///musicos.
+        /// </summary>
+        internal static string musiciansManage {
+            get {
+                return ResourceManager.GetString("musiciansManage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de
+        ///valoraciones.
+        /// </summary>
+        internal static string ratingsManage {
+            get {
+                return ResourceManager.GetString("ratingsManage", resourceCulture);
             }
         }
         
