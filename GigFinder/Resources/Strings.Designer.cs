@@ -61,6 +61,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No tienes permisos para acceder a este apartado de la aplicación..
+        /// </summary>
+        internal static string accesMenu {
+            get {
+                return ResourceManager.GetString("accesMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Acceso denegado.
+        /// </summary>
+        internal static string accesMenuShort {
+            get {
+                return ResourceManager.GetString("accesMenuShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¿Estás seguro de que deseas eliminar este usuario?.
         /// </summary>
         internal static string askDelete {

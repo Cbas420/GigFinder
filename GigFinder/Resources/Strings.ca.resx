@@ -281,4 +281,10 @@ d'usuaris</value>
   <data name="loginShort" xml:space="preserve">
     <value>Login incorrecte</value>
   </data>
+  <data name="accesMenu" xml:space="preserve">
+    <value>No teniu permisos per accedir a aquest apartat de l'aplicació.</value>
+  </data>
+  <data name="accesMenuShort" xml:space="preserve">
+    <value>Accés denegat</value>
+  </data>
 </root>

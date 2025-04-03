@@ -16,11 +16,13 @@ namespace GigFinder
 {
     public partial class SelectAccessForm : Form
     {
-        UsersDesktop userLogin;
+        UsersDesktop _userLogin;
+        string accesMenu;
+        string accesMenuShort;
         public SelectAccessForm(UsersDesktop user)
         {
             InitializeComponent();
-            userLogin = user;
+            _userLogin = user;
         }
 
         private void pictureBoxUsers_Click(object sender, EventArgs e)
@@ -85,9 +87,9 @@ namespace GigFinder
 
         public void menuUsers()
         {
-            if (userLogin.type == "super")
+            if (_userLogin.type == "super")
             {
-                ManageUsersForm formUsers = new ManageUsersForm(userLogin);
+                ManageUsersForm formUsers = new ManageUsersForm(_userLogin);
                 this.Hide();
                 formUsers.FormClosed += (s, args) =>
                 {
@@ -98,13 +100,13 @@ namespace GigFinder
             }
             else
             {
-                MessageBox.Show("No tienes permisos para acceder a este apartado de la aplicación");
+                MessageBox.Show(accesMenu, accesMenuShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         public void menuData()
         {
-            ManageDatabaseForm formData = new ManageDatabaseForm(userLogin);
+            ManageDatabaseForm formData = new ManageDatabaseForm(_userLogin);
             this.Hide();
             formData.FormClosed += (s, args) =>
             {
@@ -128,7 +130,7 @@ namespace GigFinder
 
         public void menuRegister()
         {
-            if (userLogin.type == "super")
+            if (_userLogin.type == "super")
             {
                 ActivityRegisterForm formActivity = new ActivityRegisterForm();
                 this.Hide();
@@ -141,7 +143,7 @@ namespace GigFinder
             }
             else
             {
-                MessageBox.Show("No tienes permisos para acceder a este apartado de la aplicación");
+                MessageBox.Show(accesMenu, accesMenuShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void ChangeLanguage()
@@ -158,6 +160,8 @@ namespace GigFinder
             labelStats.Text = Strings.menuStats;
             labelRegister.Text = Strings.menuActivity;
             labelData.Text = Strings.menuData;
+            accesMenu = Strings.accesMenu;
+            accesMenuShort = Strings.accesMenuShort;
         }
 
         private void SelectAccessForm_Load(object sender, EventArgs e)

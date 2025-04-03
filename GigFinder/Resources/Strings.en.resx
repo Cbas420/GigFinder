@@ -281,4 +281,10 @@ management</value>
   <data name="loginShort" xml:space="preserve">
     <value>Incorrect login</value>
   </data>
+  <data name="accesMenu" xml:space="preserve">
+    <value>You do not have permission to access this section of the application.</value>
+  </data>
+  <data name="accesMenuShort" xml:space="preserve">
+    <value>Acces denied</value>
+  </data>
 </root>
