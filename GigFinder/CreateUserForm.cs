@@ -33,38 +33,7 @@ namespace GigFinder
             actionMade = action;
             _userEdit = user;
         }
-        private void ChangeLanguage()
-        {
-            CultureInfo culture = new CultureInfo(LanguageManager.language);
-            Thread.CurrentThread.CurrentUICulture = culture;
-            Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
-        }
-
-        private void UpdateTexts()
-        {
-            if (actionMade == 0)
-            {
-                labelTitle.Text = Strings.labelCreateUser;
-            } else
-            {
-                labelTitle.Text = Strings.titleEditUser;
-            }
-            roundedButtonCancel.Text = Strings.buttonCancelar;
-            roundedButtonSave.Text = Strings.buttonSave;
-            labelMail.Text = Strings.labelMail;
-            labelName.Text = Strings.labelName;
-            labelConfirmPass.Text = Strings.labelConfirPass;
-            labelPass.Text = Strings.labelPass;
-            labelSurname.Text = Strings.labelSurname;
-            customComboBoxType.Texts = Strings.comboBoxUserType;
-            complete = Strings.messageComplete;
-            completeShort = Strings.messageCompleteShort;
-            passCheck = Strings.messagePassCheck;
-            passCheckShort = Strings.messagePassCheckShort;
-            userExists = Strings.messageUserExists;
-            userExistsShort = Strings.messageUserExistsShort;
-        }
+        
 
         private void CreateUserForm_Load(object sender, EventArgs e)
         {
@@ -185,6 +154,39 @@ namespace GigFinder
         private void roundedButtonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void ChangeLanguage()
+        {
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
+        }
+
+        private void UpdateTexts()
+        {
+            if (actionMade == 0)
+            {
+                labelTitle.Text = Strings.labelCreateUser;
+            }
+            else
+            {
+                labelTitle.Text = Strings.titleEditUser;
+            }
+            roundedButtonCancel.Text = Strings.buttonCancelar;
+            roundedButtonSave.Text = Strings.buttonSave;
+            labelMail.Text = Strings.labelMail;
+            labelName.Text = Strings.labelName;
+            labelConfirmPass.Text = Strings.labelConfirPass;
+            labelPass.Text = Strings.labelPass;
+            labelSurname.Text = Strings.labelSurname;
+            customComboBoxType.Texts = Strings.comboBoxUserType;
+            complete = Strings.messageComplete;
+            completeShort = Strings.messageCompleteShort;
+            passCheck = Strings.messagePassCheck;
+            passCheckShort = Strings.messagePassCheckShort;
+            userExists = Strings.messageUserExists;
+            userExistsShort = Strings.messageUserExistsShort;
         }
     }
 }
