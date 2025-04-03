@@ -95,6 +95,16 @@ namespace GigFinder.Models
             return _user;
         }
 
+        public static Musicians SelectMusicianWithId(int id)
+        {
+            Musicians _music =
+                (Musicians)(from music in Orm.bd.Musicians
+                        where music.id == id
+                        select music).FirstOrDefault();
+
+            return _music;
+        }
+
         public static void InsertMusician(Musicians _music)
         {
             Orm.bd.Musicians.Add(_music);
@@ -125,6 +135,49 @@ namespace GigFinder.Models
             if (existingUser != null)
             {
                 existingUser.active = false;
+
+                Orm.bd.SaveChanges();
+            }
+        }
+
+        public static void UpdateMusicianWithoutPass(int id, string name, string email, string description, List<Genres> userGenres, Languages lang, int price, int size)
+        {
+            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+
+            var existingMusician = Orm.bd.Musicians.FirstOrDefault(musician => musician.id == id);
+
+            if (existingUser != null && existingMusician != null)
+            {
+                existingUser.name = name;
+                existingUser.email = email;
+                existingUser.description = description;
+                existingUser.Genres = userGenres;
+
+                existingMusician.price = price;
+                existingMusician.size = (byte)size;
+                existingMusician.songs_lang = lang.id;
+
+                Orm.bd.SaveChanges();
+            }
+        }
+
+        public static void UpdateMusician(int id, string name, string email, string description, List<Genres> userGenres, Languages lang, int price, int size, string pass)
+        {
+            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+
+            var existingMusician = Orm.bd.Musicians.FirstOrDefault(musician => musician.id == id);
+
+            if (existingUser != null && existingMusician != null)
+            {
+                existingUser.name = name;
+                existingUser.email = email;
+                existingUser.password = pass;
+                existingUser.description = description;
+                existingUser.Genres = userGenres;
+
+                existingMusician.price = price;
+                existingMusician.size = (byte)size;
+                existingMusician.songs_lang = lang.id;
 
                 Orm.bd.SaveChanges();
             }

@@ -17,7 +17,7 @@ namespace GigFinder
 {
     public partial class ManageUsersForm : Form
     {
-        UsersDesktop userEdit = null;
+        UsersDesktop _userEdit = null;
         UsersDesktop userLogin;
         string askDelete;
         string askDeleteShort;
@@ -147,7 +147,7 @@ namespace GigFinder
 
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
-            CreateUserForm createUserForm = new CreateUserForm(0, userEdit);
+            CreateUserForm createUserForm = new CreateUserForm(0, _userEdit);
             if (createUserForm.ShowDialog() == DialogResult.OK)
             {
                 bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();
@@ -161,8 +161,8 @@ namespace GigFinder
         {
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
-                userEdit = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
-                CreateUserForm createUserForm = new CreateUserForm(1, userEdit);
+                _userEdit = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
+                CreateUserForm createUserForm = new CreateUserForm(1, _userEdit);
                 if (createUserForm.ShowDialog() == DialogResult.OK)
                 {
                     bindingSourceUsers.DataSource = UsersDesktopOrm.SelectGlobal();

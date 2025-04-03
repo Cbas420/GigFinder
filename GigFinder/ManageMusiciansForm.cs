@@ -17,6 +17,7 @@ namespace GigFinder
 {
     public partial class ManageMusiciansForm : Form
     {
+        UserMusician _userEdit = null;
         UsersDesktop userLogin;
         public ManageMusiciansForm(UsersDesktop user)
         {
@@ -47,7 +48,7 @@ namespace GigFinder
         {
             if (userLogin.type != "user")
             {
-                CreateMusicianForm createMusician = new CreateMusicianForm();
+                CreateMusicianForm createMusician = new CreateMusicianForm(0, _userEdit);
                 if (createMusician.ShowDialog() == DialogResult.OK)
                 {
                     bindingSourceMusician.DataSource = UsersOrm.SelectMusicians();
@@ -126,6 +127,25 @@ namespace GigFinder
 
                 default:
                     return _musicians;
+            }
+        }
+
+        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewData.SelectedRows.Count > 0)
+            {
+                _userEdit = (UserMusician)dataGridViewData.SelectedRows[0].DataBoundItem;
+                CreateMusicianForm createMusicianForm = new CreateMusicianForm(1, _userEdit);
+                if (createMusicianForm.ShowDialog() == DialogResult.OK)
+                {
+                    bindingSourceMusician.DataSource = UsersOrm.SelectMusicians();
+                    Log.createLog("Edit Musician", userLogin.id);
+                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un músico para poder editarlo", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

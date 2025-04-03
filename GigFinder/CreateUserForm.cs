@@ -18,9 +18,8 @@ namespace GigFinder
 {
     public partial class CreateUserForm : Form
     {
-        public bool insertOk {  get; set; }
         int actionMade;
-        UsersDesktop _useredit;
+        UsersDesktop _userEdit;
         string passCheck;
         string userExists;
         string complete;
@@ -32,7 +31,7 @@ namespace GigFinder
         {
             InitializeComponent();
             actionMade = action;
-            _useredit = user;
+            _userEdit = user;
         }
         private void ChangeLanguage()
         {
@@ -72,11 +71,11 @@ namespace GigFinder
             ChangeLanguage();
             if (actionMade == 1)
             {
-                roundedTextBoxName.Texts = _useredit.name;
-                roundedTextBoxSurname.Texts = _useredit.surname;
-                roundedTextBoxMail.Texts = _useredit.email;
-                customComboBoxType.SelectedItem = _useredit.type;
-                customComboBoxType.Texts = _useredit.type.ToString();
+                roundedTextBoxName.Texts = _userEdit.name;
+                roundedTextBoxSurname.Texts = _userEdit.surname;
+                roundedTextBoxMail.Texts = _userEdit.email;
+                customComboBoxType.SelectedItem = _userEdit.type;
+                customComboBoxType.Texts = _userEdit.type.ToString();
             }
         }
 
@@ -85,19 +84,19 @@ namespace GigFinder
             string name = roundedTextBoxName.Texts.Trim();
             string surname = roundedTextBoxSurname.Texts.Trim();
             string email = roundedTextBoxMail.Texts.Trim();
-            string password = Encrypt.EncryptSHA256(roundedTextBoxPass.Texts.Trim());
-            string confirmPassword = Encrypt.EncryptSHA256(roundedTextBoxConfirmPass.Texts.Trim());
+            string password = roundedTextBoxPass.Texts.Trim();
+            string confirmPassword = roundedTextBoxConfirmPass.Texts.Trim();
             string type = customComboBoxType.SelectedItem?.ToString();
 
             
             if (actionMade == 0)
             {
                 if (string.IsNullOrEmpty(name) ||
-                string.IsNullOrEmpty(surname) ||
-                string.IsNullOrEmpty(email) ||
-                string.IsNullOrEmpty(password) ||
-                string.IsNullOrEmpty(confirmPassword) ||
-                string.IsNullOrEmpty(type))
+                    string.IsNullOrEmpty(surname) ||
+                    string.IsNullOrEmpty(email) ||
+                    string.IsNullOrEmpty(password) ||
+                    string.IsNullOrEmpty(confirmPassword) ||
+                    string.IsNullOrEmpty(type))
                 {
                     MessageBox.Show(complete, completeShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -112,7 +111,7 @@ namespace GigFinder
                             _userDesktop.name = name;
                             _userDesktop.surname = surname;
                             _userDesktop.email = email;
-                            _userDesktop.password = password;
+                            _userDesktop.password = Encrypt.EncryptSHA256(password);
                             _userDesktop.type = type;
 
                             UsersDesktopOrm.Insert(_userDesktop);
@@ -142,7 +141,7 @@ namespace GigFinder
                 else
                 {
                     UsersDesktop userToEdit = UsersDesktopOrm.SelectWithMail(email);
-                    if (userToEdit != null && userToEdit.id != _useredit.id)
+                    if (userToEdit != null && userToEdit.id != _userEdit.id)
                     {
                         MessageBox.Show(userExists, userExistsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
@@ -150,12 +149,12 @@ namespace GigFinder
                     {
                         if (string.IsNullOrEmpty(password) && string.IsNullOrEmpty(confirmPassword))
                         {
-                            _useredit.name = name;
-                            _useredit.surname = surname;
-                            _useredit.email = email;
-                            _useredit.type = type;
+                            _userEdit.name = name;
+                            _userEdit.surname = surname;
+                            _userEdit.email = email;
+                            _userEdit.type = type;
 
-                            UsersDesktopOrm.UpdateWithoutPass(_useredit);
+                            UsersDesktopOrm.UpdateWithoutPass(_userEdit);
                             this.DialogResult = DialogResult.OK;
                             this.Close();
                         } 
@@ -163,13 +162,13 @@ namespace GigFinder
                         {
                             if (password.Equals(confirmPassword))
                             {
-                                _useredit.name = name;
-                                _useredit.surname = surname;
-                                _useredit.email = email;
-                                _useredit.password = password;
-                                _useredit.type = type;
+                                _userEdit.name = name;
+                                _userEdit.surname = surname;
+                                _userEdit.email = email;
+                                _userEdit.password = Encrypt.EncryptSHA256(password);
+                                _userEdit.type = type;
 
-                                UsersDesktopOrm.Update(_useredit);
+                                UsersDesktopOrm.Update(_userEdit);
                                 this.DialogResult = DialogResult.OK;
                                 this.Close();
                             }
