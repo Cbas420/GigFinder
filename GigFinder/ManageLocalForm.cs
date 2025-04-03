@@ -17,6 +17,7 @@ namespace GigFinder
 {
     public partial class ManageLocalForm : Form
     {
+        UserLocal _userEdit = null;
         UsersDesktop userLogin;
         public ManageLocalForm(UsersDesktop user)
         {
@@ -46,7 +47,7 @@ namespace GigFinder
         {
             if (userLogin.type != "user")
             {
-                CreateLocalForm createLocal = new CreateLocalForm();
+                CreateLocalForm createLocal = new CreateLocalForm(0, _userEdit);
                 if (createLocal.ShowDialog() == DialogResult.OK)
                 {
                     bindingSourceLocal.DataSource = UsersOrm.SelectLocals();
@@ -119,6 +120,25 @@ namespace GigFinder
 
                 default:
                     return _locals;
+            }
+        }
+
+        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLocal.SelectedRows.Count > 0)
+            {
+                _userEdit = (UserLocal)dataGridViewLocal.SelectedRows[0].DataBoundItem;
+                CreateLocalForm createLocalForm = new CreateLocalForm(1, _userEdit);
+                if (createLocalForm.ShowDialog() == DialogResult.OK)
+                {
+                    bindingSourceLocal.DataSource = UsersOrm.SelectLocals();
+                    Log.createLog("Edit Local", userLogin.id);
+                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un local para poder editarlo", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

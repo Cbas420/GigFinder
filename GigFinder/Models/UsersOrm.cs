@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -104,6 +106,15 @@ namespace GigFinder.Models
 
             return _music;
         }
+        public static Locals SelectLocalWithId(int id)
+        {
+            Locals _local =
+                (Locals)(from local in Orm.bd.Locals
+                            where local.id == id
+                            select local).FirstOrDefault();
+
+            return _local;
+        }
 
         public static void InsertMusician(Musicians _music)
         {
@@ -178,6 +189,49 @@ namespace GigFinder.Models
                 existingMusician.price = price;
                 existingMusician.size = (byte)size;
                 existingMusician.songs_lang = lang.id;
+
+                Orm.bd.SaveChanges();
+            }
+        }
+
+        internal static void UpdateLocalWithoutPass(int id, string name, string email, string description, List<Genres> userGenres, int capacity, double yCoord, double xCoord)
+        {
+            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+
+            var existingLocal = Orm.bd.Locals.FirstOrDefault(local => local.id == id);
+
+            if (existingUser != null && existingLocal != null)
+            {
+                existingUser.name = name;
+                existingUser.email = email;
+                existingUser.description = description;
+                existingUser.Genres = userGenres;
+
+                existingLocal.capacity = capacity;
+                existingLocal.x_coordination = xCoord;
+                existingLocal.y_coordination = yCoord;
+
+                Orm.bd.SaveChanges();
+            }
+        }
+
+        internal static void UpdateLocal(int id, string name, string email, string description, List<Genres> userGenres, int capacity, double yCoord, double xCoord, string pass)
+        {
+            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+
+            var existingLocal = Orm.bd.Locals.FirstOrDefault(local => local.id == id);
+
+            if (existingUser != null && existingLocal != null)
+            {
+                existingUser.name = name;
+                existingUser.email = email;
+                existingUser.password = pass;
+                existingUser.description = description;
+                existingUser.Genres = userGenres;
+
+                existingLocal.capacity = capacity;
+                existingLocal.x_coordination = xCoord;
+                existingLocal.y_coordination = yCoord;
 
                 Orm.bd.SaveChanges();
             }

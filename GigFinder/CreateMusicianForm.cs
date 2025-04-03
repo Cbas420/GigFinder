@@ -70,7 +70,7 @@ namespace GigFinder
                 roundedTextBoxSizeGroup.Texts = musicianToEdit.size.ToString();
                 customComboBoxLang.SelectedItem = _userEdit.lang;
                 customComboBoxLang.Texts = _userEdit.lang;
-                listBoxGenres.SetSelected(0, true);
+                listBoxGenres.SetSelected(0, false);
                 foreach (Genres _genre in userToEdit.Genres)
                 {
                     for (int i = 0; i < listBoxGenres.Items.Count; i++)
@@ -98,8 +98,8 @@ namespace GigFinder
             string description = roundedTextBoxDescription.Texts.Trim();
             Languages lang = (Languages)customComboBoxLang.SelectedItem;
 
-            bool isPriceValid = int.TryParse(roundedTextBoxPrice.Texts, out int price);
-            bool isSizeValid = int.TryParse(roundedTextBoxSizeGroup.Texts, out int size);
+            bool isPriceValid = int.TryParse(roundedTextBoxPrice.Texts.Trim(), out int price);
+            bool isSizeValid = int.TryParse(roundedTextBoxSizeGroup.Texts.Trim(), out int size);
 
             List<Genres> userGenres = listBoxGenres.SelectedItems.Cast<Genres>().ToList();
 
@@ -193,7 +193,7 @@ namespace GigFinder
                             }
                             else
                             {
-                                MessageBox.Show("Las contrasñas no coinciden.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Las contraseñas no coinciden.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     }
