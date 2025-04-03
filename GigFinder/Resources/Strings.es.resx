@@ -277,4 +277,7 @@ usuarios</value>
   <data name="sameUserDelete" xml:space="preserve">
     <value>No puedes eliminar tu propio usuario.</value>
   </data>
+  <data name="loginShort" xml:space="preserve">
+    <value>Login incorrecto</value>
+  </data>
 </root>

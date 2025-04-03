@@ -278,4 +278,7 @@ management</value>
   <data name="sameUserDelete" xml:space="preserve">
     <value>You cannot delete your own user.</value>
   </data>
+  <data name="loginShort" xml:space="preserve">
+    <value>Incorrect login</value>
+  </data>
 </root>

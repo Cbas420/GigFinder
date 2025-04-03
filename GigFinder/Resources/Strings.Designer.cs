@@ -349,6 +349,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Login incorrecto.
+        /// </summary>
+        internal static string loginShort {
+            get {
+                return ResourceManager.GetString("loginShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Registro de
         ///actividad.
         /// </summary>

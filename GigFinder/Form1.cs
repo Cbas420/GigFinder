@@ -18,23 +18,28 @@ namespace GigFinder
     public partial class Form1 : Form
     {
         string login;
+        string loginShort;
         public Form1()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ChangeLanguage();
         }
 
         private void roundedButtonLogin_Click(object sender, EventArgs e)
         {
             string mail = roundedTextBoxMail.Texts.Trim();
             string pass = Encrypt.EncryptSHA256(roundedTextBoxPass.Texts.Trim());
-            UsersDesktop userLogin = UsersDesktopOrm.Selectlogin(mail, pass);
-            if (userLogin != null)
+            UsersDesktop _userLogin = UsersDesktopOrm.Selectlogin(mail, pass);
+            if (_userLogin != null)
             {
                 this.Hide();
                 roundedTextBoxPass.Texts = "";
                 roundedTextBoxMail.Texts = "";
-                SelectAccessForm formMenu = new SelectAccessForm(userLogin);
+                SelectAccessForm formMenu = new SelectAccessForm(_userLogin);
                 formMenu.FormClosed += (s, args) =>
                 {
                     this.Show();
@@ -44,7 +49,7 @@ namespace GigFinder
             } else
             {
                 roundedTextBoxPass.Texts = "";
-                MessageBox.Show(login);
+                MessageBox.Show(login, loginShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -81,11 +86,9 @@ namespace GigFinder
             labelPass.Text = Strings.labelPass;
             roundedButtonLogin.Text = Strings.buttonLogin;
             login = Strings.messageLogin;
+            loginShort = Strings.loginShort;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            ChangeLanguage();
-        }
+        
     }
 }
