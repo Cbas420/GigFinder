@@ -224,7 +224,7 @@ datos</value>
 usuarios</value>
   </data>
   <data name="messageComplete" xml:space="preserve">
-    <value>Por favor, complete todos los campos antes de continuar.</value>
+    <value>Por favor, complete todos los campos correctamente antes de continuar.</value>
   </data>
   <data name="messageCompleteShort" xml:space="preserve">
     <value>Campos incompletos</value>
@@ -309,5 +309,14 @@ usuarios</value>
   </data>
   <data name="titleRatings" xml:space="preserve">
     <value>Gestión de valoraciones</value>
+  </data>
+  <data name="labelEditLocal" xml:space="preserve">
+    <value>Editar local</value>
+  </data>
+  <data name="existingLocal" xml:space="preserve">
+    <value>Ya existe un usuario con ese correo.</value>
+  </data>
+  <data name="existingLocalShort" xml:space="preserve">
+    <value>Local existente</value>
   </data>
 </root>

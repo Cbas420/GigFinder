@@ -224,7 +224,7 @@ suamary</value>
 management</value>
   </data>
   <data name="messageComplete" xml:space="preserve">
-    <value>Please complete all fields before continuing.</value>
+    <value>Please complete all fields correctly before continuing.</value>
   </data>
   <data name="messageCompleteShort" xml:space="preserve">
     <value>Incomplete fields</value>
@@ -310,5 +310,14 @@ management</value>
   </data>
   <data name="titleRatings" xml:space="preserve">
     <value>Ratings management</value>
+  </data>
+  <data name="labelEditLocal" xml:space="preserve">
+    <value>Edit local</value>
+  </data>
+  <data name="existingLocal" xml:space="preserve">
+    <value>A user with that email already exists.</value>
+  </data>
+  <data name="existingLocalShort" xml:space="preserve">
+    <value>Existing local</value>
   </data>
 </root>

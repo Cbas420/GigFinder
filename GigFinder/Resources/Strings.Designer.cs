@@ -214,6 +214,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ya existe un usuario con ese correo..
+        /// </summary>
+        internal static string existingLocal {
+            get {
+                return ResourceManager.GetString("existingLocal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Local existente.
+        /// </summary>
+        internal static string existingLocalShort {
+            get {
+                return ResourceManager.GetString("existingLocalShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Eventos programados.
         /// </summary>
         internal static string labelCalendar {
@@ -291,6 +309,15 @@ namespace GigFinder.Resources {
         internal static string labelDescription {
             get {
                 return ResourceManager.GetString("labelDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Editar local.
+        /// </summary>
+        internal static string labelEditLocal {
+            get {
+                return ResourceManager.GetString("labelEditLocal", resourceCulture);
             }
         }
         
@@ -434,7 +461,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Por favor, complete todos los campos antes de continuar..
+        ///   Busca una cadena traducida similar a Por favor, complete todos los campos correctamente antes de continuar..
         /// </summary>
         internal static string messageComplete {
             get {

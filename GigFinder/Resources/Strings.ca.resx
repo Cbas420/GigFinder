@@ -224,7 +224,7 @@ dades</value>
 d'usuaris</value>
   </data>
   <data name="messageComplete" xml:space="preserve">
-    <value>Si us plau, completeu tots els camps abans de continuar.</value>
+    <value>Si us plau, completeu tots els camps correctament abans de continuar.</value>
   </data>
   <data name="messageCompleteShort" xml:space="preserve">
     <value>Camps incomplets</value>
@@ -310,5 +310,14 @@ d'usuaris</value>
   </data>
   <data name="titleRatings" xml:space="preserve">
     <value>Gestió de valoracions</value>
+  </data>
+  <data name="labelEditLocal" xml:space="preserve">
+    <value>Editar local</value>
+  </data>
+  <data name="existingLocal" xml:space="preserve">
+    <value>Ja existeix un usuari amb aquest correu.</value>
+  </data>
+  <data name="existingLocalShort" xml:space="preserve">
+    <value>Local existent</value>
   </data>
 </root>

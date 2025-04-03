@@ -310,4 +310,13 @@ usuarios</value>
   <data name="titleRatings" xml:space="preserve">
     <value>Gestión de valoraciones</value>
   </data>
+  <data name="labelEditLocal" xml:space="preserve">
+    <value>Editar local</value>
+  </data>
+  <data name="existingLocal" xml:space="preserve">
+    <value>Ya existe un usuario con ese correo.</value>
+  </data>
+  <data name="existingLocalShort" xml:space="preserve">
+    <value>Local existente</value>
+  </data>
 </root>

@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using GigFinder.Controls;
 using GigFinder.Models;
 using GigFinder.Resources;
 
@@ -20,6 +14,13 @@ namespace GigFinder
     {
         int actionMade;
         UserLocal _userEdit;
+        String completeFields;
+        String completeFieldsShort;
+        String passCheck;
+        String passCheckShort;
+        String existingLocal;
+        String existingLocalShort;
+
         public CreateLocalForm(int action, UserLocal user)
         {
             InitializeComponent();
@@ -27,57 +28,11 @@ namespace GigFinder
             _userEdit = user;
             bindingSourceGenres.DataSource = GenresOrm.SelectGlobal();
         }
-        private void ChangeLanguage()
-        {
-            CultureInfo culture = new CultureInfo(LanguageManager.language);
-            Thread.CurrentThread.CurrentUICulture = culture;
-            Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
-        }
-
-        private void UpdateTexts()
-        {
-            labelTitle.Text = Strings.labelCreateLocal;
-            roundedButtonCreate.Text = Strings.buttonSave;
-            roundedButtonCancel.Text = Strings.buttonCancelar;
-            labelConfirmPass.Text = Strings.labelConfirPass;
-            labelDescription.Text = Strings.labelDescription;
-            labelGenres.Text = Strings.labelGendres;
-            labelMail.Text = Strings.labelMail;
-            labelName.Text = Strings.labelName;
-            labelPass.Text = Strings.labelPass;
-            labelCapacity.Text = Strings.labelLocalCapacity;
-            labelCoordX.Text = Strings.labelCoordX;
-            labelCoordY.Text = Strings.labelCoordY;
-        }
 
         private void CreateLocalForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
             LoadData();
-        }
-
-        private void LoadData()
-        {
-            Users userToEdit = UsersOrm.SelectUserWithMail(_userEdit.email);
-            Locals localToEdit = UsersOrm.SelectLocalWithId(_userEdit.id);
-            roundedTextBoxName.Texts = userToEdit.name;
-            roundedTextBoxMail.Texts = userToEdit.email;
-            roundedTextBoxDescription.Texts = userToEdit.description;
-            roundedTextBoxCapacity.Texts = localToEdit.capacity.ToString();
-            roundedTextBoxCoordX.Texts = localToEdit.x_coordination.ToString();
-            roundedTextBoxCoordY.Texts = localToEdit.y_coordination.ToString();
-            listBoxGenres.SetSelected(0, false);
-            foreach (Genres _genre in userToEdit.Genres)
-            {
-                for (int i = 0; i < listBoxGenres.Items.Count; i++)
-                {
-                    if (((Genres)listBoxGenres.Items[i]).id == _genre.id)
-                    {
-                        listBoxGenres.SetSelected(i, true);
-                    }
-                }
-            }
         }
 
         private void roundedButtonCancel_Click(object sender, EventArgs e)
@@ -110,7 +65,7 @@ namespace GigFinder
                 !isLatitudeValid || yCoord == null ||
                 !isLongitudeValid || xCoord == null)
                 {
-                    MessageBox.Show("Por favor, completa todos los campos correctamente.");
+                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -141,12 +96,12 @@ namespace GigFinder
                         }
                         else
                         {
-                            MessageBox.Show("Las contraseñas no coinciden.");
+                            MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Ya existe un usuario con ese correo.");
+                        MessageBox.Show(existingLocal, existingLocalShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -159,14 +114,14 @@ namespace GigFinder
                 !isLatitudeValid || yCoord == null ||
                 !isLongitudeValid || xCoord == null)
                 {
-                    MessageBox.Show("Por favor, completa todos los campos correctamente.");
+                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     Users userToEdit = UsersOrm.SelectUserWithMail(email);
                     if (userToEdit != null && userToEdit.id != _userEdit.id)
                     {
-                        MessageBox.Show("Ya existe otro local con ese mail", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(existingLocal, existingLocalShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -187,13 +142,71 @@ namespace GigFinder
                             }
                             else
                             {
-                                MessageBox.Show("Las contraseñas no coinciden.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     }
                 }
             }
             
+        }
+        private void LoadData()
+        {
+            Users userToEdit = UsersOrm.SelectUserWithMail(_userEdit.email);
+            Locals localToEdit = UsersOrm.SelectLocalWithId(_userEdit.id);
+            roundedTextBoxName.Texts = userToEdit.name;
+            roundedTextBoxMail.Texts = userToEdit.email;
+            roundedTextBoxDescription.Texts = userToEdit.description;
+            roundedTextBoxCapacity.Texts = localToEdit.capacity.ToString();
+            roundedTextBoxCoordX.Texts = localToEdit.x_coordination.ToString();
+            roundedTextBoxCoordY.Texts = localToEdit.y_coordination.ToString();
+            listBoxGenres.SetSelected(0, false);
+            foreach (Genres _genre in userToEdit.Genres)
+            {
+                for (int i = 0; i < listBoxGenres.Items.Count; i++)
+                {
+                    if (((Genres)listBoxGenres.Items[i]).id == _genre.id)
+                    {
+                        listBoxGenres.SetSelected(i, true);
+                    }
+                }
+            }
+        }
+        private void ChangeLanguage()
+        {
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
+        }
+
+        private void UpdateTexts()
+        {
+            if (actionMade == 0)
+            {
+                labelTitle.Text = Strings.labelCreateLocal;
+            }
+            else
+            {
+                labelTitle.Text = Strings.labelEditLocal;
+            } 
+            roundedButtonCreate.Text = Strings.buttonSave;
+            roundedButtonCancel.Text = Strings.buttonCancelar;
+            labelPass.Text = Strings.labelPass;
+            labelConfirmPass.Text = Strings.labelConfirPass;
+            labelDescription.Text = Strings.labelDescription;
+            labelGenres.Text = Strings.labelGendres;
+            labelMail.Text = Strings.labelMail;
+            labelName.Text = Strings.labelName;
+            labelCapacity.Text = Strings.labelLocalCapacity;
+            labelCoordX.Text = Strings.labelCoordX;
+            labelCoordY.Text = Strings.labelCoordY;
+            completeFields = Strings.messageComplete;
+            completeFieldsShort = Strings.messageCompleteShort;
+            passCheck = Strings.messagePassCheck;
+            passCheckShort = Strings.messagePassCheckShort;
+            existingLocal = Strings.existingLocal;
+            existingLocalShort = Strings.existingLocalShort;
         }
     }
 }
