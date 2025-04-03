@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.dataGridViewRegister = new System.Windows.Forms.DataGridView();
-            this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.activitylogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actionmadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datelogDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adminidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitylogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegister)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.activitylogBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // customPanel1
@@ -52,11 +52,11 @@
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.customPanel1.BorderRadius = 8;
             this.customPanel1.Controls.Add(this.dataGridViewRegister);
-            this.customPanel1.Location = new System.Drawing.Point(20, 180);
+            this.customPanel1.Location = new System.Drawing.Point(20, 124);
             this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Padding = new System.Windows.Forms.Padding(6, 0, 6, 8);
-            this.customPanel1.Size = new System.Drawing.Size(1148, 454);
+            this.customPanel1.Size = new System.Drawing.Size(1148, 510);
             this.customPanel1.TabIndex = 24;
             // 
             // dataGridViewRegister
@@ -70,14 +70,14 @@
             this.dataGridViewRegister.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRegister.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewRegister.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Passion One", 16F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Passion One", 16F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRegister.ColumnHeadersHeight = 35;
             this.dataGridViewRegister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewRegister.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -85,14 +85,14 @@
             this.datelogDataGridViewTextBoxColumn,
             this.adminidDataGridViewTextBoxColumn});
             this.dataGridViewRegister.DataSource = this.activitylogBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRegister.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRegister.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegister.EnableHeadersVisualStyles = false;
             this.dataGridViewRegister.GridColor = System.Drawing.Color.White;
@@ -100,19 +100,44 @@
             this.dataGridViewRegister.MultiSelect = false;
             this.dataGridViewRegister.Name = "dataGridViewRegister";
             this.dataGridViewRegister.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewRegister.RowHeadersVisible = false;
             this.dataGridViewRegister.RowTemplate.Height = 25;
             this.dataGridViewRegister.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRegister.Size = new System.Drawing.Size(1136, 446);
+            this.dataGridViewRegister.Size = new System.Drawing.Size(1136, 502);
             this.dataGridViewRegister.TabIndex = 0;
+            // 
+            // actionmadeDataGridViewTextBoxColumn
+            // 
+            this.actionmadeDataGridViewTextBoxColumn.DataPropertyName = "action_made";
+            this.actionmadeDataGridViewTextBoxColumn.HeaderText = "action_made";
+            this.actionmadeDataGridViewTextBoxColumn.Name = "actionmadeDataGridViewTextBoxColumn";
+            this.actionmadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datelogDataGridViewTextBoxColumn
+            // 
+            this.datelogDataGridViewTextBoxColumn.DataPropertyName = "date_log";
+            this.datelogDataGridViewTextBoxColumn.HeaderText = "date_log";
+            this.datelogDataGridViewTextBoxColumn.Name = "datelogDataGridViewTextBoxColumn";
+            this.datelogDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adminidDataGridViewTextBoxColumn
+            // 
+            this.adminidDataGridViewTextBoxColumn.DataPropertyName = "admin_id";
+            this.adminidDataGridViewTextBoxColumn.HeaderText = "admin_id";
+            this.adminidDataGridViewTextBoxColumn.Name = "adminidDataGridViewTextBoxColumn";
+            this.adminidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activitylogBindingSource
+            // 
+            this.activitylogBindingSource.DataSource = typeof(GigFinder.Models.Activity_log);
             // 
             // roundedButtonDelete
             // 
@@ -152,31 +177,6 @@
             this.pictureBoxLogo.TabIndex = 17;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // activitylogBindingSource
-            // 
-            this.activitylogBindingSource.DataSource = typeof(GigFinder.Models.Activity_log);
-            // 
-            // actionmadeDataGridViewTextBoxColumn
-            // 
-            this.actionmadeDataGridViewTextBoxColumn.DataPropertyName = "action_made";
-            this.actionmadeDataGridViewTextBoxColumn.HeaderText = "action_made";
-            this.actionmadeDataGridViewTextBoxColumn.Name = "actionmadeDataGridViewTextBoxColumn";
-            this.actionmadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datelogDataGridViewTextBoxColumn
-            // 
-            this.datelogDataGridViewTextBoxColumn.DataPropertyName = "date_log";
-            this.datelogDataGridViewTextBoxColumn.HeaderText = "date_log";
-            this.datelogDataGridViewTextBoxColumn.Name = "datelogDataGridViewTextBoxColumn";
-            this.datelogDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adminidDataGridViewTextBoxColumn
-            // 
-            this.adminidDataGridViewTextBoxColumn.DataPropertyName = "admin_id";
-            this.adminidDataGridViewTextBoxColumn.HeaderText = "admin_id";
-            this.adminidDataGridViewTextBoxColumn.Name = "adminidDataGridViewTextBoxColumn";
-            this.adminidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // ActivityRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,8 +195,8 @@
             this.Load += new System.EventHandler(this.ActivityRegisterForm_Load);
             this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegister)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.activitylogBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

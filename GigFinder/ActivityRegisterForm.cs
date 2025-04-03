@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Models;
 using GigFinder.Resources;
@@ -22,6 +15,11 @@ namespace GigFinder
             activitylogBindingSource.DataSource = Activity_logOrm.SelectGlobal();
         }
 
+        private void ActivityRegisterForm_Load(object sender, EventArgs e)
+        {
+            ChangeLanguage();
+        }
+
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
@@ -33,11 +31,6 @@ namespace GigFinder
         private void UpdateTexts()
         {
             labelTitle.Text = Strings.titleActivity;
-        }
-
-        private void ActivityRegisterForm_Load(object sender, EventArgs e)
-        {
-            ChangeLanguage();
         }
     }
 }
