@@ -645,6 +645,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Esta incidencia ya está resuelta..
+        /// </summary>
+        internal static string resolvedIncidencie {
+            get {
+                return ResourceManager.GetString("resolvedIncidencie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Incidencia resuelta.
+        /// </summary>
+        internal static string resolvedIncidencieShort {
+            get {
+                return ResourceManager.GetString("resolvedIncidencieShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No puedes eliminar tu propio usuario..
         /// </summary>
         internal static string sameUserDelete {
@@ -677,6 +695,15 @@ namespace GigFinder.Resources {
         internal static string selectionEdit {
             get {
                 return ResourceManager.GetString("selectionEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, selecciona una incidencia para poder resolverla..
+        /// </summary>
+        internal static string selectionIncidencie {
+            get {
+                return ResourceManager.GetString("selectionIncidencie", resourceCulture);
             }
         }
         

@@ -360,4 +360,13 @@ management</value>
   <data name="askMusicianDelete" xml:space="preserve">
     <value>Are you sure you want to delete this musician?</value>
   </data>
+  <data name="selectionIncidencie" xml:space="preserve">
+    <value>Please select an incident so we can resolve it.</value>
+  </data>
+  <data name="resolvedIncidencie" xml:space="preserve">
+    <value>This incident has now been resolved.</value>
+  </data>
+  <data name="resolvedIncidencieShort" xml:space="preserve">
+    <value>Resolver incidencie</value>
+  </data>
 </root>

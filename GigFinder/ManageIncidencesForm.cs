@@ -14,6 +14,10 @@ namespace GigFinder
     public partial class ManageIncidencesForm : Form
     {
         UsersDesktop _userLogin;
+        String selectionIncidencie;
+        String selectionIncidencieShort;
+        String resolvedIncidencie;
+        String resolvedIncidencieShort;
         public ManageIncidencesForm(UsersDesktop user)
         {
             InitializeComponent();
@@ -24,19 +28,6 @@ namespace GigFinder
         private void ManageIncidencesForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
-        }
-
-        private void ChangeLanguage()
-        {
-            CultureInfo culture = new CultureInfo(LanguageManager.language);
-            Thread.CurrentThread.CurrentUICulture = culture;
-            Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
-        }
-
-        private void UpdateTexts()
-        {
-            
         }
 
         private void roundedButtonResolve_Click(object sender, EventArgs e)
@@ -56,13 +47,13 @@ namespace GigFinder
                     }
                 } else
                 {
-                    MessageBox.Show("Esta incidencia ya está resuelta.");
+                    MessageBox.Show(resolvedIncidencie, resolvedIncidencieShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 
             }
             else
             {
-                MessageBox.Show("Selecciona una incidencia para poder resolverla.", "Selección requrida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(selectionIncidencie, selectionIncidencieShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -74,26 +65,6 @@ namespace GigFinder
             var orderedIncidences = OrderIncidencesBy(selectedOrder);
 
             bindingSourceIncidencies.DataSource = orderedIncidences;
-        }
-
-        private List<Incidences> OrderIncidencesBy(string selectedOrder)
-        {
-            var _incidences = IncidenciesOrm.SelectGlobal();
-
-            switch (selectedOrder)
-            {
-                case "Status":
-                    return _incidences.OrderBy(incidence => incidence.status).ToList();
-
-                case "User_id":
-                    return _incidences.OrderBy(incidence => incidence.user_id).ToList();
-
-                case "Admin_id":
-                    return _incidences.OrderBy(incidence => incidence.admin_id).ToList();
-
-                default:
-                    return _incidences;
-            }
         }
 
         private void customComboBoxFilter_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +88,43 @@ namespace GigFinder
             {
                 return _incidences.Where(incidence => incidence.status == selectedType).ToList();
             }
+        }
+        private List<Incidences> OrderIncidencesBy(string selectedOrder)
+        {
+            var _incidences = IncidenciesOrm.SelectGlobal();
+
+            switch (selectedOrder)
+            {
+                case "Status":
+                    return _incidences.OrderBy(incidence => incidence.status).ToList();
+
+                case "User_id":
+                    return _incidences.OrderBy(incidence => incidence.user_id).ToList();
+
+                case "Admin_id":
+                    return _incidences.OrderBy(incidence => incidence.admin_id).ToList();
+
+                default:
+                    return _incidences;
+            }
+        }
+
+        private void ChangeLanguage()
+        {
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
+        }
+
+        private void UpdateTexts()
+        {
+            customComboBoxFilter.Texts = Strings.comboBoxFilter;
+            customComboBoxOrder.Texts = Strings.comboBoxOrder;
+            selectionIncidencieShort = Strings.selectionShort;
+            selectionIncidencie = Strings.selectionIncidencie;
+            resolvedIncidencieShort = Strings.resolvedIncidencieShort;
+            resolvedIncidencie = Strings.resolvedIncidencie;
         }
     }
 }

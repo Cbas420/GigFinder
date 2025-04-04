@@ -360,4 +360,13 @@ d'incidències</value>
   <data name="askMusicianDelete" xml:space="preserve">
     <value>Estàs segur que vols eliminar aquest músic?</value>
   </data>
+  <data name="selectionIncidencie" xml:space="preserve">
+    <value>Seleccioneu una incidència per poder resoldre-la.</value>
+  </data>
+  <data name="resolvedIncidencie" xml:space="preserve">
+    <value>Aquesta incidència ja està resolta.</value>
+  </data>
+  <data name="resolvedIncidencieShort" xml:space="preserve">
+    <value>Incidència resolta</value>
+  </data>
 </root>

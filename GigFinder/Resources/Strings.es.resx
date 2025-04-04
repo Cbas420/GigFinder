@@ -359,4 +359,13 @@ incidencias</value>
   <data name="askMusicianDelete" xml:space="preserve">
     <value>¿Estas seguro de que quieres eliminar este músico?</value>
   </data>
+  <data name="selectionIncidencie" xml:space="preserve">
+    <value>Por favor, selecciona una incidencia para poder resolverla.</value>
+  </data>
+  <data name="resolvedIncidencie" xml:space="preserve">
+    <value>Esta incidencia ya está resuelta.</value>
+  </data>
+  <data name="resolvedIncidencieShort" xml:space="preserve">
+    <value>Incidencia resuelta</value>
+  </data>
 </root>
