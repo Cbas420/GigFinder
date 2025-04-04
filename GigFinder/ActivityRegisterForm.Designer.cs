@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.dataGridViewRegister = new System.Windows.Forms.DataGridView();
-            this.actionmadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datelogDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adminidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitylogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.actionmadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datelogDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegister)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.activitylogBindingSource)).BeginInit();
@@ -114,27 +114,6 @@
             this.dataGridViewRegister.Size = new System.Drawing.Size(1136, 502);
             this.dataGridViewRegister.TabIndex = 0;
             // 
-            // actionmadeDataGridViewTextBoxColumn
-            // 
-            this.actionmadeDataGridViewTextBoxColumn.DataPropertyName = "action_made";
-            this.actionmadeDataGridViewTextBoxColumn.HeaderText = "action_made";
-            this.actionmadeDataGridViewTextBoxColumn.Name = "actionmadeDataGridViewTextBoxColumn";
-            this.actionmadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datelogDataGridViewTextBoxColumn
-            // 
-            this.datelogDataGridViewTextBoxColumn.DataPropertyName = "date_log";
-            this.datelogDataGridViewTextBoxColumn.HeaderText = "date_log";
-            this.datelogDataGridViewTextBoxColumn.Name = "datelogDataGridViewTextBoxColumn";
-            this.datelogDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adminidDataGridViewTextBoxColumn
-            // 
-            this.adminidDataGridViewTextBoxColumn.DataPropertyName = "admin_id";
-            this.adminidDataGridViewTextBoxColumn.HeaderText = "admin_id";
-            this.adminidDataGridViewTextBoxColumn.Name = "adminidDataGridViewTextBoxColumn";
-            this.adminidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // activitylogBindingSource
             // 
             this.activitylogBindingSource.DataSource = typeof(GigFinder.Models.Activity_log);
@@ -177,6 +156,27 @@
             this.pictureBoxLogo.TabIndex = 17;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // actionmadeDataGridViewTextBoxColumn
+            // 
+            this.actionmadeDataGridViewTextBoxColumn.DataPropertyName = "action_made";
+            this.actionmadeDataGridViewTextBoxColumn.HeaderText = "Action made";
+            this.actionmadeDataGridViewTextBoxColumn.Name = "actionmadeDataGridViewTextBoxColumn";
+            this.actionmadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datelogDataGridViewTextBoxColumn
+            // 
+            this.datelogDataGridViewTextBoxColumn.DataPropertyName = "date_log";
+            this.datelogDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.datelogDataGridViewTextBoxColumn.Name = "datelogDataGridViewTextBoxColumn";
+            this.datelogDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adminidDataGridViewTextBoxColumn
+            // 
+            this.adminidDataGridViewTextBoxColumn.DataPropertyName = "admin_id";
+            this.adminidDataGridViewTextBoxColumn.HeaderText = "Admin id";
+            this.adminidDataGridViewTextBoxColumn.Name = "adminidDataGridViewTextBoxColumn";
+            this.adminidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // ActivityRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,9 +209,9 @@
         private Controls.RoundedButton roundedButtonDelete;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.BindingSource activitylogBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn actionmadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datelogDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adminidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource activitylogBindingSource;
     }
 }

@@ -30,8 +30,6 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelGraphic1 = new System.Windows.Forms.Label();
-            this.labelGraphic2 = new System.Windows.Forms.Label();
             this.labelMap = new System.Windows.Forms.Label();
             this.labelCalendar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -58,26 +56,6 @@
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // labelGraphic1
-            // 
-            this.labelGraphic1.AutoSize = true;
-            this.labelGraphic1.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGraphic1.Location = new System.Drawing.Point(12, 94);
-            this.labelGraphic1.Name = "labelGraphic1";
-            this.labelGraphic1.Size = new System.Drawing.Size(253, 41);
-            this.labelGraphic1.TabIndex = 4;
-            this.labelGraphic1.Text = "Tipos de usuarios";
-            // 
-            // labelGraphic2
-            // 
-            this.labelGraphic2.AutoSize = true;
-            this.labelGraphic2.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGraphic2.Location = new System.Drawing.Point(371, 94);
-            this.labelGraphic2.Name = "labelGraphic2";
-            this.labelGraphic2.Size = new System.Drawing.Size(318, 41);
-            this.labelGraphic2.TabIndex = 5;
-            this.labelGraphic2.Text = "Géneros mas comunes";
-            // 
             // labelMap
             // 
             this.labelMap.AutoSize = true;
@@ -92,7 +70,7 @@
             // 
             this.labelCalendar.AutoSize = true;
             this.labelCalendar.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCalendar.Location = new System.Drawing.Point(142, 331);
+            this.labelCalendar.Location = new System.Drawing.Point(98, 103);
             this.labelCalendar.Name = "labelCalendar";
             this.labelCalendar.Size = new System.Drawing.Size(313, 41);
             this.labelCalendar.TabIndex = 7;
@@ -106,8 +84,6 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.labelCalendar);
             this.Controls.Add(this.labelMap);
-            this.Controls.Add(this.labelGraphic2);
-            this.Controls.Add(this.labelGraphic1);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -125,8 +101,6 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelGraphic1;
-        private System.Windows.Forms.Label labelGraphic2;
         private System.Windows.Forms.Label labelMap;
         private System.Windows.Forms.Label labelCalendar;
     }
