@@ -345,4 +345,19 @@ valoracions</value>
     <value>Gestió
 d'incidències</value>
   </data>
+  <data name="titleMusicians" xml:space="preserve">
+    <value>Gestió de músics</value>
+  </data>
+  <data name="accesFunction" xml:space="preserve">
+    <value>No teniu permisos per a utilitat aquesta funcionalitat de l'aplicació.</value>
+  </data>
+  <data name="editMusician" xml:space="preserve">
+    <value>Si us plau, seleccioneu un músic per editar-lo.</value>
+  </data>
+  <data name="musicianDelete" xml:space="preserve">
+    <value>Seleccioneu un músic per eliminar-lo.</value>
+  </data>
+  <data name="askMusicianDelete" xml:space="preserve">
+    <value>Estàs segur que vols eliminar aquest músic?</value>
+  </data>
 </root>

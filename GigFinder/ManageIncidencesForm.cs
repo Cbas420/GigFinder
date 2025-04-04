@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Entities;
 using GigFinder.Models;
@@ -17,11 +13,11 @@ namespace GigFinder
 {
     public partial class ManageIncidencesForm : Form
     {
-        UsersDesktop userLogin;
+        UsersDesktop _userLogin;
         public ManageIncidencesForm(UsersDesktop user)
         {
             InitializeComponent();
-            userLogin = user;
+            _userLogin = user;
             bindingSourceIncidencies.DataSource = IncidenciesOrm.SelectGlobal();
         }
 
@@ -50,11 +46,11 @@ namespace GigFinder
                 Incidences incidence = (Incidences)dataGridViewIncidencies.SelectedRows[0].DataBoundItem;
                 if (incidence.status == "pendent")
                 {
-                    ResolveIncidencesForm createUserForm = new ResolveIncidencesForm(userLogin, incidence);
+                    ResolveIncidencesForm createUserForm = new ResolveIncidencesForm(_userLogin, incidence);
                     if (createUserForm.ShowDialog() == DialogResult.OK)
                     {
                         bindingSourceIncidencies.DataSource = IncidenciesOrm.SelectGlobal();
-                        Log.createLog("Resolve Incidencie", userLogin.id);
+                        Log.createLog("Resolve Incidencie", _userLogin.id);
                         customComboBoxFilter.Texts = Strings.comboBoxFilter;
                         customComboBoxOrder.Texts = Strings.comboBoxOrder;
                     }

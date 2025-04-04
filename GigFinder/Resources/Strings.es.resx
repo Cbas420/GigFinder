@@ -344,4 +344,19 @@ valoraciones</value>
     <value>Gestión de
 incidencias</value>
   </data>
+  <data name="titleMusicians" xml:space="preserve">
+    <value>Gestión de músicos</value>
+  </data>
+  <data name="accesFunction" xml:space="preserve">
+    <value>No tienes permisos para utilidad esta funcionalidad de la aplicación.</value>
+  </data>
+  <data name="editMusician" xml:space="preserve">
+    <value>Por favor, selecciona un músico para editarlo.</value>
+  </data>
+  <data name="musicianDelete" xml:space="preserve">
+    <value>Selecciona un músico para eliminarlo.</value>
+  </data>
+  <data name="askMusicianDelete" xml:space="preserve">
+    <value>¿Estas seguro de que quieres eliminar este músico?</value>
+  </data>
 </root>

@@ -61,6 +61,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No tienes permisos para utilidad esta funcionalidad de la aplicación..
+        /// </summary>
+        internal static string accesFunction {
+            get {
+                return ResourceManager.GetString("accesFunction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No tienes permisos para acceder a este apartado de la aplicación..
         /// </summary>
         internal static string accesMenu {
@@ -102,6 +111,15 @@ namespace GigFinder.Resources {
         internal static string askDeleteShort {
             get {
                 return ResourceManager.GetString("askDeleteShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ¿Estas seguro de que quieres eliminar este músico?.
+        /// </summary>
+        internal static string askMusicianDelete {
+            get {
+                return ResourceManager.GetString("askMusicianDelete", resourceCulture);
             }
         }
         
@@ -210,6 +228,15 @@ namespace GigFinder.Resources {
         internal static string completeIncidencie {
             get {
                 return ResourceManager.GetString("completeIncidencie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, selecciona un músico para editarlo..
+        /// </summary>
+        internal static string editMusician {
+            get {
+                return ResourceManager.GetString("editMusician", resourceCulture);
             }
         }
         
@@ -571,6 +598,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona un músico para eliminarlo..
+        /// </summary>
+        internal static string musicianDelete {
+            get {
+                return ResourceManager.GetString("musicianDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Gestión de
         ///musicos.
         /// </summary>
@@ -695,6 +731,15 @@ namespace GigFinder.Resources {
         internal static string titleIncidencie {
             get {
                 return ResourceManager.GetString("titleIncidencie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de músicos.
+        /// </summary>
+        internal static string titleMusicians {
+            get {
+                return ResourceManager.GetString("titleMusicians", resourceCulture);
             }
         }
         
