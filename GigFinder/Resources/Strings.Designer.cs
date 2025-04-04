@@ -61,7 +61,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a No tienes permisos para utilidad esta funcionalidad de la aplicación..
+        ///   Busca una cadena traducida similar a No tienes permisos para utilizar esta funcionalidad de la aplicación..
         /// </summary>
         internal static string accesFunction {
             get {
@@ -88,7 +88,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a ¿Estás seguro de que deseas eliminar este usuario?.
+        ///   Busca una cadena traducida similar a ¿Estás seguro de que quieres eliminar ese usuario?.
         /// </summary>
         internal static string askDelete {
             get {
@@ -124,7 +124,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a ¿Estas seguro de que quieres eliminar este músico?.
+        ///   Busca una cadena traducida similar a ¿Estas seguro de que quieres eliminar ese músico?.
         /// </summary>
         internal static string askMusicianDelete {
             get {
@@ -232,7 +232,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Completa todos los campos para resolver la incidencia..
+        ///   Busca una cadena traducida similar a Por favor, completa todos los campos para resolver la incidencia..
         /// </summary>
         internal static string completeIncidencie {
             get {
@@ -296,24 +296,6 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Eventos programados.
-        /// </summary>
-        internal static string labelCalendar {
-            get {
-                return ResourceManager.GetString("labelCalendar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Géneros más comunes.
-        /// </summary>
-        internal static string labelCommonGenres {
-            get {
-                return ResourceManager.GetString("labelCommonGenres", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Confirmar contraseña:.
         /// </summary>
         internal static string labelConfirPass {
@@ -323,7 +305,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Coordenada X:.
+        ///   Busca una cadena traducida similar a Longitud:.
         /// </summary>
         internal static string labelCoordX {
             get {
@@ -332,7 +314,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Coordenada Y:.
+        ///   Busca una cadena traducida similar a Latitud.
         /// </summary>
         internal static string labelCoordY {
             get {
@@ -431,15 +413,6 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ubicación de locales.
-        /// </summary>
-        internal static string labelMap {
-            get {
-                return ResourceManager.GetString("labelMap", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Nombre:.
         /// </summary>
         internal static string labelName {
@@ -472,15 +445,6 @@ namespace GigFinder.Resources {
         internal static string labelSurname {
             get {
                 return ResourceManager.GetString("labelSurname", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Tipos de usuarios.
-        /// </summary>
-        internal static string labelUserType {
-            get {
-                return ResourceManager.GetString("labelUserType", resourceCulture);
             }
         }
         
@@ -544,7 +508,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Por favor, complete todos los campos correctamente antes de continuar..
+        ///   Busca una cadena traducida similar a Por favor, completa todos los campos correctamente antes de continuar..
         /// </summary>
         internal static string messageComplete {
             get {
@@ -589,7 +553,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ya existe un usuario con ese email..
+        ///   Busca una cadena traducida similar a Ya existe un usuario con ese correo..
         /// </summary>
         internal static string messageUserExists {
             get {
@@ -607,7 +571,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Selecciona un músico para eliminarlo..
+        ///   Busca una cadena traducida similar a Por favor, selecciona un músico para eliminarlo..
         /// </summary>
         internal static string musicianDelete {
             get {
@@ -654,7 +618,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Esta incidencia ya está resuelta..
+        ///   Busca una cadena traducida similar a Esa incidencia ya está resuelta..
         /// </summary>
         internal static string resolvedIncidencie {
             get {
@@ -744,7 +708,7 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Selecciona una valoración para eliminarla..
+        ///   Busca una cadena traducida similar a Por favor, selecciona una valoración para eliminarla..
         /// </summary>
         internal static string selectRating {
             get {
@@ -758,15 +722,6 @@ namespace GigFinder.Resources {
         internal static string titleActivity {
             get {
                 return ResourceManager.GetString("titleActivity", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Gestión de datos.
-        /// </summary>
-        internal static string titleData {
-            get {
-                return ResourceManager.GetString("titleData", resourceCulture);
             }
         }
         

@@ -30,11 +30,6 @@ namespace GigFinder
 
         private void UpdateTexts()
         {
-            labelTitle.Text = Strings.titleData;
-            labelCalendar.Text = Strings.labelCalendar;
-            labelGraphic1.Text = Strings.labelUserType;
-            labelGraphic2.Text = Strings.labelCommonGenres;
-            labelMap.Text = Strings.labelMap;
         }
 
         private void ResumeDataForm_Load(object sender, EventArgs e)

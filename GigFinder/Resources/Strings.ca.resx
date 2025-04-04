@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="buttonCancelar" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Cancel·lar</value>
   </data>
   <data name="buttonCreate" xml:space="preserve">
     <value>Crear</value>
@@ -150,20 +150,14 @@
   <data name="comboBoxUserType" xml:space="preserve">
     <value>Tipus d'usuari</value>
   </data>
-  <data name="labelCalendar" xml:space="preserve">
-    <value>Events programats</value>
-  </data>
-  <data name="labelCommonGenres" xml:space="preserve">
-    <value>Géneres més comuns</value>
-  </data>
   <data name="labelConfirPass" xml:space="preserve">
     <value>Confirmar contrasenya:</value>
   </data>
   <data name="labelCoordX" xml:space="preserve">
-    <value>Coordenada X:</value>
+    <value>Longitud:</value>
   </data>
   <data name="labelCoordY" xml:space="preserve">
-    <value>Coordenada Y:</value>
+    <value>Latitut:</value>
   </data>
   <data name="labelCreateLocal" xml:space="preserve">
     <value>Crear local</value>
@@ -181,16 +175,13 @@
     <value>Géneres musicals:</value>
   </data>
   <data name="labelGroupSize" xml:space="preserve">
-    <value>Integrants del grup</value>
+    <value>Integrants del grup:</value>
   </data>
   <data name="labelLocalCapacity" xml:space="preserve">
     <value>Aforament del local:</value>
   </data>
   <data name="labelMail" xml:space="preserve">
     <value>Correu:</value>
-  </data>
-  <data name="labelMap" xml:space="preserve">
-    <value>Ubicació de locals</value>
   </data>
   <data name="labelName" xml:space="preserve">
     <value>Nom:</value>
@@ -199,13 +190,10 @@
     <value>Contrasenya:</value>
   </data>
   <data name="labelPrice" xml:space="preserve">
-    <value>Preu de contratació:</value>
+    <value>Preu de contractació:</value>
   </data>
   <data name="labelSurname" xml:space="preserve">
     <value>Cognoms:</value>
-  </data>
-  <data name="labelUserType" xml:space="preserve">
-    <value>Tipus d'usuaris</value>
   </data>
   <data name="menuActivity" xml:space="preserve">
     <value>Registre
@@ -224,22 +212,19 @@ dades</value>
 d'usuaris</value>
   </data>
   <data name="messageComplete" xml:space="preserve">
-    <value>Si us plau, completeu tots els camps correctament abans de continuar.</value>
+    <value>Si us plau, completa tots els camps correctament abans de continuar.</value>
   </data>
   <data name="messageCompleteShort" xml:space="preserve">
     <value>Camps incomplets</value>
   </data>
   <data name="messagePassCheckShort" xml:space="preserve">
-    <value>Wrong passwords</value>
+    <value>Contrasenyes errònies</value>
   </data>
   <data name="messagePassCheck" xml:space="preserve">
     <value>Les contrasenyes no coincideixen.</value>
   </data>
   <data name="titleActivity" xml:space="preserve">
     <value>Registre d'activitat</value>
-  </data>
-  <data name="titleData" xml:space="preserve">
-    <value>Gestió de dades</value>
   </data>
   <data name="titleEditUser" xml:space="preserve">
     <value>Editar usuari</value>
@@ -257,7 +242,7 @@ d'usuaris</value>
     <value>Usuari existent</value>
   </data>
   <data name="messageLogin" xml:space="preserve">
-    <value>L'usuari i/o la contrasenya són incorrectes
+    <value>L'usuari i/o la contrasenya són incorrectes.
 </value>
   </data>
   <data name="askDelete" xml:space="preserve">
@@ -267,10 +252,10 @@ d'usuaris</value>
     <value>Confirmació d'eliminació</value>
   </data>
   <data name="selectionDelete" xml:space="preserve">
-    <value>Si us plau, seleccioneu un usuari per eliminar.</value>
+    <value>Si us plau, selecciona un usuari per eliminar.</value>
   </data>
   <data name="selectionEdit" xml:space="preserve">
-    <value>Si us plau, seleccioneu un usuari per editar.</value>
+    <value>Si us plau, selecciona un usuari per editar.</value>
   </data>
   <data name="selectionShort" xml:space="preserve">
     <value>Selecció requerida</value>
@@ -282,7 +267,7 @@ d'usuaris</value>
     <value>Login incorrecte</value>
   </data>
   <data name="accesMenu" xml:space="preserve">
-    <value>No teniu permisos per accedir a aquest apartat de l'aplicació.</value>
+    <value>No tens permisos per accedir a aquest apartat de l'aplicació.</value>
   </data>
   <data name="accesMenuShort" xml:space="preserve">
     <value>Accés denegat</value>
@@ -291,7 +276,7 @@ d'usuaris</value>
     <value>Acció indeguda</value>
   </data>
   <data name="completeIncidencie" xml:space="preserve">
-    <value>Completa tots els camps per resoldre la incidència.</value>
+    <value>Si us plau, completa tots els camps per resoldre la incidència.</value>
   </data>
   <data name="titleIncidencie" xml:space="preserve">
     <value>Resoldre incidència</value>
@@ -306,7 +291,7 @@ d'usuaris</value>
     <value>Estàs segur que vols eliminar aquesta valoració?</value>
   </data>
   <data name="selectRating" xml:space="preserve">
-    <value>Selecciona una valoració per eliminar-la.</value>
+    <value>Si us plau, selecciona una valoració per eliminar-la.</value>
   </data>
   <data name="titleRatings" xml:space="preserve">
     <value>Gestió de valoracions</value>
@@ -349,19 +334,19 @@ d'incidències</value>
     <value>Gestió de músics</value>
   </data>
   <data name="accesFunction" xml:space="preserve">
-    <value>No teniu permisos per a utilitat aquesta funcionalitat de l'aplicació.</value>
+    <value>No tens permisos per utilitzar aquesta funcionalitat de l'aplicació.</value>
   </data>
   <data name="editMusician" xml:space="preserve">
-    <value>Si us plau, seleccioneu un músic per editar-lo.</value>
+    <value>Si us plau, selecciona un músic per editar-lo.</value>
   </data>
   <data name="musicianDelete" xml:space="preserve">
-    <value>Seleccioneu un músic per eliminar-lo.</value>
+    <value>Si us plau, selecciona un músic per eliminar-lo.</value>
   </data>
   <data name="askMusicianDelete" xml:space="preserve">
     <value>Estàs segur que vols eliminar aquest músic?</value>
   </data>
   <data name="selectionIncidencie" xml:space="preserve">
-    <value>Si us plau, seleccioneu una incidència per poder resoldre-la.</value>
+    <value>Si us plau, selecciona una incidència per poder resoldre-la.</value>
   </data>
   <data name="resolvedIncidencie" xml:space="preserve">
     <value>Aquesta incidència ja està resolta.</value>
@@ -373,10 +358,10 @@ d'incidències</value>
     <value>Gestió de locals</value>
   </data>
   <data name="selectionLocalEdit" xml:space="preserve">
-    <value>Si us plau, seleccioneu un local per editar-lo.</value>
+    <value>Si us plau, selecciona un local per editar-lo.</value>
   </data>
   <data name="selectionLocalDelete" xml:space="preserve">
-    <value>Si us plau, seleccioneu un local per eliminar-lo.</value>
+    <value>Si us plau, selecciona un local per eliminar-lo.</value>
   </data>
   <data name="askDeleteLocal" xml:space="preserve">
     <value>Estàs segur que vols eliminar aquest local?</value>

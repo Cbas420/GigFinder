@@ -139,7 +139,7 @@
     <value>Filter by</value>
   </data>
   <data name="comboBoxLang" xml:space="preserve">
-    <value>Songs languaje</value>
+    <value>Songs language</value>
   </data>
   <data name="comboBoxMostrar" xml:space="preserve">
     <value>Show</value>
@@ -150,20 +150,14 @@
   <data name="comboBoxUserType" xml:space="preserve">
     <value>User type</value>
   </data>
-  <data name="labelCalendar" xml:space="preserve">
-    <value>Programed events</value>
-  </data>
-  <data name="labelCommonGenres" xml:space="preserve">
-    <value>Most common genres</value>
-  </data>
   <data name="labelConfirPass" xml:space="preserve">
     <value>Confirm password:</value>
   </data>
   <data name="labelCoordX" xml:space="preserve">
-    <value>Coordinate X:</value>
+    <value>Longitude:</value>
   </data>
   <data name="labelCoordY" xml:space="preserve">
-    <value>Coordinate Y:</value>
+    <value>Latitude:</value>
   </data>
   <data name="labelCreateLocal" xml:space="preserve">
     <value>Create local</value>
@@ -189,9 +183,6 @@
   <data name="labelMail" xml:space="preserve">
     <value>Mail:</value>
   </data>
-  <data name="labelMap" xml:space="preserve">
-    <value>Locals location</value>
-  </data>
   <data name="labelName" xml:space="preserve">
     <value>Name:</value>
   </data>
@@ -203,9 +194,6 @@
   </data>
   <data name="labelSurname" xml:space="preserve">
     <value>Surnames:</value>
-  </data>
-  <data name="labelUserType" xml:space="preserve">
-    <value>Users type</value>
   </data>
   <data name="menuActivity" xml:space="preserve">
     <value>Activity
@@ -230,16 +218,13 @@ management</value>
     <value>Incomplete fields</value>
   </data>
   <data name="messagePassCheckShort" xml:space="preserve">
-    <value>Contrasenyes errònies</value>
+    <value>Wrong passwords</value>
   </data>
   <data name="messagePassCheck" xml:space="preserve">
     <value>The passwords do not match.</value>
   </data>
   <data name="titleActivity" xml:space="preserve">
     <value>Activity log</value>
-  </data>
-  <data name="titleData" xml:space="preserve">
-    <value>Data management</value>
   </data>
   <data name="titleEditUser" xml:space="preserve">
     <value>Eit user</value>
@@ -267,7 +252,7 @@ management</value>
     <value>Deletion confirmation</value>
   </data>
   <data name="selectionDelete" xml:space="preserve">
-    <value>Please select a user to delete.</value>
+    <value>Please select a user to delete it.</value>
   </data>
   <data name="selectionEdit" xml:space="preserve">
     <value>Please select a user to edit.</value>
@@ -291,10 +276,10 @@ management</value>
     <value>Improper action</value>
   </data>
   <data name="completeIncidencie" xml:space="preserve">
-    <value>Complete all fields to resolve the incident.</value>
+    <value>Please complete all fields to resolve the incidencie.</value>
   </data>
   <data name="titleIncidencie" xml:space="preserve">
-    <value>Resolve incident</value>
+    <value>Resolve incidencie</value>
   </data>
   <data name="resolutionNote" xml:space="preserve">
     <value>Resolution note:</value>
@@ -303,10 +288,10 @@ management</value>
     <value>Resolution state:</value>
   </data>
   <data name="askDeleteRating" xml:space="preserve">
-    <value>Are you sure you want to delete that review?</value>
+    <value>Are you sure you want to delete this review?</value>
   </data>
   <data name="selectRating" xml:space="preserve">
-    <value>Select a rating to delete.</value>
+    <value>Please select a rating to delete it.</value>
   </data>
   <data name="titleRatings" xml:space="preserve">
     <value>Ratings management</value>
@@ -324,7 +309,7 @@ management</value>
     <value>Edit musician</value>
   </data>
   <data name="existingMusician" xml:space="preserve">
-    <value>There is already a musician with that email.</value>
+    <value>A musician with that email already exists</value>
   </data>
   <data name="existingMusicianShort" xml:space="preserve">
     <value>Existing musician</value>
@@ -355,19 +340,19 @@ management</value>
     <value>Please select a musician to edit.</value>
   </data>
   <data name="musicianDelete" xml:space="preserve">
-    <value>Select a musician to remove.</value>
+    <value>Please select a musician to remove it.</value>
   </data>
   <data name="askMusicianDelete" xml:space="preserve">
     <value>Are you sure you want to delete this musician?</value>
   </data>
   <data name="selectionIncidencie" xml:space="preserve">
-    <value>Please select an incident so we can resolve it.</value>
+    <value>Please select an incidencie so we can resolve it.</value>
   </data>
   <data name="resolvedIncidencie" xml:space="preserve">
-    <value>This incident has now been resolved.</value>
+    <value>This incidencie has now been resolved.</value>
   </data>
   <data name="resolvedIncidencieShort" xml:space="preserve">
-    <value>Resolver incidencie</value>
+    <value>Resolved incidencie</value>
   </data>
   <data name="titleLocals" xml:space="preserve">
     <value>Locals management</value>
@@ -379,6 +364,6 @@ management</value>
     <value>Please select a local to delete it.</value>
   </data>
   <data name="askDeleteLocal" xml:space="preserve">
-    <value>Are you sure you want to delete that location?</value>
+    <value>Are you sure you want to delete this local?</value>
   </data>
 </root>

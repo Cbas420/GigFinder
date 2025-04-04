@@ -150,20 +150,14 @@
   <data name="comboBoxUserType" xml:space="preserve">
     <value>Tipo de usuario</value>
   </data>
-  <data name="labelCalendar" xml:space="preserve">
-    <value>Eventos programados</value>
-  </data>
-  <data name="labelCommonGenres" xml:space="preserve">
-    <value>Géneros mas comunes</value>
-  </data>
   <data name="labelConfirPass" xml:space="preserve">
     <value>Confirmar contraseña:</value>
   </data>
   <data name="labelCoordX" xml:space="preserve">
-    <value>Coordeanda X:</value>
+    <value>Longitud:</value>
   </data>
   <data name="labelCoordY" xml:space="preserve">
-    <value>Coordenada Y:</value>
+    <value>Latitud:</value>
   </data>
   <data name="labelCreateLocal" xml:space="preserve">
     <value>Crear local</value>
@@ -189,9 +183,6 @@
   <data name="labelMail" xml:space="preserve">
     <value>Correo:</value>
   </data>
-  <data name="labelMap" xml:space="preserve">
-    <value>Ubicación de locales</value>
-  </data>
   <data name="labelName" xml:space="preserve">
     <value>Nombre:</value>
   </data>
@@ -203,9 +194,6 @@
   </data>
   <data name="labelSurname" xml:space="preserve">
     <value>Apellidos:</value>
-  </data>
-  <data name="labelUserType" xml:space="preserve">
-    <value>Tipos de usuarios</value>
   </data>
   <data name="menuActivity" xml:space="preserve">
     <value>Registro de
@@ -224,7 +212,7 @@ datos</value>
 usuarios</value>
   </data>
   <data name="messageComplete" xml:space="preserve">
-    <value>Por favor, complete todos los campos antes de continuar.</value>
+    <value>Por favor, completa todos los campos antes de continuar.</value>
   </data>
   <data name="messageCompleteShort" xml:space="preserve">
     <value>Campos incompletos</value>
@@ -238,9 +226,6 @@ usuarios</value>
   <data name="titleActivity" xml:space="preserve">
     <value>Registro de actividad</value>
   </data>
-  <data name="titleData" xml:space="preserve">
-    <value>Gestión de datos</value>
-  </data>
   <data name="titleEditUser" xml:space="preserve">
     <value>Editar usuario</value>
   </data>
@@ -251,7 +236,7 @@ usuarios</value>
     <value>Gestión de usuarios</value>
   </data>
   <data name="messageUserExists" xml:space="preserve">
-    <value>Ya existe un usuario con ese email.</value>
+    <value>Ya existe un usuario con ese correo.</value>
   </data>
   <data name="messageUserExistsShort" xml:space="preserve">
     <value>Usuario existente</value>
@@ -260,16 +245,16 @@ usuarios</value>
     <value>El usuario y/o la contraseña son incorrectos</value>
   </data>
   <data name="askDelete" xml:space="preserve">
-    <value>¿Estás seguro de que deseas eliminar este usuario?</value>
+    <value>¿Estás seguro de que deseas eliminar ese usuario?</value>
   </data>
   <data name="askDeleteShort" xml:space="preserve">
     <value>Confirmación de eliminación</value>
   </data>
   <data name="selectionDelete" xml:space="preserve">
-    <value>Por favor, seleccione un usuario para eliminar.</value>
+    <value>Por favor, selecciona un usuario para eliminar.</value>
   </data>
   <data name="selectionEdit" xml:space="preserve">
-    <value>Por favor, seleccione un usuario para editar.</value>
+    <value>Por favor, selecciona un usuario para editar.</value>
   </data>
   <data name="selectionShort" xml:space="preserve">
     <value>Selección requerida</value>
@@ -290,7 +275,7 @@ usuarios</value>
     <value>Acción indebida</value>
   </data>
   <data name="completeIncidencie" xml:space="preserve">
-    <value>Completa todos los campos para resolver la incidencia.</value>
+    <value>Por favor, completa todos los campos para resolver la incidencia.</value>
   </data>
   <data name="titleIncidencie" xml:space="preserve">
     <value>Resolver incidencia</value>
@@ -305,7 +290,7 @@ usuarios</value>
     <value>¿Estas seguro de que quieres eliminar esa valoración?</value>
   </data>
   <data name="selectRating" xml:space="preserve">
-    <value>Selecciona una valoración para eliminarla.</value>
+    <value>Por favor, selecciona una valoración para eliminarla.</value>
   </data>
   <data name="titleRatings" xml:space="preserve">
     <value>Gestión de valoraciones</value>
@@ -348,22 +333,22 @@ incidencias</value>
     <value>Gestión de músicos</value>
   </data>
   <data name="accesFunction" xml:space="preserve">
-    <value>No tienes permisos para utilidad esta funcionalidad de la aplicación.</value>
+    <value>No tienes permisos para utilizar esta funcionalidad de la aplicación.</value>
   </data>
   <data name="editMusician" xml:space="preserve">
     <value>Por favor, selecciona un músico para editarlo.</value>
   </data>
   <data name="musicianDelete" xml:space="preserve">
-    <value>Selecciona un músico para eliminarlo.</value>
+    <value>Por favor, selecciona un músico para eliminarlo.</value>
   </data>
   <data name="askMusicianDelete" xml:space="preserve">
-    <value>¿Estas seguro de que quieres eliminar este músico?</value>
+    <value>¿Estas seguro de que quieres eliminar ese músico?</value>
   </data>
   <data name="selectionIncidencie" xml:space="preserve">
     <value>Por favor, selecciona una incidencia para poder resolverla.</value>
   </data>
   <data name="resolvedIncidencie" xml:space="preserve">
-    <value>Esta incidencia ya está resuelta.</value>
+    <value>Esa incidencia ya está resuelta.</value>
   </data>
   <data name="resolvedIncidencieShort" xml:space="preserve">
     <value>Incidencia resuelta</value>
