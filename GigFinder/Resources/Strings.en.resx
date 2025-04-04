@@ -369,4 +369,16 @@ management</value>
   <data name="resolvedIncidencieShort" xml:space="preserve">
     <value>Resolver incidencie</value>
   </data>
+  <data name="titleLocals" xml:space="preserve">
+    <value>Locals management</value>
+  </data>
+  <data name="selectionLocalEdit" xml:space="preserve">
+    <value>Please select a local to edit.</value>
+  </data>
+  <data name="selectionLocalDelete" xml:space="preserve">
+    <value>Please select a local to delete it.</value>
+  </data>
+  <data name="askDeleteLocal" xml:space="preserve">
+    <value>Are you sure you want to delete that location?</value>
+  </data>
 </root>

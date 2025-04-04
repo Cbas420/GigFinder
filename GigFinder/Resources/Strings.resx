@@ -368,4 +368,16 @@ incidencias</value>
   <data name="resolvedIncidencieShort" xml:space="preserve">
     <value>Incidencia resuelta</value>
   </data>
+  <data name="titleLocals" xml:space="preserve">
+    <value>Gestión de locales</value>
+  </data>
+  <data name="selectionLocalEdit" xml:space="preserve">
+    <value>Por favor, selecciona un local para editarlo.</value>
+  </data>
+  <data name="selectionLocalDelete" xml:space="preserve">
+    <value>Por favor, selecciona un local para eliminarlo.</value>
+  </data>
+  <data name="askDeleteLocal" xml:space="preserve">
+    <value>¿Estas seguro de que quieres eliminar ese local?</value>
+  </data>
 </root>

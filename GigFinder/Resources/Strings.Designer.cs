@@ -97,6 +97,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a ¿Estas seguro de que quieres eliminar ese local?.
+        /// </summary>
+        internal static string askDeleteLocal {
+            get {
+                return ResourceManager.GetString("askDeleteLocal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¿Estas seguro de que quieres eliminar esa valoración?.
         /// </summary>
         internal static string askDeleteRating {
@@ -708,6 +717,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, selecciona un local para eliminarlo..
+        /// </summary>
+        internal static string selectionLocalDelete {
+            get {
+                return ResourceManager.GetString("selectionLocalDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, selecciona un local para editarlo..
+        /// </summary>
+        internal static string selectionLocalEdit {
+            get {
+                return ResourceManager.GetString("selectionLocalEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Selección requerida.
         /// </summary>
         internal static string selectionShort {
@@ -758,6 +785,15 @@ namespace GigFinder.Resources {
         internal static string titleIncidencie {
             get {
                 return ResourceManager.GetString("titleIncidencie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de locales.
+        /// </summary>
+        internal static string titleLocals {
+            get {
+                return ResourceManager.GetString("titleLocals", resourceCulture);
             }
         }
         

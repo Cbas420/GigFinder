@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Entities;
 using GigFinder.Models;
@@ -18,63 +14,58 @@ namespace GigFinder
     public partial class ManageLocalForm : Form
     {
         UserLocal _userEdit = null;
-        UsersDesktop userLogin;
+        UsersDesktop _userLogin;
+        String selectionShort;
+        String selectionLocalEdit;
+        String selectionLocalDelete;
+        String accesFunction;
+        String accesFunctionShort;
+        String askDelete;
+        String askDeleteShort;
         public ManageLocalForm(UsersDesktop user)
         {
             InitializeComponent();
             bindingSourceLocal.DataSource = UsersOrm.SelectLocals();
-            userLogin = user;
+            _userLogin = user;
         }
 
         private void ManageLocalForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
         }
-        private void ChangeLanguage()
-        {
-            CultureInfo culture = new CultureInfo(LanguageManager.language);
-            Thread.CurrentThread.CurrentUICulture = culture;
-            Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
-        }
-
-        private void UpdateTexts()
-        {
-            
-        }
 
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
-            if (userLogin.type != "user")
+            if (_userLogin.type != "user")
             {
                 CreateLocalForm createLocal = new CreateLocalForm(0, _userEdit);
                 if (createLocal.ShowDialog() == DialogResult.OK)
                 {
                     bindingSourceLocal.DataSource = UsersOrm.SelectLocals();
-                    Log.createLog("Create Local", userLogin.id);
+                    Log.createLog("Create Local", _userLogin.id);
                     customComboBoxOrder.Texts = Strings.comboBoxOrder;
                 }
             }
             else
             {
-                MessageBox.Show("No tienes permisos para utilizar esta función de la aplicación.");
+                MessageBox.Show(accesFunction, accesFunctionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void roundedButtonDelete_Click(object sender, EventArgs e)
         {
-            if (userLogin.type != "user")
+            if (_userLogin.type != "user")
             {
                 if (dataGridViewLocal.SelectedRows.Count > 0)
                 {
-                    DialogResult result = MessageBox.Show("¿Estas seguro de que quieres eliminar ese local?", "Confirmación de eliminación.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show(askDelete, askDeleteShort, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
                         UserLocal userDelete = (UserLocal)dataGridViewLocal.SelectedRows[0].DataBoundItem;
 
                         UsersOrm.DeleteUserLocal(userDelete);
-                        Log.createLog("Delete Local", userLogin.id);
+                        Log.createLog("Delete Local", _userLogin.id);
                         bindingSourceLocal.DataSource = UsersOrm.SelectLocals();
 
                         customComboBoxOrder.Texts = Strings.comboBoxOrder;
@@ -82,12 +73,12 @@ namespace GigFinder
                 }
                 else
                 {
-                    MessageBox.Show("Selecciona un músico para eliminarlo.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(selectionLocalDelete, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("No tienes permisos para utilizar esta función de la aplicación.");
+                MessageBox.Show(accesFunction, accesFunctionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -100,6 +91,24 @@ namespace GigFinder
             bindingSourceLocal.DataSource = orderedLocals;
         }
 
+        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLocal.SelectedRows.Count > 0)
+            {
+                _userEdit = (UserLocal)dataGridViewLocal.SelectedRows[0].DataBoundItem;
+                CreateLocalForm createLocalForm = new CreateLocalForm(1, _userEdit);
+                if (createLocalForm.ShowDialog() == DialogResult.OK)
+                {
+                    bindingSourceLocal.DataSource = UsersOrm.SelectLocals();
+                    Log.createLog("Edit Local", _userLogin.id);
+                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
+                }
+            }
+            else
+            {
+                MessageBox.Show(selectionLocalEdit, selectionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         private List<UserLocal> OrderLocalsBy(string selectedOrder)
         {
             var _locals = UsersOrm.SelectLocals();
@@ -123,23 +132,28 @@ namespace GigFinder
             }
         }
 
-        private void roundedButtonEdit_Click(object sender, EventArgs e)
+        private void ChangeLanguage()
         {
-            if (dataGridViewLocal.SelectedRows.Count > 0)
-            {
-                _userEdit = (UserLocal)dataGridViewLocal.SelectedRows[0].DataBoundItem;
-                CreateLocalForm createLocalForm = new CreateLocalForm(1, _userEdit);
-                if (createLocalForm.ShowDialog() == DialogResult.OK)
-                {
-                    bindingSourceLocal.DataSource = UsersOrm.SelectLocals();
-                    Log.createLog("Edit Local", userLogin.id);
-                    customComboBoxOrder.Texts = Strings.comboBoxOrder;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Selecciona un local para poder editarlo", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            CultureInfo culture = new CultureInfo(LanguageManager.language);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
+            UpdateTexts();
+        }    
+
+        private void UpdateTexts()
+        {
+            labelTitle.Text = Strings.titleLocals;
+            customComboBoxOrder.Texts = Strings.comboBoxOrder;
+            roundedButtonCreate.Text = Strings.buttonCreate;
+            roundedButtonDelete.Text = Strings.buttonDelete;
+            roundedButtonEdit.Text = Strings.buttonEdit;
+            selectionShort = Strings.selectionShort;
+            selectionLocalDelete = Strings.selectionLocalDelete;
+            selectionLocalEdit = Strings.selectionLocalEdit;
+            accesFunction = Strings.accesFunction;
+            accesFunctionShort = Strings.accesMenuShort;
+            askDelete = Strings.askDelete;
+            askDeleteShort = Strings.askDeleteShort;
         }
     }
 }

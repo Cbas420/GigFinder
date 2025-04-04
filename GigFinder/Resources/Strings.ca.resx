@@ -270,7 +270,7 @@ d'usuaris</value>
     <value>Si us plau, seleccioneu un usuari per eliminar.</value>
   </data>
   <data name="selectionEdit" xml:space="preserve">
-    <value>Seleccioneu un usuari per editar.</value>
+    <value>Si us plau, seleccioneu un usuari per editar.</value>
   </data>
   <data name="selectionShort" xml:space="preserve">
     <value>Selecció requerida</value>
@@ -361,12 +361,24 @@ d'incidències</value>
     <value>Estàs segur que vols eliminar aquest músic?</value>
   </data>
   <data name="selectionIncidencie" xml:space="preserve">
-    <value>Seleccioneu una incidència per poder resoldre-la.</value>
+    <value>Si us plau, seleccioneu una incidència per poder resoldre-la.</value>
   </data>
   <data name="resolvedIncidencie" xml:space="preserve">
     <value>Aquesta incidència ja està resolta.</value>
   </data>
   <data name="resolvedIncidencieShort" xml:space="preserve">
     <value>Incidència resolta</value>
+  </data>
+  <data name="titleLocals" xml:space="preserve">
+    <value>Gestió de locals</value>
+  </data>
+  <data name="selectionLocalEdit" xml:space="preserve">
+    <value>Si us plau, seleccioneu un local per editar-lo.</value>
+  </data>
+  <data name="selectionLocalDelete" xml:space="preserve">
+    <value>Si us plau, seleccioneu un local per eliminar-lo.</value>
+  </data>
+  <data name="askDeleteLocal" xml:space="preserve">
+    <value>Estàs segur que vols eliminar aquest local?</value>
   </data>
 </root>
