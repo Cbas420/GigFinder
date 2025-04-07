@@ -449,6 +449,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Información del local.
+        /// </summary>
+        internal static string localInfo {
+            get {
+                return ResourceManager.GetString("localInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ubicación de locales.
+        /// </summary>
+        internal static string localInfoTitle {
+            get {
+                return ResourceManager.GetString("localInfoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Gestión de
         ///locales.
         /// </summary>

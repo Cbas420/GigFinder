@@ -366,4 +366,10 @@ d'incidències</value>
   <data name="askDeleteLocal" xml:space="preserve">
     <value>Estàs segur que vols eliminar aquest local?</value>
   </data>
+  <data name="localInfo" xml:space="preserve">
+    <value>Informació del local</value>
+  </data>
+  <data name="localInfoTitle" xml:space="preserve">
+    <value>Ubicació de locals</value>
+  </data>
 </root>

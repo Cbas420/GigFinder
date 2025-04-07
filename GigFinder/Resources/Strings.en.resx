@@ -366,4 +366,10 @@ management</value>
   <data name="askDeleteLocal" xml:space="preserve">
     <value>Are you sure you want to delete this local?</value>
   </data>
+  <data name="localInfo" xml:space="preserve">
+    <value>Local infomation</value>
+  </data>
+  <data name="localInfoTitle" xml:space="preserve">
+    <value>Locals ubication</value>
+  </data>
 </root>

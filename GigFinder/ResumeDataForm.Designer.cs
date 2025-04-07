@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelMap = new System.Windows.Forms.Label();
             this.labelCalendar = new System.Windows.Forms.Label();
-            this.gMapControl = new GMap.NET.WindowsForms.GMapControl();
-            this.labelLocal = new System.Windows.Forms.Label();
+            this.chartType = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartType)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -58,61 +60,31 @@
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // labelMap
-            // 
-            this.labelMap.AutoSize = true;
-            this.labelMap.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMap.Location = new System.Drawing.Point(748, 103);
-            this.labelMap.Name = "labelMap";
-            this.labelMap.Size = new System.Drawing.Size(292, 41);
-            this.labelMap.TabIndex = 6;
-            this.labelMap.Text = "Ubicación de locales";
-            // 
             // labelCalendar
             // 
             this.labelCalendar.AutoSize = true;
             this.labelCalendar.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCalendar.Location = new System.Drawing.Point(98, 103);
+            this.labelCalendar.Location = new System.Drawing.Point(94, 355);
             this.labelCalendar.Name = "labelCalendar";
             this.labelCalendar.Size = new System.Drawing.Size(313, 41);
             this.labelCalendar.TabIndex = 7;
             this.labelCalendar.Text = "Eventos programados";
             // 
-            // gMapControl
+            // chartType
             // 
-            this.gMapControl.Bearing = 0F;
-            this.gMapControl.CanDragMap = true;
-            this.gMapControl.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMapControl.GrayScaleMode = false;
-            this.gMapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapControl.LevelsKeepInMemmory = 5;
-            this.gMapControl.Location = new System.Drawing.Point(608, 147);
-            this.gMapControl.MarkersEnabled = true;
-            this.gMapControl.MaxZoom = 2;
-            this.gMapControl.MinZoom = 2;
-            this.gMapControl.MouseWheelZoomEnabled = true;
-            this.gMapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMapControl.Name = "gMapControl";
-            this.gMapControl.NegativeMode = false;
-            this.gMapControl.PolygonsEnabled = true;
-            this.gMapControl.RetryLoadTile = 0;
-            this.gMapControl.RoutesEnabled = true;
-            this.gMapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMapControl.ShowTileGridLines = false;
-            this.gMapControl.Size = new System.Drawing.Size(536, 425);
-            this.gMapControl.TabIndex = 8;
-            this.gMapControl.Zoom = 0D;
-            // 
-            // labelLocal
-            // 
-            this.labelLocal.AutoSize = true;
-            this.labelLocal.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocal.Location = new System.Drawing.Point(726, 585);
-            this.labelLocal.Name = "labelLocal";
-            this.labelLocal.Size = new System.Drawing.Size(105, 41);
-            this.labelLocal.TabIndex = 9;
-            this.labelLocal.Text = "Local: ";
+            chartArea2.Name = "ChartArea1";
+            this.chartType.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartType.Legends.Add(legend2);
+            this.chartType.Location = new System.Drawing.Point(95, 92);
+            this.chartType.Name = "chartType";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartType.Series.Add(series2);
+            this.chartType.Size = new System.Drawing.Size(338, 268);
+            this.chartType.TabIndex = 10;
+            this.chartType.Text = "User types";
             // 
             // ResumeDataForm
             // 
@@ -120,10 +92,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.labelLocal);
-            this.Controls.Add(this.gMapControl);
+            this.Controls.Add(this.chartType);
             this.Controls.Add(this.labelCalendar);
-            this.Controls.Add(this.labelMap);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -132,6 +102,7 @@
             this.Text = "ResumeDataForm";
             this.Load += new System.EventHandler(this.ResumeDataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartType)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,9 +112,7 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelMap;
         private System.Windows.Forms.Label labelCalendar;
-        private GMap.NET.WindowsForms.GMapControl gMapControl;
-        private System.Windows.Forms.Label labelLocal;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartType;
     }
 }

@@ -365,4 +365,10 @@ incidencias</value>
   <data name="askDeleteLocal" xml:space="preserve">
     <value>¿Estas seguro de que quieres eliminar ese local?</value>
   </data>
+  <data name="localInfo" xml:space="preserve">
+    <value>Información del local</value>
+  </data>
+  <data name="localInfoTitle" xml:space="preserve">
+    <value>Ubicación de locales</value>
+  </data>
 </root>
