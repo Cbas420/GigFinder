@@ -93,6 +93,16 @@ namespace GigFinder.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendario {
+            get {
+                object obj = ResourceManager.GetObject("calendario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap compra_local {
             get {
                 object obj = ResourceManager.GetObject("compra-local", resourceCulture);
@@ -116,6 +126,16 @@ namespace GigFinder.Properties {
         internal static System.Drawing.Bitmap Fondo_escritorio {
             get {
                 object obj = ResourceManager.GetObject("Fondo escritorio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grafico {
+            get {
+                object obj = ResourceManager.GetObject("grafico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,16 @@ namespace GigFinder.Properties {
         internal static System.Drawing.Bitmap logo1 {
             get {
                 object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mapa {
+            get {
+                object obj = ResourceManager.GetObject("mapa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

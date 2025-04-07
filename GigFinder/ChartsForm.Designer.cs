@@ -28,7 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.chartType = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chartType)).BeginInit();
             this.SuspendLayout();
+            // 
+            // chartType
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartType.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartType.Legends.Add(legend2);
+            this.chartType.Location = new System.Drawing.Point(152, 161);
+            this.chartType.Name = "chartType";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartType.Series.Add(series2);
+            this.chartType.Size = new System.Drawing.Size(338, 268);
+            this.chartType.TabIndex = 11;
+            this.chartType.Text = "User types";
             // 
             // ChartsForm
             // 
@@ -36,15 +57,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.chartType);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ChartsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChartsForm";
+            this.Load += new System.EventHandler(this.ChartsForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chartType)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartType;
     }
 }

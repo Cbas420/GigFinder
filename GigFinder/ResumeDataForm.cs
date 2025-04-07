@@ -22,25 +22,85 @@ namespace GigFinder
         private void ResumeDataForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
-            InitializeChart(); 
         }
 
-        private void InitializeChart()
+        private void pictureBoxCalendar_Click(object sender, EventArgs e)
         {
-            chartType.Series[0].ChartType = SeriesChartType.Pie;
+            menuCalendar();
+        }
 
-            chartType.Series[0].Points.Clear();
-            chartType.Series[0].Points.AddXY("Musicians", UsersOrm.SelectMusicians().Count());
-            chartType.Series[0].Points.AddXY("Locals", UsersOrm.SelectLocals().Count());
+        private void labelCalendar_Click(object sender, EventArgs e)
+        {
+            menuCalendar();
+        }
 
-            chartType.Series[0].Points[0].Color = Color.FromArgb(216, 151, 255);
-            chartType.Series[0].Points[1].Color = Color.FromArgb(33, 208, 213);
+        private void customPanelCalendar_Click(object sender, EventArgs e)
+        {
+            menuCalendar();
+        }
 
-            chartType.Series[0].Font = new Font("Inter", 12);
+        private void customPanelMap_Click(object sender, EventArgs e)
+        {
+            menuMap();
+        }
 
-            var titulo = new Title("User types");
-            titulo.Font = new Font("Passion One", 20, FontStyle.Bold);
-            chartType.Titles.Add(titulo);
+        private void labelMap_Click(object sender, EventArgs e)
+        {
+            menuMap();
+        }
+
+        private void pictureBoxMap_Click(object sender, EventArgs e)
+        {
+            menuMap();
+        }
+
+        private void customPanelChart_Click(object sender, EventArgs e)
+        {
+            menuChart();
+        }
+
+        private void pictureBoxChart_Click(object sender, EventArgs e)
+        {
+            menuChart();
+        }
+
+        private void labelChart_Click(object sender, EventArgs e)
+        {
+            menuChart();
+        }
+
+        public void menuMap()
+        {
+            MapForm formMap = new MapForm();
+            this.Hide();
+            formMap.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+
+            formMap.Show();
+        }
+        public void menuChart()
+        {
+            ChartsForm formChart = new ChartsForm();
+            this.Hide();
+            formChart.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+
+            formChart.Show();
+        }
+        public void menuCalendar()
+        {
+            CalendarForm formCalendar = new CalendarForm();
+            this.Hide();
+            formCalendar.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+
+            formCalendar.Show();
         }
 
         private void ChangeLanguage()
@@ -53,7 +113,7 @@ namespace GigFinder
 
         private void UpdateTexts()
         {
-            
+
         }
     }
 }
