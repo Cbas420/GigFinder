@@ -32,6 +32,8 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelMap = new System.Windows.Forms.Label();
             this.labelCalendar = new System.Windows.Forms.Label();
+            this.gMapControl = new GMap.NET.WindowsForms.GMapControl();
+            this.labelLocal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             // 
             this.labelMap.AutoSize = true;
             this.labelMap.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMap.Location = new System.Drawing.Point(781, 103);
+            this.labelMap.Location = new System.Drawing.Point(748, 103);
             this.labelMap.Name = "labelMap";
             this.labelMap.Size = new System.Drawing.Size(292, 41);
             this.labelMap.TabIndex = 6;
@@ -76,12 +78,50 @@
             this.labelCalendar.TabIndex = 7;
             this.labelCalendar.Text = "Eventos programados";
             // 
+            // gMapControl
+            // 
+            this.gMapControl.Bearing = 0F;
+            this.gMapControl.CanDragMap = true;
+            this.gMapControl.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMapControl.GrayScaleMode = false;
+            this.gMapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gMapControl.LevelsKeepInMemmory = 5;
+            this.gMapControl.Location = new System.Drawing.Point(608, 147);
+            this.gMapControl.MarkersEnabled = true;
+            this.gMapControl.MaxZoom = 2;
+            this.gMapControl.MinZoom = 2;
+            this.gMapControl.MouseWheelZoomEnabled = true;
+            this.gMapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMapControl.Name = "gMapControl";
+            this.gMapControl.NegativeMode = false;
+            this.gMapControl.PolygonsEnabled = true;
+            this.gMapControl.RetryLoadTile = 0;
+            this.gMapControl.RoutesEnabled = true;
+            this.gMapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMapControl.ShowTileGridLines = false;
+            this.gMapControl.Size = new System.Drawing.Size(536, 425);
+            this.gMapControl.TabIndex = 8;
+            this.gMapControl.Zoom = 0D;
+            // 
+            // labelLocal
+            // 
+            this.labelLocal.AutoSize = true;
+            this.labelLocal.Font = new System.Drawing.Font("Passion One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLocal.Location = new System.Drawing.Point(726, 585);
+            this.labelLocal.Name = "labelLocal";
+            this.labelLocal.Size = new System.Drawing.Size(105, 41);
+            this.labelLocal.TabIndex = 9;
+            this.labelLocal.Text = "Local: ";
+            // 
             // ResumeDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.labelLocal);
+            this.Controls.Add(this.gMapControl);
             this.Controls.Add(this.labelCalendar);
             this.Controls.Add(this.labelMap);
             this.Controls.Add(this.labelTitle);
@@ -103,5 +143,7 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelMap;
         private System.Windows.Forms.Label labelCalendar;
+        private GMap.NET.WindowsForms.GMapControl gMapControl;
+        private System.Windows.Forms.Label labelLocal;
     }
 }
