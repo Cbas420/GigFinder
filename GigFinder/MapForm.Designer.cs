@@ -181,7 +181,10 @@
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.customPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MapForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MapForm";
             this.Load += new System.EventHandler(this.MapForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();

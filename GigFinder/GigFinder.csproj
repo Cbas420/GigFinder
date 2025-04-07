@@ -69,6 +69,18 @@
     <Compile Include="ActivityRegisterForm.Designer.cs">
       <DependentUpon>ActivityRegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalendarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarForm.Designer.cs">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartsForm.Designer.cs">
+      <DependentUpon>ChartsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CustomComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +263,12 @@
     </Compile>
     <EmbeddedResource Include="ActivityRegisterForm.resx">
       <DependentUpon>ActivityRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarForm.resx">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartsForm.resx">
+      <DependentUpon>ChartsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CustomComboBox.resx">
       <DependentUpon>CustomComboBox.cs</DependentUpon>
