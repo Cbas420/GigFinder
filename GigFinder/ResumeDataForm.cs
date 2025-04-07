@@ -113,7 +113,9 @@ namespace GigFinder
 
         private void UpdateTexts()
         {
-
+            labelCalendar.Text = Strings.calendar;
+            labelMap.Text = Strings.map;
+            labelChart.Text = Strings.chart;
         }
     }
 }

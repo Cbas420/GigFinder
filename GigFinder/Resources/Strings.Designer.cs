@@ -187,6 +187,24 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Calendario.
+        /// </summary>
+        internal static string calendar {
+            get {
+                return ResourceManager.GetString("calendar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gráficos.
+        /// </summary>
+        internal static string chart {
+            get {
+                return ResourceManager.GetString("chart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Filtrar por.
         /// </summary>
         internal static string comboBoxFilter {
@@ -482,6 +500,15 @@ namespace GigFinder.Resources {
         internal static string loginShort {
             get {
                 return ResourceManager.GetString("loginShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mapa.
+        /// </summary>
+        internal static string map {
+            get {
+                return ResourceManager.GetString("map", resourceCulture);
             }
         }
         

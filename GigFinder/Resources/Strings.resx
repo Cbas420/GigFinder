@@ -371,4 +371,13 @@ incidencias</value>
   <data name="localInfoTitle" xml:space="preserve">
     <value>Ubicación de locales</value>
   </data>
+  <data name="map" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="calendar" xml:space="preserve">
+    <value>Calendario</value>
+  </data>
+  <data name="chart" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
 </root>

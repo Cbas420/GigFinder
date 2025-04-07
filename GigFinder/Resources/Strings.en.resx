@@ -372,4 +372,13 @@ management</value>
   <data name="localInfoTitle" xml:space="preserve">
     <value>Locals ubication</value>
   </data>
+  <data name="map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="chart" xml:space="preserve">
+    <value>Graphics</value>
+  </data>
 </root>

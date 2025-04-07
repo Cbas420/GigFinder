@@ -372,4 +372,13 @@ d'incidències</value>
   <data name="localInfoTitle" xml:space="preserve">
     <value>Ubicació de locals</value>
   </data>
+  <data name="map" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="calendar" xml:space="preserve">
+    <value>Calendari</value>
+  </data>
+  <data name="chart" xml:space="preserve">
+    <value>Gràfics</value>
+  </data>
 </root>
