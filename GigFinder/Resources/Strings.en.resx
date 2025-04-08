@@ -381,4 +381,7 @@ management</value>
   <data name="chart" xml:space="preserve">
     <value>Graphics</value>
   </data>
+  <data name="resumeData" xml:space="preserve">
+    <value>Resume data</value>
+  </data>
 </root>

@@ -681,6 +681,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Resumen de datos.
+        /// </summary>
+        internal static string resumeData {
+            get {
+                return ResourceManager.GetString("resumeData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No puedes eliminar tu propio usuario..
         /// </summary>
         internal static string sameUserDelete {

@@ -381,4 +381,7 @@ d'incidències</value>
   <data name="chart" xml:space="preserve">
     <value>Gràfics</value>
   </data>
+  <data name="resumeData" xml:space="preserve">
+    <value>Resum de dades</value>
+  </data>
 </root>

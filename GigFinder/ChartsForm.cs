@@ -39,7 +39,7 @@ namespace GigFinder
             chartType.Series[0].Points[1].Color = Color.FromArgb(33, 208, 213);
             chartType.Series[0].Font = new Font("Inter", 12);
             var title = new Title("User types");
-            title.Font = new Font("Passion One", 20, FontStyle.Bold);
+            title.Font = new Font("Passion One", 30, FontStyle.Bold);
             chartType.Titles.Add(title);
 
             // Chart for Applications Status
@@ -59,7 +59,7 @@ namespace GigFinder
             chartAplications.Series[0].Points[2].Color = Color.FromArgb(216, 151, 255); // Rejected color
             chartAplications.Series[0].Font = new Font("Inter", 12);
             var appTitle = new Title("Applications Status");
-            appTitle.Font = new Font("Passion One", 20, FontStyle.Bold);
+            appTitle.Font = new Font("Passion One", 30, FontStyle.Bold);
             chartAplications.Titles.Add(appTitle);
 
             // Chart for Event Offers
@@ -76,7 +76,7 @@ namespace GigFinder
             chartEvents.Series[0].Points[1].Color = Color.FromArgb(216, 151, 255); // Closed offer color
             chartEvents.Series[0].Font = new Font("Inter", 12);
             var eventTitle = new Title("Event Offer Status");
-            eventTitle.Font = new Font("Passion One", 20, FontStyle.Bold);
+            eventTitle.Font = new Font("Passion One", 30, FontStyle.Bold);
             chartEvents.Titles.Add(eventTitle);
         }
 
@@ -90,7 +90,7 @@ namespace GigFinder
 
         private void UpdateTexts()
         {
-
+            labelTitle.Text = Strings.resumeData;
         }
     }
 }

@@ -380,4 +380,7 @@ incidencias</value>
   <data name="chart" xml:space="preserve">
     <value>Gráficos</value>
   </data>
+  <data name="resumeData" xml:space="preserve">
+    <value>Resumen de datos</value>
+  </data>
 </root>
