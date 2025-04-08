@@ -36,8 +36,10 @@ namespace GigFinder
         private void CreateMusicianForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
-            LoadData();
-            
+            if (actionMade == 1)
+            {
+                LoadData();
+            }
         }      
 
         private void roundedButtonCancel_Click(object sender, EventArgs e)
@@ -158,26 +160,23 @@ namespace GigFinder
         }
         private void LoadData()
         {
-            if (actionMade == 1)
+            Users userToEdit = UsersOrm.SelectUserWithMail(_userEdit.email);
+            Musicians musicianToEdit = UsersOrm.SelectMusicianWithId(_userEdit.id);
+            roundedTextBoxName.Texts = userToEdit.name;
+            roundedTextBoxMail.Texts = userToEdit.email;
+            roundedTextBoxDescription.Texts = userToEdit.description;
+            roundedTextBoxPrice.Texts = musicianToEdit.price.ToString();
+            roundedTextBoxSizeGroup.Texts = musicianToEdit.size.ToString();
+            customComboBoxLang.SelectedItem = _userEdit.lang;
+            customComboBoxLang.Texts = _userEdit.lang;
+            listBoxGenres.SetSelected(0, false);
+            foreach (Genres _genre in userToEdit.Genres)
             {
-                Users userToEdit = UsersOrm.SelectUserWithMail(_userEdit.email);
-                Musicians musicianToEdit = UsersOrm.SelectMusicianWithId(_userEdit.id);
-                roundedTextBoxName.Texts = userToEdit.name;
-                roundedTextBoxMail.Texts = userToEdit.email;
-                roundedTextBoxDescription.Texts = userToEdit.description;
-                roundedTextBoxPrice.Texts = musicianToEdit.price.ToString();
-                roundedTextBoxSizeGroup.Texts = musicianToEdit.size.ToString();
-                customComboBoxLang.SelectedItem = _userEdit.lang;
-                customComboBoxLang.Texts = _userEdit.lang;
-                listBoxGenres.SetSelected(0, false);
-                foreach (Genres _genre in userToEdit.Genres)
+                for (int i = 0; i < listBoxGenres.Items.Count; i++)
                 {
-                    for (int i = 0; i < listBoxGenres.Items.Count; i++)
+                    if (((Genres)listBoxGenres.Items[i]).id == _genre.id)
                     {
-                        if (((Genres)listBoxGenres.Items[i]).id == _genre.id)
-                        {
-                            listBoxGenres.SetSelected(i, true);
-                        }
+                        listBoxGenres.SetSelected(i, true);
                     }
                 }
             }

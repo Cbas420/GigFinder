@@ -32,7 +32,10 @@ namespace GigFinder
         private void CreateLocalForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
-            LoadData();
+            if (actionMade == 1)
+            {
+                LoadData();
+            }
         }
 
         private void roundedButtonCancel_Click(object sender, EventArgs e)
