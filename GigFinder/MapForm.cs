@@ -40,9 +40,9 @@ namespace GigFinder
 
                 labelName.Text = "Name: " + localInfo.Name;
                 labelEmail.Text = "Email: " + localInfo.Email;
-                labelCapacity.Text = "Capacidad: " + localInfo.Capacity.ToString();
-                labelLatitud.Text = "Latitud: " + latitude.ToString("F6");
-                labelLongitud.Text = "Longitud: " + longitude.ToString("F6");
+                labelCapacity.Text = "Capacity: " + localInfo.Capacity.ToString();
+                labelLatitud.Text = "Latitude: " + latitude.ToString("F6");
+                labelLongitud.Text = "Longitude: " + longitude.ToString("F6");
             }
         }
 
