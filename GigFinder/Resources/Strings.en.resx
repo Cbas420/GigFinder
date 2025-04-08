@@ -384,4 +384,7 @@ management</value>
   <data name="resumeData" xml:space="preserve">
     <value>Resume data</value>
   </data>
+  <data name="titleCalendar" xml:space="preserve">
+    <value>Programed events</value>
+  </data>
 </root>

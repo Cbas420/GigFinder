@@ -384,4 +384,7 @@ d'incidències</value>
   <data name="resumeData" xml:space="preserve">
     <value>Resum de dades</value>
   </data>
+  <data name="titleCalendar" xml:space="preserve">
+    <value>Events programats</value>
+  </data>
 </root>

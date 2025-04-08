@@ -350,6 +350,7 @@
     <None Include="Properties\DataSources\GigFinder.Models.Attachments.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.ChatRooms.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Events.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.EventsCalendar.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Files.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Genres.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Incidences.datasource" />

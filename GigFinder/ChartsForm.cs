@@ -42,10 +42,9 @@ namespace GigFinder
             title.Font = new Font("Passion One", 30, FontStyle.Bold);
             chartType.Titles.Add(title);
 
-            // Chart for Applications Status
             chartAplications.Series[0].ChartType = SeriesChartType.Pie;
             chartAplications.Series[0].Points.Clear();
-            // Assuming UsersOrm.SelectApplications() gives the list of all applications with status
+
             var applications = AplicationsOrm.SelectGlobal();
             var pendingCount = applications.Count(a => a.status == "pendent");
             var acceptedCount = applications.Count(a => a.status == "accepted");
@@ -65,7 +64,7 @@ namespace GigFinder
             // Chart for Event Offers
             chartEvents.Series[0].ChartType = SeriesChartType.Pie;
             chartEvents.Series[0].Points.Clear();
-            // Assuming UsersOrm.SelectEvents() gives the list of all events with opened_offer
+
             var events = EventsOrm.SelectGlobal();
             var openOfferCount = events.Count(e => e.opened_offer == true);
             var closedOfferCount = events.Count(e => e.opened_offer == false);

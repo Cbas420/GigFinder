@@ -780,6 +780,15 @@ namespace GigFinder.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Eventos programados.
+        /// </summary>
+        internal static string titleCalendar {
+            get {
+                return ResourceManager.GetString("titleCalendar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Editar usuario.
         /// </summary>
         internal static string titleEditUser {

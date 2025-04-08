@@ -383,4 +383,7 @@ incidencias</value>
   <data name="resumeData" xml:space="preserve">
     <value>Resumen de datos</value>
   </data>
+  <data name="titleCalendar" xml:space="preserve">
+    <value>Eventos programados</value>
+  </data>
 </root>
