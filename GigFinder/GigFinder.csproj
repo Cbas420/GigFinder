@@ -171,6 +171,7 @@
     <Compile Include="Models\Aplications.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AplicationsOrm.cs" />
     <Compile Include="Models\Attachments.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
@@ -180,6 +181,7 @@
     <Compile Include="Models\Events.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EventsOrm.cs" />
     <Compile Include="Models\Files.cs">
       <DependentUpon>ModelGigFinder.tt</DependentUpon>
     </Compile>

@@ -25,25 +25,59 @@ namespace GigFinder
         private void ChartsForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
-            InitializeChart();
+            InitializeCharts();
         }
 
-        private void InitializeChart()
+        private void InitializeCharts()
         {
+            // Chart for User Types
             chartType.Series[0].ChartType = SeriesChartType.Pie;
-
             chartType.Series[0].Points.Clear();
             chartType.Series[0].Points.AddXY("Musicians", UsersOrm.SelectMusicians().Count());
             chartType.Series[0].Points.AddXY("Locals", UsersOrm.SelectLocals().Count());
-
             chartType.Series[0].Points[0].Color = Color.FromArgb(216, 151, 255);
             chartType.Series[0].Points[1].Color = Color.FromArgb(33, 208, 213);
-
             chartType.Series[0].Font = new Font("Inter", 12);
+            var title = new Title("User types");
+            title.Font = new Font("Passion One", 20, FontStyle.Bold);
+            chartType.Titles.Add(title);
 
-            var titulo = new Title("User types");
-            titulo.Font = new Font("Passion One", 20, FontStyle.Bold);
-            chartType.Titles.Add(titulo);
+            // Chart for Applications Status
+            chartAplications.Series[0].ChartType = SeriesChartType.Pie;
+            chartAplications.Series[0].Points.Clear();
+            // Assuming UsersOrm.SelectApplications() gives the list of all applications with status
+            var applications = AplicationsOrm.SelectGlobal();
+            var pendingCount = applications.Count(a => a.status == "pendent");
+            var acceptedCount = applications.Count(a => a.status == "accepted");
+            var rejectedCount = applications.Count(a => a.status == "rejected");
+
+            chartAplications.Series[0].Points.AddXY("Pending", pendingCount);
+            chartAplications.Series[0].Points.AddXY("Accepted", acceptedCount);
+            chartAplications.Series[0].Points.AddXY("Rejected", rejectedCount);
+            chartAplications.Series[0].Points[0].Color = Color.FromArgb(33, 208, 213); // Pending color
+            chartAplications.Series[0].Points[1].Color = Color.FromArgb(80, 255, 130); // Accepted color
+            chartAplications.Series[0].Points[2].Color = Color.FromArgb(216, 151, 255); // Rejected color
+            chartAplications.Series[0].Font = new Font("Inter", 12);
+            var appTitle = new Title("Applications Status");
+            appTitle.Font = new Font("Passion One", 20, FontStyle.Bold);
+            chartAplications.Titles.Add(appTitle);
+
+            // Chart for Event Offers
+            chartEvents.Series[0].ChartType = SeriesChartType.Pie;
+            chartEvents.Series[0].Points.Clear();
+            // Assuming UsersOrm.SelectEvents() gives the list of all events with opened_offer
+            var events = EventsOrm.SelectGlobal();
+            var openOfferCount = events.Count(e => e.opened_offer == true);
+            var closedOfferCount = events.Count(e => e.opened_offer == false);
+
+            chartEvents.Series[0].Points.AddXY("Opened Offer", openOfferCount);
+            chartEvents.Series[0].Points.AddXY("Closed Offer", closedOfferCount);
+            chartEvents.Series[0].Points[0].Color = Color.FromArgb(33, 208, 213); // Opened offer color
+            chartEvents.Series[0].Points[1].Color = Color.FromArgb(216, 151, 255); // Closed offer color
+            chartEvents.Series[0].Font = new Font("Inter", 12);
+            var eventTitle = new Title("Event Offer Status");
+            eventTitle.Font = new Font("Passion One", 20, FontStyle.Bold);
+            chartEvents.Titles.Add(eventTitle);
         }
 
         private void ChangeLanguage()
