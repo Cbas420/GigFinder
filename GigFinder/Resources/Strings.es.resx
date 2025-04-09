@@ -314,7 +314,7 @@ usuarios</value>
     <value>Músico existente</value>
   </data>
   <data name="musiciansManage" xml:space="preserve">
-    <value>Gestió de
+    <value>Gestión de
 músicos</value>
   </data>
   <data name="LocalsManage" xml:space="preserve">
@@ -322,7 +322,7 @@ músicos</value>
 locales</value>
   </data>
   <data name="ratingsManage" xml:space="preserve">
-    <value>Gestió de
+    <value>Gestión de
 valoraciones</value>
   </data>
   <data name="incidenciesManage" xml:space="preserve">
