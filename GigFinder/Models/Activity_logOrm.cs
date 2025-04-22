@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GigFinder.Models
 {
@@ -13,8 +11,13 @@ namespace GigFinder.Models
         public string activity { get; set; }
         public DateTime date { get; set; }
     }
+
     public class Activity_logOrm
     {
+        /// <summary>
+        /// Retrieves all activity logs with user details.
+        /// </summary>
+        /// <returns>A list of activity logs with the admin's name and action performed.</returns>
         public static List<Activity_logFull> SelectGlobal()
         {
             try
@@ -39,6 +42,11 @@ namespace GigFinder.Models
             }
         }
 
+        /// <summary>
+        /// Retrieves activity logs for a specific user.
+        /// </summary>
+        /// <param name="id">The user ID to filter activity logs by.</param>
+        /// <returns>A list of activity logs for the specified user.</returns>
         public static List<Activity_log> SelectByUser(int id)
         {
             try
@@ -57,6 +65,10 @@ namespace GigFinder.Models
             }
         }
 
+        /// <summary>
+        /// Inserts a new activity log into the database.
+        /// </summary>
+        /// <param name="_activity">The activity log entry to insert.</param>
         public static void Insert(Activity_log _activity)
         {
             try
@@ -67,19 +79,6 @@ namespace GigFinder.Models
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in Activity_logOrm Insert: {ex.Message}");
-            }
-        }
-
-        public static void Delete(Activity_log _activity)
-        {
-            try
-            {
-                Orm.bd.Activity_log.Remove(_activity);
-                Orm.bd.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in Activity_logOrm Delete: {ex.Message}");
             }
         }
     }
