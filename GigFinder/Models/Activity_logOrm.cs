@@ -17,18 +17,19 @@ namespace GigFinder.Models
         /// <summary>
         /// Retrieves all activity logs with user details.
         /// </summary>
-        /// <returns>A list of activity logs with the admin's name and action performed.</returns>
+        /// <returns>A list of activity logs with the admin's name, action performed, and the date of the log.</returns>
         public static List<Activity_logFull> SelectGlobal()
         {
             try
             {
+                // Join Activity_log with UsersDesktop based on the admin_id
                 List<Activity_logFull> _activity = (
                     from activity in Orm.bd.Activity_log
                     join user in Orm.bd.UsersDesktop on activity.admin_id equals user.id
                     select new Activity_logFull
                     {
                         id = activity.id,
-                        admin = user.name,
+                        admin = user.name, // Get the admin's name from the UsersDesktop table
                         activity = activity.action_made,
                         date = activity.date_log
                     }).ToList();
@@ -38,30 +39,7 @@ namespace GigFinder.Models
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in Activity_logOrm SelectGlobal: {ex.Message}");
-                return new List<Activity_logFull>();
-            }
-        }
-
-        /// <summary>
-        /// Retrieves activity logs for a specific user.
-        /// </summary>
-        /// <param name="id">The user ID to filter activity logs by.</param>
-        /// <returns>A list of activity logs for the specified user.</returns>
-        public static List<Activity_log> SelectByUser(int id)
-        {
-            try
-            {
-                List<Activity_log> _activity = (
-                    from activity in Orm.bd.Activity_log
-                    where activity.admin_id == id
-                    select activity).ToList();
-
-                return _activity;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in Activity_logOrm SelectByUser: {ex.Message}");
-                return new List<Activity_log>();
+                return new List<Activity_logFull>(); // Return an empty list in case of an error
             }
         }
 
@@ -73,8 +51,9 @@ namespace GigFinder.Models
         {
             try
             {
+                // Add the new activity log entry to the database
                 Orm.bd.Activity_log.Add(_activity);
-                Orm.bd.SaveChanges();
+                Orm.bd.SaveChanges(); // Save the changes to the database
             }
             catch (Exception ex)
             {
