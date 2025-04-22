@@ -42,198 +42,321 @@ namespace GigFinder.Models
     {
         public static List<UserMusician> SelectMusicians()
         {
-            List<UserMusician> _userMusician = (from u in Orm.bd.Users
-                          join m in Orm.bd.Musicians on u.id equals m.id
-                          join l in Orm.bd.Languages on m.songs_lang equals l.id
-                          where u.type == "music" && u.active == true
-                          select new UserMusician
-                          {
-                              id = u.id,
-                              name = u.name,
-                              description = u.description,
-                              email = u.email,
-                              password = u.password,
-                              size = m.size,
-                              price = m.price,
-                              lang = l.lang
-                          }).ToList();
+            try
+            {
+                List<UserMusician> _userMusician = (from u in Orm.bd.Users
+                                                    join m in Orm.bd.Musicians on u.id equals m.id
+                                                    join l in Orm.bd.Languages on m.songs_lang equals l.id
+                                                    where u.type == "music" && u.active == true
+                                                    select new UserMusician
+                                                    {
+                                                        id = u.id,
+                                                        name = u.name,
+                                                        description = u.description,
+                                                        email = u.email,
+                                                        password = u.password,
+                                                        size = m.size,
+                                                        price = m.price,
+                                                        lang = l.lang
+                                                    }).ToList();
 
-            return _userMusician;
+                return _userMusician;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm SelectMusicians: {ex.Message}");
+                return new List<UserMusician>();
+            }
         }
 
         public static List<UserLocal> SelectLocals()
         {
-            List<UserLocal> _userLocal = (from u in Orm.bd.Users
-                           join l in Orm.bd.Locals on u.id equals l.id
-                           where u.type == "local" && u.active == true
-                           select new UserLocal
-                           {
-                                id = u.id,
-                                name = u.name,
-                                description = u.description,
-                                email = u.email,
-                                password = u.password,
-                                capacity = l.capacity,
-                                x_coordination = l.x_coordination,
-                                y_coordination = l.y_coordination,
-                           }).ToList();
+            try
+            {
+                List<UserLocal> _userLocal = (from u in Orm.bd.Users
+                                              join l in Orm.bd.Locals on u.id equals l.id
+                                              where u.type == "local" && u.active == true
+                                              select new UserLocal
+                                              {
+                                                  id = u.id,
+                                                  name = u.name,
+                                                  description = u.description,
+                                                  email = u.email,
+                                                  password = u.password,
+                                                  capacity = l.capacity,
+                                                  x_coordination = l.x_coordination,
+                                                  y_coordination = l.y_coordination,
+                                              }).ToList();
 
-            return _userLocal;
+                return _userLocal;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm SelectLocals: {ex.Message}");
+                return new List<UserLocal>();
+            }
         }
 
         public static void InsertUser(Users _user)
         {
-            Orm.bd.Users.Add(_user);
-            Orm.bd.SaveChanges();
+            try
+            {
+                Orm.bd.Users.Add(_user);
+                Orm.bd.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm InsertUser: {ex.Message}");
+            }
         }
 
         public static Users SelectUserWithMail(string email)
         {
-            Users _user =
-                (Users)(from user in Orm.bd.Users
-                        where user.email == email && user.active == true
-                        select user).FirstOrDefault();
+            try
+            {
+                Users _user =
+                    (Users)(from user in Orm.bd.Users
+                            where user.email == email && user.active == true
+                            select user).FirstOrDefault();
 
-            return _user;
+                return _user;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm SelectUserWithMail: {ex.Message}");
+                return null;
+            }
         }
 
         public static Musicians SelectMusicianWithId(int id)
         {
-            Musicians _music =
-                (Musicians)(from music in Orm.bd.Musicians
-                        where music.id == id
-                        select music).FirstOrDefault();
+            try
+            {
+                Musicians _music =
+                    (Musicians)(from music in Orm.bd.Musicians
+                                where music.id == id
+                                select music).FirstOrDefault();
 
-            return _music;
+                return _music;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm SelectMusicianWithId: {ex.Message}");
+                return null;
+            }
         }
+
         public static Locals SelectLocalWithId(int id)
         {
-            Locals _local =
-                (Locals)(from local in Orm.bd.Locals
-                            where local.id == id
-                            select local).FirstOrDefault();
+            try
+            {
+                Locals _local =
+                    (Locals)(from local in Orm.bd.Locals
+                             where local.id == id
+                             select local).FirstOrDefault();
 
-            return _local;
+                return _local;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm SelectLocalWithId: {ex.Message}");
+                return null;
+            }
         }
 
         public static void InsertMusician(Musicians _music)
         {
-            Orm.bd.Musicians.Add(_music);
-            Orm.bd.SaveChanges();
+            try
+            {
+                Orm.bd.Musicians.Add(_music);
+                Orm.bd.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm InsertMusician: {ex.Message}");
+            }
         }
 
         public static void InsertLocal(Locals _local)
         {
-            Orm.bd.Locals.Add(_local);
-            Orm.bd.SaveChanges();
+            try
+            {
+                Orm.bd.Locals.Add(_local);
+                Orm.bd.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm InsertLocal: {ex.Message}");
+            }
         }
 
         public static void DeleteUserMusician(UserMusician _music)
         {
-            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == _music.id);
-
-            if (existingUser != null)
+            try
             {
-                existingUser.active = false;
+                var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == _music.id);
 
-                Orm.bd.SaveChanges();
+                if (existingUser != null)
+                {
+                    existingUser.active = false;
+                    Orm.bd.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine($"Error in UsersOrm user musician with ID {_music.id} not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm DeleteUserMusician: {ex.Message}");
             }
         }
+
         public static void DeleteUserLocal(UserLocal _local)
         {
-            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == _local.id);
-
-            if (existingUser != null)
+            try
             {
-                existingUser.active = false;
+                var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == _local.id);
 
-                Orm.bd.SaveChanges();
+                if (existingUser != null)
+                {
+                    existingUser.active = false;
+                    Orm.bd.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine($"Error in UsersOrm user local with ID {_local.id} not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm DeleteUserLocal: {ex.Message}");
             }
         }
 
         public static void UpdateMusicianWithoutPass(int id, string name, string email, string description, List<Genres> userGenres, Languages lang, int price, int size)
         {
-            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
-
-            var existingMusician = Orm.bd.Musicians.FirstOrDefault(musician => musician.id == id);
-
-            if (existingUser != null && existingMusician != null)
+            try
             {
-                existingUser.name = name;
-                existingUser.email = email;
-                existingUser.description = description;
-                existingUser.Genres = userGenres;
+                var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+                var existingMusician = Orm.bd.Musicians.FirstOrDefault(musician => musician.id == id);
 
-                existingMusician.price = price;
-                existingMusician.size = (byte)size;
-                existingMusician.songs_lang = lang.id;
+                if (existingUser != null && existingMusician != null)
+                {
+                    existingUser.name = name;
+                    existingUser.email = email;
+                    existingUser.description = description;
+                    existingUser.Genres = userGenres;
 
-                Orm.bd.SaveChanges();
+                    existingMusician.price = price;
+                    existingMusician.size = (byte)size;
+                    existingMusician.songs_lang = lang.id;
+
+                    Orm.bd.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine($"Error in UsersOrm user or musician with ID {id} not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm UpdateMusicianWithoutPass: {ex.Message}");
             }
         }
 
         public static void UpdateMusician(int id, string name, string email, string description, List<Genres> userGenres, Languages lang, int price, int size, string pass)
         {
-            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
-
-            var existingMusician = Orm.bd.Musicians.FirstOrDefault(musician => musician.id == id);
-
-            if (existingUser != null && existingMusician != null)
+            try
             {
-                existingUser.name = name;
-                existingUser.email = email;
-                existingUser.password = pass;
-                existingUser.description = description;
-                existingUser.Genres = userGenres;
+                var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+                var existingMusician = Orm.bd.Musicians.FirstOrDefault(musician => musician.id == id);
 
-                existingMusician.price = price;
-                existingMusician.size = (byte)size;
-                existingMusician.songs_lang = lang.id;
+                if (existingUser != null && existingMusician != null)
+                {
+                    existingUser.name = name;
+                    existingUser.email = email;
+                    existingUser.password = pass;
+                    existingUser.description = description;
+                    existingUser.Genres = userGenres;
 
-                Orm.bd.SaveChanges();
+                    existingMusician.price = price;
+                    existingMusician.size = (byte)size;
+                    existingMusician.songs_lang = lang.id;
+
+                    Orm.bd.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine($"Error in UsersOrm user or musician with ID {id} not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm UpdateMusician: {ex.Message}");
             }
         }
 
         internal static void UpdateLocalWithoutPass(int id, string name, string email, string description, List<Genres> userGenres, int capacity, double yCoord, double xCoord)
         {
-            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
-
-            var existingLocal = Orm.bd.Locals.FirstOrDefault(local => local.id == id);
-
-            if (existingUser != null && existingLocal != null)
+            try
             {
-                existingUser.name = name;
-                existingUser.email = email;
-                existingUser.description = description;
-                existingUser.Genres = userGenres;
+                var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+                var existingLocal = Orm.bd.Locals.FirstOrDefault(local => local.id == id);
 
-                existingLocal.capacity = capacity;
-                existingLocal.x_coordination = xCoord;
-                existingLocal.y_coordination = yCoord;
+                if (existingUser != null && existingLocal != null)
+                {
+                    existingUser.name = name;
+                    existingUser.email = email;
+                    existingUser.description = description;
+                    existingUser.Genres = userGenres;
 
-                Orm.bd.SaveChanges();
+                    existingLocal.capacity = capacity;
+                    existingLocal.x_coordination = xCoord;
+                    existingLocal.y_coordination = yCoord;
+
+                    Orm.bd.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine($"Error in UsersOrm user or local with ID {id} not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm UpdateLocalWithoutPass: {ex.Message}");
             }
         }
 
         internal static void UpdateLocal(int id, string name, string email, string description, List<Genres> userGenres, int capacity, double yCoord, double xCoord, string pass)
         {
-            var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
-
-            var existingLocal = Orm.bd.Locals.FirstOrDefault(local => local.id == id);
-
-            if (existingUser != null && existingLocal != null)
+            try
             {
-                existingUser.name = name;
-                existingUser.email = email;
-                existingUser.password = pass;
-                existingUser.description = description;
-                existingUser.Genres = userGenres;
+                var existingUser = Orm.bd.Users.FirstOrDefault(user => user.id == id && user.active == true);
+                var existingLocal = Orm.bd.Locals.FirstOrDefault(local => local.id == id);
 
-                existingLocal.capacity = capacity;
-                existingLocal.x_coordination = xCoord;
-                existingLocal.y_coordination = yCoord;
+                if (existingUser != null && existingLocal != null)
+                {
+                    existingUser.name = name;
+                    existingUser.email = email;
+                    existingUser.password = pass;
+                    existingUser.description = description;
+                    existingUser.Genres = userGenres;
 
-                Orm.bd.SaveChanges();
+                    existingLocal.capacity = capacity;
+                    existingLocal.x_coordination = xCoord;
+                    existingLocal.y_coordination = yCoord;
+
+                    Orm.bd.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine($"Error in UsersOrm user or local with ID {id} not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UsersOrm UpdateLocal: {ex.Message}");
             }
         }
     }

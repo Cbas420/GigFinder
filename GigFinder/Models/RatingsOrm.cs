@@ -19,29 +19,48 @@ namespace GigFinder.Models
     {
         public static List<RatingsFull> SelectGlobal()
         {
-            List<RatingsFull> _ratings = (
-                from rating in Orm.bd.Ratings
-                join user in Orm.bd.Users on rating.user_id equals user.id
-                join events in Orm.bd.Events on rating.event_id equals events.id
-                select new RatingsFull
-                {
-                    user_id = rating.user_id,
-                    user = user.name,
-                    event_id = rating.event_id,
-                    comment = rating.content,
-                    ratingValue = rating.avg_rating
-                }).ToList();
+            try
+            {
+                List<RatingsFull> _ratings = (
+                    from rating in Orm.bd.Ratings
+                    join user in Orm.bd.Users on rating.user_id equals user.id
+                    join events in Orm.bd.Events on rating.event_id equals events.id
+                    select new RatingsFull
+                    {
+                        user_id = rating.user_id,
+                        user = user.name,
+                        event_id = rating.event_id,
+                        comment = rating.content,
+                        ratingValue = rating.avg_rating
+                    }).ToList();
 
-            return _ratings;
+                return _ratings;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in RatingsOrm SelectGlobal: {ex.Message}");
+                return new List<RatingsFull>(); // Return empty list in case of error
+            }
         }
 
         public static void Delete(RatingsFull _rating)
         {
-            var ratingToDelete = Orm.bd.Ratings.FirstOrDefault(r => r.user_id == _rating.user_id && r.event_id == _rating.event_id);
-            if (ratingToDelete != null)
+            try
             {
-                Orm.bd.Ratings.Remove(ratingToDelete);
-                Orm.bd.SaveChanges();
+                var ratingToDelete = Orm.bd.Ratings.FirstOrDefault(r => r.user_id == _rating.user_id && r.event_id == _rating.event_id);
+                if (ratingToDelete != null)
+                {
+                    Orm.bd.Ratings.Remove(ratingToDelete);
+                    Orm.bd.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine($"Error in RatingsOrm rating not found for user ID {_rating.user_id} and event ID {_rating.event_id}.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in RatingsOrm Delete: {ex.Message}");
             }
         }
     }
