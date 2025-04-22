@@ -12,8 +12,8 @@ namespace GigFinder.Models
         {
             UsersDesktop _userDesktop =
                 (UsersDesktop)(from user in Orm.bd.UsersDesktop
-                 where user.email == email && user.password == password
-                 select user).FirstOrDefault();
+                 where user.email == email && user.password == password && user.active == true
+                               select user).FirstOrDefault();
 
             return _userDesktop;
         }
@@ -22,6 +22,7 @@ namespace GigFinder.Models
         {
             List<UsersDesktop> _usersDesktops = (
                 from users in Orm.bd.UsersDesktop
+                where users.active == true
                 select users).ToList();
 
             return _usersDesktops;
@@ -31,7 +32,7 @@ namespace GigFinder.Models
         {
             UsersDesktop _userDesktop =
                 (UsersDesktop)(from user in Orm.bd.UsersDesktop
-                               where user.email == email
+                               where user.email == email && user.active == true
                                select user).FirstOrDefault();
 
             return _userDesktop;
@@ -45,8 +46,13 @@ namespace GigFinder.Models
 
         public static void Delete(UsersDesktop _userDesktop)
         {
-            Orm.bd.UsersDesktop.Remove(_userDesktop);
-            Orm.bd.SaveChanges();
+            var existingUser = Orm.bd.UsersDesktop.FirstOrDefault(user => user.id == _userDesktop.id);
+            if (existingUser != null)
+            {
+                existingUser.active = false;
+
+                Orm.bd.SaveChanges();
+            }
         }
 
         public static void Update(UsersDesktop _userDesktop)

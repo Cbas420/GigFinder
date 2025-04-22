@@ -36,8 +36,8 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.dataGridViewIncidencies = new System.Windows.Forms.DataGridView();
-            this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.bindingSourceEvents = new System.Windows.Forms.BindingSource(this.components);
+            this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.musicianNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +51,8 @@
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncidencies)).BeginInit();
-            this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEvents)).BeginInit();
+            this.customPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -145,6 +145,10 @@
             this.dataGridViewIncidencies.Size = new System.Drawing.Size(1136, 313);
             this.dataGridViewIncidencies.TabIndex = 0;
             // 
+            // bindingSourceEvents
+            // 
+            this.bindingSourceEvents.DataSource = typeof(GigFinder.Models.EventsCalendar);
+            // 
             // customPanel1
             // 
             this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
@@ -157,54 +161,50 @@
             this.customPanel1.Size = new System.Drawing.Size(1148, 321);
             this.customPanel1.TabIndex = 23;
             // 
-            // bindingSourceEvents
-            // 
-            this.bindingSourceEvents.DataSource = typeof(GigFinder.Models.EventsCalendar);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 48;
+            this.idDataGridViewTextBoxColumn.Width = 49;
             // 
             // musicianNameDataGridViewTextBoxColumn
             // 
             this.musicianNameDataGridViewTextBoxColumn.DataPropertyName = "musicianName";
-            this.musicianNameDataGridViewTextBoxColumn.HeaderText = "musicianName";
+            this.musicianNameDataGridViewTextBoxColumn.HeaderText = "Musician Name";
             this.musicianNameDataGridViewTextBoxColumn.Name = "musicianNameDataGridViewTextBoxColumn";
             this.musicianNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.musicianNameDataGridViewTextBoxColumn.Width = 153;
+            this.musicianNameDataGridViewTextBoxColumn.Width = 157;
             // 
             // localNameDataGridViewTextBoxColumn
             // 
             this.localNameDataGridViewTextBoxColumn.DataPropertyName = "localName";
-            this.localNameDataGridViewTextBoxColumn.HeaderText = "localName";
+            this.localNameDataGridViewTextBoxColumn.HeaderText = "Local Name";
             this.localNameDataGridViewTextBoxColumn.Name = "localNameDataGridViewTextBoxColumn";
             this.localNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.localNameDataGridViewTextBoxColumn.Width = 119;
+            this.localNameDataGridViewTextBoxColumn.Width = 127;
             // 
             // dateStartDataGridViewTextBoxColumn
             // 
             this.dateStartDataGridViewTextBoxColumn.DataPropertyName = "dateStart";
-            this.dateStartDataGridViewTextBoxColumn.HeaderText = "dateStart";
+            this.dateStartDataGridViewTextBoxColumn.HeaderText = "Date Start";
             this.dateStartDataGridViewTextBoxColumn.Name = "dateStartDataGridViewTextBoxColumn";
             this.dateStartDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateStartDataGridViewTextBoxColumn.Width = 110;
+            this.dateStartDataGridViewTextBoxColumn.Width = 117;
             // 
             // dateEndDataGridViewTextBoxColumn
             // 
             this.dateEndDataGridViewTextBoxColumn.DataPropertyName = "dateEnd";
-            this.dateEndDataGridViewTextBoxColumn.HeaderText = "dateEnd";
+            this.dateEndDataGridViewTextBoxColumn.HeaderText = "Date End";
             this.dateEndDataGridViewTextBoxColumn.Name = "dateEndDataGridViewTextBoxColumn";
             this.dateEndDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateEndDataGridViewTextBoxColumn.Width = 99;
+            this.dateEndDataGridViewTextBoxColumn.Width = 106;
             // 
             // openedofferDataGridViewCheckBoxColumn
             // 
             this.openedofferDataGridViewCheckBoxColumn.DataPropertyName = "opened_offer";
-            this.openedofferDataGridViewCheckBoxColumn.HeaderText = "opened_offer";
+            this.openedofferDataGridViewCheckBoxColumn.HeaderText = "Opened Offer";
             this.openedofferDataGridViewCheckBoxColumn.Name = "openedofferDataGridViewCheckBoxColumn";
             this.openedofferDataGridViewCheckBoxColumn.ReadOnly = true;
             this.openedofferDataGridViewCheckBoxColumn.Width = 122;
@@ -212,7 +212,7 @@
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             this.priceDataGridViewTextBoxColumn.Width = 73;
@@ -220,34 +220,34 @@
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn.Width = 123;
+            this.descriptionDataGridViewTextBoxColumn.Width = 125;
             // 
             // canceledDataGridViewCheckBoxColumn
             // 
             this.canceledDataGridViewCheckBoxColumn.DataPropertyName = "canceled";
-            this.canceledDataGridViewCheckBoxColumn.HeaderText = "canceled";
+            this.canceledDataGridViewCheckBoxColumn.HeaderText = "Canceled";
             this.canceledDataGridViewCheckBoxColumn.Name = "canceledDataGridViewCheckBoxColumn";
             this.canceledDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.canceledDataGridViewCheckBoxColumn.Width = 85;
+            this.canceledDataGridViewCheckBoxColumn.Width = 86;
             // 
             // cancelmsgDataGridViewTextBoxColumn
             // 
             this.cancelmsgDataGridViewTextBoxColumn.DataPropertyName = "cancel_msg";
-            this.cancelmsgDataGridViewTextBoxColumn.HeaderText = "cancel_msg";
+            this.cancelmsgDataGridViewTextBoxColumn.HeaderText = "Cancel Msg";
             this.cancelmsgDataGridViewTextBoxColumn.Name = "cancelmsgDataGridViewTextBoxColumn";
             this.cancelmsgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cancelmsgDataGridViewTextBoxColumn.Width = 127;
+            this.cancelmsgDataGridViewTextBoxColumn.Width = 123;
             // 
             // genreDataGridViewTextBoxColumn
             // 
             this.genreDataGridViewTextBoxColumn.DataPropertyName = "genre";
-            this.genreDataGridViewTextBoxColumn.HeaderText = "genre";
+            this.genreDataGridViewTextBoxColumn.HeaderText = "Genre";
             this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
             this.genreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.genreDataGridViewTextBoxColumn.Width = 80;
+            this.genreDataGridViewTextBoxColumn.Width = 81;
             // 
             // CalendarForm
             // 
@@ -267,8 +267,8 @@
             this.Load += new System.EventHandler(this.CalendarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncidencies)).EndInit();
-            this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEvents)).EndInit();
+            this.customPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

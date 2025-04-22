@@ -49,7 +49,6 @@ namespace GigFinder
                     if (result == DialogResult.Yes)
                     {
                         UsersDesktop userDelete = (UsersDesktop)dataGridViewUsers.SelectedRows[0].DataBoundItem;
-                        deleteRelatedData(userDelete);
 
                         UsersDesktopOrm.Delete(userDelete);
                         Log.createLog("Delete UserDesktop", _userLogin.id);
@@ -154,20 +153,6 @@ namespace GigFinder
             else
             {
                 return _desktopUsers.Where(user => user.type == selectedType).ToList();
-            }
-        }
-
-        private void deleteRelatedData(UsersDesktop userDelete)
-        {
-            List<Activity_log> activity_logs = Activity_logOrm.SelectByUser(userDelete.id);
-            foreach (Activity_log activity in activity_logs)
-            {
-                Activity_logOrm.Delete(activity);
-            }
-            List<Incidences> incidences = IncidenciesOrm.SelectIncidenceByAdmin(userDelete.id);
-            foreach (Incidences incidence in incidences)
-            {
-                IncidenciesOrm.UpdateIncidenceAdmin(userDelete.id);
             }
         }
 

@@ -44,7 +44,6 @@ namespace GigFinder
                 roundedTextBoxPass.Texts = "";
                 MessageBox.Show(login, loginShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
         }
 
         private void pictureBoxES_Click(object sender, EventArgs e)
