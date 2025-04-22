@@ -91,7 +91,7 @@ namespace GigFinder.Models
         {
             Users _user =
                 (Users)(from user in Orm.bd.Users
-                        where user.email == email
+                        where user.email == email && user.active == true
                         select user).FirstOrDefault();
 
             return _user;
