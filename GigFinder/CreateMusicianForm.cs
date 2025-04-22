@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Models;
 using GigFinder.Resources;
@@ -16,39 +12,50 @@ namespace GigFinder
 {
     public partial class CreateMusicianForm : Form
     {
-        int actionMade;
-        UserMusician _userEdit;
-        String completeFields;
-        String completeFieldsShort;
-        String passCheck;
-        String passCheckShort;
-        String existingMusician;
-        String existingMusicianShort;
+        private int actionMade;
+        private UserMusician _userEdit;
+        private string completeFields;
+        private string completeFieldsShort;
+        private string passCheck;
+        private string passCheckShort;
+        private string existingMusician;
+        private string existingMusicianShort;
+
         public CreateMusicianForm(int action, UserMusician user)
         {
             InitializeComponent();
-            _userEdit = user;
             actionMade = action;
-            bindingSourceGenres.DataSource = GenresOrm.SelectGlobal();
-            bindingSourceLang.DataSource = LanguagesOrm.SelectGlobal();
-        }   
+            _userEdit = user;
+            bindingSourceGenres.DataSource = GenresOrm.SelectGlobal();  // Populates the genres dropdown
+            bindingSourceLang.DataSource = LanguagesOrm.SelectGlobal();  // Populates the languages dropdown
+        }
 
+        /// <summary>
+        /// Handles the form's Load event. It is triggered when the form is loaded.
+        /// </summary>
         private void CreateMusicianForm_Load(object sender, EventArgs e)
         {
-            ChangeLanguage();
-            if (actionMade == 1)
+            ChangeLanguage();  // Changes the language of the form
+            if (actionMade == 1)  // If editing an existing musician, load existing data
             {
                 LoadData();
             }
-        }      
-
-        private void roundedButtonCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
+        /// <summary>
+        /// Closes the form when the cancel button is clicked without saving any changes.
+        /// </summary>
+        private void roundedButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();  // Closes the form
+        }
+
+        /// <summary>
+        /// Handles the form submission when the "Create" or "Save" button is clicked.
+        /// </summary>
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
+            // Retrieves input values from the form
             string name = roundedTextBoxName.Texts.Trim();
             string email = roundedTextBoxMail.Texts.Trim();
             string pass = roundedTextBoxPass.Texts.Trim();
@@ -59,83 +66,91 @@ namespace GigFinder
             bool isPriceValid = int.TryParse(roundedTextBoxPrice.Texts.Trim(), out int price);
             bool isSizeValid = int.TryParse(roundedTextBoxSizeGroup.Texts.Trim(), out int size);
 
-            List<Genres> userGenres = listBoxGenres.SelectedItems.Cast<Genres>().ToList();
+            List<Genres> userGenres = listBoxGenres.SelectedItems.Cast<Genres>().ToList();  // Retrieves selected genres
 
-            if (actionMade == 0)
+            if (actionMade == 0)  // Creating a new musician
             {
-                if (string.IsNullOrEmpty(name) ||
-                string.IsNullOrEmpty(email) ||
-                string.IsNullOrEmpty(pass) ||
-                string.IsNullOrEmpty(confirmPass) ||
-                string.IsNullOrEmpty(description) ||
-                userGenres.Count == 0 ||
-                lang == null ||
-                !isPriceValid || price <= 0 ||
-                !isSizeValid || size <= 0)
+                if (string.IsNullOrWhiteSpace(name) ||
+                    string.IsNullOrWhiteSpace(email) ||
+                    string.IsNullOrWhiteSpace(pass) ||
+                    string.IsNullOrWhiteSpace(confirmPass) ||
+                    string.IsNullOrWhiteSpace(description) ||
+                    userGenres.Count == 0 ||
+                    lang == null ||
+                    !isPriceValid || price <= 0 ||
+                    !isSizeValid || size <= 0)
                 {
-                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);  // Show warning for incomplete fields
                 }
                 else
                 {
+                    // Check if email already exists
                     Users userMail = UsersOrm.SelectUserWithMail(email);
                     if (userMail == null)
                     {
                         if (pass.Equals(confirmPass))
                         {
-                            Users _user = new Users();
-                            _user.name = name;
-                            _user.email = email;
-                            _user.password = Entities.Encrypt.EncryptSHA256(pass);
-                            _user.description = description;
-                            _user.type = "music";
-                            _user.Genres = userGenres;
-                            _user.active = true;
+                            // Create new user and musician
+                            Users _user = new Users
+                            {
+                                name = name,
+                                email = email,
+                                password = Entities.Encrypt.EncryptSHA256(pass),
+                                description = description,
+                                type = "music",
+                                Genres = userGenres,
+                                active = true
+                            };
                             UsersOrm.InsertUser(_user);
                             Users _userCreate = UsersOrm.SelectUserWithMail(email);
-                            Musicians _music = new Musicians();
-                            _music.id = _userCreate.id;
-                            _music.price = price;
-                            _music.songs_lang = lang.id;
-                            _music.size = (byte)size;
+                            Musicians _music = new Musicians
+                            {
+                                id = _userCreate.id,
+                                price = price,
+                                songs_lang = lang.id,
+                                size = (byte)size
+                            };
                             UsersOrm.InsertMusician(_music);
 
-                            this.DialogResult = DialogResult.OK;
+                            this.DialogResult = DialogResult.OK;  // Signals successful creation
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);  // Passwords do not match
                         }
                     }
                     else
                     {
-                        MessageBox.Show(existingMusician, existingMusicianShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(existingMusician, existingMusicianShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);  // Email already exists
                     }
                 }
             }
-            else
+            else  // Editing an existing musician
             {
                 if (string.IsNullOrEmpty(name) ||
-                string.IsNullOrEmpty(email) ||
-                string.IsNullOrEmpty(description) ||
-                userGenres.Count == 0 ||
-                lang == null ||
-                !isPriceValid || price <= 0 ||
-                !isSizeValid || size <= 0)
+                    string.IsNullOrEmpty(email) ||
+                    string.IsNullOrEmpty(description) ||
+                    userGenres.Count == 0 ||
+                    lang == null ||
+                    !isPriceValid || price <= 0 ||
+                    !isSizeValid || size <= 0)
                 {
-                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(completeFields, completeFieldsShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);  // Show warning for incomplete fields
                 }
                 else
                 {
+                    // Check if email is already in use by another user
                     Users userToEdit = UsersOrm.SelectUserWithMail(email);
                     if (userToEdit != null && userToEdit.id != _userEdit.id)
                     {
-                        MessageBox.Show(existingMusician, existingMusicianShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(existingMusician, existingMusicianShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);  // Email already exists
                     }
                     else
                     {
                         if (string.IsNullOrEmpty(pass) && string.IsNullOrEmpty(confirmPass))
                         {
+                            // Update user without changing password
                             UsersOrm.UpdateMusicianWithoutPass(_userEdit.id, name, email, description, userGenres, lang, price, size);
                             this.DialogResult = DialogResult.OK;
                             this.Close();
@@ -144,20 +159,25 @@ namespace GigFinder
                         {
                             if (pass.Equals(confirmPass))
                             {
-                                pass = Entities.Encrypt.EncryptSHA256(pass);
+                                pass = Entities.Encrypt.EncryptSHA256(pass);  // Encrypt the new password
+                                // Update user with new password
                                 UsersOrm.UpdateMusician(_userEdit.id, name, email, description, userGenres, lang, price, size, pass);
                                 this.DialogResult = DialogResult.OK;
                                 this.Close();
                             }
                             else
                             {
-                                MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show(passCheck, passCheckShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);  // Passwords do not match
                             }
                         }
                     }
                 }
             }
         }
+
+        /// <summary>
+        /// Loads the data of the existing musician user into the form fields for editing.
+        /// </summary>
         private void LoadData()
         {
             Users userToEdit = UsersOrm.SelectUserWithMail(_userEdit.email);
@@ -176,19 +196,26 @@ namespace GigFinder
                 {
                     if (((Genres)listBoxGenres.Items[i]).id == _genre.id)
                     {
-                        listBoxGenres.SetSelected(i, true);
+                        listBoxGenres.SetSelected(i, true);  // Select the genres for the user
                     }
                 }
             }
         }
+
+        /// <summary>
+        /// Changes the language of the form based on the selected language in the language manager.
+        /// </summary>
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
             Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();
+            UpdateTexts();  // Updates UI text according to the new language
         }
 
+        /// <summary>
+        /// Updates the UI text elements based on the current language.
+        /// </summary>
         private void UpdateTexts()
         {
             if (actionMade == 0)
@@ -199,17 +226,20 @@ namespace GigFinder
             {
                 labelTitle.Text = Strings.labelEditMusic;
             }
+
+            // Update other UI elements with the appropriate text strings
             roundedButtonCreate.Text = Strings.buttonSave;
             roundedButtonCancel.Text = Strings.buttonCancelar;
-            customComboBoxLang.Texts = Strings.comboBoxLang;
+            labelPass.Text = Strings.labelPass;
             labelConfirmPass.Text = Strings.labelConfirPass;
             labelDescription.Text = Strings.labelDescription;
             labelGenres.Text = Strings.labelGendres;
-            labelGroupSize.Text = Strings.labelGroupSize;
             labelMail.Text = Strings.labelMail;
             labelName.Text = Strings.labelName;
-            labelPass.Text = Strings.labelPass;
             labelPrize.Text = Strings.labelPrice;
+            labelGroupSize.Text = Strings.labelGroupSize;
+
+            // Store the localized warning messages
             passCheck = Strings.messagePassCheck;
             passCheckShort = Strings.messagePassCheckShort;
             completeFields = Strings.messageComplete;

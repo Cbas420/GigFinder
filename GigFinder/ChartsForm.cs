@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GigFinder.Models;
 using GigFinder.Resources;
@@ -22,12 +17,23 @@ namespace GigFinder
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the form's Load event. It is triggered when the form is loaded.
+        /// </summary>
+        /// <param name="sender">The sender object of the event.</param>
+        /// <param name="e">The event data.</param>
         private void ChartsForm_Load(object sender, EventArgs e)
         {
+            // Changes the language when the form is loaded.
             ChangeLanguage();
+
+            // Initializes the charts with relevant data.
             InitializeCharts();
         }
 
+        /// <summary>
+        /// Initializes the charts by setting up the chart types, data points, and colors for the charts.
+        /// </summary>
         private void InitializeCharts()
         {
             // Chart for User Types
@@ -35,13 +41,14 @@ namespace GigFinder
             chartType.Series[0].Points.Clear();
             chartType.Series[0].Points.AddXY("Musicians", UsersOrm.SelectMusicians().Count());
             chartType.Series[0].Points.AddXY("Locals", UsersOrm.SelectLocals().Count());
-            chartType.Series[0].Points[0].Color = Color.FromArgb(216, 151, 255);
-            chartType.Series[0].Points[1].Color = Color.FromArgb(33, 208, 213);
+            chartType.Series[0].Points[0].Color = Color.FromArgb(216, 151, 255); // Musicians color
+            chartType.Series[0].Points[1].Color = Color.FromArgb(33, 208, 213); // Locals color
             chartType.Series[0].Font = new Font("Inter", 12);
             var title = new Title("User types");
             title.Font = new Font("Passion One", 30, FontStyle.Bold);
             chartType.Titles.Add(title);
 
+            // Chart for Application Statuses
             chartAplications.Series[0].ChartType = SeriesChartType.Pie;
             chartAplications.Series[0].Points.Clear();
 
@@ -61,7 +68,7 @@ namespace GigFinder
             appTitle.Font = new Font("Passion One", 30, FontStyle.Bold);
             chartAplications.Titles.Add(appTitle);
 
-            // Chart for Event Offers
+            // Chart for Event Offer Statuses
             chartEvents.Series[0].ChartType = SeriesChartType.Pie;
             chartEvents.Series[0].Points.Clear();
 
@@ -79,16 +86,28 @@ namespace GigFinder
             chartEvents.Titles.Add(eventTitle);
         }
 
+        /// <summary>
+        /// Changes the language of the form based on the selected language in the language manager.
+        /// </summary>
         private void ChangeLanguage()
         {
+            // Sets the culture info based on the selected language in the LanguageManager.
             CultureInfo cultura = new CultureInfo(LanguageManager.language);
+
+            // Applies the culture settings to the current thread.
             Thread.CurrentThread.CurrentUICulture = cultura;
             Thread.CurrentThread.CurrentCulture = cultura;
+
+            // Updates the text of the UI controls after changing the language.
             UpdateTexts();
         }
 
+        /// <summary>
+        /// Updates the UI text to reflect the current language.
+        /// </summary>
         private void UpdateTexts()
         {
+            // Sets the title label text to the localized string for the resume data.
             labelTitle.Text = Strings.resumeData;
         }
     }
