@@ -34,7 +34,7 @@ namespace GigFinder
         {
             if (dataGridViewIncidencies.SelectedRows.Count > 0)
             {
-                Incidences incidence = (Incidences)dataGridViewIncidencies.SelectedRows[0].DataBoundItem;
+                IncidenciesFull incidence = (IncidenciesFull)dataGridViewIncidencies.SelectedRows[0].DataBoundItem;
                 if (incidence.status == "pendent")
                 {
                     ResolveIncidencesForm createUserForm = new ResolveIncidencesForm(_userLogin, incidence);

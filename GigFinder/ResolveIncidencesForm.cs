@@ -12,9 +12,9 @@ namespace GigFinder
         string completeIncidencie;
         string completeIncidencieShort;
         
-        Incidences incidence;
+        IncidenciesFull incidence;
         UsersDesktop userLogin;
-        public ResolveIncidencesForm(UsersDesktop user, Incidences incidence)
+        public ResolveIncidencesForm(UsersDesktop user, IncidenciesFull incidence)
         {
             InitializeComponent();
             userLogin = user;
