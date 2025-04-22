@@ -346,6 +346,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\GigFinder.Models.Activity_log.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.Activity_logFull.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Aplications.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Attachments.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.ChatRooms.datasource" />

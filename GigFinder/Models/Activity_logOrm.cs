@@ -6,13 +6,27 @@ using System.Threading.Tasks;
 
 namespace GigFinder.Models
 {
+    public class Activity_logFull
+    {
+        public int id { get; set; }
+        public string admin { get; set; }
+        public string activity { get; set; }
+        public DateTime date { get; set; }
+    }
     public class Activity_logOrm
     {
-        public static List<Activity_log> SelectGlobal()
+        public static List<Activity_logFull> SelectGlobal()
         {
-            List<Activity_log> _activity = (
+            List<Activity_logFull> _activity = (
                 from activity in Orm.bd.Activity_log
-                select activity).ToList();
+                join user in Orm.bd.UsersDesktop on activity.admin_id equals user.id
+                select new Activity_logFull
+                {
+                    id = activity.id,
+                    admin = user.name,
+                    activity = activity.action_made,
+                    date = activity.date_log
+                }).ToList();
 
             return _activity;
         }
