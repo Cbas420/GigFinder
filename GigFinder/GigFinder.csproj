@@ -362,6 +362,7 @@
     <None Include="Properties\DataSources\GigFinder.Models.Musicians.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Orm.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Ratings.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.RatingsFull.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.UserLocal.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.userMusician.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Users.datasource" />

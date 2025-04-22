@@ -38,7 +38,7 @@ namespace GigFinder
 
                 if (result == DialogResult.Yes)
                 {
-                    RatingsOrm.Delete((Ratings)dataGridViewRatings.SelectedRows[0].DataBoundItem);
+                    RatingsOrm.Delete((RatingsFull)dataGridViewRatings.SelectedRows[0].DataBoundItem);
                     Log.createLog("Delete Rating", _userLogin.id);
                     bindingSourceRatings.DataSource = RatingsOrm.SelectGlobal();
                     customComboBoxOrder.Texts = Strings.comboBoxOrder;
@@ -59,20 +59,20 @@ namespace GigFinder
             bindingSourceRatings.DataSource = orderedUsers;
         }
 
-        private List<Ratings> OrderRatingsBy(string selectedOrder)
+        private List<RatingsFull> OrderRatingsBy(string selectedOrder)
         {
             var _ratings = RatingsOrm.SelectGlobal();
 
             switch (selectedOrder)
             {
-                case "User_id":
+                case "User":
                     return _ratings.OrderBy(rating => rating.user_id).ToList();
 
                 case "Event_id":
                     return _ratings.OrderBy(rating => rating.event_id).ToList();
 
                 case "Rating":
-                    return _ratings.OrderBy(rating => rating.avg_rating).ToList();
+                    return _ratings.OrderBy(rating => rating.ratingValue).ToList();
 
                 default:
                     return _ratings;

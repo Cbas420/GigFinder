@@ -36,10 +36,10 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.dataGridViewRatings = new System.Windows.Forms.DataGridView();
-            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avgratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ratingValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceRatings = new System.Windows.Forms.BindingSource(this.components);
             this.customComboBoxOrder = new GigFinder.Controls.CustomComboBox();
             this.roundedButtonDelete = new GigFinder.Controls.RoundedButton();
@@ -104,10 +104,10 @@
             this.dataGridViewRatings.ColumnHeadersHeight = 35;
             this.dataGridViewRatings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewRatings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.useridDataGridViewTextBoxColumn,
+            this.userDataGridViewTextBoxColumn,
             this.eventidDataGridViewTextBoxColumn,
-            this.contentDataGridViewTextBoxColumn,
-            this.avgratingDataGridViewTextBoxColumn});
+            this.commentDataGridViewTextBoxColumn,
+            this.ratingValueDataGridViewTextBoxColumn});
             this.dataGridViewRatings.DataSource = this.bindingSourceRatings;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -138,37 +138,37 @@
             this.dataGridViewRatings.Size = new System.Drawing.Size(1136, 446);
             this.dataGridViewRatings.TabIndex = 0;
             // 
-            // useridDataGridViewTextBoxColumn
+            // userDataGridViewTextBoxColumn
             // 
-            this.useridDataGridViewTextBoxColumn.DataPropertyName = "user_id";
-            this.useridDataGridViewTextBoxColumn.HeaderText = "User_id";
-            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
-            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userDataGridViewTextBoxColumn.DataPropertyName = "user";
+            this.userDataGridViewTextBoxColumn.HeaderText = "User";
+            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // eventidDataGridViewTextBoxColumn
             // 
             this.eventidDataGridViewTextBoxColumn.DataPropertyName = "event_id";
-            this.eventidDataGridViewTextBoxColumn.HeaderText = "Event_id";
+            this.eventidDataGridViewTextBoxColumn.HeaderText = "Event id";
             this.eventidDataGridViewTextBoxColumn.Name = "eventidDataGridViewTextBoxColumn";
             this.eventidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // contentDataGridViewTextBoxColumn
+            // commentDataGridViewTextBoxColumn
             // 
-            this.contentDataGridViewTextBoxColumn.DataPropertyName = "content";
-            this.contentDataGridViewTextBoxColumn.HeaderText = "Content";
-            this.contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
-            this.contentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Comment";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // avgratingDataGridViewTextBoxColumn
+            // ratingValueDataGridViewTextBoxColumn
             // 
-            this.avgratingDataGridViewTextBoxColumn.DataPropertyName = "avg_rating";
-            this.avgratingDataGridViewTextBoxColumn.HeaderText = "Rating";
-            this.avgratingDataGridViewTextBoxColumn.Name = "avgratingDataGridViewTextBoxColumn";
-            this.avgratingDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ratingValueDataGridViewTextBoxColumn.DataPropertyName = "ratingValue";
+            this.ratingValueDataGridViewTextBoxColumn.HeaderText = "Rating value";
+            this.ratingValueDataGridViewTextBoxColumn.Name = "ratingValueDataGridViewTextBoxColumn";
+            this.ratingValueDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bindingSourceRatings
             // 
-            this.bindingSourceRatings.DataSource = typeof(GigFinder.Models.Ratings);
+            this.bindingSourceRatings.DataSource = typeof(GigFinder.Models.RatingsFull);
             // 
             // customComboBoxOrder
             // 
@@ -180,7 +180,7 @@
             this.customComboBoxOrder.ForeColor = System.Drawing.Color.White;
             this.customComboBoxOrder.IconColor = System.Drawing.Color.White;
             this.customComboBoxOrder.Items.AddRange(new object[] {
-            "User_id",
+            "User",
             "Event_id",
             "Rating"});
             this.customComboBoxOrder.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
@@ -247,9 +247,10 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.BindingSource bindingSourceRatings;
-        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eventDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn avgratingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ratingValueDataGridViewTextBoxColumn;
     }
 }
