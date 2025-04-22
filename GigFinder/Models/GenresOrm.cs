@@ -10,11 +10,19 @@ namespace GigFinder.Models
     {
         public static List<Genres> SelectGlobal()
         {
-            List<Genres> _genres = (
-                from genre in Orm.bd.Genres
-                select genre).ToList();
+            try
+            {
+                List<Genres> _genres = (
+                    from genre in Orm.bd.Genres
+                    select genre).ToList();
 
-            return _genres;
+                return _genres;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GenresOrm SelectGlobal: {ex.Message}");
+                return new List<Genres>();
+            }
         }
     }
 }
