@@ -96,6 +96,8 @@ namespace GigFinder
 
             switch (selectedOrder)
             {
+                case "Id":
+                    return _incidences.OrderBy(incidence => incidence.id).ToList();
                 case "Status":
                     return _incidences.OrderBy(incidence => incidence.status).ToList();
 
