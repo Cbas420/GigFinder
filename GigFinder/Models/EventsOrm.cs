@@ -24,36 +24,53 @@ namespace GigFinder.Models
     {
         public static List<Events> SelectGlobal()
         {
-            List<Events> _event = (
-                from ev in Orm.bd.Events
-                select ev).ToList();
+            try
+            {
+                List<Events> _event = (
+                    from ev in Orm.bd.Events
+                    select ev).ToList();
 
-            return _event;
+                return _event;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in EventsOrm SelectGlobal: {ex.Message}");
+                return new List<Events>();
+            }
         }
 
         public static List<EventsCalendar> SelectEventsCalendar()
         {
-            List<EventsCalendar> _eventsCalendar = (from e in Orm.bd.Events
-                                                    join m in Orm.bd.Users on e.musician_id equals m.id
-                                                    join l in Orm.bd.Users on e.local_id equals l.id
-                                                    join g in Orm.bd.Genres on e.genre_id equals g.id
-                                                    where m.type == "music" && l.type == "local"
-                                                    select new EventsCalendar
-                                                    {
-                                                        id = e.id,
-                                                        musicianName = m.name,
-                                                        localName = l.name,
-                                                        dateStart = e.date_start,
-                                                        dateEnd = e.date_end,
-                                                        opened_offer = (bool)e.opened_offer,
-                                                        price = e.price,
-                                                        description = e.description,
-                                                        canceled = (bool)e.canceled,
-                                                        cancel_msg = e.cancel_msg,
-                                                        genre = g.name
-                                                    }).ToList();
+            try
+            {
+                List<EventsCalendar> _eventsCalendar = (
+                    from e in Orm.bd.Events
+                    join m in Orm.bd.Users on e.musician_id equals m.id
+                    join l in Orm.bd.Users on e.local_id equals l.id
+                    join g in Orm.bd.Genres on e.genre_id equals g.id
+                    where m.type == "music" && l.type == "local"
+                    select new EventsCalendar
+                    {
+                        id = e.id,
+                        musicianName = m.name,
+                        localName = l.name,
+                        dateStart = e.date_start,
+                        dateEnd = e.date_end,
+                        opened_offer = (bool)e.opened_offer,
+                        price = e.price,
+                        description = e.description,
+                        canceled = (bool)e.canceled,
+                        cancel_msg = e.cancel_msg,
+                        genre = g.name
+                    }).ToList();
 
-            return _eventsCalendar;
+                return _eventsCalendar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in EventsOrm SelectEventsCalendar: {ex.Message}");
+                return new List<EventsCalendar>();
+            }
         }
     }
 }

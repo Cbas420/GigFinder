@@ -10,11 +10,19 @@ namespace GigFinder.Models
     {
         public static List<Aplications> SelectGlobal()
         {
-            List<Aplications> _aplication = (
-                from aplication in Orm.bd.Aplications
-                select aplication).ToList();
+            try
+            {
+                List<Aplications> _aplication = (
+                    from aplication in Orm.bd.Aplications
+                    select aplication).ToList();
 
-            return _aplication;
+                return _aplication;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in AplicationsOrm SelectGlobal: {ex.Message}");
+                return new List<Aplications>();
+            }
         }
     }
 }
