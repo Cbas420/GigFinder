@@ -354,6 +354,7 @@
     <None Include="Properties\DataSources\GigFinder.Models.Files.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Genres.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Incidences.datasource" />
+    <None Include="Properties\DataSources\GigFinder.Models.IncidenciesFull.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Languages.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Locals.datasource" />
     <None Include="Properties\DataSources\GigFinder.Models.Messages.datasource" />

@@ -6,13 +6,33 @@ using System.Threading.Tasks;
 
 namespace GigFinder.Models
 {
+    public class IncidenciesFull
+    {
+        public int id { get; set; }
+        public string description { get; set; }
+        public string admin_note { get; set; }
+        public string status { get; set; }
+        public string user { get; set; }
+        public string admin { get; set; }
+    }
+
     public class IncidenciesOrm
     {
-        public static List<Incidences> SelectGlobal()
+        public static List<IncidenciesFull> SelectGlobal()
         {
-            List<Incidences> _incidences = (
+            List<IncidenciesFull> _incidences = (
                 from incidence in Orm.bd.Incidences
-                select incidence).ToList();
+                join user in Orm.bd.Users on incidence.user_id equals user.id
+                join admin in Orm.bd.UsersDesktop on incidence.admin_id equals admin.id
+                select new IncidenciesFull
+                {
+                    id = incidence.id,
+                    description = incidence.description,
+                    admin_note = incidence.admin_note,
+                    status = incidence.status,
+                    user = user.name,
+                    admin = admin.name
+                }).ToList();
 
             return _incidences;
         }
@@ -36,18 +56,6 @@ namespace GigFinder.Models
                 incidenceToUpdate.status = status;
                 incidenceToUpdate.admin_note = adminNote;
                 incidenceToUpdate.admin_id = adminId;
-
-                Orm.bd.SaveChanges();
-            }
-        }
-
-        public static void UpdateIncidenceAdmin(int adminId)
-        {
-            var incidenceToUpdate = Orm.bd.Incidences.FirstOrDefault(i => i.id == adminId);
-
-            if (incidenceToUpdate != null)
-            {
-                incidenceToUpdate.admin_id = null;
 
                 Orm.bd.SaveChanges();
             }

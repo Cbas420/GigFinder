@@ -57,7 +57,7 @@ namespace GigFinder
             }
             
         }
-
+        
         private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedOrder = customComboBoxOrder.SelectedItem?.ToString();
@@ -75,8 +75,8 @@ namespace GigFinder
 
             bindingSourceIncidencies.DataSource = filteredIncidences;
         }
-
-        private List<Incidences> FilterIncidencesByStatus(string selectedType)
+        
+        private List<IncidenciesFull> FilterIncidencesByStatus(string selectedType)
         {
             var _incidences = IncidenciesOrm.SelectGlobal();
 
@@ -89,8 +89,9 @@ namespace GigFinder
                 return _incidences.Where(incidence => incidence.status == selectedType).ToList();
             }
         }
-        private List<Incidences> OrderIncidencesBy(string selectedOrder)
+        private List<IncidenciesFull> OrderIncidencesBy(string selectedOrder)
         {
+            
             var _incidences = IncidenciesOrm.SelectGlobal();
 
             switch (selectedOrder)
@@ -99,10 +100,10 @@ namespace GigFinder
                     return _incidences.OrderBy(incidence => incidence.status).ToList();
 
                 case "User_id":
-                    return _incidences.OrderBy(incidence => incidence.user_id).ToList();
+                    return _incidences.OrderBy(incidence => incidence.user).ToList();
 
                 case "Admin_id":
-                    return _incidences.OrderBy(incidence => incidence.admin_id).ToList();
+                    return _incidences.OrderBy(incidence => incidence.admin).ToList();
 
                 default:
                     return _incidences;
