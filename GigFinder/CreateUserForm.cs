@@ -166,31 +166,29 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the language of the form based on the selected language in the language manager.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
             Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();  // Updates UI text according to the new language
+            UpdateTexts();
         }
 
         /// <summary>
-        /// Updates the UI text elements based on the current language.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {
             if (actionMade == 0)
             {
-                labelTitle.Text = Strings.labelCreateUser;  // Set title for creating a new user
+                labelTitle.Text = Strings.labelCreateUser;
             }
             else
             {
-                labelTitle.Text = Strings.titleEditUser;  // Set title for editing an existing user
+                labelTitle.Text = Strings.titleEditUser;
             }
-
-            // Update other UI elements with the appropriate text strings
             roundedButtonCancel.Text = Strings.buttonCancelar;
             roundedButtonSave.Text = Strings.buttonSave;
             labelMail.Text = Strings.labelMail;
@@ -199,8 +197,6 @@ namespace GigFinder
             labelPass.Text = Strings.labelPass;
             labelSurname.Text = Strings.labelSurname;
             customComboBoxType.Texts = Strings.comboBoxUserType;
-
-            // Store the localized warning messages
             complete = Strings.messageComplete;
             completeShort = Strings.messageCompleteShort;
             passCheck = Strings.messagePassCheck;

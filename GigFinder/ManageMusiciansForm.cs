@@ -99,7 +99,6 @@ namespace GigFinder
 
         /// <summary>
         /// Handles the change event of the combo box used for ordering musicians.
-        /// Sorts the list based on the selected field.
         /// </summary>
         private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -161,7 +160,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Applies the current UI culture based on the global language setting.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
@@ -172,7 +171,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Updates all localized texts for the UI controls on the form.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {

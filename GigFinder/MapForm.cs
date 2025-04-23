@@ -17,7 +17,6 @@ namespace GigFinder
     {
         private GeoCoordinateWatcher geoWatcher;
         private GMapOverlay markersOverlay;
-        private GMapMarker selectedMarker = null;
         public MapForm()
         {
             InitializeComponent();
@@ -36,8 +35,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the event when a marker on the map is clicked. Displays additional information about the selected marker.
         /// </summary>
-        /// <param name="item">The marker that was clicked.</param>
-        /// <param name="e">The mouse event data.</param>
         private void GMapControl_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
             var localInfo = item.Tag as dynamic;
@@ -89,8 +86,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the event when the geo-position of the user changes. Updates the map position to the user's current location.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data containing the new position.</param>
         private void GeoWatcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
             double latitude = e.Position.Location.Latitude;
@@ -125,7 +120,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the application language based on the current setting.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
@@ -136,7 +131,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Updates the text values in the form according to the current language.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {

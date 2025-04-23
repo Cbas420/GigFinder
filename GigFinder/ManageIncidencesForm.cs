@@ -132,7 +132,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Sets the UI language and updates the UI labels based on the current culture.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
@@ -143,7 +143,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Updates the texts of UI elements using localized resources.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {

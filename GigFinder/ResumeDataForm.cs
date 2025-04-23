@@ -25,8 +25,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Calendar picture box. Navigates to the Calendar form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxCalendar_Click(object sender, EventArgs e)
         {
             menuCalendar();
@@ -35,8 +33,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Calendar label. Navigates to the Calendar form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void labelCalendar_Click(object sender, EventArgs e)
         {
             menuCalendar();
@@ -45,8 +41,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Calendar panel. Navigates to the Calendar form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void customPanelCalendar_Click(object sender, EventArgs e)
         {
             menuCalendar();
@@ -55,8 +49,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Map panel. Navigates to the Map form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void customPanelMap_Click(object sender, EventArgs e)
         {
             menuMap();
@@ -65,8 +57,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Map label. Navigates to the Map form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void labelMap_Click(object sender, EventArgs e)
         {
             menuMap();
@@ -75,8 +65,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Map picture box. Navigates to the Map form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxMap_Click(object sender, EventArgs e)
         {
             menuMap();
@@ -85,8 +73,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Chart panel. Navigates to the Chart form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void customPanelChart_Click(object sender, EventArgs e)
         {
             menuChart();
@@ -95,8 +81,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Chart picture box. Navigates to the Chart form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxChart_Click(object sender, EventArgs e)
         {
             menuChart();
@@ -105,8 +89,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Chart label. Navigates to the Chart form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void labelChart_Click(object sender, EventArgs e)
         {
             menuChart();

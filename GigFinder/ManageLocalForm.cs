@@ -39,7 +39,6 @@ namespace GigFinder
 
         /// <summary>
         /// Handles the click event for the "Create" button. Opens the create local form.
-        /// Only accessible to users with appropriate permissions.
         /// </summary>
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
@@ -63,7 +62,6 @@ namespace GigFinder
 
         /// <summary>
         /// Handles the click event for the "Delete" button. Deletes the selected local.
-        /// Prompts confirmation before proceeding and checks user permissions.
         /// </summary>
         private void roundedButtonDelete_Click(object sender, EventArgs e)
         {
@@ -100,7 +98,6 @@ namespace GigFinder
 
         /// <summary>
         /// Handles the event when the order combo box selection changes.
-        /// Reorders the list of locals accordingly.
         /// </summary>
         private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -159,7 +156,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the application's language based on the global setting.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
@@ -170,7 +167,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Updates UI text components using localized string resources.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {

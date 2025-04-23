@@ -203,18 +203,18 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the language of the form based on the selected language in the language manager.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
             Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();  // Updates UI text according to the new language
+            UpdateTexts();
         }
 
         /// <summary>
-        /// Updates the UI text elements based on the current language.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {
@@ -226,8 +226,6 @@ namespace GigFinder
             {
                 labelTitle.Text = Strings.labelEditMusic;
             }
-
-            // Update other UI elements with the appropriate text strings
             roundedButtonCreate.Text = Strings.buttonSave;
             roundedButtonCancel.Text = Strings.buttonCancelar;
             labelPass.Text = Strings.labelPass;
@@ -238,8 +236,6 @@ namespace GigFinder
             labelName.Text = Strings.labelName;
             labelPrize.Text = Strings.labelPrice;
             labelGroupSize.Text = Strings.labelGroupSize;
-
-            // Store the localized warning messages
             passCheck = Strings.messagePassCheck;
             passCheckShort = Strings.messagePassCheckShort;
             completeFields = Strings.messageComplete;

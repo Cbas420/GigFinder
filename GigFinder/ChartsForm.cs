@@ -20,8 +20,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the form's Load event. It is triggered when the form is loaded.
         /// </summary>
-        /// <param name="sender">The sender object of the event.</param>
-        /// <param name="e">The event data.</param>
         private void ChartsForm_Load(object sender, EventArgs e)
         {
             // Changes the language when the form is loaded.
@@ -87,27 +85,21 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the language of the form based on the selected language in the language manager.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
-            // Sets the culture info based on the selected language in the LanguageManager.
             CultureInfo cultura = new CultureInfo(LanguageManager.language);
-
-            // Applies the culture settings to the current thread.
             Thread.CurrentThread.CurrentUICulture = cultura;
             Thread.CurrentThread.CurrentCulture = cultura;
-
-            // Updates the text of the UI controls after changing the language.
             UpdateTexts();
         }
 
         /// <summary>
-        /// Updates the UI text to reflect the current language.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {
-            // Sets the title label text to the localized string for the resume data.
             labelTitle.Text = Strings.resumeData;
         }
     }

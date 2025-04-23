@@ -181,7 +181,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the current thread's culture and UI culture based on the selected language.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
@@ -189,11 +189,11 @@ namespace GigFinder
             Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
 
-            UpdateTexts(); // Refresh UI labels with new language
+            UpdateTexts();
         }
 
         /// <summary>
-        /// Updates UI labels with localized resource strings.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {

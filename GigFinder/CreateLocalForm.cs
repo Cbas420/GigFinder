@@ -20,7 +20,6 @@ namespace GigFinder
         private string passCheckShort;
         private string existingLocal;
         private string existingLocalShort;
-
         public CreateLocalForm(int action, UserLocal user)
         {
             InitializeComponent();
@@ -199,18 +198,18 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the language of the form based on the selected language in the language manager.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
             Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
-            UpdateTexts();  // Updates UI text according to the new language
+            UpdateTexts();
         }
 
         /// <summary>
-        /// Updates the UI text elements based on the current language.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {
@@ -222,8 +221,6 @@ namespace GigFinder
             {
                 labelTitle.Text = Strings.labelEditLocal;
             }
-
-            // Update other UI elements with the appropriate text strings
             roundedButtonCreate.Text = Strings.buttonSave;
             roundedButtonCancel.Text = Strings.buttonCancelar;
             labelPass.Text = Strings.labelPass;
@@ -235,8 +232,6 @@ namespace GigFinder
             labelCapacity.Text = Strings.labelLocalCapacity;
             labelCoordX.Text = Strings.labelCoordX;
             labelCoordY.Text = Strings.labelCoordY;
-
-            // Store the localized warning messages
             completeFields = Strings.messageComplete;
             completeFieldsShort = Strings.messageCompleteShort;
             passCheck = Strings.messagePassCheck;

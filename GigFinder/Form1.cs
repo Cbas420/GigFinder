@@ -12,7 +12,6 @@ namespace GigFinder
     {
         string login;
         string loginShort;
-
         public Form1()
         {
             InitializeComponent();
@@ -22,8 +21,6 @@ namespace GigFinder
         /// <summary>
         /// Event handler for when the form loads.
         /// </summary>
-        /// <param name="sender">The object that triggered the event.</param>
-        /// <param name="e">The event data.</param>
         private void Form1_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
@@ -32,8 +29,6 @@ namespace GigFinder
         /// <summary>
         /// Event handler for the Login button click event. This method validates the user login.
         /// </summary>
-        /// <param name="sender">The object that triggered the event (the Login button).</param>
-        /// <param name="e">The event data.</param>
         private void roundedButtonLogin_Click(object sender, EventArgs e)
         {
             // Retrieve and trim the input email and password.
@@ -70,8 +65,6 @@ namespace GigFinder
         /// <summary>
         /// Event handler for the click event of the Spanish language selection button.
         /// </summary>
-        /// <param name="sender">The object that triggered the event (the Spanish language selection button).</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxES_Click(object sender, EventArgs e)
         {
             LanguageManager.language = "es-ES"; // Set the language to Spanish.
@@ -81,8 +74,6 @@ namespace GigFinder
         /// <summary>
         /// Event handler for the click event of the English language selection button.
         /// </summary>
-        /// <param name="sender">The object that triggered the event (the English language selection button).</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxEN_Click(object sender, EventArgs e)
         {
             LanguageManager.language = "en-En"; // Set the language to English.
@@ -92,8 +83,6 @@ namespace GigFinder
         /// <summary>
         /// Event handler for the click event of the Catalan language selection button.
         /// </summary>
-        /// <param name="sender">The object that triggered the event (the Catalan language selection button).</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxCA_Click(object sender, EventArgs e)
         {
             LanguageManager.language = "ca-CA"; // Set the language to Catalan.
@@ -101,30 +90,26 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Updates the UI's language settings by changing the culture info and refreshing the texts.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
-            // Set the current culture based on the selected language.
             CultureInfo culture = new CultureInfo(LanguageManager.language);
             Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
-
-            // Update the UI elements with the appropriate text for the selected language.
             UpdateTexts();
         }
 
         /// <summary>
-        /// Updates the text of various UI elements on the form based on the current language.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {
-            // Set the text for the form's controls based on the language resource file.
             labelMail.Text = Strings.labelMail;
             labelPass.Text = Strings.labelPass;
             roundedButtonLogin.Text = Strings.buttonLogin;
-            login = Strings.messageLogin; // Assign the login message to the variable.
-            loginShort = Strings.loginShort; // Assign the login short message to the variable.
+            login = Strings.messageLogin;
+            loginShort = Strings.loginShort;
         }
     }
 }

@@ -30,8 +30,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Users picture box. Navigates to the ManageUsers form if the user has the appropriate access.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxUsers_Click(object sender, EventArgs e)
         {
             menuUsers();
@@ -40,8 +38,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Users label. Navigates to the ManageUsers form if the user has the appropriate access.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void labelUsers_Click(object sender, EventArgs e)
         {
             menuUsers();
@@ -50,8 +46,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Users panel. Navigates to the ManageUsers form if the user has the appropriate access.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void customPanelUsers_Click(object sender, EventArgs e)
         {
             menuUsers();
@@ -60,8 +54,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Data picture box. Navigates to the ManageDatabase form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxData_Click(object sender, EventArgs e)
         {
             menuData();
@@ -70,8 +62,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Data label. Navigates to the ManageDatabase form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void labelData_Click(object sender, EventArgs e)
         {
             menuData();
@@ -80,8 +70,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Data panel. Navigates to the ManageDatabase form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void customPanelData_Click(object sender, EventArgs e)
         {
             menuData();
@@ -90,8 +78,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Stats picture box. Navigates to the ResumeData form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxStats_Click(object sender, EventArgs e)
         {
             menuStats();
@@ -100,8 +86,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Stats label. Navigates to the ResumeData form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void labelStats_Click(object sender, EventArgs e)
         {
             menuStats();
@@ -110,8 +94,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Stats panel. Navigates to the ResumeData form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void customPanelStats_Click(object sender, EventArgs e)
         {
             menuStats();
@@ -120,8 +102,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Register picture box. Navigates to the ActivityRegister form if the user has the appropriate access.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void pictureBoxRegister_Click(object sender, EventArgs e)
         {
             menuRegister();
@@ -130,8 +110,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Register label. Navigates to the ActivityRegister form if the user has the appropriate access.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void labelRegister_Click(object sender, EventArgs e)
         {
             menuRegister();
@@ -140,8 +118,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the click event on the Register panel. Navigates to the ActivityRegister form if the user has the appropriate access.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void customPanelRegister_Click(object sender, EventArgs e)
         {
             menuRegister();

@@ -31,8 +31,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the Cancel button click event. Closes the form.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void roundedButtonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -41,8 +39,6 @@ namespace GigFinder
         /// <summary>
         /// Handles the Save button click event. Validates the inputs and updates the incidence resolution in the database.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
         private void roundedButtonSave_Click(object sender, EventArgs e)
         {
             string note = roundedTextBoxNote.Texts.Trim();
@@ -69,7 +65,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the application language based on the current language setting.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {

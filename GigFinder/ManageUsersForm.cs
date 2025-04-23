@@ -22,7 +22,6 @@ namespace GigFinder
         string selectionEdit;
         string sameUserDelete;
         string sameUserDeleteShort;
-
         public ManageUsersForm(UsersDesktop user)
         {
             InitializeComponent();
@@ -77,7 +76,6 @@ namespace GigFinder
 
         /// <summary>
         /// Handles the click event of the create button. Opens the CreateUserForm for creating a new user.
-        /// Refreshes the user list upon success.
         /// </summary>
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
@@ -94,7 +92,6 @@ namespace GigFinder
 
         /// <summary>
         /// Handles the click event of the edit button. Opens the CreateUserForm in edit mode for the selected user.
-        /// Refreshes the user list upon success.
         /// </summary>
         private void roundedButtonEdit_Click(object sender, EventArgs e)
         {
@@ -191,7 +188,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Changes the application language based on the current setting.
+        /// Changes the language based on the current language setting.
         /// </summary>
         private void ChangeLanguage()
         {
@@ -202,7 +199,7 @@ namespace GigFinder
         }
 
         /// <summary>
-        /// Updates all texts in the form to match the current language.
+        /// Updates the text values on the form according to the current language setting.
         /// </summary>
         private void UpdateTexts()
         {
