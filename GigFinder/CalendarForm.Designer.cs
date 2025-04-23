@@ -36,8 +36,6 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.dataGridViewIncidencies = new System.Windows.Forms.DataGridView();
-            this.bindingSourceEvents = new System.Windows.Forms.BindingSource(this.components);
-            this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.musicianNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,8 @@
             this.canceledDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cancelmsgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEvents = new System.Windows.Forms.BindingSource(this.components);
+            this.customPanel1 = new GigFinder.Controls.CustomPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncidencies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEvents)).BeginInit();
@@ -78,7 +78,7 @@
             // 
             // monthCalendar
             // 
-            this.monthCalendar.Location = new System.Drawing.Point(378, 113);
+            this.monthCalendar.Location = new System.Drawing.Point(726, 18);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 8;
             // 
@@ -142,24 +142,8 @@
             this.dataGridViewIncidencies.RowHeadersVisible = false;
             this.dataGridViewIncidencies.RowTemplate.Height = 25;
             this.dataGridViewIncidencies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewIncidencies.Size = new System.Drawing.Size(1136, 313);
+            this.dataGridViewIncidencies.Size = new System.Drawing.Size(1136, 436);
             this.dataGridViewIncidencies.TabIndex = 0;
-            // 
-            // bindingSourceEvents
-            // 
-            this.bindingSourceEvents.DataSource = typeof(GigFinder.Models.EventsCalendar);
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            this.customPanel1.BorderRadius = 8;
-            this.customPanel1.Controls.Add(this.dataGridViewIncidencies);
-            this.customPanel1.Location = new System.Drawing.Point(18, 329);
-            this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Padding = new System.Windows.Forms.Padding(6, 0, 6, 8);
-            this.customPanel1.Size = new System.Drawing.Size(1148, 321);
-            this.customPanel1.TabIndex = 23;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -248,6 +232,22 @@
             this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
             this.genreDataGridViewTextBoxColumn.ReadOnly = true;
             this.genreDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // bindingSourceEvents
+            // 
+            this.bindingSourceEvents.DataSource = typeof(GigFinder.Models.EventsCalendar);
+            // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            this.customPanel1.BorderRadius = 8;
+            this.customPanel1.Controls.Add(this.dataGridViewIncidencies);
+            this.customPanel1.Location = new System.Drawing.Point(18, 206);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Padding = new System.Windows.Forms.Padding(6, 0, 6, 8);
+            this.customPanel1.Size = new System.Drawing.Size(1148, 444);
+            this.customPanel1.TabIndex = 23;
             // 
             // CalendarForm
             // 
