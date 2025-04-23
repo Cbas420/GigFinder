@@ -25,11 +25,17 @@ namespace GigFinder
             bindingSourceRatings.DataSource = RatingsOrm.SelectGlobal();
         }
 
+        /// <summary>
+        /// Handles the form load event. Applies current language settings to UI text.
+        /// </summary>
         private void ManageRatingsForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
         }
 
+        /// <summary>
+        /// Handles the click event for the delete button. Deletes the selected rating after user confirmation.
+        /// </summary>
         private void roundedButtonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridViewRatings.SelectedRows.Count > 0)
@@ -38,6 +44,7 @@ namespace GigFinder
 
                 if (result == DialogResult.Yes)
                 {
+                    // Perform deletion and refresh data
                     RatingsOrm.Delete((RatingsFull)dataGridViewRatings.SelectedRows[0].DataBoundItem);
                     Log.createLog("Delete Rating", _userLogin.id);
                     bindingSourceRatings.DataSource = RatingsOrm.SelectGlobal();
@@ -46,19 +53,26 @@ namespace GigFinder
             }
             else
             {
+                // Prompt user to select a rating before deleting
                 MessageBox.Show(selecctionRequired, selecctionRequiredShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// Handles the order combo box selection change event. Sorts ratings based on the selected field.
+        /// </summary>
         private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedOrder = customComboBoxOrder.SelectedItem?.ToString();
-
             var orderedUsers = OrderRatingsBy(selectedOrder);
-
             bindingSourceRatings.DataSource = orderedUsers;
         }
 
+        /// <summary>
+        /// Sorts the list of ratings by the specified order option.
+        /// </summary>
+        /// <param name="selectedOrder">The selected sorting criteria.</param>
+        /// <returns>A sorted list of <see cref="RatingsFull"/> objects.</returns>
         private List<RatingsFull> OrderRatingsBy(string selectedOrder)
         {
             var _ratings = RatingsOrm.SelectGlobal();
@@ -67,17 +81,18 @@ namespace GigFinder
             {
                 case "User":
                     return _ratings.OrderBy(rating => rating.user_id).ToList();
-
                 case "Event_id":
                     return _ratings.OrderBy(rating => rating.event_id).ToList();
-
                 case "Rating":
                     return _ratings.OrderBy(rating => rating.ratingValue).ToList();
-
                 default:
                     return _ratings;
             }
         }
+
+        /// <summary>
+        /// Sets the application's culture and updates the UI text to the selected language.
+        /// </summary>
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
@@ -86,6 +101,9 @@ namespace GigFinder
             UpdateTexts();
         }
 
+        /// <summary>
+        /// Updates the text of all UI controls using the localized resource strings.
+        /// </summary>
         private void UpdateTexts()
         {
             confirmDelete = Strings.askDeleteRating;

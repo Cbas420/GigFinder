@@ -12,76 +12,144 @@ namespace GigFinder
         UsersDesktop _userLogin;
         string accesMenu;
         string accesMenuShort;
+
         public SelectAccessForm(UsersDesktop user)
         {
             InitializeComponent();
             _userLogin = user;
         }
+
+        /// <summary>
+        /// Handles the form's Load event. Changes the language and initializes the form's components.
+        /// </summary>
         private void SelectAccessForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
         }
 
+        /// <summary>
+        /// Handles the click event on the Users picture box. Navigates to the ManageUsers form if the user has the appropriate access.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void pictureBoxUsers_Click(object sender, EventArgs e)
         {
             menuUsers();
         }
 
+        /// <summary>
+        /// Handles the click event on the Users label. Navigates to the ManageUsers form if the user has the appropriate access.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void labelUsers_Click(object sender, EventArgs e)
         {
             menuUsers();
         }
 
+        /// <summary>
+        /// Handles the click event on the Users panel. Navigates to the ManageUsers form if the user has the appropriate access.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void customPanelUsers_Click(object sender, EventArgs e)
         {
             menuUsers();
         }
 
+        /// <summary>
+        /// Handles the click event on the Data picture box. Navigates to the ManageDatabase form.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void pictureBoxData_Click(object sender, EventArgs e)
         {
             menuData();
         }
 
+        /// <summary>
+        /// Handles the click event on the Data label. Navigates to the ManageDatabase form.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void labelData_Click(object sender, EventArgs e)
         {
             menuData();
         }
 
+        /// <summary>
+        /// Handles the click event on the Data panel. Navigates to the ManageDatabase form.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void customPanelData_Click(object sender, EventArgs e)
         {
             menuData();
         }
 
+        /// <summary>
+        /// Handles the click event on the Stats picture box. Navigates to the ResumeData form.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void pictureBoxStats_Click(object sender, EventArgs e)
         {
             menuStats();
         }
 
+        /// <summary>
+        /// Handles the click event on the Stats label. Navigates to the ResumeData form.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void labelStats_Click(object sender, EventArgs e)
         {
             menuStats();
         }
 
+        /// <summary>
+        /// Handles the click event on the Stats panel. Navigates to the ResumeData form.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void customPanelStats_Click(object sender, EventArgs e)
         {
             menuStats();
         }
 
+        /// <summary>
+        /// Handles the click event on the Register picture box. Navigates to the ActivityRegister form if the user has the appropriate access.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void pictureBoxRegister_Click(object sender, EventArgs e)
         {
             menuRegister();
         }
 
+        /// <summary>
+        /// Handles the click event on the Register label. Navigates to the ActivityRegister form if the user has the appropriate access.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void labelRegister_Click(object sender, EventArgs e)
         {
             menuRegister();
         }
 
+        /// <summary>
+        /// Handles the click event on the Register panel. Navigates to the ActivityRegister form if the user has the appropriate access.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void customPanelRegister_Click(object sender, EventArgs e)
         {
             menuRegister();
         }
 
+        /// <summary>
+        /// Navigates to the ManageUsers form if the user has a "super" type; otherwise, shows a warning message.
+        /// </summary>
         public void menuUsers()
         {
             if (_userLogin.type == "super")
@@ -101,6 +169,9 @@ namespace GigFinder
             }
         }
 
+        /// <summary>
+        /// Navigates to the ManageDatabase form and hides the current form. Shows the current form when the ManageDatabase form is closed.
+        /// </summary>
         public void menuData()
         {
             ManageDatabaseForm formData = new ManageDatabaseForm(_userLogin);
@@ -113,6 +184,9 @@ namespace GigFinder
             formData.Show();
         }
 
+        /// <summary>
+        /// Navigates to the ResumeData form and hides the current form. Shows the current form when the ResumeData form is closed.
+        /// </summary>
         public void menuStats()
         {
             ResumeDataForm formResume = new ResumeDataForm();
@@ -125,6 +199,9 @@ namespace GigFinder
             formResume.Show();
         }
 
+        /// <summary>
+        /// Navigates to the ActivityRegister form if the user has a "super" type; otherwise, shows a warning message.
+        /// </summary>
         public void menuRegister()
         {
             if (_userLogin.type == "super")
@@ -143,6 +220,10 @@ namespace GigFinder
                 MessageBox.Show(accesMenu, accesMenuShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        /// <summary>
+        /// Changes the language based on the current language setting.
+        /// </summary>
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
@@ -151,6 +232,9 @@ namespace GigFinder
             UpdateTexts();
         }
 
+        /// <summary>
+        /// Updates the text values on the form according to the current language setting.
+        /// </summary>
         private void UpdateTexts()
         {
             labelUsers.Text = Strings.menuUsers;
@@ -160,5 +244,6 @@ namespace GigFinder
             accesMenu = Strings.accesMenu;
             accesMenuShort = Strings.accesMenuShort;
         }
+
     }
 }

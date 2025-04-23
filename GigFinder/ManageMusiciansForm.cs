@@ -15,15 +15,14 @@ namespace GigFinder
     {
         UserMusician _userEdit = null;
         UsersDesktop _userLogin;
-        String editMusician;
-        String editMusicianShort;
-        String musicianDelete;
-        String musicianDeleteShort;
-        String askMusicianDelete;
-        String askMusicianDeleteShort;
-        String accesFunction;
-        String accesFunctionShort;
-
+        string editMusician;
+        string editMusicianShort;
+        string musicianDelete;
+        string musicianDeleteShort;
+        string askMusicianDelete;
+        string askMusicianDeleteShort;
+        string accesFunction;
+        string accesFunctionShort;
         public ManageMusiciansForm(UsersDesktop user)
         {
             InitializeComponent();
@@ -31,11 +30,17 @@ namespace GigFinder
             _userLogin = user;
         }
 
+        /// <summary>
+        /// Handles the form load event. Applies the language configuration.
+        /// </summary>
         private void ManageMusiciansForm_Load(object sender, EventArgs e)
         {
             ChangeLanguage();
         }
 
+        /// <summary>
+        /// Handles the create button click. Opens the musician creation form.
+        /// </summary>
         private void roundedButtonCreate_Click(object sender, EventArgs e)
         {
             if (_userLogin.type != "user")
@@ -43,17 +48,22 @@ namespace GigFinder
                 CreateMusicianForm createMusician = new CreateMusicianForm(0, _userEdit);
                 if (createMusician.ShowDialog() == DialogResult.OK)
                 {
+                    // Refresh musician list after creation
                     bindingSourceMusician.DataSource = UsersOrm.SelectMusicians();
                     Log.createLog("Create Musician", _userLogin.id);
                     customComboBoxOrder.Texts = Strings.comboBoxOrder;
                 }
-            } 
+            }
             else
             {
+                // Show permission warning
                 MessageBox.Show(accesFunction, accesFunctionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// Handles the delete button click. Prompts user to confirm musician deletion.
+        /// </summary>
         private void roundedButtonDelete_Click(object sender, EventArgs e)
         {
             if (_userLogin.type != "user")
@@ -65,34 +75,42 @@ namespace GigFinder
                     if (result == DialogResult.Yes)
                     {
                         UserMusician userDelete = (UserMusician)dataGridViewData.SelectedRows[0].DataBoundItem;
-
                         UsersOrm.DeleteUserMusician(userDelete);
-                        Log.createLog("Delete Musician", _userLogin.id);
-                        bindingSourceMusician.DataSource = UsersOrm.SelectMusicians();
 
+                        Log.createLog("Delete Musician", _userLogin.id);
+
+                        // Refresh list after deletion
+                        bindingSourceMusician.DataSource = UsersOrm.SelectMusicians();
                         customComboBoxOrder.Texts = Strings.comboBoxOrder;
                     }
                 }
                 else
                 {
+                    // Prompt user to select a musician before deleting
                     MessageBox.Show(musicianDelete, musicianDeleteShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
+                // Show permission warning
                 MessageBox.Show(accesFunction, accesFunctionShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// Handles the change event of the combo box used for ordering musicians.
+        /// Sorts the list based on the selected field.
+        /// </summary>
         private void customComboBoxOrder_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedOrder = customComboBoxOrder.SelectedItem?.ToString();
-
             var orderedMusicians = OrderMusiciansBy(selectedOrder);
-
             bindingSourceMusician.DataSource = orderedMusicians;
-        }  
+        }
 
+        /// <summary>
+        /// Handles the edit button click. Opens the form to edit a selected musician.
+        /// </summary>
         private void roundedButtonEdit_Click(object sender, EventArgs e)
         {
             if (dataGridViewData.SelectedRows.Count > 0)
@@ -101,6 +119,7 @@ namespace GigFinder
                 CreateMusicianForm createMusicianForm = new CreateMusicianForm(1, _userEdit);
                 if (createMusicianForm.ShowDialog() == DialogResult.OK)
                 {
+                    // Refresh list after edit
                     bindingSourceMusician.DataSource = UsersOrm.SelectMusicians();
                     Log.createLog("Edit Musician", _userLogin.id);
                     customComboBoxOrder.Texts = Strings.comboBoxOrder;
@@ -108,9 +127,16 @@ namespace GigFinder
             }
             else
             {
+                // Prompt user to select a musician before editing
                 MessageBox.Show(editMusician, editMusicianShort, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        /// <summary>
+        /// Orders the list of musicians by the specified field.
+        /// </summary>
+        /// <param name="selectedOrder">The field to sort by (e.g. "Name", "Email").</param>
+        /// <returns>A sorted list of <see cref="UserMusician"/> objects.</returns>
         private List<UserMusician> OrderMusiciansBy(string selectedOrder)
         {
             var _musicians = UsersOrm.SelectMusicians();
@@ -119,26 +145,24 @@ namespace GigFinder
             {
                 case "Id":
                     return _musicians.OrderBy(user => user.id).ToList();
-
                 case "Name":
                     return _musicians.OrderBy(user => user.name).ToList();
-
                 case "Email":
                     return _musicians.OrderBy(user => user.email).ToList();
-
                 case "Size":
                     return _musicians.OrderBy(user => user.size).ToList();
-
                 case "Price":
                     return _musicians.OrderBy(user => user.price).ToList();
-
                 case "Lang":
                     return _musicians.OrderBy(user => user.lang).ToList();
-
                 default:
                     return _musicians;
             }
         }
+
+        /// <summary>
+        /// Applies the current UI culture based on the global language setting.
+        /// </summary>
         private void ChangeLanguage()
         {
             CultureInfo culture = new CultureInfo(LanguageManager.language);
@@ -147,6 +171,9 @@ namespace GigFinder
             UpdateTexts();
         }
 
+        /// <summary>
+        /// Updates all localized texts for the UI controls on the form.
+        /// </summary>
         private void UpdateTexts()
         {
             roundedButtonCreate.Text = Strings.buttonCreate;
@@ -165,6 +192,3 @@ namespace GigFinder
         }
     }
 }
-
-
-    
