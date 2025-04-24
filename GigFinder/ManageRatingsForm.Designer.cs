@@ -190,7 +190,7 @@
             this.customComboBoxOrder.Name = "customComboBoxOrder";
             this.customComboBoxOrder.Padding = new System.Windows.Forms.Padding(1);
             this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
-            this.customComboBoxOrder.TabIndex = 21;
+            this.customComboBoxOrder.TabIndex = 1;
             this.customComboBoxOrder.Texts = "Ordenar por";
             this.customComboBoxOrder.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxOrder_OnSelectedIndexChanged);
             // 
@@ -207,7 +207,7 @@
             this.roundedButtonDelete.Location = new System.Drawing.Point(1018, 123);
             this.roundedButtonDelete.Name = "roundedButtonDelete";
             this.roundedButtonDelete.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonDelete.TabIndex = 20;
+            this.roundedButtonDelete.TabIndex = 2;
             this.roundedButtonDelete.Text = "Eliminar";
             this.roundedButtonDelete.UseVisualStyleBackColor = false;
             this.roundedButtonDelete.Click += new System.EventHandler(this.roundedButtonDelete_Click);

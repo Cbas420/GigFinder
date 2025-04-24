@@ -55,7 +55,7 @@
             this.customComboBoxStatus.Name = "customComboBoxStatus";
             this.customComboBoxStatus.Padding = new System.Windows.Forms.Padding(2);
             this.customComboBoxStatus.Size = new System.Drawing.Size(320, 38);
-            this.customComboBoxStatus.TabIndex = 47;
+            this.customComboBoxStatus.TabIndex = 2;
             this.customComboBoxStatus.Texts = "Estado de resolución:";
             // 
             // labelNote
@@ -85,7 +85,7 @@
             this.roundedTextBoxNote.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxNote.PlaceholderText = "";
             this.roundedTextBoxNote.Size = new System.Drawing.Size(320, 102);
-            this.roundedTextBoxNote.TabIndex = 45;
+            this.roundedTextBoxNote.TabIndex = 1;
             this.roundedTextBoxNote.Texts = "";
             this.roundedTextBoxNote.UnderlinedStyle = false;
             // 
@@ -112,7 +112,7 @@
             this.roundedButtonCancel.Location = new System.Drawing.Point(258, 289);
             this.roundedButtonCancel.Name = "roundedButtonCancel";
             this.roundedButtonCancel.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCancel.TabIndex = 51;
+            this.roundedButtonCancel.TabIndex = 4;
             this.roundedButtonCancel.Text = "Cancelar";
             this.roundedButtonCancel.UseVisualStyleBackColor = false;
             this.roundedButtonCancel.Click += new System.EventHandler(this.roundedButtonCancel_Click);
@@ -130,7 +130,7 @@
             this.roundedButtonSave.Location = new System.Drawing.Point(88, 289);
             this.roundedButtonSave.Name = "roundedButtonSave";
             this.roundedButtonSave.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonSave.TabIndex = 50;
+            this.roundedButtonSave.TabIndex = 3;
             this.roundedButtonSave.Text = "Guardar";
             this.roundedButtonSave.UseVisualStyleBackColor = false;
             this.roundedButtonSave.Click += new System.EventHandler(this.roundedButtonSave_Click);

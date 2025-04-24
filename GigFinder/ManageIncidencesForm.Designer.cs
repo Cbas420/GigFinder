@@ -86,7 +86,7 @@
             this.roundedButtonResolve.Location = new System.Drawing.Point(1018, 124);
             this.roundedButtonResolve.Name = "roundedButtonResolve";
             this.roundedButtonResolve.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonResolve.TabIndex = 23;
+            this.roundedButtonResolve.TabIndex = 3;
             this.roundedButtonResolve.Text = "Resolver";
             this.roundedButtonResolve.UseVisualStyleBackColor = false;
             this.roundedButtonResolve.Click += new System.EventHandler(this.roundedButtonResolve_Click);
@@ -228,7 +228,7 @@
             this.customComboBoxOrder.Name = "customComboBoxOrder";
             this.customComboBoxOrder.Padding = new System.Windows.Forms.Padding(1);
             this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
-            this.customComboBoxOrder.TabIndex = 21;
+            this.customComboBoxOrder.TabIndex = 2;
             this.customComboBoxOrder.Texts = "Ordenar por";
             this.customComboBoxOrder.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxOrder_OnSelectedIndexChanged);
             // 
@@ -253,7 +253,7 @@
             this.customComboBoxFilter.Name = "customComboBoxFilter";
             this.customComboBoxFilter.Padding = new System.Windows.Forms.Padding(1);
             this.customComboBoxFilter.Size = new System.Drawing.Size(150, 41);
-            this.customComboBoxFilter.TabIndex = 24;
+            this.customComboBoxFilter.TabIndex = 1;
             this.customComboBoxFilter.Texts = "Filtrar por";
             this.customComboBoxFilter.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxFilter_OnSelectedIndexChanged);
             // 

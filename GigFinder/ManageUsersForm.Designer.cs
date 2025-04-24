@@ -40,13 +40,13 @@
             this.roundedButtonCreate = new GigFinder.Controls.RoundedButton();
             this.customPanel1 = new GigFinder.Controls.CustomPanel();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.bindingSourceUsers = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceUsers = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUsers)).BeginInit();
@@ -84,7 +84,7 @@
             this.customComboBoxFilter.Name = "customComboBoxFilter";
             this.customComboBoxFilter.Padding = new System.Windows.Forms.Padding(1);
             this.customComboBoxFilter.Size = new System.Drawing.Size(150, 41);
-            this.customComboBoxFilter.TabIndex = 7;
+            this.customComboBoxFilter.TabIndex = 1;
             this.customComboBoxFilter.Texts = "Filtrar por";
             this.customComboBoxFilter.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxFilter_OnSelectedIndexChanged);
             // 
@@ -110,7 +110,7 @@
             this.customComboBoxOrder.Name = "customComboBoxOrder";
             this.customComboBoxOrder.Padding = new System.Windows.Forms.Padding(1);
             this.customComboBoxOrder.Size = new System.Drawing.Size(150, 41);
-            this.customComboBoxOrder.TabIndex = 6;
+            this.customComboBoxOrder.TabIndex = 2;
             this.customComboBoxOrder.Texts = "Ordenar por";
             this.customComboBoxOrder.OnSelectedIndexChanged += new System.EventHandler(this.customComboBoxOrder_OnSelectedIndexChanged);
             // 
@@ -127,7 +127,7 @@
             this.roundedButtonDelete.Location = new System.Drawing.Point(1019, 124);
             this.roundedButtonDelete.Name = "roundedButtonDelete";
             this.roundedButtonDelete.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonDelete.TabIndex = 4;
+            this.roundedButtonDelete.TabIndex = 5;
             this.roundedButtonDelete.Text = "Eliminar";
             this.roundedButtonDelete.UseVisualStyleBackColor = false;
             this.roundedButtonDelete.Click += new System.EventHandler(this.roundedButtonDelete_Click);
@@ -145,7 +145,7 @@
             this.roundedButtonEdit.Location = new System.Drawing.Point(863, 124);
             this.roundedButtonEdit.Name = "roundedButtonEdit";
             this.roundedButtonEdit.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonEdit.TabIndex = 3;
+            this.roundedButtonEdit.TabIndex = 4;
             this.roundedButtonEdit.Text = "Editar";
             this.roundedButtonEdit.UseVisualStyleBackColor = false;
             this.roundedButtonEdit.Click += new System.EventHandler(this.roundedButtonEdit_Click);
@@ -163,7 +163,7 @@
             this.roundedButtonCreate.Location = new System.Drawing.Point(707, 124);
             this.roundedButtonCreate.Name = "roundedButtonCreate";
             this.roundedButtonCreate.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCreate.TabIndex = 2;
+            this.roundedButtonCreate.TabIndex = 3;
             this.roundedButtonCreate.Text = "Crear";
             this.roundedButtonCreate.UseVisualStyleBackColor = false;
             this.roundedButtonCreate.Click += new System.EventHandler(this.roundedButtonCreate_Click);
@@ -237,21 +237,6 @@
             this.dataGridViewUsers.Size = new System.Drawing.Size(1136, 446);
             this.dataGridViewUsers.TabIndex = 0;
             // 
-            // bindingSourceUsers
-            // 
-            this.bindingSourceUsers.DataSource = typeof(GigFinder.Models.UsersDesktop);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogo.BackgroundImage = global::GigFinder.Properties.Resources.logo1;
-            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1094, 12);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(75, 90);
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -286,6 +271,21 @@
             this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceUsers
+            // 
+            this.bindingSourceUsers.DataSource = typeof(GigFinder.Models.UsersDesktop);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.BackgroundImage = global::GigFinder.Properties.Resources.logo1;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1094, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(75, 90);
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // ManageUsersForm
             // 

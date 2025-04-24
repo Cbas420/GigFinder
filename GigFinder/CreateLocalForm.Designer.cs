@@ -144,7 +144,7 @@
             this.roundedTextBoxCapacity.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxCapacity.PlaceholderText = "";
             this.roundedTextBoxCapacity.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxCapacity.TabIndex = 4;
+            this.roundedTextBoxCapacity.TabIndex = 6;
             this.roundedTextBoxCapacity.Texts = "";
             this.roundedTextBoxCapacity.UnderlinedStyle = false;
             // 
@@ -165,7 +165,7 @@
             this.roundedTextBoxCoordX.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxCoordX.PlaceholderText = "";
             this.roundedTextBoxCoordX.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxCoordX.TabIndex = 5;
+            this.roundedTextBoxCoordX.TabIndex = 7;
             this.roundedTextBoxCoordX.Texts = "";
             this.roundedTextBoxCoordX.UnderlinedStyle = false;
             // 
@@ -186,7 +186,7 @@
             this.roundedTextBoxCoordY.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxCoordY.PlaceholderText = "";
             this.roundedTextBoxCoordY.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxCoordY.TabIndex = 6;
+            this.roundedTextBoxCoordY.TabIndex = 8;
             this.roundedTextBoxCoordY.Texts = "";
             this.roundedTextBoxCoordY.UnderlinedStyle = false;
             // 
@@ -207,7 +207,7 @@
             this.roundedTextBoxConfirmPass.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxConfirmPass.PlaceholderText = "";
             this.roundedTextBoxConfirmPass.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxConfirmPass.TabIndex = 7;
+            this.roundedTextBoxConfirmPass.TabIndex = 4;
             this.roundedTextBoxConfirmPass.Texts = "";
             this.roundedTextBoxConfirmPass.UnderlinedStyle = false;
             // 
@@ -228,7 +228,7 @@
             this.roundedTextBoxDescription.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxDescription.PlaceholderText = "";
             this.roundedTextBoxDescription.Size = new System.Drawing.Size(320, 206);
-            this.roundedTextBoxDescription.TabIndex = 8;
+            this.roundedTextBoxDescription.TabIndex = 5;
             this.roundedTextBoxDescription.Texts = "";
             this.roundedTextBoxDescription.UnderlinedStyle = false;
             // 
@@ -355,7 +355,7 @@
             this.roundedButtonCreate.Location = new System.Drawing.Point(425, 609);
             this.roundedButtonCreate.Name = "roundedButtonCreate";
             this.roundedButtonCreate.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCreate.TabIndex = 45;
+            this.roundedButtonCreate.TabIndex = 10;
             this.roundedButtonCreate.Text = "Crear";
             this.roundedButtonCreate.UseVisualStyleBackColor = false;
             this.roundedButtonCreate.Click += new System.EventHandler(this.roundedButtonCreate_Click);
@@ -373,7 +373,7 @@
             this.roundedButtonCancel.Location = new System.Drawing.Point(595, 609);
             this.roundedButtonCancel.Name = "roundedButtonCancel";
             this.roundedButtonCancel.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCancel.TabIndex = 46;
+            this.roundedButtonCancel.TabIndex = 11;
             this.roundedButtonCancel.Text = "Cancelar";
             this.roundedButtonCancel.UseVisualStyleBackColor = false;
             this.roundedButtonCancel.Click += new System.EventHandler(this.roundedButtonCancel_Click);

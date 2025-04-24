@@ -111,7 +111,7 @@
             this.roundedTextBoxConfirmPass.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxConfirmPass.PlaceholderText = "";
             this.roundedTextBoxConfirmPass.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxConfirmPass.TabIndex = 36;
+            this.roundedTextBoxConfirmPass.TabIndex = 5;
             this.roundedTextBoxConfirmPass.Texts = "";
             this.roundedTextBoxConfirmPass.UnderlinedStyle = false;
             // 
@@ -132,7 +132,7 @@
             this.roundedTextBoxPass.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxPass.PlaceholderText = "";
             this.roundedTextBoxPass.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxPass.TabIndex = 35;
+            this.roundedTextBoxPass.TabIndex = 4;
             this.roundedTextBoxPass.Texts = "";
             this.roundedTextBoxPass.UnderlinedStyle = false;
             // 
@@ -153,7 +153,7 @@
             this.roundedTextBoxMail.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxMail.PlaceholderText = "";
             this.roundedTextBoxMail.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxMail.TabIndex = 34;
+            this.roundedTextBoxMail.TabIndex = 3;
             this.roundedTextBoxMail.Texts = "";
             this.roundedTextBoxMail.UnderlinedStyle = false;
             // 
@@ -174,7 +174,7 @@
             this.roundedTextBoxName.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxName.PlaceholderText = "";
             this.roundedTextBoxName.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxName.TabIndex = 33;
+            this.roundedTextBoxName.TabIndex = 1;
             this.roundedTextBoxName.Texts = "";
             this.roundedTextBoxName.UnderlinedStyle = false;
             // 
@@ -205,7 +205,7 @@
             this.roundedTextBoxSurname.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.roundedTextBoxSurname.PlaceholderText = "";
             this.roundedTextBoxSurname.Size = new System.Drawing.Size(320, 44);
-            this.roundedTextBoxSurname.TabIndex = 41;
+            this.roundedTextBoxSurname.TabIndex = 2;
             this.roundedTextBoxSurname.Texts = "";
             this.roundedTextBoxSurname.UnderlinedStyle = false;
             // 
@@ -229,7 +229,7 @@
             this.customComboBoxType.Name = "customComboBoxType";
             this.customComboBoxType.Padding = new System.Windows.Forms.Padding(2);
             this.customComboBoxType.Size = new System.Drawing.Size(320, 38);
-            this.customComboBoxType.TabIndex = 43;
+            this.customComboBoxType.TabIndex = 6;
             this.customComboBoxType.Texts = "Tipo de usuario";
             // 
             // roundedButtonSave
@@ -245,7 +245,7 @@
             this.roundedButtonSave.Location = new System.Drawing.Point(32, 509);
             this.roundedButtonSave.Name = "roundedButtonSave";
             this.roundedButtonSave.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonSave.TabIndex = 44;
+            this.roundedButtonSave.TabIndex = 7;
             this.roundedButtonSave.Text = "Crear";
             this.roundedButtonSave.UseVisualStyleBackColor = false;
             this.roundedButtonSave.Click += new System.EventHandler(this.roundedButtonCreate_Click);
@@ -263,7 +263,7 @@
             this.roundedButtonCancel.Location = new System.Drawing.Point(202, 509);
             this.roundedButtonCancel.Name = "roundedButtonCancel";
             this.roundedButtonCancel.Size = new System.Drawing.Size(150, 40);
-            this.roundedButtonCancel.TabIndex = 49;
+            this.roundedButtonCancel.TabIndex = 8;
             this.roundedButtonCancel.Text = "Cancelar";
             this.roundedButtonCancel.UseVisualStyleBackColor = false;
             this.roundedButtonCancel.Click += new System.EventHandler(this.roundedButtonCancel_Click);
